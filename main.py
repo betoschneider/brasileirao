@@ -30,5 +30,38 @@ df_classificacao.rename(columns={'Equipevde': 'Equipe'}, inplace=True)
 
 print(df_classificacao)
 
+# resultado dos confrontos
 df_confrontos = tables[7]
-df_pos_rodada = tables[8]
+li_clube_sigla = df_confrontos.columns[1:]
+li_clube_nome = df_confrontos['Casa \ Fora'].to_list()
+
+# criando dicionario sigla-nome
+dic_clube = {}
+for i in range(len(li_clube_sigla)):
+    dic_clube[li_clube_sigla[i]] = li_clube_nome[i]
+
+# transformando df_confrontos
+li_confronto = []
+for i in range(len(li_clube_nome)):
+    for clube in li_clube_sigla:
+        li_confronto.append([li_clube_nome[i], df_confrontos[clube][i], dic_clube[clube]])
+
+df_confrontos = pd.DataFrame(li_confronto, columns=['mandante', 'placar', 'visitante'])
+df_confrontos = df_confrontos[(df_confrontos['placar']!='—') & (df_confrontos['placar']!='a')].dropna()
+
+df_confrontos['gols_mandante'] = df_confrontos.apply(lambda x: x['placar'].split('–')[0], axis=1)
+df_confrontos['gols_visitante'] = df_confrontos.apply(lambda x: x['placar'].split('–')[1], axis=1)
+
+# posição de clube por rodada
+df_pos_rodada = tables[8].dropna()
+
+print(df_pos_rodada)
+
+li_posicao = []
+for rodada in df_pos_rodada[df_pos_rodada.columns[0]][:-1]:
+    indice = int(rodada.replace('ª', '')) - 1
+    for clube in li_clube_sigla:
+        li_posicao.append([dic_clube[clube], indice +1, df_pos_rodada[clube][indice]])
+
+df_pos_rodada = pd.DataFrame(li_posicao, columns=['clube', 'rodada', 'posicao'])
+print(df_pos_rodada)
