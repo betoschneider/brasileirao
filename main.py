@@ -15,7 +15,10 @@ html_string_io = StringIO(html_data)
 # Use o objeto StringIO com a função read_html
 tables = pd.read_html(html_string_io)
 
-# #Adicionar classificação por aproveitamento
+# data de atualização do artigo
+atualizacao = tables[0][1][0].split('Editado pela última vez em ')[1].replace('.', '')
+
+# Adicionar classificação por aproveitamento
 df_classificacao = tables[6]
 df_classificacao.drop(columns=['Classificação ou descenso'], inplace=True)
 
@@ -55,8 +58,6 @@ df_confrontos['gols_visitante'] = df_confrontos.apply(lambda x: x['placar'].spli
 # posição de clube por rodada
 df_pos_rodada = tables[8].dropna()
 
-print(df_pos_rodada)
-
 li_posicao = []
 for rodada in df_pos_rodada[df_pos_rodada.columns[0]][:-1]:
     indice = int(rodada.replace('ª', '')) - 1
@@ -64,4 +65,5 @@ for rodada in df_pos_rodada[df_pos_rodada.columns[0]][:-1]:
         li_posicao.append([dic_clube[clube], indice +1, df_pos_rodada[clube][indice]])
 
 df_pos_rodada = pd.DataFrame(li_posicao, columns=['clube', 'rodada', 'posicao'])
-print(df_pos_rodada)
+# print(df_pos_rodada)
+
