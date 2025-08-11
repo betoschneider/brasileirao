@@ -1,69 +1,95 @@
-import pandas as pd
 import requests
-from io import StringIO
+import urllib3
+import pandas as pd
+import streamlit as st
 
-# URL da tabela de classificação
-url = "https://pt.wikipedia.org/wiki/Campeonato_Brasileiro_de_Futebol_de_2024_-_S%C3%A9rie_A"
+# Ignorar warnings de certificado SSL
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# Fazendo a requisição para o site
-response = requests.get(url)
-html_data = response.text
+st.set_page_config(page_title="Brasileirão 2025", layout="wide")
 
-# Envolva a string HTML em um objeto StringIO
-html_string_io = StringIO(html_data)
+# Função para buscar e processar dados
+@st.cache_data
+def carregar_dados():
+    url = "https://service.ig.com.br/football_ig/campeonatos/10/fases/768"
+    response = requests.get(url, verify=False)
+    data = response.json()
 
-# Use o objeto StringIO com a função read_html
-tables = pd.read_html(html_string_io)
+    # Dados da edição
+    edicao_data = {}
+    if "edicao" in data:
+        for k, v in data["edicao"].items():
+            edicao_data[f"edicao.{k}"] = v
 
-# data de atualização do artigo
-atualizacao = tables[0][1][0].split('Editado pela última vez em ')[1].replace('.', '')
+    # Partidas
+    partidas_data = []
+    if "partidas" in data:
+        for rodada, lista_partidas in data["partidas"].items():
+            for partida in lista_partidas:
+                registro = {"rodada": rodada}
+                registro.update(partida)
+                registro.update(edicao_data)
+                partidas_data.append(registro)
 
-# Adicionar classificação por aproveitamento
-df_classificacao = tables[6]
-df_classificacao.drop(columns=['Classificação ou descenso'], inplace=True)
+    partidas_df = pd.json_normalize(partidas_data)
 
-df_classificacao['Aprov'] = round((df_classificacao['V'] * 3 + df_classificacao['E']) / (df_classificacao['J'] * 3) * 100, 2)
-df_classificacao.sort_values(['Aprov', 'GP', 'SG', 'Pos'], ascending=[False, False, False, True], inplace=True)
+    # Remove colunas indesejadas em partidas_df
+    colunas_descartar_partidas = [
+        "partida_id",
+        "disputa_penalti",
+        "slug",
+        "data_realizacao",
+        "hora_realizacao",
+        "data_realizacao_iso",
+        "_link",
+        "edicao.nome",
+        "edicao.slug",
+        "estadio",
+    ]
+    partidas_df = partidas_df.drop(columns=[c for c in colunas_descartar_partidas if c in partidas_df.columns])
 
-df_classificacao = df_classificacao.reset_index(drop=True).reset_index()
+    # Tabela
+    tabela_data = []
+    if "tabela" in data:
+        for posicao in data["tabela"]:
+            registro = dict(posicao)
+            registro.update(edicao_data)
+            tabela_data.append(registro)
 
-df_classificacao['Pos Aprov'] = df_classificacao['index'] + 1
-df_classificacao.drop(columns=['index'], inplace=True)
-df_classificacao.rename(columns={'Equipevde': 'Equipe'}, inplace=True)
+    tabela_df = pd.json_normalize(tabela_data)
 
-print(df_classificacao)
+    # Remove coluna variacao_posicao
+    if "variacao_posicao" in tabela_df.columns:
+        tabela_df = tabela_df.drop(columns=["variacao_posicao"])
 
-# resultado dos confrontos
-df_confrontos = tables[7]
-li_clube_sigla = df_confrontos.columns[1:]
-li_clube_nome = df_confrontos['Casa \ Fora'].to_list()
+    # Calcula aproveitamento recente
+    def calc_aproveitamento(ultimos):
+        if not ultimos:
+            return None
+        pontos = sum(3 if r == "v" else 1 if r == "e" else 0 for r in ultimos)
+        return round(pontos / 15, 2) * 100 if len(ultimos) >= 5 else None
 
-# criando dicionario sigla-nome
-dic_clube = {}
-for i in range(len(li_clube_sigla)):
-    dic_clube[li_clube_sigla[i]] = li_clube_nome[i]
+    if "ultimos_jogos" in tabela_df.columns:
+        tabela_df["aproveitamento_recente"] = tabela_df["ultimos_jogos"].apply(calc_aproveitamento)
 
-# transformando df_confrontos
-li_confronto = []
-for i in range(len(li_clube_nome)):
-    for clube in li_clube_sigla:
-        li_confronto.append([li_clube_nome[i], df_confrontos[clube][i], dic_clube[clube]])
+    return partidas_df, tabela_df
 
-df_confrontos = pd.DataFrame(li_confronto, columns=['mandante', 'placar', 'visitante'])
-df_confrontos = df_confrontos[(df_confrontos['placar']!='—') & (df_confrontos['placar']!='a')].dropna()
+# Carrega os dados
+partidas_df, tabela_df = carregar_dados()
 
-df_confrontos['gols_mandante'] = df_confrontos.apply(lambda x: x['placar'].split('–')[0], axis=1)
-df_confrontos['gols_visitante'] = df_confrontos.apply(lambda x: x['placar'].split('–')[1], axis=1)
+# Título
+st.title("📊 Campeonato Brasileiro 2025")
 
-# posição de clube por rodada
-df_pos_rodada = tables[8].dropna()
+# Tabela de classificação
+st.subheader("Classificação")
+st.dataframe(tabela_df, use_container_width=True)
 
-li_posicao = []
-for rodada in df_pos_rodada[df_pos_rodada.columns[0]][:-1]:
-    indice = int(rodada.replace('ª', '')) - 1
-    for clube in li_clube_sigla:
-        li_posicao.append([dic_clube[clube], indice +1, df_pos_rodada[clube][indice]])
+csv_tabela = tabela_df.to_csv(index=False).encode('utf-8')
+st.download_button("Baixar classificação (CSV)", csv_tabela, "tabela.csv", "text/csv")
 
-df_pos_rodada = pd.DataFrame(li_posicao, columns=['clube', 'rodada', 'posicao'])
-# print(df_pos_rodada)
+# Tabela de partidas
+st.subheader("Partidas")
+st.dataframe(partidas_df, use_container_width=True)
 
+csv_partidas = partidas_df.to_csv(index=False).encode('utf-8')
+st.download_button("Baixar partidas (CSV)", csv_partidas, "partidas.csv", "text/csv")
