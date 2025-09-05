@@ -2,7 +2,6 @@
 import requests
 import urllib3
 import pandas as pd
-from IPython.display import display
 import numpy as np
 
 # Ignorar warnings de certificado SSL
