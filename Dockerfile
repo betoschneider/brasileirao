@@ -9,6 +9,7 @@ COPY app ./app
 
 # Instalar dependências
 # RUN pip install --no-cache-dir streamlit pandas requests
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Porta padrão do Streamlit
