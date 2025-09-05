@@ -8,7 +8,8 @@ WORKDIR /app
 COPY app ./app
 
 # Instalar dependências
-RUN pip install --no-cache-dir streamlit pandas requests
+# RUN pip install --no-cache-dir streamlit pandas requests
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Porta padrão do Streamlit
 EXPOSE 8504
