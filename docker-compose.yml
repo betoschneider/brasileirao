@@ -12,11 +12,11 @@ services:
     command: streamlit run app.py --server.port=8504 --server.address=0.0.0.0
     restart: always
 
-  worker:
-    build: .
-    image: brasileirao_worker
-    volumes:
-      - ./app:/app
-    working_dir: /app
-    command: python3 worker.py
-    restart: always
+  # worker:
+  #   build: .
+  #   image: brasileirao_worker
+  #   volumes:
+  #     - ./app:/app
+  #   working_dir: /app
+  #   command: python3 worker.py
+  #   restart: always
