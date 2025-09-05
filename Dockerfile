@@ -1,5 +1,5 @@
 # Usar imagem Python oficial
-FROM python:3.10
+FROM python:3.12
 
 # Diretório de trabalho
 WORKDIR /app
