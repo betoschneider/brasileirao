@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  brasileirao:
+    build: .
+    ports:
+      - "8504:8504"
+    volumes:
+      - ./app:/app  # monta a pasta local /app no container
+    working_dir: /app
+    command: streamlit run app.py --server.port=8504 --server.address=0.0.0.0
+    restart: always
+
+  worker:
+    build: .
+    command: python3 worker.py
+    volumes:
+      - ./app:/app
