@@ -24,6 +24,7 @@ def main():
     st.set_page_config(
         page_title="Brasileirão Série A - Previsão de resultados",
         page_icon="⚽",
+        layout="wide",
     )
 
     # Carregar dados
@@ -96,14 +97,17 @@ def main():
         )
         .properties(
             width=700,
-            height=400
+            height=700,
         )
     )
     st.altair_chart(chart, use_container_width=True)
 
     # tabela
-    st.subheader(f"Previsão de pontos na 38ª rodada")
-    st.dataframe(tabela, hide_index=True, height=740)
+    # === Conteúdo centralizado abaixo ===
+    col_esq, col_centro, col_dir = st.columns([1, 1, 1])
+    with col_centro:
+        st.subheader(f"Previsão de pontos na 38ª rodada")
+        st.dataframe(tabela, hide_index=True, height=740)
 
     # modelos utilizados
     st.markdown("""
