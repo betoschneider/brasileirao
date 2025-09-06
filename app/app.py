@@ -15,7 +15,8 @@ def carregar_dados():
                        'modelo': 'Modelo',
                        }, inplace=True)
     df['data_atualizacao'] = pd.to_datetime(df['data_atualizacao'])
-    return df
+    df_partidas = pd.read_csv('partidas-modelos.csv')
+    return df, df_partidas
 
 # Interface Streamlit
 def main():
@@ -29,6 +30,8 @@ def main():
 
     # Carregar dados
     df = carregar_dados()
+    partidas = df[1]
+    df = df[0]
     
     # sidebar
     st.sidebar.write(f"Dados atualizados em: {df['data_atualizacao'].max().strftime('%d/%m/%Y %H:%M')}.")
@@ -106,6 +109,10 @@ def main():
     # === Conteúdo centralizado abaixo ===
     col_esq, col_centro, col_dir = st.columns([1, 1, 1])
     with col_centro:
+        if len(times_selecionados) == 1:
+            partidas = partidas[(partidas['time'] == times_selecionados[0]) & ((partidas['modelo'] == modelo) | (partidas['status'] == 'Finalizado'))]
+            st.subheader(f"Resultados previstos para {times_selecionados[0]}")
+            st.dataframe(partidas, hide_index=True, height=740)
         st.subheader(f"Previsão de pontos na 38ª rodada")
         st.dataframe(tabela, hide_index=True, height=740)
 

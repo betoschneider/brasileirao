@@ -687,6 +687,34 @@ def executar_modelo():
         .astype(int)
     )
 
+    # lista de partidas
+    partidas_finalizadas_df = partidas_finalizadas_df[['rodada_num', 'mandante', 'time', 'adversario', 'pontos']]
+    partidas_finalizadas_df['status'] = 'Finalizado'
+
+    loso_resumo_agendadas_df['validacao'] = 'LOSO'
+    mccv_resumo_agendadas_df['validacao'] = 'MCCV'
+
+    partidas_predicao_df = pd.concat(
+        [
+            loso_resumo_agendadas_df[['rodada_num', 'mandante', 'time', 'adversario', 'RandomForest_pred', 'LogisticRegression_pred', 'validacao']],
+            mccv_resumo_agendadas_df[['rodada_num', 'mandante', 'time', 'adversario', 'RandomForest_pred', 'RandomForest_pred_freq', 'LogisticRegression_pred', 'LogisticRegression_pred_freq', 'validacao']]
+        ], ignore_index=True)
+    partidas_predicao_df['status'] = 'Previsto'
+
+    modelos = ['RandomForest_pred', 'LogisticRegression_pred']
+    partidas_df = None
+    for modelo in modelos:
+        temp = partidas_predicao_df[['rodada_num', 'mandante', 'time', 'adversario', modelo, f'{modelo}_freq','status', 'validacao']].copy()
+        temp.rename(columns={modelo: 'pontos', f'{modelo}_freq': 'frequencia'}, inplace=True)
+        temp['modelo'] = temp.apply(lambda x: f'{modelo}'.replace('_pred', '') + ('_MCCV' if x['validacao'] == 'MCCV' else '_LOSO'), axis=1)
+        partidas_df = pd.concat([partidas_df, temp], ignore_index=True)
+
+    partidas_df = pd.concat([partidas_df, partidas_finalizadas_df], ignore_index=True)
+    partidas_df['resultado'] = partidas_df.apply(lambda x: 'Vitória' if x['pontos'] == 3 else ('Empate' if x['pontos'] == 1 else 'Derrota'), axis=1)
+    partidas_df['mandante'] = partidas_df['mandante'].apply(lambda x: 'Sim' if x == 1 else 'Não')
+    partidas_df.sort_values(by=['rodada_num', 'time', 'mandante'], ascending=[True, True, False], inplace=True)
+    partidas_df = partidas_df[['rodada_num', 'status', 'mandante', 'time', 'adversario', 'resultado', 'frequencia', 'modelo']]
+
     # add coluna com data de atualização
     tabela_evolucao_df['data_atualizacao'] = pd.Timestamp.now()
 
@@ -694,6 +722,7 @@ def executar_modelo():
     #    Exportando resultados para CSV    #
     ########################################
     tabela_evolucao_df.to_csv("tabela-evolucao-modelos.csv", index=False)
+    partidas_df.to_csv("partidas-modelos.csv", index=False)
 
 if __name__ == "__main__":
     executar_modelo()
