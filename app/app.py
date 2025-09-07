@@ -7,6 +7,7 @@ from datetime import datetime, time
 
 # Função para carregar os dados
 def carregar_dados():
+    # tabela acumulada
     df = pd.read_csv('tabela-evolucao-modelos.csv')
     df.rename(columns={'time': 'Time',
                        'posicao': 'Posição',
@@ -15,7 +16,20 @@ def carregar_dados():
                        'modelo': 'Modelo',
                        }, inplace=True)
     df['data_atualizacao'] = pd.to_datetime(df['data_atualizacao'])
+
+    # partidas
     df_partidas = pd.read_csv('partidas-modelos.csv')
+    df_partidas.rename(columns={'rodada_num': 'Rodada',
+                                'status': 'Status',
+                                'mandante': 'Mandante',
+                                'time': 'Time',
+                                'adversario': 'Adversário',
+                                'resultado': 'Resultado',
+                                'frequencia': 'Frequência',
+                                'modelo': 'Modelo',
+                               }, inplace=True)
+    df_partidas['Frequência'] = df_partidas['Frequência'].round(2)
+    df_partidas['Frequência'] = df_partidas['Frequência'].fillna('-')
     return df, df_partidas
 
 # Interface Streamlit
@@ -110,7 +124,10 @@ def main():
     col_esq, col_centro, col_dir = st.columns([1, 1, 1])
     with col_centro:
         if len(times_selecionados) == 1:
-            partidas = partidas[(partidas['time'] == times_selecionados[0]) & ((partidas['modelo'] == modelo) | (partidas['status'] == 'Finalizado'))]
+            partidas = partidas[(partidas['Time'] == times_selecionados[0]) & ((partidas['Modelo'] == modelo) | (partidas['Status'] == 'Finalizado'))]
+            partidas = partidas[['Rodada', 'Status', 'Mandante', 'Adversário', 'Resultado', 'Frequência']]
+            if 'LOSO' in modelo:
+                partidas.drop(columns=['Frequência'], inplace=True)
             st.subheader(f"Resultados previstos para {times_selecionados[0]}")
             st.dataframe(partidas, hide_index=True, height=740)
         st.subheader(f"Previsão de pontos na 38ª rodada")
