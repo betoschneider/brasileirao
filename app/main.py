@@ -7,430 +7,475 @@ import numpy as np
 # Ignorar warnings de certificado SSL
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-#######################
-# Dados da competição #
-#######################
+######################################
+# Captura e enriquecimento dos dados #
+######################################
 
-# Requisição dos dados da API
-url = "https://service.ig.com.br/football_ig/campeonatos/10/fases/768"
-response = requests.get(url, verify=False)
-data = response.json()
+def tratar():
 
-# Dados da edição
-edicao_data = {}
-if "edicao" in data:
-    for k, v in data["edicao"].items():
-        edicao_data[f"edicao.{k}"] = v
+    #######################
+    # Dados da competição #
+    #######################
 
-# Tabela
-tabela_data = []
-if "tabela" in data:
-    for posicao in data["tabela"]:
-        registro = dict(posicao)
-        registro.update(edicao_data)
-        tabela_data.append(registro)
+    # Requisição dos dados da API
+    url = "https://service.ig.com.br/football_ig/campeonatos/10/fases/768"
+    response = requests.get(url, verify=False)
+    data = response.json()
 
-tabela_df = pd.json_normalize(tabela_data)
+    # Dados da edição
+    edicao_data = {}
+    if "edicao" in data:
+        for k, v in data["edicao"].items():
+            edicao_data[f"edicao.{k}"] = v
 
-# Recalcula aproveitamento
-tabela_df['aproveitamento'] = round((tabela_df['vitorias'] * 3 + tabela_df['empates']) / (tabela_df['jogos'] * 3), 4) *100
-
-# Calcula aproveitamento recente
-def calc_aproveitamento(ultimos):
-    if not ultimos:
-        return None
-    pontos = sum(3 if r == "v" else 1 if r == "e" else 0 for r in ultimos)
-    return round(pontos / 15, 4) * 100 if len(ultimos) >= 5 else None
-
-if "ultimos_jogos" in tabela_df.columns:
-    tabela_df["aproveitamento_recente"] = tabela_df["ultimos_jogos"].apply(calc_aproveitamento)
-
-tabela_df = tabela_df.rename(columns={
-        'edicao.edicao_id': 'edicao_id', 
-        'edicao.temporada': 'edicao_temporada', 
-        'edicao.nome':  'edicao_nome', 
-        'edicao.nome_popular': 'edicao_nome_popular',
-        'edicao.slug': 'edicao_slug', 
-        'time.time_id': 'time_id', 
-        'time.nome_popular': 'time_nome_popular', 
-        'time.sigla': 'time_sigla', 
-        'time.escudo': 'time_escudo'})
-
-# print(tabela_df.columns)
-
-colunas_ordenadas = ['edicao_id', 'edicao_temporada',
-       'edicao_nome', 'edicao_nome_popular', 'edicao_slug', 'time_id',
-       'time_nome_popular', 'time_sigla', 'time_escudo', 'posicao', 'pontos', 'jogos', 'vitorias', 'empates', 'derrotas',
-       'gols_pro', 'gols_contra', 'saldo_gols', 'variacao_posicao', 'ultimos_jogos', 'aproveitamento', 'aproveitamento_recente',
-       ]
-colunas_exibicao = ['posicao', 'time_sigla', 'jogos', 'pontos', 'vitorias', 'empates', 'derrotas',
-       'gols_pro', 'saldo_gols', 'aproveitamento', 'aproveitamento_recente',
-       ]
-colunas_exibicao_res = ['posicao', 'time_sigla', 'jogos', 'pontos', 'aproveitamento', 'aproveitamento_recente',
-       ]
-
-tabela_df = tabela_df[colunas_ordenadas]
-tabela_df['data_atualizacao'] = pd.Timestamp.now()
-
-############
-# Partidas #
-############
-
-partidas_data = []
-if "partidas" in data:
-    for rodada, lista_partidas in data["partidas"].items():
-        for partida in lista_partidas:
-            registro = {"rodada": rodada}
-            registro.update(partida)
+    # Tabela
+    tabela_data = []
+    if "tabela" in data:
+        for posicao in data["tabela"]:
+            registro = dict(posicao)
             registro.update(edicao_data)
-            partidas_data.append(registro)
+            tabela_data.append(registro)
 
-partidas_df = pd.json_normalize(partidas_data)
+    tabela_df = pd.json_normalize(tabela_data)
 
-# Remove colunas indesejadas em partidas_df
-colunas_descartar_partidas = ["disputa_penalti", "slug", "hora_realizacao",
-                              "data_realizacao_iso", "_link", "edicao.nome", "edicao.slug", "estadio",
-                              ]
-partidas_df = partidas_df.drop(columns=[c for c in colunas_descartar_partidas if c in partidas_df.columns])
+    # Recalcula aproveitamento
+    tabela_df['aproveitamento'] = round((tabela_df['vitorias'] * 3 + tabela_df['empates']) / (tabela_df['jogos'] * 3), 4) *100
 
-# rodada int
-def rodada_int(rodada):
-    if isinstance(rodada, str):
-        # Remove espaços, divide no 'a' e pega a primeira parte
-        return rodada.strip().split('a')[0]
-    return None  # Caso o valor não seja string
+    # Calcula aproveitamento recente
+    def calc_aproveitamento(ultimos):
+        if not ultimos:
+            return None
+        pontos = sum(3 if r == "v" else 1 if r == "e" else 0 for r in ultimos)
+        return round(pontos / 15, 4) * 100 if len(ultimos) >= 5 else None
 
-if "rodada" in partidas_df.columns:
-    partidas_df["rodada_num"] = partidas_df["rodada"].apply(rodada_int).astype(int)
+    if "ultimos_jogos" in tabela_df.columns:
+        tabela_df["aproveitamento_recente"] = tabela_df["ultimos_jogos"].apply(calc_aproveitamento)
 
-#####################
-# add valor do time #
-#####################
-# arquivo csv com valores dos times
-valor_time_df = pd.read_csv("valor-time-titular.csv")
-partidas_df['edicao.temporada'] = partidas_df['edicao.temporada'].astype('int64')
-# mandante
-partidas_df = partidas_df.merge(valor_time_df, left_on=['time_mandante.nome_popular', 'edicao.temporada'], right_on=['time', 'ano'], how='left')
-partidas_df.drop(columns=['time', 'ano'], inplace=True)
-partidas_df.rename(columns={'time.valor': 'time_mandante.valor'}, inplace=True)
-# visitante
-partidas_df = partidas_df.merge(valor_time_df, left_on=['time_visitante.nome_popular', 'edicao.temporada'], right_on=['time', 'ano'], how='left')
-partidas_df.drop(columns=['time', 'ano'], inplace=True)
-partidas_df.rename(columns={'time.valor': 'time_visitante.valor'}, inplace=True)
+    tabela_df = tabela_df.rename(columns={
+            'edicao.edicao_id': 'edicao_id', 
+            'edicao.temporada': 'edicao_temporada', 
+            'edicao.nome':  'edicao_nome', 
+            'edicao.nome_popular': 'edicao_nome_popular',
+            'edicao.slug': 'edicao_slug', 
+            'time.time_id': 'time_id', 
+            'time.nome_popular': 'time_nome_popular', 
+            'time.sigla': 'time_sigla', 
+            'time.escudo': 'time_escudo'})
 
-# formata data
-partidas_df["data_realizacao"] = pd.to_datetime(partidas_df["data_realizacao"], format="%d/%m/%Y")
+    # print(tabela_df.columns)
 
-###########################
-# campeoanatos anteriores #
-###########################
-# arquivo csv com dados históricos
-historico_df = pd.read_csv("br-historico-2022-2024.csv")
-historico_df['data_realizacao'] = pd.to_datetime(historico_df['data_realizacao'], unit='D', origin='1899-12-30')
+    colunas_ordenadas = ['edicao_id', 'edicao_temporada',
+        'edicao_nome', 'edicao_nome_popular', 'edicao_slug', 'time_id',
+        'time_nome_popular', 'time_sigla', 'time_escudo', 'posicao', 'pontos', 'jogos', 'vitorias', 'empates', 'derrotas',
+        'gols_pro', 'gols_contra', 'saldo_gols', 'variacao_posicao', 'ultimos_jogos', 'aproveitamento', 'aproveitamento_recente',
+        ]
+    colunas_exibicao = ['posicao', 'time_sigla', 'jogos', 'pontos', 'vitorias', 'empates', 'derrotas',
+        'gols_pro', 'saldo_gols', 'aproveitamento', 'aproveitamento_recente',
+        ]
+    colunas_exibicao_res = ['posicao', 'time_sigla', 'jogos', 'pontos', 'aproveitamento', 'aproveitamento_recente',
+        ]
 
-# add registros antigos ao campeonato atual
-partidas_df = pd.concat([partidas_df, historico_df], ignore_index=True)
+    tabela_df = tabela_df[colunas_ordenadas]
+    tabela_df['data_atualizacao'] = pd.Timestamp.now()
 
-# definindo colunas
-colunas_mandante = ['rodada', 'rodada_num', 'data_realizacao', 'partida_id', 'estadio.estadio_id', 'estadio.nome_popular',
-                    'status', 'edicao.edicao_id', 'edicao.temporada', 'edicao.nome_popular', 'campeonato.campeonato_id', 
-                    'campeonato.nome', 'campeonato.slug', 'time_mandante.time_id', 'time_mandante.nome_popular',
-                    'time_visitante.time_id', 'time_visitante.nome_popular', 'placar_mandante', 'placar_visitante',
-                    'time_mandante.valor', 'time_visitante.valor',
-                    ]
-colunas_visitante = ['rodada', 'rodada_num', 'data_realizacao', 'partida_id', 'estadio.estadio_id', 'estadio.nome_popular',
-                     'status', 'edicao.edicao_id', 'edicao.temporada', 'edicao.nome_popular', 'campeonato.campeonato_id', 
-                     'campeonato.nome', 'campeonato.slug', 'time_mandante.time_id', 'time_mandante.nome_popular',
-                     'time_visitante.time_id', 'time_visitante.nome_popular', 'placar_visitante', 'placar_mandante',
-                     'time_mandante.valor', 'time_visitante.valor',
-                     ]
+    ############
+    # Partidas #
+    ############
 
-# modelagem para as projeções
-partidas_model_df = None
-temp = None
+    partidas_data = []
+    if "partidas" in data:
+        for rodada, lista_partidas in data["partidas"].items():
+            for partida in lista_partidas:
+                registro = {"rodada": rodada}
+                registro.update(partida)
+                registro.update(edicao_data)
+                partidas_data.append(registro)
 
-for partida in partidas_df['partida_id']:
+    partidas_df = pd.json_normalize(partidas_data)
+
+    # Remove colunas indesejadas em partidas_df
+    colunas_descartar_partidas = ["disputa_penalti", "slug", "hora_realizacao",
+                                "data_realizacao_iso", "_link", "edicao.nome", "edicao.slug", "estadio",
+                                ]
+    partidas_df = partidas_df.drop(columns=[c for c in colunas_descartar_partidas if c in partidas_df.columns])
+
+    # rodada int
+    def rodada_int(rodada):
+        if isinstance(rodada, str):
+            # Remove espaços, divide no 'a' e pega a primeira parte
+            return rodada.strip().split('a')[0]
+        return None  # Caso o valor não seja string
+
+    if "rodada" in partidas_df.columns:
+        partidas_df["rodada_num"] = partidas_df["rodada"].apply(rodada_int).astype(int)
+
+    #####################
+    # add valor do time #
+    #####################
+    # arquivo csv com valores dos times
+    valor_time_df = pd.read_csv("valor-time-titular.csv")
+    partidas_df['edicao.temporada'] = partidas_df['edicao.temporada'].astype('int64')
     # mandante
-    temp = partidas_df[(partidas_df['partida_id'] == partida)]
-    temp = temp[colunas_mandante]
-    temp['mandante'] = 1
-    temp.rename(columns={
-        'time_mandante.time_id': 'time_id',
-        'time_mandante.nome_popular': 'time',
-        'time_visitante.time_id': 'adversario_id',
-        'time_visitante.nome_popular': 'adversario',
-        'time_mandante.valor': 'valor_time',
-        'time_visitante.valor': 'valor_adversario',
-        'placar_mandante': 'gols_time',
-        'placar_visitante': 'gols_adversario',
-    }, inplace=True)
-    partidas_model_df = pd.concat([partidas_model_df, temp], ignore_index=True)
-
+    partidas_df = partidas_df.merge(valor_time_df, left_on=['time_mandante.nome_popular', 'edicao.temporada'], right_on=['time', 'ano'], how='left')
+    partidas_df.drop(columns=['time', 'ano'], inplace=True)
+    partidas_df.rename(columns={'time.valor': 'time_mandante.valor'}, inplace=True)
     # visitante
-    temp = partidas_df[(partidas_df['partida_id'] == partida)]
-    temp = temp[colunas_visitante]
-    temp['mandante'] = 0
-    temp.rename(columns={
-        'time_mandante.time_id': 'adversario_id',
-        'time_mandante.nome_popular': 'adversario',
-        'time_visitante.time_id': 'time_id',
-        'time_visitante.nome_popular': 'time',
-        'time_mandante.valor': 'valor_adversario',
-        'time_visitante.valor': 'valor_time',
-        'placar_visitante': 'gols_time',
-        'placar_mandante': 'gols_adversario',
-    }, inplace=True)
-    partidas_model_df = pd.concat([partidas_model_df, temp], ignore_index=True)
+    partidas_df = partidas_df.merge(valor_time_df, left_on=['time_visitante.nome_popular', 'edicao.temporada'], right_on=['time', 'ano'], how='left')
+    partidas_df.drop(columns=['time', 'ano'], inplace=True)
+    partidas_df.rename(columns={'time.valor': 'time_visitante.valor'}, inplace=True)
 
-# classifica df
-partidas_model_df.sort_values(by=['data_realizacao', 'rodada_num', 'partida_id', 'mandante'], ascending=[True, True, True, False], inplace=True)
+    # formata data
+    partidas_df["data_realizacao"] = pd.to_datetime(partidas_df["data_realizacao"], format="%d/%m/%Y")
 
-partidas_agendadas_df = partidas_model_df[partidas_model_df['status'] != 'finalizado']
-partidas_model_df = partidas_model_df[partidas_model_df['status'] == 'finalizado']       
+    ###########################
+    # campeoanatos anteriores #
+    ###########################
+    # arquivo csv com dados históricos
+    historico_df = pd.read_csv("br-historico-2022-2024.csv")
+    historico_df['data_realizacao'] = pd.to_datetime(historico_df['data_realizacao'], unit='D', origin='1899-12-30')
 
-# add ano-rodada
-partidas_model_df['ano-rodada'] = partidas_model_df['edicao.temporada'].astype(str) + "." + partidas_model_df['rodada_num'].astype(str)
+    # add registros antigos ao campeonato atual
+    partidas_df = pd.concat([partidas_df, historico_df], ignore_index=True)
 
-#################
-# média de gols #
-#################
-# calcula média de gols marcados e sofridos por time até a rodada anterior
-media_gols_df = None
-for rodada in partidas_model_df['ano-rodada'].drop_duplicates():
-    temp = partidas_model_df[(partidas_model_df['rodada_num'] < int(rodada.split(".")[1])) &
-                              (partidas_model_df['edicao.temporada'] == int(rodada.split(".")[0]))]
-    temp = temp[['time', 'gols_time', 'gols_adversario']].groupby('time').mean().reset_index()
-    temp['ano-rodada'] = rodada
-    media_gols_df = pd.concat([media_gols_df, temp], ignore_index=True)
+    # definindo colunas
+    colunas_mandante = ['rodada', 'rodada_num', 'data_realizacao', 'partida_id', 'estadio.estadio_id', 'estadio.nome_popular',
+                        'status', 'edicao.edicao_id', 'edicao.temporada', 'edicao.nome_popular', 'campeonato.campeonato_id', 
+                        'campeonato.nome', 'campeonato.slug', 'time_mandante.time_id', 'time_mandante.nome_popular',
+                        'time_visitante.time_id', 'time_visitante.nome_popular', 'placar_mandante', 'placar_visitante',
+                        'time_mandante.valor', 'time_visitante.valor',
+                        ]
+    colunas_visitante = ['rodada', 'rodada_num', 'data_realizacao', 'partida_id', 'estadio.estadio_id', 'estadio.nome_popular',
+                        'status', 'edicao.edicao_id', 'edicao.temporada', 'edicao.nome_popular', 'campeonato.campeonato_id', 
+                        'campeonato.nome', 'campeonato.slug', 'time_mandante.time_id', 'time_mandante.nome_popular',
+                        'time_visitante.time_id', 'time_visitante.nome_popular', 'placar_visitante', 'placar_mandante',
+                        'time_mandante.valor', 'time_visitante.valor',
+                        ]
 
-media_gols_df.rename(columns={'gols_time': 'media_gols_marcados', 'gols_adversario': 'media_gols_sofridos'}, inplace=True)
+    # modelagem para as projeções
+    partidas_model_df = None
+    temp = None
 
-# add média time
-partidas_model_df = partidas_model_df.merge(media_gols_df, on=['ano-rodada', 'time'], how='left')
+    for partida in partidas_df['partida_id']:
+        # mandante
+        temp = partidas_df[(partidas_df['partida_id'] == partida)]
+        temp = temp[colunas_mandante]
+        temp['mandante'] = 1
+        temp.rename(columns={
+            'time_mandante.time_id': 'time_id',
+            'time_mandante.nome_popular': 'time',
+            'time_visitante.time_id': 'adversario_id',
+            'time_visitante.nome_popular': 'adversario',
+            'time_mandante.valor': 'valor_time',
+            'time_visitante.valor': 'valor_adversario',
+            'placar_mandante': 'gols_time',
+            'placar_visitante': 'gols_adversario',
+        }, inplace=True)
+        partidas_model_df = pd.concat([partidas_model_df, temp], ignore_index=True)
 
-# add média adversário
-media_gols_df.rename(columns={'time': 'adversario', 'media_gols_marcados': 'media_gols_marcados_adversario', 'media_gols_sofridos': 'media_gols_sofridos_adversario'}, inplace=True)
-partidas_model_df = partidas_model_df.merge(media_gols_df, on=['ano-rodada', 'adversario'], how='left')
+        # visitante
+        temp = partidas_df[(partidas_df['partida_id'] == partida)]
+        temp = temp[colunas_visitante]
+        temp['mandante'] = 0
+        temp.rename(columns={
+            'time_mandante.time_id': 'adversario_id',
+            'time_mandante.nome_popular': 'adversario',
+            'time_visitante.time_id': 'time_id',
+            'time_visitante.nome_popular': 'time',
+            'time_mandante.valor': 'valor_adversario',
+            'time_visitante.valor': 'valor_time',
+            'placar_visitante': 'gols_time',
+            'placar_mandante': 'gols_adversario',
+        }, inplace=True)
+        partidas_model_df = pd.concat([partidas_model_df, temp], ignore_index=True)
+
+    # classifica df
+    partidas_model_df.sort_values(by=['data_realizacao', 'rodada_num', 'partida_id', 'mandante'], ascending=[True, True, True, False], inplace=True)
+
+    partidas_agendadas_df = partidas_model_df[partidas_model_df['status'] != 'finalizado']
+    partidas_model_df = partidas_model_df[partidas_model_df['status'] == 'finalizado']       
+
+    # add ano-rodada
+    partidas_model_df['ano-rodada'] = partidas_model_df['edicao.temporada'].astype(str) + "." + partidas_model_df['rodada_num'].astype(str)
+
+    #################
+    # média de gols #
+    #################
+    # calcula média de gols marcados e sofridos por time até a rodada anterior
+    media_gols_df = None
+    for rodada in partidas_model_df['ano-rodada'].drop_duplicates():
+        temp = partidas_model_df[(partidas_model_df['rodada_num'] < int(rodada.split(".")[1])) &
+                                (partidas_model_df['edicao.temporada'] == int(rodada.split(".")[0]))]
+        temp = temp[['time', 'gols_time', 'gols_adversario']].groupby('time').mean().reset_index()
+        temp['ano-rodada'] = rodada
+        media_gols_df = pd.concat([media_gols_df, temp], ignore_index=True)
+
+    media_gols_df.rename(columns={'gols_time': 'media_gols_marcados', 'gols_adversario': 'media_gols_sofridos'}, inplace=True)
+
+    # add média time
+    partidas_model_df = partidas_model_df.merge(media_gols_df, on=['ano-rodada', 'time'], how='left')
+
+    # add média adversário
+    media_gols_df.rename(columns={'time': 'adversario', 'media_gols_marcados': 'media_gols_marcados_adversario', 'media_gols_sofridos': 'media_gols_sofridos_adversario'}, inplace=True)
+    partidas_model_df = partidas_model_df.merge(media_gols_df, on=['ano-rodada', 'adversario'], how='left')
 
 
-#######################
-# pontos conquistados #
-#######################
-# calcula pontos conquistados por time até a rodada anterior
-# vitória = 3 pontos, empate = 1 ponto, derrota = 0 pontos
-partidas_model_df['pontos'] = partidas_model_df.apply(
-    lambda x: 3 if x['gols_time'] > x['gols_adversario'] else (1 if x['gols_time'] == x['gols_adversario'] else (0 if x['status'] != 'agendado' else np.nan)),
-    axis=1
-)
+    #######################
+    # pontos conquistados #
+    #######################
+    # calcula pontos conquistados por time até a rodada anterior
+    # vitória = 3 pontos, empate = 1 ponto, derrota = 0 pontos
+    partidas_model_df['pontos'] = partidas_model_df.apply(
+        lambda x: 3 if x['gols_time'] > x['gols_adversario'] else (1 if x['gols_time'] == x['gols_adversario'] else (0 if x['status'] != 'agendado' else np.nan)),
+        axis=1
+    )
 
-pontos_df = None
-for rodada in partidas_model_df['ano-rodada'].drop_duplicates():
-    temp = partidas_model_df[(partidas_model_df['rodada_num'] < int(rodada.split(".")[1])) &
-                              (partidas_model_df['edicao.temporada'] == int(rodada.split(".")[0]))]
-    temp = temp[['time', 'pontos']].groupby('time').sum().reset_index()
-    temp['ano-rodada'] = rodada
-    pontos_df = pd.concat([pontos_df, temp], ignore_index=True)
+    pontos_df = None
+    for rodada in partidas_model_df['ano-rodada'].drop_duplicates():
+        temp = partidas_model_df[(partidas_model_df['rodada_num'] < int(rodada.split(".")[1])) &
+                                (partidas_model_df['edicao.temporada'] == int(rodada.split(".")[0]))]
+        temp = temp[['time', 'pontos']].groupby('time').sum().reset_index()
+        temp['ano-rodada'] = rodada
+        pontos_df = pd.concat([pontos_df, temp], ignore_index=True)
 
-# add média time
-pontos_df.rename(
-    columns={
-        'pontos': 'pontos_time'
-    }, 
-    inplace=True
-)
-partidas_model_df = partidas_model_df.merge(pontos_df, on=['ano-rodada', 'time'], how='left')
+    # add média time
+    pontos_df.rename(
+        columns={
+            'pontos': 'pontos_time'
+        }, 
+        inplace=True
+    )
+    partidas_model_df = partidas_model_df.merge(pontos_df, on=['ano-rodada', 'time'], how='left')
 
-# add média adversario
-pontos_df.rename(
-    columns={
+    # add média adversario
+    pontos_df.rename(
+        columns={
+            'pontos_time': 'pontos_adversario',
+            'time': 'adversario'
+        }, 
+        inplace=True
+    )
+    partidas_model_df = partidas_model_df.merge(pontos_df, on=['ano-rodada', 'adversario'], how='left')
+
+
+    ##################
+    # Aproveitamento #
+    ##################
+    # cria a coluna "jogos" inicialmente como 0
+    partidas_model_df["jogos"] = np.nan
+
+    # conta só partidas já realizadas (por temporada e time)
+    partidas_model_df.loc[partidas_model_df["status"] != "agendado", "jogos"] = (
+        partidas_model_df.loc[partidas_model_df["status"] != "agendado"]
+        .groupby(["edicao.temporada", "time"])
+        .cumcount()
+    )
+
+    # preenche os "agendados" com o valor anterior do mesmo time na mesma temporada
+    partidas_model_df["jogos"] = (
+        partidas_model_df.groupby(["edicao.temporada", "time"])["jogos"]
+        .ffill()
+        .fillna(0)
+        .astype(int)
+    )
+
+    # pontos acumulados até a rodada (se for ano-rodada já incluído, pode trocar)
+    partidas_model_df["pontos_acumulados"] = (
+        partidas_model_df.groupby(["edicao.temporada", "time"])["pontos_time"]
+        .cumsum()
+    )
+
+    # aproveitamento (%)
+    partidas_model_df["aproveitamento"] = (
+        partidas_model_df["pontos_acumulados"] / (partidas_model_df["jogos"] * 3)
+    )
+
+    ###############################################
+    # Aproveitamento recente (últimas 5 partidas) #
+    ###############################################
+    from collections import deque
+
+    window = 5
+
+    # ordena por temporada, time e rodada
+    partidas_model_df = partidas_model_df.sort_values(["edicao.temporada", "time", "rodada_num"])
+
+    # listas para armazenar resultados
+    pontos_recentes = []
+    jogos_validos = []
+
+    # processa temporada + time
+    for (temporada, time), g in partidas_model_df.groupby(["edicao.temporada", "time"]):
+        last_points = deque()  # pontos das últimas 'window' partidas realizadas
+        for idx, row in g.iterrows():
+            # calcula soma e quantidade **antes de incluir a rodada atual**
+            pontos_recentes.append(sum(last_points))
+            jogos_validos.append(len(last_points))
+            
+            # adiciona os pontos da rodada atual somente se foi realizada
+            if row["status"] != "agendado":
+                last_points.append(row["pontos"])
+            
+            # mantém no máximo 'window' jogos realizados
+            while len(last_points) > window:
+                last_points.popleft()
+
+    # adiciona ao DataFrame
+    partidas_model_df["pontos_recentes"] = pontos_recentes
+    partidas_model_df["jogos_validos"] = jogos_validos
+    partidas_model_df["aproveitamento_recente"] = (
+        partidas_model_df["pontos_recentes"] / (partidas_model_df["jogos_validos"] * 3)
+    )
+
+    # --- adiciona aproveitamento e aproveitamento recente para adversário ---
+    # seleciona as colunas do adversário, incluindo temporada
+    adversario_cols = ["edicao.temporada", "rodada_num", "time", "aproveitamento", "aproveitamento_recente"]
+
+    # renomeia as colunas do adversário
+    adversario_renomeado = partidas_model_df[adversario_cols].rename(
+        columns={
+            "time": "adversario",
+            "aproveitamento": "aproveitamento_adversario",
+            "aproveitamento_recente": "aproveitamento_recente_adversario"
+        }
+    )
+
+    # merge com o próprio dataframe (mesma temporada, rodada e adversário)
+    partidas_model_df = partidas_model_df.merge(
+        adversario_renomeado,
+        on=["edicao.temporada", "rodada_num", "adversario"],
+        how="left"
+    )
+
+    #####################
+    # Confronto recente #
+    #####################
+    def calcular_confronto_recente(partidas_model_df, window=5, por_temporada=True):
+        df = partidas_model_df.copy().reset_index(drop=True)
+        df = df[df['status']=='finalizado']
+
+        # mantém apenas a visão do time
+        A = df[["edicao.temporada", "rodada_num", "time", "adversario", "pontos", "status"]].copy()
+
+        # ordena
+        if por_temporada:
+            sort_cols = ["edicao.temporada", "time", "adversario", "rodada_num"]
+            group_cols = ["edicao.temporada", "time", "adversario"]
+        else:
+            sort_cols = ["time", "adversario", "edicao.temporada", "rodada_num"]
+            group_cols = ["time", "adversario"]
+
+        A = A.sort_values(sort_cols).reset_index(drop=True)
+
+        # calcular aproveitamento nos últimos confrontos
+        confronto_valores = {}
+        for keys, g in A.groupby(group_cols, sort=False):
+            last = deque()
+            for idx, row in g.iterrows():
+                if len(last) > 0:
+                    aproveitamento = sum(last) / (len(last) * 3)
+                else:
+                    aproveitamento = np.nan
+                confronto_valores[idx] = aproveitamento
+
+                if row["status"] != "agendado":
+                    last.append(int(row["pontos"]))
+                if len(last) > window:
+                    last.popleft()
+
+        A["confronto_recente"] = A.index.map(confronto_valores)
+
+        # merge de volta ao df original
+        out = df.merge(
+            A[["edicao.temporada", "rodada_num", "time", "adversario", "confronto_recente"]],
+            on=["edicao.temporada", "rodada_num", "time", "adversario"],
+            how="left",
+        )
+
+        # adversario
+        out_adv = out.copy()
+        # out_adv.drop(labels='confronto_recente_adversario', inplace=True)
+        out_adv = out_adv[
+            [
+                'edicao.temporada', 
+                'rodada_num', 
+                'time', 
+                'adversario', 
+                'confronto_recente', 
+            ]
+        ].rename(columns={'time': 'adversario',
+                'adversario': 'time',
+                'confronto_recente': 'confronto_recente_adversario'})
+        
+        # add confronto recente adversario
+        out = out.merge(out_adv, on=['edicao.temporada', 'rodada_num', 'time', 'adversario'], how='left')
+
+        out['confronto_recente'] = out['confronto_recente'].fillna(0)
+        out['confronto_recente_adversario'] = out['confronto_recente_adversario'].fillna(0)
+        
+        return out
+
+
+    partidas_model_df = calcular_confronto_recente(partidas_model_df, window=5, por_temporada=False)
+    # por_temporada=True se quiser reiniciar o histórico a cada temporada
+
+    ##############################################
+    # add dados enriquecidos aos jogos agendados #
+    ##############################################
+
+    # pega a maior rodada por temporada + time
+    df_max_rodada = (
+        partidas_model_df
+        .groupby(['edicao.temporada', 'time'], as_index=False)['rodada_num']
+        .max()
+    )
+
+    # reune com o dataframe original para trazer as demais colunas da linha da maior rodada
+    df_max_rodada = df_max_rodada.merge(
+        partidas_model_df,
+        on=['edicao.temporada', 'time', 'rodada_num'],
+        how='left'
+    ).reset_index(drop=True)
+
+    df_max_rodada = df_max_rodada[['edicao.temporada', 'time', 'media_gols_marcados', 'media_gols_sofridos', 'pontos', 
+                                'pontos_time', 'jogos', 'pontos_acumulados', 'aproveitamento', 'pontos_recentes',
+                                'jogos_validos', 'aproveitamento_recente', 'confronto_recente']]
+
+    partidas_agendadas_df = partidas_agendadas_df.merge(df_max_rodada, on=['edicao.temporada', 'time'], how='left')
+
+    df_max_rodada.rename(columns={
+        'time': 'adversario',
+        'media_gols_marcados': 'media_gols_marcados_adversario',
+        'media_gols_sofridos': 'media_gols_sofridos_adversario',
         'pontos_time': 'pontos_adversario',
-        'time': 'adversario'
-    }, 
-    inplace=True
-)
-partidas_model_df = partidas_model_df.merge(pontos_df, on=['ano-rodada', 'adversario'], how='left')
+        'aproveitamento': 'aproveitamento_adversario',
+        'aproveitamento_recente': 'aproveitamento_recente_adversario',
+        'confronto_recente': 'confronto_recente_adversario',
+        }, inplace=True)
+    df_max_rodada.drop(columns=['pontos', 'jogos', 'pontos_acumulados', 'pontos_recentes', 'jogos_validos',], inplace=True)
 
+    partidas_agendadas_df = partidas_agendadas_df.merge(df_max_rodada, on=['edicao.temporada', 'adversario'], how='left')
 
-##################
-# Aproveitamento #
-##################
-# cria a coluna "jogos" inicialmente como 0
-partidas_model_df["jogos"] = np.nan
+    ###########################
+    # df para aplicar modelos #
+    ###########################
+    partidas_model_df = pd.concat([partidas_model_df, partidas_agendadas_df], ignore_index=True)
 
-# conta só partidas já realizadas (por temporada e time)
-partidas_model_df.loc[partidas_model_df["status"] != "agendado", "jogos"] = (
-    partidas_model_df.loc[partidas_model_df["status"] != "agendado"]
-    .groupby(["edicao.temporada", "time"])
-    .cumcount()
-)
+    colunas_descartar_partidas = ['rodada', 'estadio.nome_popular', 'edicao.edicao_id',
+                                'ano-rodada', 'edicao.nome_popular', 'campeonato.campeonato_id',
+                                'campeonato.nome', 'campeonato.slug',
+                                'jogos', 'pontos_acumulados', "pontos_validos", "pontos_recentes", 
+                                "jogos_validos", "pontos_shifted",
+                                ]
+    partidas_model_final_df = partidas_model_df.drop(columns=[c for c in colunas_descartar_partidas if c in partidas_model_df.columns])
 
-# preenche os "agendados" com o valor anterior do mesmo time na mesma temporada
-partidas_model_df["jogos"] = (
-    partidas_model_df.groupby(["edicao.temporada", "time"])["jogos"]
-    .ffill()
-    .fillna(0)
-    .astype(int)
-)
+    partidas_finalizadas_df = partidas_model_final_df[(partidas_model_final_df['status'] != 'agendado') &
+                                                    #   (partidas_model_final_df['mandante'] == 1) &
+                                                    (partidas_model_final_df['edicao.temporada'] == partidas_model_final_df['edicao.temporada'].max())
+                                                    ]
+    # remove rodada 1 (sem dados anteriores)
+    partidas_model_final_df = partidas_model_final_df[partidas_model_final_df["rodada_num"] != 1].reset_index(drop=True)
 
-# pontos acumulados até a rodada (se for ano-rodada já incluído, pode trocar)
-partidas_model_df["pontos_acumulados"] = (
-    partidas_model_df.groupby(["edicao.temporada", "time"])["pontos_time"]
-    .cumsum()
-)
-
-# aproveitamento (%)
-partidas_model_df["aproveitamento"] = (
-    partidas_model_df["pontos_acumulados"] / (partidas_model_df["jogos"] * 3)
-)
-
-###############################################
-# Aproveitamento recente (últimas 5 partidas) #
-###############################################
-from collections import deque
-
-window = 5
-
-# ordena por temporada, time e rodada
-partidas_model_df = partidas_model_df.sort_values(["edicao.temporada", "time", "rodada_num"])
-
-# listas para armazenar resultados
-pontos_recentes = []
-jogos_validos = []
-
-# processa temporada + time
-for (temporada, time), g in partidas_model_df.groupby(["edicao.temporada", "time"]):
-    last_points = deque()  # pontos das últimas 'window' partidas realizadas
-    for idx, row in g.iterrows():
-        # calcula soma e quantidade **antes de incluir a rodada atual**
-        pontos_recentes.append(sum(last_points))
-        jogos_validos.append(len(last_points))
-        
-        # adiciona os pontos da rodada atual somente se foi realizada
-        if row["status"] != "agendado":
-            last_points.append(row["pontos"])
-        
-        # mantém no máximo 'window' jogos realizados
-        while len(last_points) > window:
-            last_points.popleft()
-
-# adiciona ao DataFrame
-partidas_model_df["pontos_recentes"] = pontos_recentes
-partidas_model_df["jogos_validos"] = jogos_validos
-partidas_model_df["aproveitamento_recente"] = (
-    partidas_model_df["pontos_recentes"] / (partidas_model_df["jogos_validos"] * 3)
-)
-
-# --- adiciona aproveitamento e aproveitamento recente para adversário ---
-# seleciona as colunas do adversário, incluindo temporada
-adversario_cols = ["edicao.temporada", "rodada_num", "time", "aproveitamento", "aproveitamento_recente"]
-
-# renomeia as colunas do adversário
-adversario_renomeado = partidas_model_df[adversario_cols].rename(
-    columns={
-        "time": "adversario",
-        "aproveitamento": "aproveitamento_adversario",
-        "aproveitamento_recente": "aproveitamento_recente_adversario"
-    }
-)
-
-# merge com o próprio dataframe (mesma temporada, rodada e adversário)
-partidas_model_df = partidas_model_df.merge(
-    adversario_renomeado,
-    on=["edicao.temporada", "rodada_num", "adversario"],
-    how="left"
-)
-
-#####################
-# Confronto recente #
-#####################
-# soma dos pontos conquistados nos últimos 5 confrontos diretos entre os times
-window = 5
-
-# garante ordem correta
-partidas_model_df = partidas_model_df.sort_values(
-    ["edicao.temporada", "time", "adversario", "rodada_num"]
-)
-
-# lista para armazenar o histórico direto
-confronto_recentes = []
-
-# processa time vs adversário
-for (temporada, time, adversario), g in partidas_model_df.groupby(
-    ["edicao.temporada", "time", "adversario"]
-):
-    last_points = deque()
-    for idx, row in g.iterrows():
-        # soma dos pontos nos últimos 'window' confrontos diretos
-        confronto_recentes.append(sum(last_points))
-        
-        # adiciona os pontos do confronto atual (se realizado)
-        if row["status"] != "agendado":
-            last_points.append(row["pontos"])
-        
-        # mantém só os últimos N confrontos
-        while len(last_points) > window:
-            last_points.popleft()
-
-# adiciona ao DataFrame
-partidas_model_df["confronto_recente"] = confronto_recentes
-
-
-##############################################
-# add dados enriquecidos aos jogos agendados #
-##############################################
-
-# pega a maior rodada por temporada + time
-df_max_rodada = (
-    partidas_model_df
-    .groupby(['edicao.temporada', 'time'], as_index=False)['rodada_num']
-    .max()
-)
-
-# reune com o dataframe original para trazer as demais colunas da linha da maior rodada
-df_max_rodada = df_max_rodada.merge(
-    partidas_model_df,
-    on=['edicao.temporada', 'time', 'rodada_num'],
-    how='left'
-).reset_index(drop=True)
-
-df_max_rodada = df_max_rodada[['edicao.temporada', 'time', 'media_gols_marcados', 'media_gols_sofridos', 'pontos', 
-                               'pontos_time', 'jogos', 'pontos_acumulados', 'aproveitamento', 'pontos_recentes',
-                               'jogos_validos', 'aproveitamento_recente', 'confronto_recente']]
-
-partidas_agendadas_df = partidas_agendadas_df.merge(df_max_rodada, on=['edicao.temporada', 'time'], how='left')
-
-df_max_rodada.rename(columns={
-    'time': 'adversario',
-    'media_gols_marcados': 'media_gols_marcados_adversario',
-    'media_gols_sofridos': 'media_gols_sofridos_adversario',
-    'pontos_time': 'pontos_adversario',
-    'aproveitamento': 'aproveitamento_adversario',
-    'aproveitamento_recente': 'aproveitamento_recente_adversario',
-    'confronto_recente': 'confronto_recente_adversario',
-    }, inplace=True)
-df_max_rodada.drop(columns=['pontos', 'jogos', 'pontos_acumulados', 'pontos_recentes', 'jogos_validos',], inplace=True)
-
-partidas_agendadas_df = partidas_agendadas_df.merge(df_max_rodada, on=['edicao.temporada', 'adversario'], how='left')
-
-###########################
-# df para aplicar modelos #
-###########################
-partidas_model_df = pd.concat([partidas_model_df, partidas_agendadas_df], ignore_index=True)
-
-colunas_descartar_partidas = ['rodada', 'estadio.nome_popular', 'edicao.edicao_id',
-                              'ano-rodada', 'edicao.nome_popular', 'campeonato.campeonato_id',
-                              'campeonato.nome', 'campeonato.slug',
-                              'jogos', 'pontos_acumulados', "pontos_validos", "pontos_recentes", 
-                              "jogos_validos", "pontos_shifted",
-                              ]
-partidas_model_final_df = partidas_model_df.drop(columns=[c for c in colunas_descartar_partidas if c in partidas_model_df.columns])
-
-partidas_finalizadas_df = partidas_model_final_df[(partidas_model_final_df['status'] != 'agendado') &
-                                                #   (partidas_model_final_df['mandante'] == 1) &
-                                                  (partidas_model_final_df['edicao.temporada'] == partidas_model_final_df['edicao.temporada'].max())
-                                                  ]
-# remove rodada 1 (sem dados anteriores)
-partidas_model_final_df = partidas_model_final_df[partidas_model_final_df["rodada_num"] != 1].reset_index(drop=True)
+    return partidas_model_final_df
 
 
 
@@ -461,7 +506,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 warnings.filterwarnings('ignore')
 
-def executar_modelo():
+def executar_modelo(partidas_model_final_df):
     # filtra apenas partidas realizadas
     df = partidas_model_final_df[(partidas_model_final_df["status"] != "agendado")].copy()
 
@@ -725,4 +770,5 @@ def executar_modelo():
     partidas_df.to_csv("partidas-modelos.csv", index=False)
 
 if __name__ == "__main__":
-    executar_modelo()
+    df = tratar()
+    executar_modelo(df)

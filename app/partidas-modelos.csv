@@ -227,37 +227,37 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 12,Previsto,Sim,Botafogo,Mirassol,Vitória,100.0,LogisticRegression_MCCV
 12,Finalizado,Sim,Bragantino,Bahia,Derrota,,
 12,Previsto,Não,Ceará,Fluminense,Derrota,,RandomForest_LOSO
-12,Previsto,Não,Ceará,Fluminense,Derrota,77.60000000000001,RandomForest_MCCV
+12,Previsto,Não,Ceará,Fluminense,Derrota,82.19999999999999,RandomForest_MCCV
 12,Previsto,Não,Ceará,Fluminense,Derrota,,LogisticRegression_LOSO
 12,Previsto,Não,Ceará,Fluminense,Derrota,100.0,LogisticRegression_MCCV
 12,Finalizado,Não,Corinthians,Grêmio,Empate,,
 12,Finalizado,Não,Cruzeiro,Vitória,Empate,,
-12,Previsto,Não,Flamengo,Sport,Vitória,,RandomForest_LOSO
-12,Previsto,Não,Flamengo,Sport,Empate,45.800000000000004,RandomForest_MCCV
+12,Previsto,Não,Flamengo,Sport,Empate,,RandomForest_LOSO
+12,Previsto,Não,Flamengo,Sport,Empate,47.4,RandomForest_MCCV
 12,Previsto,Não,Flamengo,Sport,Derrota,,LogisticRegression_LOSO
 12,Previsto,Não,Flamengo,Sport,Derrota,100.0,LogisticRegression_MCCV
 12,Previsto,Sim,Fluminense,Ceará,Vitória,,RandomForest_LOSO
-12,Previsto,Sim,Fluminense,Ceará,Vitória,82.0,RandomForest_MCCV
+12,Previsto,Sim,Fluminense,Ceará,Vitória,77.10000000000001,RandomForest_MCCV
 12,Previsto,Sim,Fluminense,Ceará,Vitória,,LogisticRegression_LOSO
 12,Previsto,Sim,Fluminense,Ceará,Vitória,100.0,LogisticRegression_MCCV
 12,Finalizado,Sim,Fortaleza,Santos,Derrota,,
 12,Finalizado,Sim,Grêmio,Corinthians,Empate,,
 12,Finalizado,Não,Internacional,Atlético-MG,Derrota,,
 12,Previsto,Não,Juventude,Palmeiras,Vitória,,RandomForest_LOSO
-12,Previsto,Não,Juventude,Palmeiras,Vitória,67.30000000000001,RandomForest_MCCV
+12,Previsto,Não,Juventude,Palmeiras,Vitória,67.9,RandomForest_MCCV
 12,Previsto,Não,Juventude,Palmeiras,Derrota,,LogisticRegression_LOSO
-12,Previsto,Não,Juventude,Palmeiras,Derrota,95.8,LogisticRegression_MCCV
+12,Previsto,Não,Juventude,Palmeiras,Derrota,94.6,LogisticRegression_MCCV
 12,Previsto,Não,Mirassol,Botafogo,Derrota,,RandomForest_LOSO
 12,Previsto,Não,Mirassol,Botafogo,Derrota,100.0,RandomForest_MCCV
 12,Previsto,Não,Mirassol,Botafogo,Derrota,,LogisticRegression_LOSO
 12,Previsto,Não,Mirassol,Botafogo,Derrota,100.0,LogisticRegression_MCCV
 12,Previsto,Sim,Palmeiras,Juventude,Derrota,,RandomForest_LOSO
-12,Previsto,Sim,Palmeiras,Juventude,Derrota,68.0,RandomForest_MCCV
+12,Previsto,Sim,Palmeiras,Juventude,Derrota,69.39999999999999,RandomForest_MCCV
 12,Previsto,Sim,Palmeiras,Juventude,Vitória,,LogisticRegression_LOSO
-12,Previsto,Sim,Palmeiras,Juventude,Vitória,94.5,LogisticRegression_MCCV
+12,Previsto,Sim,Palmeiras,Juventude,Vitória,95.39999999999999,LogisticRegression_MCCV
 12,Finalizado,Não,Santos,Fortaleza,Vitória,,
 12,Previsto,Sim,Sport,Flamengo,Empate,,RandomForest_LOSO
-12,Previsto,Sim,Sport,Flamengo,Empate,49.9,RandomForest_MCCV
+12,Previsto,Sim,Sport,Flamengo,Empate,48.6,RandomForest_MCCV
 12,Previsto,Sim,Sport,Flamengo,Vitória,,LogisticRegression_LOSO
 12,Previsto,Sim,Sport,Flamengo,Vitória,100.0,LogisticRegression_MCCV
 12,Finalizado,Sim,São Paulo,Vasco,Derrota,,
@@ -272,7 +272,7 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 13,Finalizado,Sim,Cruzeiro,Grêmio,Vitória,,
 13,Finalizado,Sim,Flamengo,São Paulo,Vitória,,
 13,Previsto,Não,Fluminense,Mirassol,Derrota,,RandomForest_LOSO
-13,Previsto,Não,Fluminense,Mirassol,Derrota,95.8,RandomForest_MCCV
+13,Previsto,Não,Fluminense,Mirassol,Derrota,96.8,RandomForest_MCCV
 13,Previsto,Não,Fluminense,Mirassol,Derrota,,LogisticRegression_LOSO
 13,Previsto,Não,Fluminense,Mirassol,Derrota,100.0,LogisticRegression_MCCV
 13,Finalizado,Sim,Fortaleza,Ceará,Derrota,,
@@ -280,17 +280,17 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 13,Finalizado,Sim,Internacional,Vitória,Vitória,,
 13,Finalizado,Sim,Juventude,Sport,Vitória,,
 13,Previsto,Sim,Mirassol,Fluminense,Vitória,,RandomForest_LOSO
-13,Previsto,Sim,Mirassol,Fluminense,Vitória,96.2,RandomForest_MCCV
+13,Previsto,Sim,Mirassol,Fluminense,Vitória,96.7,RandomForest_MCCV
 13,Previsto,Sim,Mirassol,Fluminense,Vitória,,LogisticRegression_LOSO
-13,Previsto,Sim,Mirassol,Fluminense,Vitória,100.0,LogisticRegression_MCCV
+13,Previsto,Sim,Mirassol,Fluminense,Vitória,99.9,LogisticRegression_MCCV
 13,Previsto,Não,Palmeiras,Santos,Vitória,,RandomForest_LOSO
-13,Previsto,Não,Palmeiras,Santos,Vitória,64.4,RandomForest_MCCV
+13,Previsto,Não,Palmeiras,Santos,Vitória,65.3,RandomForest_MCCV
 13,Previsto,Não,Palmeiras,Santos,Derrota,,LogisticRegression_LOSO
-13,Previsto,Não,Palmeiras,Santos,Derrota,98.2,LogisticRegression_MCCV
+13,Previsto,Não,Palmeiras,Santos,Derrota,98.1,LogisticRegression_MCCV
 13,Previsto,Sim,Santos,Palmeiras,Derrota,,RandomForest_LOSO
-13,Previsto,Sim,Santos,Palmeiras,Derrota,64.2,RandomForest_MCCV
+13,Previsto,Sim,Santos,Palmeiras,Derrota,65.5,RandomForest_MCCV
 13,Previsto,Sim,Santos,Palmeiras,Vitória,,LogisticRegression_LOSO
-13,Previsto,Sim,Santos,Palmeiras,Vitória,98.5,LogisticRegression_MCCV
+13,Previsto,Sim,Santos,Palmeiras,Vitória,97.89999999999999,LogisticRegression_MCCV
 13,Finalizado,Não,Sport,Juventude,Derrota,,
 13,Finalizado,Não,São Paulo,Flamengo,Derrota,,
 13,Finalizado,Sim,Vasco,Botafogo,Derrota,,
@@ -300,7 +300,7 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 14,Previsto,Sim,Atlético-MG,Sport,Vitória,,LogisticRegression_LOSO
 14,Previsto,Sim,Atlético-MG,Sport,Vitória,100.0,LogisticRegression_MCCV
 14,Previsto,Sim,Bahia,Internacional,Vitória,,RandomForest_LOSO
-14,Previsto,Sim,Bahia,Internacional,Vitória,90.9,RandomForest_MCCV
+14,Previsto,Sim,Bahia,Internacional,Vitória,88.9,RandomForest_MCCV
 14,Previsto,Sim,Bahia,Internacional,Vitória,,LogisticRegression_LOSO
 14,Previsto,Sim,Bahia,Internacional,Vitória,100.0,LogisticRegression_MCCV
 14,Finalizado,Sim,Botafogo,Vitória,Empate,,
@@ -313,7 +313,7 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 14,Finalizado,Não,Fortaleza,Grêmio,Derrota,,
 14,Finalizado,Sim,Grêmio,Fortaleza,Vitória,,
 14,Previsto,Não,Internacional,Bahia,Derrota,,RandomForest_LOSO
-14,Previsto,Não,Internacional,Bahia,Derrota,89.7,RandomForest_MCCV
+14,Previsto,Não,Internacional,Bahia,Derrota,91.4,RandomForest_MCCV
 14,Previsto,Não,Internacional,Bahia,Derrota,,LogisticRegression_LOSO
 14,Previsto,Não,Internacional,Bahia,Derrota,100.0,LogisticRegression_MCCV
 14,Finalizado,Sim,Juventude,Vasco,Vitória,,
@@ -348,31 +348,31 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 15,Finalizado,Sim,Vasco,Grêmio,Empate,,
 15,Finalizado,Sim,Vitória,Bragantino,Vitória,,
 16,Previsto,Sim,Atlético-MG,Fortaleza,Derrota,,RandomForest_LOSO
-16,Previsto,Sim,Atlético-MG,Fortaleza,Vitória,47.199999999999996,RandomForest_MCCV
+16,Previsto,Sim,Atlético-MG,Fortaleza,Vitória,47.3,RandomForest_MCCV
 16,Previsto,Sim,Atlético-MG,Fortaleza,Vitória,,LogisticRegression_LOSO
-16,Previsto,Sim,Atlético-MG,Fortaleza,Vitória,98.2,LogisticRegression_MCCV
-16,Previsto,Não,Bahia,Vasco,Vitória,,RandomForest_LOSO
-16,Previsto,Não,Bahia,Vasco,Empate,71.89999999999999,RandomForest_MCCV
+16,Previsto,Sim,Atlético-MG,Fortaleza,Vitória,97.89999999999999,LogisticRegression_MCCV
+16,Previsto,Não,Bahia,Vasco,Empate,,RandomForest_LOSO
+16,Previsto,Não,Bahia,Vasco,Empate,72.1,RandomForest_MCCV
 16,Previsto,Não,Bahia,Vasco,Vitória,,LogisticRegression_LOSO
 16,Previsto,Não,Bahia,Vasco,Vitória,100.0,LogisticRegression_MCCV
 16,Previsto,Não,Botafogo,Grêmio,Derrota,,RandomForest_LOSO
-16,Previsto,Não,Botafogo,Grêmio,Derrota,94.69999999999999,RandomForest_MCCV
+16,Previsto,Não,Botafogo,Grêmio,Derrota,95.1,RandomForest_MCCV
 16,Previsto,Não,Botafogo,Grêmio,Derrota,,LogisticRegression_LOSO
-16,Previsto,Não,Botafogo,Grêmio,Derrota,97.39999999999999,LogisticRegression_MCCV
+16,Previsto,Não,Botafogo,Grêmio,Derrota,97.7,LogisticRegression_MCCV
 16,Finalizado,Sim,Bragantino,Flamengo,Derrota,,
 16,Finalizado,Sim,Ceará,Mirassol,Derrota,,
 16,Finalizado,Sim,Corinthians,Cruzeiro,Empate,,
 16,Finalizado,Não,Cruzeiro,Corinthians,Empate,,
 16,Finalizado,Não,Flamengo,Bragantino,Vitória,,
 16,Finalizado,Sim,Fluminense,Palmeiras,Derrota,,
-16,Previsto,Não,Fortaleza,Atlético-MG,Derrota,,RandomForest_LOSO
-16,Previsto,Não,Fortaleza,Atlético-MG,Derrota,53.400000000000006,RandomForest_MCCV
+16,Previsto,Não,Fortaleza,Atlético-MG,Empate,,RandomForest_LOSO
+16,Previsto,Não,Fortaleza,Atlético-MG,Derrota,50.8,RandomForest_MCCV
 16,Previsto,Não,Fortaleza,Atlético-MG,Derrota,,LogisticRegression_LOSO
-16,Previsto,Não,Fortaleza,Atlético-MG,Derrota,98.2,LogisticRegression_MCCV
+16,Previsto,Não,Fortaleza,Atlético-MG,Derrota,98.1,LogisticRegression_MCCV
 16,Previsto,Sim,Grêmio,Botafogo,Vitória,,RandomForest_LOSO
-16,Previsto,Sim,Grêmio,Botafogo,Vitória,95.3,RandomForest_MCCV
+16,Previsto,Sim,Grêmio,Botafogo,Vitória,94.69999999999999,RandomForest_MCCV
 16,Previsto,Sim,Grêmio,Botafogo,Vitória,,LogisticRegression_LOSO
-16,Previsto,Sim,Grêmio,Botafogo,Vitória,97.5,LogisticRegression_MCCV
+16,Previsto,Sim,Grêmio,Botafogo,Vitória,97.8,LogisticRegression_MCCV
 16,Finalizado,Não,Internacional,Santos,Vitória,,
 16,Finalizado,Sim,Juventude,São Paulo,Derrota,,
 16,Finalizado,Não,Mirassol,Ceará,Vitória,,
@@ -381,7 +381,7 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 16,Finalizado,Não,Sport,Vitória,Empate,,
 16,Finalizado,Não,São Paulo,Juventude,Vitória,,
 16,Previsto,Sim,Vasco,Bahia,Empate,,RandomForest_LOSO
-16,Previsto,Sim,Vasco,Bahia,Empate,71.0,RandomForest_MCCV
+16,Previsto,Sim,Vasco,Bahia,Empate,71.89999999999999,RandomForest_MCCV
 16,Previsto,Sim,Vasco,Bahia,Derrota,,LogisticRegression_LOSO
 16,Previsto,Sim,Vasco,Bahia,Derrota,100.0,LogisticRegression_MCCV
 16,Finalizado,Sim,Vitória,Sport,Empate,,
@@ -505,20 +505,20 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 22,Finalizado,Não,São Paulo,Cruzeiro,Derrota,,
 22,Finalizado,Não,Vasco,Sport,Vitória,,
 22,Finalizado,Sim,Vitória,Atlético-MG,Vitória,,
-23,Previsto,Sim,Atlético-MG,Santos,Empate,,RandomForest_LOSO
-23,Previsto,Sim,Atlético-MG,Santos,Empate,53.2,RandomForest_MCCV
+23,Previsto,Sim,Atlético-MG,Santos,Derrota,,RandomForest_LOSO
+23,Previsto,Sim,Atlético-MG,Santos,Empate,55.2,RandomForest_MCCV
 23,Previsto,Sim,Atlético-MG,Santos,Vitória,,LogisticRegression_LOSO
-23,Previsto,Sim,Atlético-MG,Santos,Vitória,54.50000000000001,LogisticRegression_MCCV
+23,Previsto,Sim,Atlético-MG,Santos,Vitória,55.00000000000001,LogisticRegression_MCCV
 23,Previsto,Sim,Bahia,Cruzeiro,Vitória,,RandomForest_LOSO
 23,Previsto,Sim,Bahia,Cruzeiro,Vitória,100.0,RandomForest_MCCV
 23,Previsto,Sim,Bahia,Cruzeiro,Vitória,,LogisticRegression_LOSO
 23,Previsto,Sim,Bahia,Cruzeiro,Vitória,100.0,LogisticRegression_MCCV
-23,Previsto,Não,Botafogo,São Paulo,Vitória,,RandomForest_LOSO
-23,Previsto,Não,Botafogo,São Paulo,Derrota,48.3,RandomForest_MCCV
+23,Previsto,Não,Botafogo,São Paulo,Derrota,,RandomForest_LOSO
+23,Previsto,Não,Botafogo,São Paulo,Derrota,50.3,RandomForest_MCCV
 23,Previsto,Não,Botafogo,São Paulo,Derrota,,LogisticRegression_LOSO
-23,Previsto,Não,Botafogo,São Paulo,Derrota,99.7,LogisticRegression_MCCV
+23,Previsto,Não,Botafogo,São Paulo,Derrota,99.9,LogisticRegression_MCCV
 23,Previsto,Sim,Bragantino,Sport,Vitória,,RandomForest_LOSO
-23,Previsto,Sim,Bragantino,Sport,Vitória,98.2,RandomForest_MCCV
+23,Previsto,Sim,Bragantino,Sport,Vitória,97.3,RandomForest_MCCV
 23,Previsto,Sim,Bragantino,Sport,Vitória,,LogisticRegression_LOSO
 23,Previsto,Sim,Bragantino,Sport,Vitória,100.0,LogisticRegression_MCCV
 23,Previsto,Não,Ceará,Vasco,Derrota,,RandomForest_LOSO
@@ -534,15 +534,15 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 23,Previsto,Não,Cruzeiro,Bahia,Derrota,,LogisticRegression_LOSO
 23,Previsto,Não,Cruzeiro,Bahia,Derrota,100.0,LogisticRegression_MCCV
 23,Previsto,Não,Flamengo,Juventude,Vitória,,RandomForest_LOSO
-23,Previsto,Não,Flamengo,Juventude,Empate,53.0,RandomForest_MCCV
+23,Previsto,Não,Flamengo,Juventude,Empate,53.400000000000006,RandomForest_MCCV
 23,Previsto,Não,Flamengo,Juventude,Vitória,,LogisticRegression_LOSO
-23,Previsto,Não,Flamengo,Juventude,Vitória,50.0,LogisticRegression_MCCV
+23,Previsto,Não,Flamengo,Juventude,Vitória,51.800000000000004,LogisticRegression_MCCV
 23,Previsto,Sim,Fluminense,Corinthians,Vitória,,RandomForest_LOSO
 23,Previsto,Sim,Fluminense,Corinthians,Vitória,100.0,RandomForest_MCCV
 23,Previsto,Sim,Fluminense,Corinthians,Vitória,,LogisticRegression_LOSO
 23,Previsto,Sim,Fluminense,Corinthians,Vitória,100.0,LogisticRegression_MCCV
-23,Previsto,Sim,Fortaleza,Vitória,Vitória,,RandomForest_LOSO
-23,Previsto,Sim,Fortaleza,Vitória,Derrota,51.4,RandomForest_MCCV
+23,Previsto,Sim,Fortaleza,Vitória,Derrota,,RandomForest_LOSO
+23,Previsto,Sim,Fortaleza,Vitória,Derrota,51.7,RandomForest_MCCV
 23,Previsto,Sim,Fortaleza,Vitória,Vitória,,LogisticRegression_LOSO
 23,Previsto,Sim,Fortaleza,Vitória,Vitória,100.0,LogisticRegression_MCCV
 23,Previsto,Sim,Grêmio,Mirassol,Vitória,,RandomForest_LOSO
@@ -550,179 +550,179 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 23,Previsto,Sim,Grêmio,Mirassol,Vitória,,LogisticRegression_LOSO
 23,Previsto,Sim,Grêmio,Mirassol,Vitória,100.0,LogisticRegression_MCCV
 23,Previsto,Não,Internacional,Palmeiras,Derrota,,RandomForest_LOSO
-23,Previsto,Não,Internacional,Palmeiras,Derrota,84.5,RandomForest_MCCV
+23,Previsto,Não,Internacional,Palmeiras,Derrota,85.6,RandomForest_MCCV
 23,Previsto,Não,Internacional,Palmeiras,Derrota,,LogisticRegression_LOSO
-23,Previsto,Não,Internacional,Palmeiras,Derrota,79.7,LogisticRegression_MCCV
-23,Previsto,Sim,Juventude,Flamengo,Vitória,,RandomForest_LOSO
-23,Previsto,Sim,Juventude,Flamengo,Empate,50.3,RandomForest_MCCV
+23,Previsto,Não,Internacional,Palmeiras,Derrota,78.2,LogisticRegression_MCCV
+23,Previsto,Sim,Juventude,Flamengo,Empate,,RandomForest_LOSO
+23,Previsto,Sim,Juventude,Flamengo,Empate,53.7,RandomForest_MCCV
 23,Previsto,Sim,Juventude,Flamengo,Derrota,,LogisticRegression_LOSO
-23,Previsto,Sim,Juventude,Flamengo,Derrota,51.9,LogisticRegression_MCCV
+23,Previsto,Sim,Juventude,Flamengo,Derrota,52.7,LogisticRegression_MCCV
 23,Previsto,Não,Mirassol,Grêmio,Derrota,,RandomForest_LOSO
 23,Previsto,Não,Mirassol,Grêmio,Derrota,100.0,RandomForest_MCCV
 23,Previsto,Não,Mirassol,Grêmio,Derrota,,LogisticRegression_LOSO
 23,Previsto,Não,Mirassol,Grêmio,Derrota,100.0,LogisticRegression_MCCV
 23,Previsto,Sim,Palmeiras,Internacional,Vitória,,RandomForest_LOSO
-23,Previsto,Sim,Palmeiras,Internacional,Vitória,83.5,RandomForest_MCCV
+23,Previsto,Sim,Palmeiras,Internacional,Vitória,83.3,RandomForest_MCCV
 23,Previsto,Sim,Palmeiras,Internacional,Vitória,,LogisticRegression_LOSO
-23,Previsto,Sim,Palmeiras,Internacional,Vitória,79.3,LogisticRegression_MCCV
+23,Previsto,Sim,Palmeiras,Internacional,Vitória,78.8,LogisticRegression_MCCV
 23,Previsto,Não,Santos,Atlético-MG,Empate,,RandomForest_LOSO
-23,Previsto,Não,Santos,Atlético-MG,Empate,54.900000000000006,RandomForest_MCCV
+23,Previsto,Não,Santos,Atlético-MG,Empate,61.1,RandomForest_MCCV
 23,Previsto,Não,Santos,Atlético-MG,Derrota,,LogisticRegression_LOSO
-23,Previsto,Não,Santos,Atlético-MG,Derrota,56.49999999999999,LogisticRegression_MCCV
+23,Previsto,Não,Santos,Atlético-MG,Derrota,54.900000000000006,LogisticRegression_MCCV
 23,Previsto,Não,Sport,Bragantino,Derrota,,RandomForest_LOSO
-23,Previsto,Não,Sport,Bragantino,Derrota,97.3,RandomForest_MCCV
+23,Previsto,Não,Sport,Bragantino,Derrota,97.2,RandomForest_MCCV
 23,Previsto,Não,Sport,Bragantino,Derrota,,LogisticRegression_LOSO
 23,Previsto,Não,Sport,Bragantino,Derrota,100.0,LogisticRegression_MCCV
 23,Previsto,Sim,São Paulo,Botafogo,Derrota,,RandomForest_LOSO
-23,Previsto,Sim,São Paulo,Botafogo,Vitória,48.199999999999996,RandomForest_MCCV
+23,Previsto,Sim,São Paulo,Botafogo,Vitória,45.800000000000004,RandomForest_MCCV
 23,Previsto,Sim,São Paulo,Botafogo,Vitória,,LogisticRegression_LOSO
-23,Previsto,Sim,São Paulo,Botafogo,Vitória,100.0,LogisticRegression_MCCV
+23,Previsto,Sim,São Paulo,Botafogo,Vitória,99.6,LogisticRegression_MCCV
 23,Previsto,Sim,Vasco,Ceará,Vitória,,RandomForest_LOSO
 23,Previsto,Sim,Vasco,Ceará,Vitória,100.0,RandomForest_MCCV
 23,Previsto,Sim,Vasco,Ceará,Vitória,,LogisticRegression_LOSO
 23,Previsto,Sim,Vasco,Ceará,Vitória,100.0,LogisticRegression_MCCV
-23,Previsto,Não,Vitória,Fortaleza,Vitória,,RandomForest_LOSO
-23,Previsto,Não,Vitória,Fortaleza,Derrota,50.6,RandomForest_MCCV
+23,Previsto,Não,Vitória,Fortaleza,Derrota,,RandomForest_LOSO
+23,Previsto,Não,Vitória,Fortaleza,Derrota,49.8,RandomForest_MCCV
 23,Previsto,Não,Vitória,Fortaleza,Derrota,,LogisticRegression_LOSO
 23,Previsto,Não,Vitória,Fortaleza,Derrota,100.0,LogisticRegression_MCCV
 24,Previsto,Não,Atlético-MG,Botafogo,Vitória,,RandomForest_LOSO
-24,Previsto,Não,Atlético-MG,Botafogo,Vitória,91.7,RandomForest_MCCV
+24,Previsto,Não,Atlético-MG,Botafogo,Vitória,91.60000000000001,RandomForest_MCCV
 24,Previsto,Não,Atlético-MG,Botafogo,Empate,,LogisticRegression_LOSO
-24,Previsto,Não,Atlético-MG,Botafogo,Empate,89.9,LogisticRegression_MCCV
+24,Previsto,Não,Atlético-MG,Botafogo,Empate,89.3,LogisticRegression_MCCV
 24,Previsto,Não,Bahia,Ceará,Derrota,,RandomForest_LOSO
-24,Previsto,Não,Bahia,Ceará,Derrota,100.0,RandomForest_MCCV
+24,Previsto,Não,Bahia,Ceará,Derrota,99.9,RandomForest_MCCV
 24,Previsto,Não,Bahia,Ceará,Derrota,,LogisticRegression_LOSO
 24,Previsto,Não,Bahia,Ceará,Derrota,100.0,LogisticRegression_MCCV
 24,Previsto,Sim,Botafogo,Atlético-MG,Derrota,,RandomForest_LOSO
-24,Previsto,Sim,Botafogo,Atlético-MG,Derrota,91.4,RandomForest_MCCV
+24,Previsto,Sim,Botafogo,Atlético-MG,Derrota,92.10000000000001,RandomForest_MCCV
 24,Previsto,Sim,Botafogo,Atlético-MG,Empate,,LogisticRegression_LOSO
-24,Previsto,Sim,Botafogo,Atlético-MG,Empate,89.2,LogisticRegression_MCCV
+24,Previsto,Sim,Botafogo,Atlético-MG,Empate,89.7,LogisticRegression_MCCV
 24,Previsto,Não,Bragantino,Cruzeiro,Derrota,,RandomForest_LOSO
-24,Previsto,Não,Bragantino,Cruzeiro,Derrota,76.1,RandomForest_MCCV
+24,Previsto,Não,Bragantino,Cruzeiro,Derrota,78.60000000000001,RandomForest_MCCV
 24,Previsto,Não,Bragantino,Cruzeiro,Derrota,,LogisticRegression_LOSO
-24,Previsto,Não,Bragantino,Cruzeiro,Derrota,92.80000000000001,LogisticRegression_MCCV
+24,Previsto,Não,Bragantino,Cruzeiro,Derrota,91.2,LogisticRegression_MCCV
 24,Previsto,Sim,Ceará,Bahia,Vitória,,RandomForest_LOSO
 24,Previsto,Sim,Ceará,Bahia,Vitória,100.0,RandomForest_MCCV
 24,Previsto,Sim,Ceará,Bahia,Vitória,,LogisticRegression_LOSO
 24,Previsto,Sim,Ceará,Bahia,Vitória,100.0,LogisticRegression_MCCV
 24,Previsto,Não,Corinthians,Sport,Derrota,,RandomForest_LOSO
-24,Previsto,Não,Corinthians,Sport,Derrota,71.39999999999999,RandomForest_MCCV
+24,Previsto,Não,Corinthians,Sport,Derrota,67.2,RandomForest_MCCV
 24,Previsto,Não,Corinthians,Sport,Derrota,,LogisticRegression_LOSO
 24,Previsto,Não,Corinthians,Sport,Derrota,100.0,LogisticRegression_MCCV
 24,Previsto,Sim,Cruzeiro,Bragantino,Vitória,,RandomForest_LOSO
 24,Previsto,Sim,Cruzeiro,Bragantino,Vitória,73.9,RandomForest_MCCV
 24,Previsto,Sim,Cruzeiro,Bragantino,Vitória,,LogisticRegression_LOSO
-24,Previsto,Sim,Cruzeiro,Bragantino,Vitória,90.5,LogisticRegression_MCCV
+24,Previsto,Sim,Cruzeiro,Bragantino,Vitória,91.5,LogisticRegression_MCCV
 24,Previsto,Sim,Flamengo,Vasco,Vitória,,RandomForest_LOSO
-24,Previsto,Sim,Flamengo,Vasco,Vitória,62.8,RandomForest_MCCV
+24,Previsto,Sim,Flamengo,Vasco,Vitória,61.8,RandomForest_MCCV
 24,Previsto,Sim,Flamengo,Vasco,Empate,,LogisticRegression_LOSO
-24,Previsto,Sim,Flamengo,Vasco,Empate,95.89999999999999,LogisticRegression_MCCV
+24,Previsto,Sim,Flamengo,Vasco,Empate,95.1,LogisticRegression_MCCV
 24,Previsto,Não,Fluminense,Vitória,Empate,,RandomForest_LOSO
-24,Previsto,Não,Fluminense,Vitória,Empate,95.6,RandomForest_MCCV
+24,Previsto,Não,Fluminense,Vitória,Empate,96.5,RandomForest_MCCV
 24,Previsto,Não,Fluminense,Vitória,Vitória,,LogisticRegression_LOSO
-24,Previsto,Não,Fluminense,Vitória,Vitória,99.8,LogisticRegression_MCCV
+24,Previsto,Não,Fluminense,Vitória,Vitória,100.0,LogisticRegression_MCCV
 24,Previsto,Não,Fortaleza,Palmeiras,Vitória,,RandomForest_LOSO
-24,Previsto,Não,Fortaleza,Palmeiras,Vitória,80.4,RandomForest_MCCV
+24,Previsto,Não,Fortaleza,Palmeiras,Vitória,81.2,RandomForest_MCCV
 24,Previsto,Não,Fortaleza,Palmeiras,Vitória,,LogisticRegression_LOSO
-24,Previsto,Não,Fortaleza,Palmeiras,Vitória,93.89999999999999,LogisticRegression_MCCV
+24,Previsto,Não,Fortaleza,Palmeiras,Vitória,94.19999999999999,LogisticRegression_MCCV
 24,Previsto,Não,Grêmio,Internacional,Vitória,,RandomForest_LOSO
-24,Previsto,Não,Grêmio,Internacional,Vitória,74.7,RandomForest_MCCV
+24,Previsto,Não,Grêmio,Internacional,Vitória,74.4,RandomForest_MCCV
 24,Previsto,Não,Grêmio,Internacional,Derrota,,LogisticRegression_LOSO
-24,Previsto,Não,Grêmio,Internacional,Derrota,99.1,LogisticRegression_MCCV
+24,Previsto,Não,Grêmio,Internacional,Derrota,99.7,LogisticRegression_MCCV
 24,Previsto,Sim,Internacional,Grêmio,Derrota,,RandomForest_LOSO
-24,Previsto,Sim,Internacional,Grêmio,Derrota,76.7,RandomForest_MCCV
+24,Previsto,Sim,Internacional,Grêmio,Derrota,77.60000000000001,RandomForest_MCCV
 24,Previsto,Sim,Internacional,Grêmio,Vitória,,LogisticRegression_LOSO
-24,Previsto,Sim,Internacional,Grêmio,Vitória,98.9,LogisticRegression_MCCV
+24,Previsto,Sim,Internacional,Grêmio,Vitória,98.4,LogisticRegression_MCCV
 24,Previsto,Não,Juventude,Mirassol,Derrota,,RandomForest_LOSO
-24,Previsto,Não,Juventude,Mirassol,Derrota,87.3,RandomForest_MCCV
+24,Previsto,Não,Juventude,Mirassol,Derrota,89.9,RandomForest_MCCV
 24,Previsto,Não,Juventude,Mirassol,Derrota,,LogisticRegression_LOSO
 24,Previsto,Não,Juventude,Mirassol,Derrota,100.0,LogisticRegression_MCCV
 24,Previsto,Sim,Mirassol,Juventude,Vitória,,RandomForest_LOSO
-24,Previsto,Sim,Mirassol,Juventude,Vitória,87.7,RandomForest_MCCV
+24,Previsto,Sim,Mirassol,Juventude,Vitória,88.6,RandomForest_MCCV
 24,Previsto,Sim,Mirassol,Juventude,Vitória,,LogisticRegression_LOSO
 24,Previsto,Sim,Mirassol,Juventude,Vitória,100.0,LogisticRegression_MCCV
 24,Previsto,Sim,Palmeiras,Fortaleza,Derrota,,RandomForest_LOSO
-24,Previsto,Sim,Palmeiras,Fortaleza,Derrota,77.8,RandomForest_MCCV
+24,Previsto,Sim,Palmeiras,Fortaleza,Derrota,83.6,RandomForest_MCCV
 24,Previsto,Sim,Palmeiras,Fortaleza,Derrota,,LogisticRegression_LOSO
-24,Previsto,Sim,Palmeiras,Fortaleza,Derrota,93.8,LogisticRegression_MCCV
+24,Previsto,Sim,Palmeiras,Fortaleza,Derrota,94.19999999999999,LogisticRegression_MCCV
 24,Previsto,Sim,Santos,São Paulo,Derrota,,RandomForest_LOSO
-24,Previsto,Sim,Santos,São Paulo,Derrota,92.9,RandomForest_MCCV
+24,Previsto,Sim,Santos,São Paulo,Derrota,93.0,RandomForest_MCCV
 24,Previsto,Sim,Santos,São Paulo,Vitória,,LogisticRegression_LOSO
-24,Previsto,Sim,Santos,São Paulo,Vitória,99.5,LogisticRegression_MCCV
-24,Previsto,Sim,Sport,Corinthians,Empate,,RandomForest_LOSO
-24,Previsto,Sim,Sport,Corinthians,Vitória,68.8,RandomForest_MCCV
+24,Previsto,Sim,Santos,São Paulo,Vitória,99.7,LogisticRegression_MCCV
+24,Previsto,Sim,Sport,Corinthians,Vitória,,RandomForest_LOSO
+24,Previsto,Sim,Sport,Corinthians,Vitória,65.5,RandomForest_MCCV
 24,Previsto,Sim,Sport,Corinthians,Vitória,,LogisticRegression_LOSO
 24,Previsto,Sim,Sport,Corinthians,Vitória,100.0,LogisticRegression_MCCV
 24,Previsto,Não,São Paulo,Santos,Vitória,,RandomForest_LOSO
-24,Previsto,Não,São Paulo,Santos,Vitória,92.10000000000001,RandomForest_MCCV
+24,Previsto,Não,São Paulo,Santos,Vitória,92.60000000000001,RandomForest_MCCV
 24,Previsto,Não,São Paulo,Santos,Derrota,,LogisticRegression_LOSO
-24,Previsto,Não,São Paulo,Santos,Derrota,99.5,LogisticRegression_MCCV
+24,Previsto,Não,São Paulo,Santos,Derrota,99.4,LogisticRegression_MCCV
 24,Previsto,Não,Vasco,Flamengo,Derrota,,RandomForest_LOSO
-24,Previsto,Não,Vasco,Flamengo,Derrota,68.4,RandomForest_MCCV
+24,Previsto,Não,Vasco,Flamengo,Derrota,67.30000000000001,RandomForest_MCCV
 24,Previsto,Não,Vasco,Flamengo,Empate,,LogisticRegression_LOSO
-24,Previsto,Não,Vasco,Flamengo,Empate,96.3,LogisticRegression_MCCV
+24,Previsto,Não,Vasco,Flamengo,Empate,96.39999999999999,LogisticRegression_MCCV
 24,Previsto,Sim,Vitória,Fluminense,Empate,,RandomForest_LOSO
-24,Previsto,Sim,Vitória,Fluminense,Empate,96.7,RandomForest_MCCV
+24,Previsto,Sim,Vitória,Fluminense,Empate,96.8,RandomForest_MCCV
 24,Previsto,Sim,Vitória,Fluminense,Derrota,,LogisticRegression_LOSO
-24,Previsto,Sim,Vitória,Fluminense,Derrota,99.8,LogisticRegression_MCCV
-25,Previsto,Sim,Atlético-MG,Mirassol,Empate,,RandomForest_LOSO
-25,Previsto,Sim,Atlético-MG,Mirassol,Empate,52.7,RandomForest_MCCV
+24,Previsto,Sim,Vitória,Fluminense,Derrota,100.0,LogisticRegression_MCCV
+25,Previsto,Sim,Atlético-MG,Mirassol,Vitória,,RandomForest_LOSO
+25,Previsto,Sim,Atlético-MG,Mirassol,Empate,53.800000000000004,RandomForest_MCCV
 25,Previsto,Sim,Atlético-MG,Mirassol,Vitória,,LogisticRegression_LOSO
 25,Previsto,Sim,Atlético-MG,Mirassol,Vitória,100.0,LogisticRegression_MCCV
-25,Previsto,Sim,Bahia,Palmeiras,Vitória,,RandomForest_LOSO
-25,Previsto,Sim,Bahia,Palmeiras,Vitória,56.2,RandomForest_MCCV
+25,Previsto,Sim,Bahia,Palmeiras,Derrota,,RandomForest_LOSO
+25,Previsto,Sim,Bahia,Palmeiras,Vitória,55.7,RandomForest_MCCV
 25,Previsto,Sim,Bahia,Palmeiras,Vitória,,LogisticRegression_LOSO
 25,Previsto,Sim,Bahia,Palmeiras,Vitória,100.0,LogisticRegression_MCCV
 25,Previsto,Não,Botafogo,Fluminense,Vitória,,RandomForest_LOSO
-25,Previsto,Não,Botafogo,Fluminense,Vitória,74.0,RandomForest_MCCV
+25,Previsto,Não,Botafogo,Fluminense,Vitória,71.6,RandomForest_MCCV
 25,Previsto,Não,Botafogo,Fluminense,Derrota,,LogisticRegression_LOSO
-25,Previsto,Não,Botafogo,Fluminense,Derrota,96.6,LogisticRegression_MCCV
+25,Previsto,Não,Botafogo,Fluminense,Derrota,97.89999999999999,LogisticRegression_MCCV
 25,Previsto,Sim,Bragantino,Santos,Vitória,,RandomForest_LOSO
 25,Previsto,Sim,Bragantino,Santos,Vitória,100.0,RandomForest_MCCV
 25,Previsto,Sim,Bragantino,Santos,Vitória,,LogisticRegression_LOSO
 25,Previsto,Sim,Bragantino,Santos,Vitória,100.0,LogisticRegression_MCCV
-25,Previsto,Não,Ceará,São Paulo,Vitória,,RandomForest_LOSO
-25,Previsto,Não,Ceará,São Paulo,Vitória,57.8,RandomForest_MCCV
+25,Previsto,Não,Ceará,São Paulo,Derrota,,RandomForest_LOSO
+25,Previsto,Não,Ceará,São Paulo,Vitória,56.99999999999999,RandomForest_MCCV
 25,Previsto,Não,Ceará,São Paulo,Derrota,,LogisticRegression_LOSO
-25,Previsto,Não,Ceará,São Paulo,Derrota,99.9,LogisticRegression_MCCV
+25,Previsto,Não,Ceará,São Paulo,Derrota,100.0,LogisticRegression_MCCV
 25,Previsto,Sim,Corinthians,Flamengo,Vitória,,RandomForest_LOSO
-25,Previsto,Sim,Corinthians,Flamengo,Vitória,74.7,RandomForest_MCCV
+25,Previsto,Sim,Corinthians,Flamengo,Vitória,76.6,RandomForest_MCCV
 25,Previsto,Sim,Corinthians,Flamengo,Vitória,,LogisticRegression_LOSO
 25,Previsto,Sim,Corinthians,Flamengo,Vitória,100.0,LogisticRegression_MCCV
 25,Previsto,Não,Cruzeiro,Vasco,Derrota,,RandomForest_LOSO
-25,Previsto,Não,Cruzeiro,Vasco,Derrota,99.1,RandomForest_MCCV
+25,Previsto,Não,Cruzeiro,Vasco,Derrota,99.5,RandomForest_MCCV
 25,Previsto,Não,Cruzeiro,Vasco,Derrota,,LogisticRegression_LOSO
 25,Previsto,Não,Cruzeiro,Vasco,Derrota,100.0,LogisticRegression_MCCV
 25,Previsto,Não,Flamengo,Corinthians,Empate,,RandomForest_LOSO
-25,Previsto,Não,Flamengo,Corinthians,Derrota,78.60000000000001,RandomForest_MCCV
+25,Previsto,Não,Flamengo,Corinthians,Derrota,76.7,RandomForest_MCCV
 25,Previsto,Não,Flamengo,Corinthians,Derrota,,LogisticRegression_LOSO
 25,Previsto,Não,Flamengo,Corinthians,Derrota,100.0,LogisticRegression_MCCV
 25,Previsto,Sim,Fluminense,Botafogo,Derrota,,RandomForest_LOSO
-25,Previsto,Sim,Fluminense,Botafogo,Derrota,74.2,RandomForest_MCCV
+25,Previsto,Sim,Fluminense,Botafogo,Derrota,74.3,RandomForest_MCCV
 25,Previsto,Sim,Fluminense,Botafogo,Vitória,,LogisticRegression_LOSO
-25,Previsto,Sim,Fluminense,Botafogo,Vitória,96.39999999999999,LogisticRegression_MCCV
-25,Previsto,Sim,Fortaleza,Sport,Empate,,RandomForest_LOSO
-25,Previsto,Sim,Fortaleza,Sport,Derrota,63.4,RandomForest_MCCV
+25,Previsto,Sim,Fluminense,Botafogo,Vitória,96.0,LogisticRegression_MCCV
+25,Previsto,Sim,Fortaleza,Sport,Derrota,,RandomForest_LOSO
+25,Previsto,Sim,Fortaleza,Sport,Derrota,65.4,RandomForest_MCCV
 25,Previsto,Sim,Fortaleza,Sport,Derrota,,LogisticRegression_LOSO
-25,Previsto,Sim,Fortaleza,Sport,Derrota,86.4,LogisticRegression_MCCV
+25,Previsto,Sim,Fortaleza,Sport,Derrota,86.6,LogisticRegression_MCCV
 25,Previsto,Sim,Grêmio,Vitória,Vitória,,RandomForest_LOSO
-25,Previsto,Sim,Grêmio,Vitória,Vitória,99.6,RandomForest_MCCV
+25,Previsto,Sim,Grêmio,Vitória,Vitória,99.8,RandomForest_MCCV
 25,Previsto,Sim,Grêmio,Vitória,Vitória,,LogisticRegression_LOSO
 25,Previsto,Sim,Grêmio,Vitória,Vitória,100.0,LogisticRegression_MCCV
-25,Previsto,Não,Internacional,Juventude,Derrota,,RandomForest_LOSO
-25,Previsto,Não,Internacional,Juventude,Derrota,39.2,RandomForest_MCCV
+25,Previsto,Não,Internacional,Juventude,Vitória,,RandomForest_LOSO
+25,Previsto,Não,Internacional,Juventude,Vitória,38.1,RandomForest_MCCV
 25,Previsto,Não,Internacional,Juventude,Derrota,,LogisticRegression_LOSO
 25,Previsto,Não,Internacional,Juventude,Derrota,100.0,LogisticRegression_MCCV
-25,Previsto,Sim,Juventude,Internacional,Empate,,RandomForest_LOSO
-25,Previsto,Sim,Juventude,Internacional,Derrota,42.9,RandomForest_MCCV
+25,Previsto,Sim,Juventude,Internacional,Derrota,,RandomForest_LOSO
+25,Previsto,Sim,Juventude,Internacional,Derrota,45.1,RandomForest_MCCV
 25,Previsto,Sim,Juventude,Internacional,Vitória,,LogisticRegression_LOSO
 25,Previsto,Sim,Juventude,Internacional,Vitória,100.0,LogisticRegression_MCCV
-25,Previsto,Não,Mirassol,Atlético-MG,Empate,,RandomForest_LOSO
-25,Previsto,Não,Mirassol,Atlético-MG,Empate,53.2,RandomForest_MCCV
+25,Previsto,Não,Mirassol,Atlético-MG,Vitória,,RandomForest_LOSO
+25,Previsto,Não,Mirassol,Atlético-MG,Empate,52.7,RandomForest_MCCV
 25,Previsto,Não,Mirassol,Atlético-MG,Derrota,,LogisticRegression_LOSO
 25,Previsto,Não,Mirassol,Atlético-MG,Derrota,100.0,LogisticRegression_MCCV
 25,Previsto,Não,Palmeiras,Bahia,Derrota,,RandomForest_LOSO
-25,Previsto,Não,Palmeiras,Bahia,Derrota,56.8,RandomForest_MCCV
+25,Previsto,Não,Palmeiras,Bahia,Derrota,63.1,RandomForest_MCCV
 25,Previsto,Não,Palmeiras,Bahia,Derrota,,LogisticRegression_LOSO
 25,Previsto,Não,Palmeiras,Bahia,Derrota,100.0,LogisticRegression_MCCV
 25,Previsto,Não,Santos,Bragantino,Derrota,,RandomForest_LOSO
@@ -730,109 +730,109 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 25,Previsto,Não,Santos,Bragantino,Derrota,,LogisticRegression_LOSO
 25,Previsto,Não,Santos,Bragantino,Derrota,100.0,LogisticRegression_MCCV
 25,Previsto,Não,Sport,Fortaleza,Vitória,,RandomForest_LOSO
-25,Previsto,Não,Sport,Fortaleza,Vitória,59.599999999999994,RandomForest_MCCV
+25,Previsto,Não,Sport,Fortaleza,Vitória,62.4,RandomForest_MCCV
 25,Previsto,Não,Sport,Fortaleza,Vitória,,LogisticRegression_LOSO
-25,Previsto,Não,Sport,Fortaleza,Vitória,86.9,LogisticRegression_MCCV
+25,Previsto,Não,Sport,Fortaleza,Vitória,87.4,LogisticRegression_MCCV
 25,Previsto,Sim,São Paulo,Ceará,Derrota,,RandomForest_LOSO
-25,Previsto,Sim,São Paulo,Ceará,Derrota,56.8,RandomForest_MCCV
+25,Previsto,Sim,São Paulo,Ceará,Derrota,60.699999999999996,RandomForest_MCCV
 25,Previsto,Sim,São Paulo,Ceará,Vitória,,LogisticRegression_LOSO
 25,Previsto,Sim,São Paulo,Ceará,Vitória,100.0,LogisticRegression_MCCV
 25,Previsto,Sim,Vasco,Cruzeiro,Vitória,,RandomForest_LOSO
-25,Previsto,Sim,Vasco,Cruzeiro,Vitória,98.8,RandomForest_MCCV
+25,Previsto,Sim,Vasco,Cruzeiro,Vitória,98.7,RandomForest_MCCV
 25,Previsto,Sim,Vasco,Cruzeiro,Vitória,,LogisticRegression_LOSO
 25,Previsto,Sim,Vasco,Cruzeiro,Vitória,100.0,LogisticRegression_MCCV
 25,Previsto,Não,Vitória,Grêmio,Derrota,,RandomForest_LOSO
-25,Previsto,Não,Vitória,Grêmio,Derrota,100.0,RandomForest_MCCV
+25,Previsto,Não,Vitória,Grêmio,Derrota,99.7,RandomForest_MCCV
 25,Previsto,Não,Vitória,Grêmio,Derrota,,LogisticRegression_LOSO
 25,Previsto,Não,Vitória,Grêmio,Derrota,100.0,LogisticRegression_MCCV
 26,Previsto,Sim,Atlético-MG,Juventude,Derrota,,RandomForest_LOSO
-26,Previsto,Sim,Atlético-MG,Juventude,Derrota,98.2,RandomForest_MCCV
+26,Previsto,Sim,Atlético-MG,Juventude,Derrota,98.9,RandomForest_MCCV
 26,Previsto,Sim,Atlético-MG,Juventude,Vitória,,LogisticRegression_LOSO
-26,Previsto,Sim,Atlético-MG,Juventude,Vitória,81.0,LogisticRegression_MCCV
+26,Previsto,Sim,Atlético-MG,Juventude,Vitória,81.69999999999999,LogisticRegression_MCCV
 26,Previsto,Não,Bahia,Botafogo,Empate,,RandomForest_LOSO
-26,Previsto,Não,Bahia,Botafogo,Empate,68.7,RandomForest_MCCV
+26,Previsto,Não,Bahia,Botafogo,Empate,71.7,RandomForest_MCCV
 26,Previsto,Não,Bahia,Botafogo,Vitória,,LogisticRegression_LOSO
-26,Previsto,Não,Bahia,Botafogo,Vitória,84.5,LogisticRegression_MCCV
-26,Previsto,Sim,Botafogo,Bahia,Empate,,RandomForest_LOSO
-26,Previsto,Sim,Botafogo,Bahia,Empate,71.39999999999999,RandomForest_MCCV
+26,Previsto,Não,Bahia,Botafogo,Vitória,82.69999999999999,LogisticRegression_MCCV
+26,Previsto,Sim,Botafogo,Bahia,Vitória,,RandomForest_LOSO
+26,Previsto,Sim,Botafogo,Bahia,Empate,69.5,RandomForest_MCCV
 26,Previsto,Sim,Botafogo,Bahia,Derrota,,LogisticRegression_LOSO
-26,Previsto,Sim,Botafogo,Bahia,Derrota,83.3,LogisticRegression_MCCV
+26,Previsto,Sim,Botafogo,Bahia,Derrota,82.8,LogisticRegression_MCCV
 26,Previsto,Não,Bragantino,Mirassol,Derrota,,RandomForest_LOSO
-26,Previsto,Não,Bragantino,Mirassol,Derrota,64.60000000000001,RandomForest_MCCV
+26,Previsto,Não,Bragantino,Mirassol,Derrota,66.9,RandomForest_MCCV
 26,Previsto,Não,Bragantino,Mirassol,Derrota,,LogisticRegression_LOSO
 26,Previsto,Não,Bragantino,Mirassol,Derrota,100.0,LogisticRegression_MCCV
 26,Previsto,Não,Ceará,Vitória,Vitória,,RandomForest_LOSO
-26,Previsto,Não,Ceará,Vitória,Vitória,76.8,RandomForest_MCCV
+26,Previsto,Não,Ceará,Vitória,Vitória,77.4,RandomForest_MCCV
 26,Previsto,Não,Ceará,Vitória,Derrota,,LogisticRegression_LOSO
-26,Previsto,Não,Ceará,Vitória,Derrota,82.8,LogisticRegression_MCCV
+26,Previsto,Não,Ceará,Vitória,Derrota,83.6,LogisticRegression_MCCV
 26,Previsto,Não,Corinthians,Internacional,Derrota,,RandomForest_LOSO
-26,Previsto,Não,Corinthians,Internacional,Derrota,89.0,RandomForest_MCCV
+26,Previsto,Não,Corinthians,Internacional,Derrota,88.0,RandomForest_MCCV
 26,Previsto,Não,Corinthians,Internacional,Derrota,,LogisticRegression_LOSO
 26,Previsto,Não,Corinthians,Internacional,Derrota,100.0,LogisticRegression_MCCV
 26,Previsto,Não,Cruzeiro,Flamengo,Derrota,,RandomForest_LOSO
-26,Previsto,Não,Cruzeiro,Flamengo,Derrota,90.5,RandomForest_MCCV
+26,Previsto,Não,Cruzeiro,Flamengo,Derrota,88.4,RandomForest_MCCV
 26,Previsto,Não,Cruzeiro,Flamengo,Derrota,,LogisticRegression_LOSO
-26,Previsto,Não,Cruzeiro,Flamengo,Derrota,76.1,LogisticRegression_MCCV
+26,Previsto,Não,Cruzeiro,Flamengo,Derrota,73.6,LogisticRegression_MCCV
 26,Previsto,Sim,Flamengo,Cruzeiro,Vitória,,RandomForest_LOSO
-26,Previsto,Sim,Flamengo,Cruzeiro,Vitória,87.2,RandomForest_MCCV
+26,Previsto,Sim,Flamengo,Cruzeiro,Vitória,88.7,RandomForest_MCCV
 26,Previsto,Sim,Flamengo,Cruzeiro,Vitória,,LogisticRegression_LOSO
-26,Previsto,Sim,Flamengo,Cruzeiro,Vitória,76.9,LogisticRegression_MCCV
+26,Previsto,Sim,Flamengo,Cruzeiro,Vitória,74.9,LogisticRegression_MCCV
 26,Previsto,Não,Fluminense,Sport,Vitória,,RandomForest_LOSO
-26,Previsto,Não,Fluminense,Sport,Vitória,76.4,RandomForest_MCCV
+26,Previsto,Não,Fluminense,Sport,Vitória,78.8,RandomForest_MCCV
 26,Previsto,Não,Fluminense,Sport,Vitória,,LogisticRegression_LOSO
-26,Previsto,Não,Fluminense,Sport,Vitória,41.199999999999996,LogisticRegression_MCCV
+26,Previsto,Não,Fluminense,Sport,Vitória,40.2,LogisticRegression_MCCV
 26,Previsto,Sim,Fortaleza,São Paulo,Vitória,,RandomForest_LOSO
 26,Previsto,Sim,Fortaleza,São Paulo,Vitória,100.0,RandomForest_MCCV
 26,Previsto,Sim,Fortaleza,São Paulo,Vitória,,LogisticRegression_LOSO
 26,Previsto,Sim,Fortaleza,São Paulo,Vitória,100.0,LogisticRegression_MCCV
 26,Previsto,Não,Grêmio,Santos,Derrota,,RandomForest_LOSO
-26,Previsto,Não,Grêmio,Santos,Derrota,48.199999999999996,RandomForest_MCCV
+26,Previsto,Não,Grêmio,Santos,Derrota,53.300000000000004,RandomForest_MCCV
 26,Previsto,Não,Grêmio,Santos,Derrota,,LogisticRegression_LOSO
-26,Previsto,Não,Grêmio,Santos,Derrota,99.8,LogisticRegression_MCCV
+26,Previsto,Não,Grêmio,Santos,Derrota,99.7,LogisticRegression_MCCV
 26,Previsto,Sim,Internacional,Corinthians,Vitória,,RandomForest_LOSO
-26,Previsto,Sim,Internacional,Corinthians,Vitória,89.4,RandomForest_MCCV
+26,Previsto,Sim,Internacional,Corinthians,Vitória,87.8,RandomForest_MCCV
 26,Previsto,Sim,Internacional,Corinthians,Vitória,,LogisticRegression_LOSO
 26,Previsto,Sim,Internacional,Corinthians,Vitória,100.0,LogisticRegression_MCCV
 26,Previsto,Não,Juventude,Atlético-MG,Vitória,,RandomForest_LOSO
-26,Previsto,Não,Juventude,Atlético-MG,Vitória,98.0,RandomForest_MCCV
+26,Previsto,Não,Juventude,Atlético-MG,Vitória,98.1,RandomForest_MCCV
 26,Previsto,Não,Juventude,Atlético-MG,Derrota,,LogisticRegression_LOSO
-26,Previsto,Não,Juventude,Atlético-MG,Derrota,80.9,LogisticRegression_MCCV
+26,Previsto,Não,Juventude,Atlético-MG,Derrota,78.9,LogisticRegression_MCCV
 26,Previsto,Sim,Mirassol,Bragantino,Vitória,,RandomForest_LOSO
-26,Previsto,Sim,Mirassol,Bragantino,Vitória,65.0,RandomForest_MCCV
+26,Previsto,Sim,Mirassol,Bragantino,Vitória,61.5,RandomForest_MCCV
 26,Previsto,Sim,Mirassol,Bragantino,Vitória,,LogisticRegression_LOSO
 26,Previsto,Sim,Mirassol,Bragantino,Vitória,100.0,LogisticRegression_MCCV
 26,Previsto,Sim,Palmeiras,Vasco,Vitória,,RandomForest_LOSO
-26,Previsto,Sim,Palmeiras,Vasco,Vitória,81.89999999999999,RandomForest_MCCV
+26,Previsto,Sim,Palmeiras,Vasco,Vitória,79.80000000000001,RandomForest_MCCV
 26,Previsto,Sim,Palmeiras,Vasco,Vitória,,LogisticRegression_LOSO
 26,Previsto,Sim,Palmeiras,Vasco,Vitória,100.0,LogisticRegression_MCCV
 26,Previsto,Sim,Santos,Grêmio,Vitória,,RandomForest_LOSO
-26,Previsto,Sim,Santos,Grêmio,Vitória,50.7,RandomForest_MCCV
+26,Previsto,Sim,Santos,Grêmio,Vitória,50.2,RandomForest_MCCV
 26,Previsto,Sim,Santos,Grêmio,Vitória,,LogisticRegression_LOSO
-26,Previsto,Sim,Santos,Grêmio,Vitória,99.9,LogisticRegression_MCCV
+26,Previsto,Sim,Santos,Grêmio,Vitória,99.7,LogisticRegression_MCCV
 26,Previsto,Sim,Sport,Fluminense,Derrota,,RandomForest_LOSO
-26,Previsto,Sim,Sport,Fluminense,Derrota,78.0,RandomForest_MCCV
+26,Previsto,Sim,Sport,Fluminense,Derrota,80.60000000000001,RandomForest_MCCV
 26,Previsto,Sim,Sport,Fluminense,Derrota,,LogisticRegression_LOSO
-26,Previsto,Sim,Sport,Fluminense,Derrota,40.400000000000006,LogisticRegression_MCCV
+26,Previsto,Sim,Sport,Fluminense,Derrota,41.6,LogisticRegression_MCCV
 26,Previsto,Não,São Paulo,Fortaleza,Derrota,,RandomForest_LOSO
 26,Previsto,Não,São Paulo,Fortaleza,Derrota,100.0,RandomForest_MCCV
 26,Previsto,Não,São Paulo,Fortaleza,Derrota,,LogisticRegression_LOSO
 26,Previsto,Não,São Paulo,Fortaleza,Derrota,100.0,LogisticRegression_MCCV
 26,Previsto,Não,Vasco,Palmeiras,Derrota,,RandomForest_LOSO
-26,Previsto,Não,Vasco,Palmeiras,Derrota,80.10000000000001,RandomForest_MCCV
+26,Previsto,Não,Vasco,Palmeiras,Derrota,84.2,RandomForest_MCCV
 26,Previsto,Não,Vasco,Palmeiras,Derrota,,LogisticRegression_LOSO
 26,Previsto,Não,Vasco,Palmeiras,Derrota,100.0,LogisticRegression_MCCV
 26,Previsto,Sim,Vitória,Ceará,Derrota,,RandomForest_LOSO
-26,Previsto,Sim,Vitória,Ceará,Derrota,80.80000000000001,RandomForest_MCCV
+26,Previsto,Sim,Vitória,Ceará,Derrota,78.2,RandomForest_MCCV
 26,Previsto,Sim,Vitória,Ceará,Vitória,,LogisticRegression_LOSO
-26,Previsto,Sim,Vitória,Ceará,Vitória,82.1,LogisticRegression_MCCV
+26,Previsto,Sim,Vitória,Ceará,Vitória,80.80000000000001,LogisticRegression_MCCV
 27,Previsto,Não,Atlético-MG,Fluminense,Derrota,,RandomForest_LOSO
 27,Previsto,Não,Atlético-MG,Fluminense,Derrota,100.0,RandomForest_MCCV
 27,Previsto,Não,Atlético-MG,Fluminense,Derrota,,LogisticRegression_LOSO
 27,Previsto,Não,Atlético-MG,Fluminense,Derrota,100.0,LogisticRegression_MCCV
 27,Previsto,Sim,Bahia,Flamengo,Derrota,,RandomForest_LOSO
-27,Previsto,Sim,Bahia,Flamengo,Derrota,95.7,RandomForest_MCCV
+27,Previsto,Sim,Bahia,Flamengo,Derrota,96.39999999999999,RandomForest_MCCV
 27,Previsto,Sim,Bahia,Flamengo,Derrota,,LogisticRegression_LOSO
-27,Previsto,Sim,Bahia,Flamengo,Derrota,87.9,LogisticRegression_MCCV
+27,Previsto,Sim,Bahia,Flamengo,Derrota,89.8,LogisticRegression_MCCV
 27,Previsto,Não,Botafogo,Internacional,Derrota,,RandomForest_LOSO
 27,Previsto,Não,Botafogo,Internacional,Derrota,100.0,RandomForest_MCCV
 27,Previsto,Não,Botafogo,Internacional,Derrota,,LogisticRegression_LOSO
@@ -842,29 +842,29 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 27,Previsto,Sim,Bragantino,Grêmio,Vitória,,LogisticRegression_LOSO
 27,Previsto,Sim,Bragantino,Grêmio,Vitória,100.0,LogisticRegression_MCCV
 27,Previsto,Sim,Ceará,Santos,Empate,,RandomForest_LOSO
-27,Previsto,Sim,Ceará,Santos,Empate,85.1,RandomForest_MCCV
+27,Previsto,Sim,Ceará,Santos,Empate,84.5,RandomForest_MCCV
 27,Previsto,Sim,Ceará,Santos,Vitória,,LogisticRegression_LOSO
 27,Previsto,Sim,Ceará,Santos,Vitória,96.5,LogisticRegression_MCCV
 27,Previsto,Sim,Corinthians,Mirassol,Vitória,,RandomForest_LOSO
-27,Previsto,Sim,Corinthians,Mirassol,Vitória,100.0,RandomForest_MCCV
+27,Previsto,Sim,Corinthians,Mirassol,Vitória,99.9,RandomForest_MCCV
 27,Previsto,Sim,Corinthians,Mirassol,Vitória,,LogisticRegression_LOSO
 27,Previsto,Sim,Corinthians,Mirassol,Vitória,100.0,LogisticRegression_MCCV
 27,Previsto,Sim,Cruzeiro,Sport,Vitória,,RandomForest_LOSO
-27,Previsto,Sim,Cruzeiro,Sport,Vitória,47.599999999999994,RandomForest_MCCV
+27,Previsto,Sim,Cruzeiro,Sport,Empate,45.4,RandomForest_MCCV
 27,Previsto,Sim,Cruzeiro,Sport,Vitória,,LogisticRegression_LOSO
 27,Previsto,Sim,Cruzeiro,Sport,Vitória,100.0,LogisticRegression_MCCV
 27,Previsto,Não,Flamengo,Bahia,Vitória,,RandomForest_LOSO
-27,Previsto,Não,Flamengo,Bahia,Vitória,96.6,RandomForest_MCCV
+27,Previsto,Não,Flamengo,Bahia,Vitória,96.0,RandomForest_MCCV
 27,Previsto,Não,Flamengo,Bahia,Vitória,,LogisticRegression_LOSO
-27,Previsto,Não,Flamengo,Bahia,Vitória,90.4,LogisticRegression_MCCV
+27,Previsto,Não,Flamengo,Bahia,Vitória,89.2,LogisticRegression_MCCV
 27,Previsto,Sim,Fluminense,Atlético-MG,Vitória,,RandomForest_LOSO
 27,Previsto,Sim,Fluminense,Atlético-MG,Vitória,100.0,RandomForest_MCCV
 27,Previsto,Sim,Fluminense,Atlético-MG,Vitória,,LogisticRegression_LOSO
 27,Previsto,Sim,Fluminense,Atlético-MG,Vitória,100.0,LogisticRegression_MCCV
 27,Previsto,Não,Fortaleza,Juventude,Vitória,,RandomForest_LOSO
-27,Previsto,Não,Fortaleza,Juventude,Derrota,51.2,RandomForest_MCCV
+27,Previsto,Não,Fortaleza,Juventude,Derrota,49.0,RandomForest_MCCV
 27,Previsto,Não,Fortaleza,Juventude,Vitória,,LogisticRegression_LOSO
-27,Previsto,Não,Fortaleza,Juventude,Vitória,99.7,LogisticRegression_MCCV
+27,Previsto,Não,Fortaleza,Juventude,Vitória,99.6,LogisticRegression_MCCV
 27,Previsto,Não,Grêmio,Bragantino,Derrota,,RandomForest_LOSO
 27,Previsto,Não,Grêmio,Bragantino,Derrota,100.0,RandomForest_MCCV
 27,Previsto,Não,Grêmio,Bragantino,Derrota,,LogisticRegression_LOSO
@@ -874,39 +874,39 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 27,Previsto,Sim,Internacional,Botafogo,Vitória,,LogisticRegression_LOSO
 27,Previsto,Sim,Internacional,Botafogo,Vitória,100.0,LogisticRegression_MCCV
 27,Previsto,Sim,Juventude,Fortaleza,Vitória,,RandomForest_LOSO
-27,Previsto,Sim,Juventude,Fortaleza,Derrota,48.199999999999996,RandomForest_MCCV
+27,Previsto,Sim,Juventude,Fortaleza,Derrota,51.0,RandomForest_MCCV
 27,Previsto,Sim,Juventude,Fortaleza,Derrota,,LogisticRegression_LOSO
-27,Previsto,Sim,Juventude,Fortaleza,Derrota,99.7,LogisticRegression_MCCV
+27,Previsto,Sim,Juventude,Fortaleza,Derrota,99.5,LogisticRegression_MCCV
 27,Previsto,Não,Mirassol,Corinthians,Derrota,,RandomForest_LOSO
 27,Previsto,Não,Mirassol,Corinthians,Derrota,99.9,RandomForest_MCCV
 27,Previsto,Não,Mirassol,Corinthians,Derrota,,LogisticRegression_LOSO
 27,Previsto,Não,Mirassol,Corinthians,Derrota,100.0,LogisticRegression_MCCV
-27,Previsto,Não,Palmeiras,São Paulo,Vitória,,RandomForest_LOSO
-27,Previsto,Não,Palmeiras,São Paulo,Vitória,55.800000000000004,RandomForest_MCCV
+27,Previsto,Não,Palmeiras,São Paulo,Empate,,RandomForest_LOSO
+27,Previsto,Não,Palmeiras,São Paulo,Vitória,53.6,RandomForest_MCCV
 27,Previsto,Não,Palmeiras,São Paulo,Vitória,,LogisticRegression_LOSO
-27,Previsto,Não,Palmeiras,São Paulo,Vitória,76.2,LogisticRegression_MCCV
+27,Previsto,Não,Palmeiras,São Paulo,Vitória,75.2,LogisticRegression_MCCV
 27,Previsto,Não,Santos,Ceará,Empate,,RandomForest_LOSO
-27,Previsto,Não,Santos,Ceará,Empate,84.6,RandomForest_MCCV
+27,Previsto,Não,Santos,Ceará,Empate,87.4,RandomForest_MCCV
 27,Previsto,Não,Santos,Ceará,Derrota,,LogisticRegression_LOSO
-27,Previsto,Não,Santos,Ceará,Derrota,97.39999999999999,LogisticRegression_MCCV
-27,Previsto,Não,Sport,Cruzeiro,Empate,,RandomForest_LOSO
-27,Previsto,Não,Sport,Cruzeiro,Derrota,48.0,RandomForest_MCCV
+27,Previsto,Não,Santos,Ceará,Derrota,97.2,LogisticRegression_MCCV
+27,Previsto,Não,Sport,Cruzeiro,Derrota,,RandomForest_LOSO
+27,Previsto,Não,Sport,Cruzeiro,Derrota,47.8,RandomForest_MCCV
 27,Previsto,Não,Sport,Cruzeiro,Derrota,,LogisticRegression_LOSO
-27,Previsto,Não,Sport,Cruzeiro,Derrota,100.0,LogisticRegression_MCCV
-27,Previsto,Sim,São Paulo,Palmeiras,Empate,,RandomForest_LOSO
-27,Previsto,Sim,São Paulo,Palmeiras,Derrota,54.6,RandomForest_MCCV
+27,Previsto,Não,Sport,Cruzeiro,Derrota,99.9,LogisticRegression_MCCV
+27,Previsto,Sim,São Paulo,Palmeiras,Derrota,,RandomForest_LOSO
+27,Previsto,Sim,São Paulo,Palmeiras,Derrota,57.099999999999994,RandomForest_MCCV
 27,Previsto,Sim,São Paulo,Palmeiras,Derrota,,LogisticRegression_LOSO
-27,Previsto,Sim,São Paulo,Palmeiras,Derrota,76.1,LogisticRegression_MCCV
+27,Previsto,Sim,São Paulo,Palmeiras,Derrota,77.60000000000001,LogisticRegression_MCCV
 27,Previsto,Sim,Vasco,Vitória,Vitória,,RandomForest_LOSO
-27,Previsto,Sim,Vasco,Vitória,Vitória,74.3,RandomForest_MCCV
+27,Previsto,Sim,Vasco,Vitória,Vitória,75.5,RandomForest_MCCV
 27,Previsto,Sim,Vasco,Vitória,Vitória,,LogisticRegression_LOSO
-27,Previsto,Sim,Vasco,Vitória,Vitória,99.9,LogisticRegression_MCCV
+27,Previsto,Sim,Vasco,Vitória,Vitória,100.0,LogisticRegression_MCCV
 27,Previsto,Não,Vitória,Vasco,Derrota,,RandomForest_LOSO
-27,Previsto,Não,Vitória,Vasco,Derrota,75.2,RandomForest_MCCV
+27,Previsto,Não,Vitória,Vasco,Derrota,76.4,RandomForest_MCCV
 27,Previsto,Não,Vitória,Vasco,Derrota,,LogisticRegression_LOSO
 27,Previsto,Não,Vitória,Vasco,Derrota,99.9,LogisticRegression_MCCV
-28,Previsto,Sim,Atlético-MG,Cruzeiro,Derrota,,RandomForest_LOSO
-28,Previsto,Sim,Atlético-MG,Cruzeiro,Vitória,44.800000000000004,RandomForest_MCCV
+28,Previsto,Sim,Atlético-MG,Cruzeiro,Empate,,RandomForest_LOSO
+28,Previsto,Sim,Atlético-MG,Cruzeiro,Vitória,44.2,RandomForest_MCCV
 28,Previsto,Sim,Atlético-MG,Cruzeiro,Vitória,,LogisticRegression_LOSO
 28,Previsto,Sim,Atlético-MG,Cruzeiro,Vitória,100.0,LogisticRegression_MCCV
 28,Previsto,Não,Bahia,Vitória,Derrota,,RandomForest_LOSO
@@ -914,11 +914,11 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 28,Previsto,Não,Bahia,Vitória,Derrota,,LogisticRegression_LOSO
 28,Previsto,Não,Bahia,Vitória,Derrota,100.0,LogisticRegression_MCCV
 28,Previsto,Sim,Botafogo,Flamengo,Vitória,,RandomForest_LOSO
-28,Previsto,Sim,Botafogo,Flamengo,Vitória,61.1,RandomForest_MCCV
+28,Previsto,Sim,Botafogo,Flamengo,Vitória,56.2,RandomForest_MCCV
 28,Previsto,Sim,Botafogo,Flamengo,Derrota,,LogisticRegression_LOSO
-28,Previsto,Sim,Botafogo,Flamengo,Derrota,97.3,LogisticRegression_MCCV
-28,Previsto,Não,Bragantino,Palmeiras,Empate,,RandomForest_LOSO
-28,Previsto,Não,Bragantino,Palmeiras,Derrota,51.300000000000004,RandomForest_MCCV
+28,Previsto,Sim,Botafogo,Flamengo,Derrota,97.0,LogisticRegression_MCCV
+28,Previsto,Não,Bragantino,Palmeiras,Derrota,,RandomForest_LOSO
+28,Previsto,Não,Bragantino,Palmeiras,Derrota,54.0,RandomForest_MCCV
 28,Previsto,Não,Bragantino,Palmeiras,Derrota,,LogisticRegression_LOSO
 28,Previsto,Não,Bragantino,Palmeiras,Derrota,100.0,LogisticRegression_MCCV
 28,Previsto,Não,Ceará,Sport,Derrota,,RandomForest_LOSO
@@ -929,52 +929,52 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 28,Previsto,Não,Corinthians,Santos,Derrota,98.9,RandomForest_MCCV
 28,Previsto,Não,Corinthians,Santos,Derrota,,LogisticRegression_LOSO
 28,Previsto,Não,Corinthians,Santos,Derrota,99.5,LogisticRegression_MCCV
-28,Previsto,Não,Cruzeiro,Atlético-MG,Derrota,,RandomForest_LOSO
-28,Previsto,Não,Cruzeiro,Atlético-MG,Derrota,49.4,RandomForest_MCCV
+28,Previsto,Não,Cruzeiro,Atlético-MG,Empate,,RandomForest_LOSO
+28,Previsto,Não,Cruzeiro,Atlético-MG,Derrota,47.199999999999996,RandomForest_MCCV
 28,Previsto,Não,Cruzeiro,Atlético-MG,Derrota,,LogisticRegression_LOSO
 28,Previsto,Não,Cruzeiro,Atlético-MG,Derrota,100.0,LogisticRegression_MCCV
 28,Previsto,Não,Flamengo,Botafogo,Derrota,,RandomForest_LOSO
-28,Previsto,Não,Flamengo,Botafogo,Derrota,60.6,RandomForest_MCCV
+28,Previsto,Não,Flamengo,Botafogo,Derrota,61.8,RandomForest_MCCV
 28,Previsto,Não,Flamengo,Botafogo,Vitória,,LogisticRegression_LOSO
-28,Previsto,Não,Flamengo,Botafogo,Vitória,98.1,LogisticRegression_MCCV
-28,Previsto,Sim,Fluminense,Juventude,Derrota,,RandomForest_LOSO
-28,Previsto,Sim,Fluminense,Juventude,Vitória,81.10000000000001,RandomForest_MCCV
+28,Previsto,Não,Flamengo,Botafogo,Vitória,97.39999999999999,LogisticRegression_MCCV
+28,Previsto,Sim,Fluminense,Juventude,Vitória,,RandomForest_LOSO
+28,Previsto,Sim,Fluminense,Juventude,Vitória,80.4,RandomForest_MCCV
 28,Previsto,Sim,Fluminense,Juventude,Vitória,,LogisticRegression_LOSO
-28,Previsto,Sim,Fluminense,Juventude,Vitória,100.0,LogisticRegression_MCCV
+28,Previsto,Sim,Fluminense,Juventude,Vitória,99.9,LogisticRegression_MCCV
 28,Previsto,Sim,Fortaleza,Vasco,Vitória,,RandomForest_LOSO
 28,Previsto,Sim,Fortaleza,Vasco,Vitória,100.0,RandomForest_MCCV
 28,Previsto,Sim,Fortaleza,Vasco,Vitória,,LogisticRegression_LOSO
 28,Previsto,Sim,Fortaleza,Vasco,Vitória,100.0,LogisticRegression_MCCV
 28,Previsto,Sim,Grêmio,São Paulo,Vitória,,RandomForest_LOSO
-28,Previsto,Sim,Grêmio,São Paulo,Vitória,99.0,RandomForest_MCCV
+28,Previsto,Sim,Grêmio,São Paulo,Vitória,99.2,RandomForest_MCCV
 28,Previsto,Sim,Grêmio,São Paulo,Vitória,,LogisticRegression_LOSO
 28,Previsto,Sim,Grêmio,São Paulo,Vitória,100.0,LogisticRegression_MCCV
 28,Previsto,Não,Internacional,Mirassol,Empate,,RandomForest_LOSO
-28,Previsto,Não,Internacional,Mirassol,Empate,98.6,RandomForest_MCCV
+28,Previsto,Não,Internacional,Mirassol,Empate,98.7,RandomForest_MCCV
 28,Previsto,Não,Internacional,Mirassol,Derrota,,LogisticRegression_LOSO
 28,Previsto,Não,Internacional,Mirassol,Derrota,100.0,LogisticRegression_MCCV
 28,Previsto,Não,Juventude,Fluminense,Derrota,,RandomForest_LOSO
-28,Previsto,Não,Juventude,Fluminense,Derrota,83.6,RandomForest_MCCV
+28,Previsto,Não,Juventude,Fluminense,Derrota,82.8,RandomForest_MCCV
 28,Previsto,Não,Juventude,Fluminense,Derrota,,LogisticRegression_LOSO
-28,Previsto,Não,Juventude,Fluminense,Derrota,99.9,LogisticRegression_MCCV
+28,Previsto,Não,Juventude,Fluminense,Derrota,99.8,LogisticRegression_MCCV
 28,Previsto,Sim,Mirassol,Internacional,Empate,,RandomForest_LOSO
-28,Previsto,Sim,Mirassol,Internacional,Empate,98.2,RandomForest_MCCV
+28,Previsto,Sim,Mirassol,Internacional,Empate,97.0,RandomForest_MCCV
 28,Previsto,Sim,Mirassol,Internacional,Vitória,,LogisticRegression_LOSO
 28,Previsto,Sim,Mirassol,Internacional,Vitória,100.0,LogisticRegression_MCCV
-28,Previsto,Sim,Palmeiras,Bragantino,Empate,,RandomForest_LOSO
-28,Previsto,Sim,Palmeiras,Bragantino,Vitória,52.1,RandomForest_MCCV
+28,Previsto,Sim,Palmeiras,Bragantino,Vitória,,RandomForest_LOSO
+28,Previsto,Sim,Palmeiras,Bragantino,Vitória,48.3,RandomForest_MCCV
 28,Previsto,Sim,Palmeiras,Bragantino,Vitória,,LogisticRegression_LOSO
 28,Previsto,Sim,Palmeiras,Bragantino,Vitória,100.0,LogisticRegression_MCCV
 28,Previsto,Sim,Santos,Corinthians,Vitória,,RandomForest_LOSO
-28,Previsto,Sim,Santos,Corinthians,Vitória,99.3,RandomForest_MCCV
+28,Previsto,Sim,Santos,Corinthians,Vitória,98.6,RandomForest_MCCV
 28,Previsto,Sim,Santos,Corinthians,Vitória,,LogisticRegression_LOSO
-28,Previsto,Sim,Santos,Corinthians,Vitória,99.9,LogisticRegression_MCCV
+28,Previsto,Sim,Santos,Corinthians,Vitória,99.7,LogisticRegression_MCCV
 28,Previsto,Sim,Sport,Ceará,Vitória,,RandomForest_LOSO
 28,Previsto,Sim,Sport,Ceará,Vitória,100.0,RandomForest_MCCV
 28,Previsto,Sim,Sport,Ceará,Vitória,,LogisticRegression_LOSO
 28,Previsto,Sim,Sport,Ceará,Vitória,100.0,LogisticRegression_MCCV
 28,Previsto,Não,São Paulo,Grêmio,Derrota,,RandomForest_LOSO
-28,Previsto,Não,São Paulo,Grêmio,Derrota,99.6,RandomForest_MCCV
+28,Previsto,Não,São Paulo,Grêmio,Derrota,99.7,RandomForest_MCCV
 28,Previsto,Não,São Paulo,Grêmio,Derrota,,LogisticRegression_LOSO
 28,Previsto,Não,São Paulo,Grêmio,Derrota,100.0,LogisticRegression_MCCV
 28,Previsto,Não,Vasco,Fortaleza,Derrota,,RandomForest_LOSO
@@ -986,47 +986,47 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 28,Previsto,Sim,Vitória,Bahia,Vitória,,LogisticRegression_LOSO
 28,Previsto,Sim,Vitória,Bahia,Vitória,100.0,LogisticRegression_MCCV
 29,Previsto,Não,Atlético-MG,Corinthians,Empate,,RandomForest_LOSO
-29,Previsto,Não,Atlético-MG,Corinthians,Derrota,56.2,RandomForest_MCCV
+29,Previsto,Não,Atlético-MG,Corinthians,Derrota,55.1,RandomForest_MCCV
 29,Previsto,Não,Atlético-MG,Corinthians,Derrota,,LogisticRegression_LOSO
 29,Previsto,Não,Atlético-MG,Corinthians,Derrota,100.0,LogisticRegression_MCCV
 29,Previsto,Sim,Bahia,Grêmio,Empate,,RandomForest_LOSO
-29,Previsto,Sim,Bahia,Grêmio,Empate,55.50000000000001,RandomForest_MCCV
+29,Previsto,Sim,Bahia,Grêmio,Empate,54.400000000000006,RandomForest_MCCV
 29,Previsto,Sim,Bahia,Grêmio,Vitória,,LogisticRegression_LOSO
 29,Previsto,Sim,Bahia,Grêmio,Vitória,100.0,LogisticRegression_MCCV
 29,Previsto,Não,Botafogo,Ceará,Empate,,RandomForest_LOSO
-29,Previsto,Não,Botafogo,Ceará,Derrota,60.3,RandomForest_MCCV
+29,Previsto,Não,Botafogo,Ceará,Derrota,57.9,RandomForest_MCCV
 29,Previsto,Não,Botafogo,Ceará,Derrota,,LogisticRegression_LOSO
 29,Previsto,Não,Botafogo,Ceará,Derrota,100.0,LogisticRegression_MCCV
 29,Previsto,Não,Bragantino,Juventude,Derrota,,RandomForest_LOSO
-29,Previsto,Não,Bragantino,Juventude,Derrota,84.6,RandomForest_MCCV
+29,Previsto,Não,Bragantino,Juventude,Derrota,83.6,RandomForest_MCCV
 29,Previsto,Não,Bragantino,Juventude,Derrota,,LogisticRegression_LOSO
-29,Previsto,Não,Bragantino,Juventude,Derrota,99.5,LogisticRegression_MCCV
-29,Previsto,Sim,Ceará,Botafogo,Empate,,RandomForest_LOSO
-29,Previsto,Sim,Ceará,Botafogo,Vitória,55.00000000000001,RandomForest_MCCV
+29,Previsto,Não,Bragantino,Juventude,Derrota,99.7,LogisticRegression_MCCV
+29,Previsto,Sim,Ceará,Botafogo,Vitória,,RandomForest_LOSO
+29,Previsto,Sim,Ceará,Botafogo,Vitória,57.49999999999999,RandomForest_MCCV
 29,Previsto,Sim,Ceará,Botafogo,Vitória,,LogisticRegression_LOSO
 29,Previsto,Sim,Ceará,Botafogo,Vitória,100.0,LogisticRegression_MCCV
 29,Previsto,Sim,Corinthians,Atlético-MG,Empate,,RandomForest_LOSO
-29,Previsto,Sim,Corinthians,Atlético-MG,Vitória,53.400000000000006,RandomForest_MCCV
+29,Previsto,Sim,Corinthians,Atlético-MG,Vitória,52.7,RandomForest_MCCV
 29,Previsto,Sim,Corinthians,Atlético-MG,Vitória,,LogisticRegression_LOSO
 29,Previsto,Sim,Corinthians,Atlético-MG,Vitória,100.0,LogisticRegression_MCCV
 29,Previsto,Sim,Cruzeiro,Fortaleza,Derrota,,RandomForest_LOSO
-29,Previsto,Sim,Cruzeiro,Fortaleza,Vitória,60.9,RandomForest_MCCV
+29,Previsto,Sim,Cruzeiro,Fortaleza,Vitória,60.4,RandomForest_MCCV
 29,Previsto,Sim,Cruzeiro,Fortaleza,Vitória,,LogisticRegression_LOSO
-29,Previsto,Sim,Cruzeiro,Fortaleza,Vitória,100.0,LogisticRegression_MCCV
+29,Previsto,Sim,Cruzeiro,Fortaleza,Vitória,99.9,LogisticRegression_MCCV
 29,Previsto,Sim,Flamengo,Palmeiras,Vitória,,RandomForest_LOSO
-29,Previsto,Sim,Flamengo,Palmeiras,Vitória,87.4,RandomForest_MCCV
+29,Previsto,Sim,Flamengo,Palmeiras,Vitória,86.3,RandomForest_MCCV
 29,Previsto,Sim,Flamengo,Palmeiras,Vitória,,LogisticRegression_LOSO
-29,Previsto,Sim,Flamengo,Palmeiras,Vitória,100.0,LogisticRegression_MCCV
+29,Previsto,Sim,Flamengo,Palmeiras,Vitória,99.9,LogisticRegression_MCCV
 29,Previsto,Não,Fluminense,Vasco,Derrota,,RandomForest_LOSO
-29,Previsto,Não,Fluminense,Vasco,Vitória,56.699999999999996,RandomForest_MCCV
+29,Previsto,Não,Fluminense,Vasco,Vitória,55.2,RandomForest_MCCV
 29,Previsto,Não,Fluminense,Vasco,Vitória,,LogisticRegression_LOSO
-29,Previsto,Não,Fluminense,Vasco,Vitória,61.9,LogisticRegression_MCCV
+29,Previsto,Não,Fluminense,Vasco,Vitória,59.5,LogisticRegression_MCCV
 29,Previsto,Não,Fortaleza,Cruzeiro,Derrota,,RandomForest_LOSO
-29,Previsto,Não,Fortaleza,Cruzeiro,Derrota,63.5,RandomForest_MCCV
+29,Previsto,Não,Fortaleza,Cruzeiro,Derrota,64.1,RandomForest_MCCV
 29,Previsto,Não,Fortaleza,Cruzeiro,Derrota,,LogisticRegression_LOSO
-29,Previsto,Não,Fortaleza,Cruzeiro,Derrota,99.9,LogisticRegression_MCCV
-29,Previsto,Não,Grêmio,Bahia,Vitória,,RandomForest_LOSO
-29,Previsto,Não,Grêmio,Bahia,Empate,55.50000000000001,RandomForest_MCCV
+29,Previsto,Não,Fortaleza,Cruzeiro,Derrota,100.0,LogisticRegression_MCCV
+29,Previsto,Não,Grêmio,Bahia,Empate,,RandomForest_LOSO
+29,Previsto,Não,Grêmio,Bahia,Empate,56.49999999999999,RandomForest_MCCV
 29,Previsto,Não,Grêmio,Bahia,Derrota,,LogisticRegression_LOSO
 29,Previsto,Não,Grêmio,Bahia,Derrota,99.9,LogisticRegression_MCCV
 29,Previsto,Sim,Internacional,Sport,Vitória,,RandomForest_LOSO
@@ -1034,15 +1034,15 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 29,Previsto,Sim,Internacional,Sport,Vitória,,LogisticRegression_LOSO
 29,Previsto,Sim,Internacional,Sport,Vitória,100.0,LogisticRegression_MCCV
 29,Previsto,Sim,Juventude,Bragantino,Vitória,,RandomForest_LOSO
-29,Previsto,Sim,Juventude,Bragantino,Vitória,82.19999999999999,RandomForest_MCCV
+29,Previsto,Sim,Juventude,Bragantino,Vitória,84.7,RandomForest_MCCV
 29,Previsto,Sim,Juventude,Bragantino,Vitória,,LogisticRegression_LOSO
-29,Previsto,Sim,Juventude,Bragantino,Vitória,99.7,LogisticRegression_MCCV
+29,Previsto,Sim,Juventude,Bragantino,Vitória,99.9,LogisticRegression_MCCV
 29,Previsto,Sim,Mirassol,São Paulo,Derrota,,RandomForest_LOSO
-29,Previsto,Sim,Mirassol,São Paulo,Derrota,92.80000000000001,RandomForest_MCCV
+29,Previsto,Sim,Mirassol,São Paulo,Derrota,93.7,RandomForest_MCCV
 29,Previsto,Sim,Mirassol,São Paulo,Vitória,,LogisticRegression_LOSO
 29,Previsto,Sim,Mirassol,São Paulo,Vitória,100.0,LogisticRegression_MCCV
 29,Previsto,Não,Palmeiras,Flamengo,Derrota,,RandomForest_LOSO
-29,Previsto,Não,Palmeiras,Flamengo,Derrota,90.10000000000001,RandomForest_MCCV
+29,Previsto,Não,Palmeiras,Flamengo,Derrota,88.4,RandomForest_MCCV
 29,Previsto,Não,Palmeiras,Flamengo,Derrota,,LogisticRegression_LOSO
 29,Previsto,Não,Palmeiras,Flamengo,Derrota,100.0,LogisticRegression_MCCV
 29,Previsto,Sim,Santos,Vitória,Vitória,,RandomForest_LOSO
@@ -1057,32 +1057,32 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 29,Previsto,Não,São Paulo,Mirassol,Vitória,92.30000000000001,RandomForest_MCCV
 29,Previsto,Não,São Paulo,Mirassol,Derrota,,LogisticRegression_LOSO
 29,Previsto,Não,São Paulo,Mirassol,Derrota,100.0,LogisticRegression_MCCV
-29,Previsto,Sim,Vasco,Fluminense,Derrota,,RandomForest_LOSO
-29,Previsto,Sim,Vasco,Fluminense,Derrota,62.3,RandomForest_MCCV
+29,Previsto,Sim,Vasco,Fluminense,Vitória,,RandomForest_LOSO
+29,Previsto,Sim,Vasco,Fluminense,Derrota,59.4,RandomForest_MCCV
 29,Previsto,Sim,Vasco,Fluminense,Derrota,,LogisticRegression_LOSO
-29,Previsto,Sim,Vasco,Fluminense,Derrota,57.699999999999996,LogisticRegression_MCCV
+29,Previsto,Sim,Vasco,Fluminense,Derrota,60.099999999999994,LogisticRegression_MCCV
 29,Previsto,Não,Vitória,Santos,Derrota,,RandomForest_LOSO
 29,Previsto,Não,Vitória,Santos,Derrota,100.0,RandomForest_MCCV
 29,Previsto,Não,Vitória,Santos,Derrota,,LogisticRegression_LOSO
 29,Previsto,Não,Vitória,Santos,Derrota,100.0,LogisticRegression_MCCV
 30,Previsto,Sim,Atlético-MG,Ceará,Vitória,,RandomForest_LOSO
-30,Previsto,Sim,Atlético-MG,Ceará,Vitória,98.8,RandomForest_MCCV
+30,Previsto,Sim,Atlético-MG,Ceará,Vitória,98.5,RandomForest_MCCV
 30,Previsto,Sim,Atlético-MG,Ceará,Vitória,,LogisticRegression_LOSO
 30,Previsto,Sim,Atlético-MG,Ceará,Vitória,100.0,LogisticRegression_MCCV
 30,Previsto,Não,Bahia,São Paulo,Vitória,,RandomForest_LOSO
-30,Previsto,Não,Bahia,São Paulo,Vitória,79.0,RandomForest_MCCV
+30,Previsto,Não,Bahia,São Paulo,Vitória,80.5,RandomForest_MCCV
 30,Previsto,Não,Bahia,São Paulo,Derrota,,LogisticRegression_LOSO
-30,Previsto,Não,Bahia,São Paulo,Derrota,81.3,LogisticRegression_MCCV
+30,Previsto,Não,Bahia,São Paulo,Derrota,78.4,LogisticRegression_MCCV
 30,Previsto,Sim,Botafogo,Santos,Derrota,,RandomForest_LOSO
-30,Previsto,Sim,Botafogo,Santos,Derrota,94.0,RandomForest_MCCV
+30,Previsto,Sim,Botafogo,Santos,Derrota,95.89999999999999,RandomForest_MCCV
 30,Previsto,Sim,Botafogo,Santos,Derrota,,LogisticRegression_LOSO
-30,Previsto,Sim,Botafogo,Santos,Derrota,99.3,LogisticRegression_MCCV
+30,Previsto,Sim,Botafogo,Santos,Derrota,99.2,LogisticRegression_MCCV
 30,Previsto,Sim,Bragantino,Vasco,Empate,,RandomForest_LOSO
-30,Previsto,Sim,Bragantino,Vasco,Empate,91.4,RandomForest_MCCV
+30,Previsto,Sim,Bragantino,Vasco,Empate,91.5,RandomForest_MCCV
 30,Previsto,Sim,Bragantino,Vasco,Vitória,,LogisticRegression_LOSO
 30,Previsto,Sim,Bragantino,Vasco,Vitória,100.0,LogisticRegression_MCCV
 30,Previsto,Não,Ceará,Atlético-MG,Derrota,,RandomForest_LOSO
-30,Previsto,Não,Ceará,Atlético-MG,Derrota,98.2,RandomForest_MCCV
+30,Previsto,Não,Ceará,Atlético-MG,Derrota,98.5,RandomForest_MCCV
 30,Previsto,Não,Ceará,Atlético-MG,Derrota,,LogisticRegression_LOSO
 30,Previsto,Não,Ceará,Atlético-MG,Derrota,100.0,LogisticRegression_MCCV
 30,Previsto,Não,Corinthians,Vitória,Derrota,,RandomForest_LOSO
@@ -1090,31 +1090,31 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 30,Previsto,Não,Corinthians,Vitória,Derrota,,LogisticRegression_LOSO
 30,Previsto,Não,Corinthians,Vitória,Derrota,100.0,LogisticRegression_MCCV
 30,Previsto,Não,Cruzeiro,Palmeiras,Derrota,,RandomForest_LOSO
-30,Previsto,Não,Cruzeiro,Palmeiras,Derrota,99.8,RandomForest_MCCV
+30,Previsto,Não,Cruzeiro,Palmeiras,Derrota,99.9,RandomForest_MCCV
 30,Previsto,Não,Cruzeiro,Palmeiras,Derrota,,LogisticRegression_LOSO
 30,Previsto,Não,Cruzeiro,Palmeiras,Derrota,100.0,LogisticRegression_MCCV
 30,Previsto,Não,Flamengo,Fortaleza,Derrota,,RandomForest_LOSO
-30,Previsto,Não,Flamengo,Fortaleza,Derrota,59.0,RandomForest_MCCV
+30,Previsto,Não,Flamengo,Fortaleza,Derrota,60.5,RandomForest_MCCV
 30,Previsto,Não,Flamengo,Fortaleza,Derrota,,LogisticRegression_LOSO
 30,Previsto,Não,Flamengo,Fortaleza,Derrota,100.0,LogisticRegression_MCCV
 30,Previsto,Sim,Fluminense,Internacional,Empate,,RandomForest_LOSO
-30,Previsto,Sim,Fluminense,Internacional,Empate,75.5,RandomForest_MCCV
+30,Previsto,Sim,Fluminense,Internacional,Empate,75.4,RandomForest_MCCV
 30,Previsto,Sim,Fluminense,Internacional,Derrota,,LogisticRegression_LOSO
 30,Previsto,Sim,Fluminense,Internacional,Derrota,100.0,LogisticRegression_MCCV
-30,Previsto,Sim,Fortaleza,Flamengo,Vitória,,RandomForest_LOSO
-30,Previsto,Sim,Fortaleza,Flamengo,Vitória,54.6,RandomForest_MCCV
+30,Previsto,Sim,Fortaleza,Flamengo,Derrota,,RandomForest_LOSO
+30,Previsto,Sim,Fortaleza,Flamengo,Vitória,55.2,RandomForest_MCCV
 30,Previsto,Sim,Fortaleza,Flamengo,Vitória,,LogisticRegression_LOSO
 30,Previsto,Sim,Fortaleza,Flamengo,Vitória,100.0,LogisticRegression_MCCV
 30,Previsto,Sim,Grêmio,Juventude,Vitória,,RandomForest_LOSO
-30,Previsto,Sim,Grêmio,Juventude,Vitória,95.39999999999999,RandomForest_MCCV
+30,Previsto,Sim,Grêmio,Juventude,Vitória,92.7,RandomForest_MCCV
 30,Previsto,Sim,Grêmio,Juventude,Vitória,,LogisticRegression_LOSO
-30,Previsto,Sim,Grêmio,Juventude,Vitória,100.0,LogisticRegression_MCCV
-30,Previsto,Não,Internacional,Fluminense,Vitória,,RandomForest_LOSO
-30,Previsto,Não,Internacional,Fluminense,Empate,74.6,RandomForest_MCCV
+30,Previsto,Sim,Grêmio,Juventude,Vitória,99.9,LogisticRegression_MCCV
+30,Previsto,Não,Internacional,Fluminense,Empate,,RandomForest_LOSO
+30,Previsto,Não,Internacional,Fluminense,Empate,76.0,RandomForest_MCCV
 30,Previsto,Não,Internacional,Fluminense,Vitória,,LogisticRegression_LOSO
 30,Previsto,Não,Internacional,Fluminense,Vitória,100.0,LogisticRegression_MCCV
 30,Previsto,Não,Juventude,Grêmio,Derrota,,RandomForest_LOSO
-30,Previsto,Não,Juventude,Grêmio,Derrota,94.19999999999999,RandomForest_MCCV
+30,Previsto,Não,Juventude,Grêmio,Derrota,92.30000000000001,RandomForest_MCCV
 30,Previsto,Não,Juventude,Grêmio,Derrota,,LogisticRegression_LOSO
 30,Previsto,Não,Juventude,Grêmio,Derrota,99.9,LogisticRegression_MCCV
 30,Previsto,Não,Mirassol,Sport,Derrota,,RandomForest_LOSO
@@ -1126,19 +1126,19 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 30,Previsto,Sim,Palmeiras,Cruzeiro,Vitória,,LogisticRegression_LOSO
 30,Previsto,Sim,Palmeiras,Cruzeiro,Vitória,100.0,LogisticRegression_MCCV
 30,Previsto,Não,Santos,Botafogo,Vitória,,RandomForest_LOSO
-30,Previsto,Não,Santos,Botafogo,Vitória,95.0,RandomForest_MCCV
+30,Previsto,Não,Santos,Botafogo,Vitória,94.8,RandomForest_MCCV
 30,Previsto,Não,Santos,Botafogo,Vitória,,LogisticRegression_LOSO
-30,Previsto,Não,Santos,Botafogo,Vitória,99.5,LogisticRegression_MCCV
+30,Previsto,Não,Santos,Botafogo,Vitória,99.6,LogisticRegression_MCCV
 30,Previsto,Sim,Sport,Mirassol,Vitória,,RandomForest_LOSO
 30,Previsto,Sim,Sport,Mirassol,Vitória,100.0,RandomForest_MCCV
 30,Previsto,Sim,Sport,Mirassol,Vitória,,LogisticRegression_LOSO
 30,Previsto,Sim,Sport,Mirassol,Vitória,100.0,LogisticRegression_MCCV
-30,Previsto,Sim,São Paulo,Bahia,Derrota,,RandomForest_LOSO
-30,Previsto,Sim,São Paulo,Bahia,Derrota,80.4,RandomForest_MCCV
+30,Previsto,Sim,São Paulo,Bahia,Vitória,,RandomForest_LOSO
+30,Previsto,Sim,São Paulo,Bahia,Derrota,82.5,RandomForest_MCCV
 30,Previsto,Sim,São Paulo,Bahia,Vitória,,LogisticRegression_LOSO
-30,Previsto,Sim,São Paulo,Bahia,Vitória,79.7,LogisticRegression_MCCV
+30,Previsto,Sim,São Paulo,Bahia,Vitória,79.0,LogisticRegression_MCCV
 30,Previsto,Não,Vasco,Bragantino,Empate,,RandomForest_LOSO
-30,Previsto,Não,Vasco,Bragantino,Empate,91.2,RandomForest_MCCV
+30,Previsto,Não,Vasco,Bragantino,Empate,92.10000000000001,RandomForest_MCCV
 30,Previsto,Não,Vasco,Bragantino,Derrota,,LogisticRegression_LOSO
 30,Previsto,Não,Vasco,Bragantino,Derrota,100.0,LogisticRegression_MCCV
 30,Previsto,Sim,Vitória,Corinthians,Vitória,,RandomForest_LOSO
@@ -1146,65 +1146,65 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 30,Previsto,Sim,Vitória,Corinthians,Vitória,,LogisticRegression_LOSO
 30,Previsto,Sim,Vitória,Corinthians,Vitória,100.0,LogisticRegression_MCCV
 31,Previsto,Não,Atlético-MG,Internacional,Derrota,,RandomForest_LOSO
-31,Previsto,Não,Atlético-MG,Internacional,Derrota,59.099999999999994,RandomForest_MCCV
+31,Previsto,Não,Atlético-MG,Internacional,Derrota,61.6,RandomForest_MCCV
 31,Previsto,Não,Atlético-MG,Internacional,Derrota,,LogisticRegression_LOSO
 31,Previsto,Não,Atlético-MG,Internacional,Derrota,100.0,LogisticRegression_MCCV
-31,Previsto,Sim,Bahia,Bragantino,Derrota,,RandomForest_LOSO
-31,Previsto,Sim,Bahia,Bragantino,Derrota,88.8,RandomForest_MCCV
+31,Previsto,Sim,Bahia,Bragantino,Empate,,RandomForest_LOSO
+31,Previsto,Sim,Bahia,Bragantino,Derrota,90.7,RandomForest_MCCV
 31,Previsto,Sim,Bahia,Bragantino,Vitória,,LogisticRegression_LOSO
-31,Previsto,Sim,Bahia,Bragantino,Vitória,77.3,LogisticRegression_MCCV
+31,Previsto,Sim,Bahia,Bragantino,Vitória,76.2,LogisticRegression_MCCV
 31,Previsto,Não,Botafogo,Mirassol,Derrota,,RandomForest_LOSO
 31,Previsto,Não,Botafogo,Mirassol,Derrota,100.0,RandomForest_MCCV
 31,Previsto,Não,Botafogo,Mirassol,Derrota,,LogisticRegression_LOSO
 31,Previsto,Não,Botafogo,Mirassol,Derrota,100.0,LogisticRegression_MCCV
 31,Previsto,Não,Bragantino,Bahia,Vitória,,RandomForest_LOSO
-31,Previsto,Não,Bragantino,Bahia,Vitória,88.5,RandomForest_MCCV
+31,Previsto,Não,Bragantino,Bahia,Vitória,89.60000000000001,RandomForest_MCCV
 31,Previsto,Não,Bragantino,Bahia,Derrota,,LogisticRegression_LOSO
-31,Previsto,Não,Bragantino,Bahia,Derrota,77.7,LogisticRegression_MCCV
+31,Previsto,Não,Bragantino,Bahia,Derrota,76.0,LogisticRegression_MCCV
 31,Previsto,Sim,Ceará,Fluminense,Derrota,,RandomForest_LOSO
-31,Previsto,Sim,Ceará,Fluminense,Derrota,90.7,RandomForest_MCCV
+31,Previsto,Sim,Ceará,Fluminense,Derrota,92.2,RandomForest_MCCV
 31,Previsto,Sim,Ceará,Fluminense,Derrota,,LogisticRegression_LOSO
-31,Previsto,Sim,Ceará,Fluminense,Derrota,97.89999999999999,LogisticRegression_MCCV
+31,Previsto,Sim,Ceará,Fluminense,Derrota,97.7,LogisticRegression_MCCV
 31,Previsto,Sim,Corinthians,Grêmio,Vitória,,RandomForest_LOSO
-31,Previsto,Sim,Corinthians,Grêmio,Vitória,85.3,RandomForest_MCCV
+31,Previsto,Sim,Corinthians,Grêmio,Vitória,86.6,RandomForest_MCCV
 31,Previsto,Sim,Corinthians,Grêmio,Vitória,,LogisticRegression_LOSO
-31,Previsto,Sim,Corinthians,Grêmio,Vitória,100.0,LogisticRegression_MCCV
+31,Previsto,Sim,Corinthians,Grêmio,Vitória,99.8,LogisticRegression_MCCV
 31,Previsto,Sim,Cruzeiro,Vitória,Derrota,,RandomForest_LOSO
-31,Previsto,Sim,Cruzeiro,Vitória,Derrota,94.5,RandomForest_MCCV
+31,Previsto,Sim,Cruzeiro,Vitória,Derrota,95.0,RandomForest_MCCV
 31,Previsto,Sim,Cruzeiro,Vitória,Derrota,,LogisticRegression_LOSO
-31,Previsto,Sim,Cruzeiro,Vitória,Derrota,92.0,LogisticRegression_MCCV
+31,Previsto,Sim,Cruzeiro,Vitória,Derrota,92.60000000000001,LogisticRegression_MCCV
 31,Previsto,Sim,Flamengo,Sport,Vitória,,RandomForest_LOSO
-31,Previsto,Sim,Flamengo,Sport,Vitória,99.3,RandomForest_MCCV
+31,Previsto,Sim,Flamengo,Sport,Vitória,99.0,RandomForest_MCCV
 31,Previsto,Sim,Flamengo,Sport,Vitória,,LogisticRegression_LOSO
 31,Previsto,Sim,Flamengo,Sport,Vitória,100.0,LogisticRegression_MCCV
 31,Previsto,Não,Fluminense,Ceará,Vitória,,RandomForest_LOSO
-31,Previsto,Não,Fluminense,Ceará,Vitória,90.2,RandomForest_MCCV
+31,Previsto,Não,Fluminense,Ceará,Vitória,90.9,RandomForest_MCCV
 31,Previsto,Não,Fluminense,Ceará,Vitória,,LogisticRegression_LOSO
-31,Previsto,Não,Fluminense,Ceará,Vitória,98.2,LogisticRegression_MCCV
+31,Previsto,Não,Fluminense,Ceará,Vitória,98.1,LogisticRegression_MCCV
 31,Previsto,Não,Fortaleza,Santos,Derrota,,RandomForest_LOSO
 31,Previsto,Não,Fortaleza,Santos,Derrota,100.0,RandomForest_MCCV
 31,Previsto,Não,Fortaleza,Santos,Derrota,,LogisticRegression_LOSO
 31,Previsto,Não,Fortaleza,Santos,Derrota,100.0,LogisticRegression_MCCV
 31,Previsto,Não,Grêmio,Corinthians,Derrota,,RandomForest_LOSO
-31,Previsto,Não,Grêmio,Corinthians,Derrota,88.3,RandomForest_MCCV
+31,Previsto,Não,Grêmio,Corinthians,Derrota,88.7,RandomForest_MCCV
 31,Previsto,Não,Grêmio,Corinthians,Derrota,,LogisticRegression_LOSO
-31,Previsto,Não,Grêmio,Corinthians,Derrota,99.9,LogisticRegression_MCCV
+31,Previsto,Não,Grêmio,Corinthians,Derrota,99.8,LogisticRegression_MCCV
 31,Previsto,Sim,Internacional,Atlético-MG,Empate,,RandomForest_LOSO
-31,Previsto,Sim,Internacional,Atlético-MG,Vitória,61.5,RandomForest_MCCV
+31,Previsto,Sim,Internacional,Atlético-MG,Vitória,57.699999999999996,RandomForest_MCCV
 31,Previsto,Sim,Internacional,Atlético-MG,Vitória,,LogisticRegression_LOSO
 31,Previsto,Sim,Internacional,Atlético-MG,Vitória,100.0,LogisticRegression_MCCV
 31,Previsto,Sim,Juventude,Palmeiras,Vitória,,RandomForest_LOSO
-31,Previsto,Sim,Juventude,Palmeiras,Vitória,72.2,RandomForest_MCCV
+31,Previsto,Sim,Juventude,Palmeiras,Vitória,72.89999999999999,RandomForest_MCCV
 31,Previsto,Sim,Juventude,Palmeiras,Vitória,,LogisticRegression_LOSO
-31,Previsto,Sim,Juventude,Palmeiras,Vitória,100.0,LogisticRegression_MCCV
+31,Previsto,Sim,Juventude,Palmeiras,Vitória,99.9,LogisticRegression_MCCV
 31,Previsto,Sim,Mirassol,Botafogo,Vitória,,RandomForest_LOSO
 31,Previsto,Sim,Mirassol,Botafogo,Vitória,100.0,RandomForest_MCCV
 31,Previsto,Sim,Mirassol,Botafogo,Vitória,,LogisticRegression_LOSO
 31,Previsto,Sim,Mirassol,Botafogo,Vitória,100.0,LogisticRegression_MCCV
 31,Previsto,Não,Palmeiras,Juventude,Derrota,,RandomForest_LOSO
-31,Previsto,Não,Palmeiras,Juventude,Derrota,75.6,RandomForest_MCCV
+31,Previsto,Não,Palmeiras,Juventude,Derrota,74.8,RandomForest_MCCV
 31,Previsto,Não,Palmeiras,Juventude,Derrota,,LogisticRegression_LOSO
-31,Previsto,Não,Palmeiras,Juventude,Derrota,99.8,LogisticRegression_MCCV
+31,Previsto,Não,Palmeiras,Juventude,Derrota,99.7,LogisticRegression_MCCV
 31,Previsto,Sim,Santos,Fortaleza,Vitória,,RandomForest_LOSO
 31,Previsto,Sim,Santos,Fortaleza,Vitória,100.0,RandomForest_MCCV
 31,Previsto,Sim,Santos,Fortaleza,Vitória,,LogisticRegression_LOSO
@@ -1213,62 +1213,62 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 31,Previsto,Não,Sport,Flamengo,Derrota,99.6,RandomForest_MCCV
 31,Previsto,Não,Sport,Flamengo,Derrota,,LogisticRegression_LOSO
 31,Previsto,Não,Sport,Flamengo,Derrota,100.0,LogisticRegression_MCCV
-31,Previsto,Não,São Paulo,Vasco,Vitória,,RandomForest_LOSO
-31,Previsto,Não,São Paulo,Vasco,Empate,59.3,RandomForest_MCCV
+31,Previsto,Não,São Paulo,Vasco,Empate,,RandomForest_LOSO
+31,Previsto,Não,São Paulo,Vasco,Empate,58.5,RandomForest_MCCV
 31,Previsto,Não,São Paulo,Vasco,Vitória,,LogisticRegression_LOSO
 31,Previsto,Não,São Paulo,Vasco,Vitória,100.0,LogisticRegression_MCCV
 31,Previsto,Sim,Vasco,São Paulo,Empate,,RandomForest_LOSO
-31,Previsto,Sim,Vasco,São Paulo,Empate,58.199999999999996,RandomForest_MCCV
+31,Previsto,Sim,Vasco,São Paulo,Empate,58.699999999999996,RandomForest_MCCV
 31,Previsto,Sim,Vasco,São Paulo,Derrota,,LogisticRegression_LOSO
 31,Previsto,Sim,Vasco,São Paulo,Derrota,100.0,LogisticRegression_MCCV
 31,Previsto,Não,Vitória,Cruzeiro,Vitória,,RandomForest_LOSO
 31,Previsto,Não,Vitória,Cruzeiro,Vitória,94.39999999999999,RandomForest_MCCV
 31,Previsto,Não,Vitória,Cruzeiro,Vitória,,LogisticRegression_LOSO
-31,Previsto,Não,Vitória,Cruzeiro,Vitória,93.0,LogisticRegression_MCCV
+31,Previsto,Não,Vitória,Cruzeiro,Vitória,91.9,LogisticRegression_MCCV
 32,Previsto,Sim,Atlético-MG,Bahia,Vitória,,RandomForest_LOSO
-32,Previsto,Sim,Atlético-MG,Bahia,Vitória,94.5,RandomForest_MCCV
+32,Previsto,Sim,Atlético-MG,Bahia,Vitória,96.39999999999999,RandomForest_MCCV
 32,Previsto,Sim,Atlético-MG,Bahia,Vitória,,LogisticRegression_LOSO
 32,Previsto,Sim,Atlético-MG,Bahia,Vitória,100.0,LogisticRegression_MCCV
 32,Previsto,Não,Bahia,Atlético-MG,Derrota,,RandomForest_LOSO
-32,Previsto,Não,Bahia,Atlético-MG,Derrota,95.89999999999999,RandomForest_MCCV
+32,Previsto,Não,Bahia,Atlético-MG,Derrota,95.8,RandomForest_MCCV
 32,Previsto,Não,Bahia,Atlético-MG,Derrota,,LogisticRegression_LOSO
 32,Previsto,Não,Bahia,Atlético-MG,Derrota,100.0,LogisticRegression_MCCV
 32,Previsto,Sim,Botafogo,Vasco,Derrota,,RandomForest_LOSO
-32,Previsto,Sim,Botafogo,Vasco,Derrota,65.0,RandomForest_MCCV
+32,Previsto,Sim,Botafogo,Vasco,Derrota,67.2,RandomForest_MCCV
 32,Previsto,Sim,Botafogo,Vasco,Vitória,,LogisticRegression_LOSO
-32,Previsto,Sim,Botafogo,Vasco,Vitória,100.0,LogisticRegression_MCCV
+32,Previsto,Sim,Botafogo,Vasco,Vitória,99.8,LogisticRegression_MCCV
 32,Previsto,Sim,Bragantino,Corinthians,Empate,,RandomForest_LOSO
-32,Previsto,Sim,Bragantino,Corinthians,Empate,71.7,RandomForest_MCCV
+32,Previsto,Sim,Bragantino,Corinthians,Empate,69.8,RandomForest_MCCV
 32,Previsto,Sim,Bragantino,Corinthians,Vitória,,LogisticRegression_LOSO
 32,Previsto,Sim,Bragantino,Corinthians,Vitória,100.0,LogisticRegression_MCCV
 32,Previsto,Sim,Ceará,Fortaleza,Derrota,,RandomForest_LOSO
-32,Previsto,Sim,Ceará,Fortaleza,Derrota,98.8,RandomForest_MCCV
+32,Previsto,Sim,Ceará,Fortaleza,Derrota,98.5,RandomForest_MCCV
 32,Previsto,Sim,Ceará,Fortaleza,Derrota,,LogisticRegression_LOSO
-32,Previsto,Sim,Ceará,Fortaleza,Derrota,56.39999999999999,LogisticRegression_MCCV
-32,Previsto,Não,Corinthians,Bragantino,Vitória,,RandomForest_LOSO
-32,Previsto,Não,Corinthians,Bragantino,Empate,71.6,RandomForest_MCCV
+32,Previsto,Sim,Ceará,Fortaleza,Derrota,55.1,LogisticRegression_MCCV
+32,Previsto,Não,Corinthians,Bragantino,Empate,,RandomForest_LOSO
+32,Previsto,Não,Corinthians,Bragantino,Empate,74.0,RandomForest_MCCV
 32,Previsto,Não,Corinthians,Bragantino,Derrota,,LogisticRegression_LOSO
 32,Previsto,Não,Corinthians,Bragantino,Derrota,99.9,LogisticRegression_MCCV
 32,Previsto,Não,Cruzeiro,Grêmio,Derrota,,RandomForest_LOSO
-32,Previsto,Não,Cruzeiro,Grêmio,Derrota,58.199999999999996,RandomForest_MCCV
+32,Previsto,Não,Cruzeiro,Grêmio,Derrota,58.8,RandomForest_MCCV
 32,Previsto,Não,Cruzeiro,Grêmio,Derrota,,LogisticRegression_LOSO
-32,Previsto,Não,Cruzeiro,Grêmio,Derrota,82.5,LogisticRegression_MCCV
+32,Previsto,Não,Cruzeiro,Grêmio,Derrota,80.30000000000001,LogisticRegression_MCCV
 32,Previsto,Não,Flamengo,São Paulo,Derrota,,RandomForest_LOSO
-32,Previsto,Não,Flamengo,São Paulo,Derrota,91.10000000000001,RandomForest_MCCV
+32,Previsto,Não,Flamengo,São Paulo,Derrota,91.7,RandomForest_MCCV
 32,Previsto,Não,Flamengo,São Paulo,Derrota,,LogisticRegression_LOSO
 32,Previsto,Não,Flamengo,São Paulo,Derrota,100.0,LogisticRegression_MCCV
 32,Previsto,Sim,Fluminense,Mirassol,Vitória,,RandomForest_LOSO
-32,Previsto,Sim,Fluminense,Mirassol,Vitória,99.0,RandomForest_MCCV
+32,Previsto,Sim,Fluminense,Mirassol,Vitória,99.7,RandomForest_MCCV
 32,Previsto,Sim,Fluminense,Mirassol,Vitória,,LogisticRegression_LOSO
 32,Previsto,Sim,Fluminense,Mirassol,Vitória,100.0,LogisticRegression_MCCV
 32,Previsto,Não,Fortaleza,Ceará,Vitória,,RandomForest_LOSO
 32,Previsto,Não,Fortaleza,Ceará,Vitória,98.5,RandomForest_MCCV
 32,Previsto,Não,Fortaleza,Ceará,Vitória,,LogisticRegression_LOSO
-32,Previsto,Não,Fortaleza,Ceará,Vitória,55.400000000000006,LogisticRegression_MCCV
-32,Previsto,Sim,Grêmio,Cruzeiro,Empate,,RandomForest_LOSO
-32,Previsto,Sim,Grêmio,Cruzeiro,Vitória,56.599999999999994,RandomForest_MCCV
+32,Previsto,Não,Fortaleza,Ceará,Vitória,56.49999999999999,LogisticRegression_MCCV
+32,Previsto,Sim,Grêmio,Cruzeiro,Vitória,,RandomForest_LOSO
+32,Previsto,Sim,Grêmio,Cruzeiro,Vitória,56.2,RandomForest_MCCV
 32,Previsto,Sim,Grêmio,Cruzeiro,Vitória,,LogisticRegression_LOSO
-32,Previsto,Sim,Grêmio,Cruzeiro,Vitória,80.5,LogisticRegression_MCCV
+32,Previsto,Sim,Grêmio,Cruzeiro,Vitória,81.0,LogisticRegression_MCCV
 32,Previsto,Não,Internacional,Vitória,Derrota,,RandomForest_LOSO
 32,Previsto,Não,Internacional,Vitória,Derrota,100.0,RandomForest_MCCV
 32,Previsto,Não,Internacional,Vitória,Derrota,,LogisticRegression_LOSO
@@ -1276,13 +1276,13 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 32,Previsto,Não,Juventude,Sport,Vitória,,RandomForest_LOSO
 32,Previsto,Não,Juventude,Sport,Vitória,84.89999999999999,RandomForest_MCCV
 32,Previsto,Não,Juventude,Sport,Vitória,,LogisticRegression_LOSO
-32,Previsto,Não,Juventude,Sport,Vitória,92.5,LogisticRegression_MCCV
+32,Previsto,Não,Juventude,Sport,Vitória,91.8,LogisticRegression_MCCV
 32,Previsto,Não,Mirassol,Fluminense,Derrota,,RandomForest_LOSO
-32,Previsto,Não,Mirassol,Fluminense,Derrota,99.9,RandomForest_MCCV
+32,Previsto,Não,Mirassol,Fluminense,Derrota,99.7,RandomForest_MCCV
 32,Previsto,Não,Mirassol,Fluminense,Derrota,,LogisticRegression_LOSO
 32,Previsto,Não,Mirassol,Fluminense,Derrota,100.0,LogisticRegression_MCCV
 32,Previsto,Sim,Palmeiras,Santos,Vitória,,RandomForest_LOSO
-32,Previsto,Sim,Palmeiras,Santos,Vitória,99.9,RandomForest_MCCV
+32,Previsto,Sim,Palmeiras,Santos,Vitória,100.0,RandomForest_MCCV
 32,Previsto,Sim,Palmeiras,Santos,Vitória,,LogisticRegression_LOSO
 32,Previsto,Sim,Palmeiras,Santos,Vitória,100.0,LogisticRegression_MCCV
 32,Previsto,Não,Santos,Palmeiras,Derrota,,RandomForest_LOSO
@@ -1290,17 +1290,17 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 32,Previsto,Não,Santos,Palmeiras,Derrota,,LogisticRegression_LOSO
 32,Previsto,Não,Santos,Palmeiras,Derrota,100.0,LogisticRegression_MCCV
 32,Previsto,Sim,Sport,Juventude,Derrota,,RandomForest_LOSO
-32,Previsto,Sim,Sport,Juventude,Derrota,87.7,RandomForest_MCCV
+32,Previsto,Sim,Sport,Juventude,Derrota,87.4,RandomForest_MCCV
 32,Previsto,Sim,Sport,Juventude,Derrota,,LogisticRegression_LOSO
-32,Previsto,Sim,Sport,Juventude,Derrota,90.8,LogisticRegression_MCCV
+32,Previsto,Sim,Sport,Juventude,Derrota,90.2,LogisticRegression_MCCV
 32,Previsto,Sim,São Paulo,Flamengo,Vitória,,RandomForest_LOSO
-32,Previsto,Sim,São Paulo,Flamengo,Vitória,89.4,RandomForest_MCCV
+32,Previsto,Sim,São Paulo,Flamengo,Vitória,88.6,RandomForest_MCCV
 32,Previsto,Sim,São Paulo,Flamengo,Vitória,,LogisticRegression_LOSO
 32,Previsto,Sim,São Paulo,Flamengo,Vitória,100.0,LogisticRegression_MCCV
 32,Previsto,Não,Vasco,Botafogo,Vitória,,RandomForest_LOSO
 32,Previsto,Não,Vasco,Botafogo,Vitória,62.9,RandomForest_MCCV
 32,Previsto,Não,Vasco,Botafogo,Derrota,,LogisticRegression_LOSO
-32,Previsto,Não,Vasco,Botafogo,Derrota,99.6,LogisticRegression_MCCV
+32,Previsto,Não,Vasco,Botafogo,Derrota,99.7,LogisticRegression_MCCV
 32,Previsto,Sim,Vitória,Internacional,Vitória,,RandomForest_LOSO
 32,Previsto,Sim,Vitória,Internacional,Vitória,100.0,RandomForest_MCCV
 32,Previsto,Sim,Vitória,Internacional,Vitória,,LogisticRegression_LOSO
@@ -1310,65 +1310,65 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 33,Previsto,Não,Atlético-MG,Sport,Derrota,,LogisticRegression_LOSO
 33,Previsto,Não,Atlético-MG,Sport,Derrota,100.0,LogisticRegression_MCCV
 33,Previsto,Não,Bahia,Internacional,Derrota,,RandomForest_LOSO
-33,Previsto,Não,Bahia,Internacional,Derrota,99.4,RandomForest_MCCV
+33,Previsto,Não,Bahia,Internacional,Derrota,99.3,RandomForest_MCCV
 33,Previsto,Não,Bahia,Internacional,Derrota,,LogisticRegression_LOSO
 33,Previsto,Não,Bahia,Internacional,Derrota,100.0,LogisticRegression_MCCV
 33,Previsto,Não,Botafogo,Vitória,Empate,,RandomForest_LOSO
-33,Previsto,Não,Botafogo,Vitória,Empate,77.8,RandomForest_MCCV
+33,Previsto,Não,Botafogo,Vitória,Empate,79.3,RandomForest_MCCV
 33,Previsto,Não,Botafogo,Vitória,Vitória,,LogisticRegression_LOSO
-33,Previsto,Não,Botafogo,Vitória,Vitória,99.0,LogisticRegression_MCCV
+33,Previsto,Não,Botafogo,Vitória,Vitória,99.1,LogisticRegression_MCCV
 33,Previsto,Não,Bragantino,São Paulo,Derrota,,RandomForest_LOSO
-33,Previsto,Não,Bragantino,São Paulo,Derrota,99.9,RandomForest_MCCV
+33,Previsto,Não,Bragantino,São Paulo,Derrota,100.0,RandomForest_MCCV
 33,Previsto,Não,Bragantino,São Paulo,Derrota,,LogisticRegression_LOSO
 33,Previsto,Não,Bragantino,São Paulo,Derrota,100.0,LogisticRegression_MCCV
-33,Previsto,Não,Ceará,Corinthians,Empate,,RandomForest_LOSO
-33,Previsto,Não,Ceará,Corinthians,Vitória,53.400000000000006,RandomForest_MCCV
+33,Previsto,Não,Ceará,Corinthians,Vitória,,RandomForest_LOSO
+33,Previsto,Não,Ceará,Corinthians,Vitória,51.1,RandomForest_MCCV
 33,Previsto,Não,Ceará,Corinthians,Vitória,,LogisticRegression_LOSO
-33,Previsto,Não,Ceará,Corinthians,Vitória,99.9,LogisticRegression_MCCV
-33,Previsto,Sim,Corinthians,Ceará,Derrota,,RandomForest_LOSO
-33,Previsto,Sim,Corinthians,Ceará,Derrota,57.599999999999994,RandomForest_MCCV
+33,Previsto,Não,Ceará,Corinthians,Vitória,100.0,LogisticRegression_MCCV
+33,Previsto,Sim,Corinthians,Ceará,Empate,,RandomForest_LOSO
+33,Previsto,Sim,Corinthians,Ceará,Derrota,59.3,RandomForest_MCCV
 33,Previsto,Sim,Corinthians,Ceará,Derrota,,LogisticRegression_LOSO
-33,Previsto,Sim,Corinthians,Ceará,Derrota,99.6,LogisticRegression_MCCV
+33,Previsto,Sim,Corinthians,Ceará,Derrota,99.8,LogisticRegression_MCCV
 33,Previsto,Sim,Cruzeiro,Fluminense,Derrota,,RandomForest_LOSO
-33,Previsto,Sim,Cruzeiro,Fluminense,Derrota,80.60000000000001,RandomForest_MCCV
+33,Previsto,Sim,Cruzeiro,Fluminense,Derrota,82.19999999999999,RandomForest_MCCV
 33,Previsto,Sim,Cruzeiro,Fluminense,Vitória,,LogisticRegression_LOSO
-33,Previsto,Sim,Cruzeiro,Fluminense,Vitória,64.5,LogisticRegression_MCCV
-33,Previsto,Sim,Flamengo,Santos,Empate,,RandomForest_LOSO
-33,Previsto,Sim,Flamengo,Santos,Empate,73.7,RandomForest_MCCV
+33,Previsto,Sim,Cruzeiro,Fluminense,Vitória,66.8,LogisticRegression_MCCV
+33,Previsto,Sim,Flamengo,Santos,Vitória,,RandomForest_LOSO
+33,Previsto,Sim,Flamengo,Santos,Empate,75.3,RandomForest_MCCV
 33,Previsto,Sim,Flamengo,Santos,Vitória,,LogisticRegression_LOSO
-33,Previsto,Sim,Flamengo,Santos,Vitória,100.0,LogisticRegression_MCCV
+33,Previsto,Sim,Flamengo,Santos,Vitória,99.9,LogisticRegression_MCCV
 33,Previsto,Não,Fluminense,Cruzeiro,Vitória,,RandomForest_LOSO
-33,Previsto,Não,Fluminense,Cruzeiro,Vitória,79.80000000000001,RandomForest_MCCV
+33,Previsto,Não,Fluminense,Cruzeiro,Vitória,82.39999999999999,RandomForest_MCCV
 33,Previsto,Não,Fluminense,Cruzeiro,Derrota,,LogisticRegression_LOSO
-33,Previsto,Não,Fluminense,Cruzeiro,Derrota,65.7,LogisticRegression_MCCV
-33,Previsto,Sim,Fortaleza,Grêmio,Derrota,,RandomForest_LOSO
-33,Previsto,Sim,Fortaleza,Grêmio,Vitória,63.5,RandomForest_MCCV
+33,Previsto,Não,Fluminense,Cruzeiro,Derrota,63.5,LogisticRegression_MCCV
+33,Previsto,Sim,Fortaleza,Grêmio,Vitória,,RandomForest_LOSO
+33,Previsto,Sim,Fortaleza,Grêmio,Vitória,62.7,RandomForest_MCCV
 33,Previsto,Sim,Fortaleza,Grêmio,Vitória,,LogisticRegression_LOSO
 33,Previsto,Sim,Fortaleza,Grêmio,Vitória,100.0,LogisticRegression_MCCV
 33,Previsto,Não,Grêmio,Fortaleza,Derrota,,RandomForest_LOSO
-33,Previsto,Não,Grêmio,Fortaleza,Derrota,67.30000000000001,RandomForest_MCCV
+33,Previsto,Não,Grêmio,Fortaleza,Derrota,64.0,RandomForest_MCCV
 33,Previsto,Não,Grêmio,Fortaleza,Derrota,,LogisticRegression_LOSO
 33,Previsto,Não,Grêmio,Fortaleza,Derrota,100.0,LogisticRegression_MCCV
 33,Previsto,Sim,Internacional,Bahia,Vitória,,RandomForest_LOSO
-33,Previsto,Sim,Internacional,Bahia,Vitória,99.1,RandomForest_MCCV
+33,Previsto,Sim,Internacional,Bahia,Vitória,99.3,RandomForest_MCCV
 33,Previsto,Sim,Internacional,Bahia,Vitória,,LogisticRegression_LOSO
 33,Previsto,Sim,Internacional,Bahia,Vitória,100.0,LogisticRegression_MCCV
-33,Previsto,Não,Juventude,Vasco,Vitória,,RandomForest_LOSO
-33,Previsto,Não,Juventude,Vasco,Empate,69.6,RandomForest_MCCV
+33,Previsto,Não,Juventude,Vasco,Empate,,RandomForest_LOSO
+33,Previsto,Não,Juventude,Vasco,Empate,70.89999999999999,RandomForest_MCCV
 33,Previsto,Não,Juventude,Vasco,Derrota,,LogisticRegression_LOSO
-33,Previsto,Não,Juventude,Vasco,Derrota,53.900000000000006,LogisticRegression_MCCV
-33,Previsto,Sim,Mirassol,Palmeiras,Empate,,RandomForest_LOSO
-33,Previsto,Sim,Mirassol,Palmeiras,Empate,71.0,RandomForest_MCCV
+33,Previsto,Não,Juventude,Vasco,Derrota,51.800000000000004,LogisticRegression_MCCV
+33,Previsto,Sim,Mirassol,Palmeiras,Derrota,,RandomForest_LOSO
+33,Previsto,Sim,Mirassol,Palmeiras,Empate,70.6,RandomForest_MCCV
 33,Previsto,Sim,Mirassol,Palmeiras,Vitória,,LogisticRegression_LOSO
-33,Previsto,Sim,Mirassol,Palmeiras,Vitória,98.6,LogisticRegression_MCCV
+33,Previsto,Sim,Mirassol,Palmeiras,Vitória,99.1,LogisticRegression_MCCV
 33,Previsto,Não,Palmeiras,Mirassol,Empate,,RandomForest_LOSO
-33,Previsto,Não,Palmeiras,Mirassol,Empate,71.1,RandomForest_MCCV
+33,Previsto,Não,Palmeiras,Mirassol,Empate,72.0,RandomForest_MCCV
 33,Previsto,Não,Palmeiras,Mirassol,Derrota,,LogisticRegression_LOSO
-33,Previsto,Não,Palmeiras,Mirassol,Derrota,98.6,LogisticRegression_MCCV
+33,Previsto,Não,Palmeiras,Mirassol,Derrota,99.2,LogisticRegression_MCCV
 33,Previsto,Não,Santos,Flamengo,Empate,,RandomForest_LOSO
-33,Previsto,Não,Santos,Flamengo,Empate,72.0,RandomForest_MCCV
+33,Previsto,Não,Santos,Flamengo,Empate,75.2,RandomForest_MCCV
 33,Previsto,Não,Santos,Flamengo,Derrota,,LogisticRegression_LOSO
-33,Previsto,Não,Santos,Flamengo,Derrota,99.5,LogisticRegression_MCCV
+33,Previsto,Não,Santos,Flamengo,Derrota,99.8,LogisticRegression_MCCV
 33,Previsto,Sim,Sport,Atlético-MG,Vitória,,RandomForest_LOSO
 33,Previsto,Sim,Sport,Atlético-MG,Vitória,100.0,RandomForest_MCCV
 33,Previsto,Sim,Sport,Atlético-MG,Vitória,,LogisticRegression_LOSO
@@ -1378,13 +1378,13 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 33,Previsto,Sim,São Paulo,Bragantino,Vitória,,LogisticRegression_LOSO
 33,Previsto,Sim,São Paulo,Bragantino,Vitória,100.0,LogisticRegression_MCCV
 33,Previsto,Sim,Vasco,Juventude,Empate,,RandomForest_LOSO
-33,Previsto,Sim,Vasco,Juventude,Empate,70.39999999999999,RandomForest_MCCV
+33,Previsto,Sim,Vasco,Juventude,Empate,71.6,RandomForest_MCCV
 33,Previsto,Sim,Vasco,Juventude,Vitória,,LogisticRegression_LOSO
-33,Previsto,Sim,Vasco,Juventude,Vitória,50.7,LogisticRegression_MCCV
+33,Previsto,Sim,Vasco,Juventude,Vitória,52.900000000000006,LogisticRegression_MCCV
 33,Previsto,Sim,Vitória,Botafogo,Empate,,RandomForest_LOSO
-33,Previsto,Sim,Vitória,Botafogo,Empate,77.9,RandomForest_MCCV
+33,Previsto,Sim,Vitória,Botafogo,Empate,77.7,RandomForest_MCCV
 33,Previsto,Sim,Vitória,Botafogo,Derrota,,LogisticRegression_LOSO
-33,Previsto,Sim,Vitória,Botafogo,Derrota,99.2,LogisticRegression_MCCV
+33,Previsto,Sim,Vitória,Botafogo,Derrota,99.0,LogisticRegression_MCCV
 34,Previsto,Sim,Atlético-MG,Palmeiras,Vitória,,RandomForest_LOSO
 34,Previsto,Sim,Atlético-MG,Palmeiras,Vitória,100.0,RandomForest_MCCV
 34,Previsto,Sim,Atlético-MG,Palmeiras,Vitória,,LogisticRegression_LOSO
@@ -1402,10 +1402,10 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 34,Previsto,Sim,Bragantino,Vitória,Vitória,,LogisticRegression_LOSO
 34,Previsto,Sim,Bragantino,Vitória,Vitória,100.0,LogisticRegression_MCCV
 34,Previsto,Sim,Ceará,Internacional,Vitória,,RandomForest_LOSO
-34,Previsto,Sim,Ceará,Internacional,Vitória,99.7,RandomForest_MCCV
+34,Previsto,Sim,Ceará,Internacional,Vitória,99.8,RandomForest_MCCV
 34,Previsto,Sim,Ceará,Internacional,Vitória,,LogisticRegression_LOSO
 34,Previsto,Sim,Ceará,Internacional,Vitória,100.0,LogisticRegression_MCCV
-34,Previsto,Sim,Corinthians,São Paulo,Empate,,RandomForest_LOSO
+34,Previsto,Sim,Corinthians,São Paulo,Vitória,,RandomForest_LOSO
 34,Previsto,Sim,Corinthians,São Paulo,Vitória,70.8,RandomForest_MCCV
 34,Previsto,Sim,Corinthians,São Paulo,Vitória,,LogisticRegression_LOSO
 34,Previsto,Sim,Corinthians,São Paulo,Vitória,100.0,LogisticRegression_MCCV
@@ -1414,11 +1414,11 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 34,Previsto,Não,Cruzeiro,Juventude,Derrota,,LogisticRegression_LOSO
 34,Previsto,Não,Cruzeiro,Juventude,Derrota,100.0,LogisticRegression_MCCV
 34,Previsto,Não,Flamengo,Fluminense,Derrota,,RandomForest_LOSO
-34,Previsto,Não,Flamengo,Fluminense,Derrota,96.89999999999999,RandomForest_MCCV
+34,Previsto,Não,Flamengo,Fluminense,Derrota,96.3,RandomForest_MCCV
 34,Previsto,Não,Flamengo,Fluminense,Derrota,,LogisticRegression_LOSO
 34,Previsto,Não,Flamengo,Fluminense,Derrota,100.0,LogisticRegression_MCCV
 34,Previsto,Sim,Fluminense,Flamengo,Vitória,,RandomForest_LOSO
-34,Previsto,Sim,Fluminense,Flamengo,Vitória,96.0,RandomForest_MCCV
+34,Previsto,Sim,Fluminense,Flamengo,Vitória,95.8,RandomForest_MCCV
 34,Previsto,Sim,Fluminense,Flamengo,Vitória,,LogisticRegression_LOSO
 34,Previsto,Sim,Fluminense,Flamengo,Vitória,100.0,LogisticRegression_MCCV
 34,Previsto,Não,Fortaleza,Bahia,Derrota,,RandomForest_LOSO
@@ -1426,11 +1426,11 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 34,Previsto,Não,Fortaleza,Bahia,Derrota,,LogisticRegression_LOSO
 34,Previsto,Não,Fortaleza,Bahia,Derrota,100.0,LogisticRegression_MCCV
 34,Previsto,Sim,Grêmio,Vasco,Vitória,,RandomForest_LOSO
-34,Previsto,Sim,Grêmio,Vasco,Vitória,99.9,RandomForest_MCCV
+34,Previsto,Sim,Grêmio,Vasco,Vitória,99.7,RandomForest_MCCV
 34,Previsto,Sim,Grêmio,Vasco,Vitória,,LogisticRegression_LOSO
 34,Previsto,Sim,Grêmio,Vasco,Vitória,100.0,LogisticRegression_MCCV
 34,Previsto,Não,Internacional,Ceará,Derrota,,RandomForest_LOSO
-34,Previsto,Não,Internacional,Ceará,Derrota,99.7,RandomForest_MCCV
+34,Previsto,Não,Internacional,Ceará,Derrota,99.9,RandomForest_MCCV
 34,Previsto,Não,Internacional,Ceará,Derrota,,LogisticRegression_LOSO
 34,Previsto,Não,Internacional,Ceará,Derrota,100.0,LogisticRegression_MCCV
 34,Previsto,Sim,Juventude,Cruzeiro,Vitória,,RandomForest_LOSO
@@ -1438,7 +1438,7 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 34,Previsto,Sim,Juventude,Cruzeiro,Vitória,,LogisticRegression_LOSO
 34,Previsto,Sim,Juventude,Cruzeiro,Vitória,100.0,LogisticRegression_MCCV
 34,Previsto,Não,Mirassol,Santos,Derrota,,RandomForest_LOSO
-34,Previsto,Não,Mirassol,Santos,Derrota,99.9,RandomForest_MCCV
+34,Previsto,Não,Mirassol,Santos,Derrota,99.7,RandomForest_MCCV
 34,Previsto,Não,Mirassol,Santos,Derrota,,LogisticRegression_LOSO
 34,Previsto,Não,Mirassol,Santos,Derrota,100.0,LogisticRegression_MCCV
 34,Previsto,Não,Palmeiras,Atlético-MG,Derrota,,RandomForest_LOSO
@@ -1446,19 +1446,19 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 34,Previsto,Não,Palmeiras,Atlético-MG,Derrota,,LogisticRegression_LOSO
 34,Previsto,Não,Palmeiras,Atlético-MG,Derrota,100.0,LogisticRegression_MCCV
 34,Previsto,Sim,Santos,Mirassol,Vitória,,RandomForest_LOSO
-34,Previsto,Sim,Santos,Mirassol,Vitória,99.8,RandomForest_MCCV
+34,Previsto,Sim,Santos,Mirassol,Vitória,99.9,RandomForest_MCCV
 34,Previsto,Sim,Santos,Mirassol,Vitória,,LogisticRegression_LOSO
 34,Previsto,Sim,Santos,Mirassol,Vitória,100.0,LogisticRegression_MCCV
 34,Previsto,Não,Sport,Botafogo,Vitória,,RandomForest_LOSO
-34,Previsto,Não,Sport,Botafogo,Vitória,99.9,RandomForest_MCCV
+34,Previsto,Não,Sport,Botafogo,Vitória,100.0,RandomForest_MCCV
 34,Previsto,Não,Sport,Botafogo,Vitória,,LogisticRegression_LOSO
-34,Previsto,Não,Sport,Botafogo,Vitória,99.9,LogisticRegression_MCCV
-34,Previsto,Não,São Paulo,Corinthians,Empate,,RandomForest_LOSO
-34,Previsto,Não,São Paulo,Corinthians,Derrota,75.0,RandomForest_MCCV
+34,Previsto,Não,Sport,Botafogo,Vitória,100.0,LogisticRegression_MCCV
+34,Previsto,Não,São Paulo,Corinthians,Derrota,,RandomForest_LOSO
+34,Previsto,Não,São Paulo,Corinthians,Derrota,74.5,RandomForest_MCCV
 34,Previsto,Não,São Paulo,Corinthians,Derrota,,LogisticRegression_LOSO
 34,Previsto,Não,São Paulo,Corinthians,Derrota,100.0,LogisticRegression_MCCV
 34,Previsto,Não,Vasco,Grêmio,Derrota,,RandomForest_LOSO
-34,Previsto,Não,Vasco,Grêmio,Derrota,99.5,RandomForest_MCCV
+34,Previsto,Não,Vasco,Grêmio,Derrota,99.6,RandomForest_MCCV
 34,Previsto,Não,Vasco,Grêmio,Derrota,,LogisticRegression_LOSO
 34,Previsto,Não,Vasco,Grêmio,Derrota,100.0,LogisticRegression_MCCV
 34,Previsto,Não,Vitória,Bragantino,Derrota,,RandomForest_LOSO
@@ -1466,85 +1466,85 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 34,Previsto,Não,Vitória,Bragantino,Derrota,,LogisticRegression_LOSO
 34,Previsto,Não,Vitória,Bragantino,Derrota,100.0,LogisticRegression_MCCV
 35,Previsto,Não,Atlético-MG,Fortaleza,Empate,,RandomForest_LOSO
-35,Previsto,Não,Atlético-MG,Fortaleza,Empate,73.1,RandomForest_MCCV
+35,Previsto,Não,Atlético-MG,Fortaleza,Empate,76.5,RandomForest_MCCV
 35,Previsto,Não,Atlético-MG,Fortaleza,Vitória,,LogisticRegression_LOSO
-35,Previsto,Não,Atlético-MG,Fortaleza,Vitória,99.6,LogisticRegression_MCCV
+35,Previsto,Não,Atlético-MG,Fortaleza,Vitória,99.5,LogisticRegression_MCCV
 35,Previsto,Sim,Bahia,Vasco,Empate,,RandomForest_LOSO
-35,Previsto,Sim,Bahia,Vasco,Empate,74.8,RandomForest_MCCV
+35,Previsto,Sim,Bahia,Vasco,Empate,72.7,RandomForest_MCCV
 35,Previsto,Sim,Bahia,Vasco,Derrota,,LogisticRegression_LOSO
-35,Previsto,Sim,Bahia,Vasco,Derrota,100.0,LogisticRegression_MCCV
+35,Previsto,Sim,Bahia,Vasco,Derrota,99.9,LogisticRegression_MCCV
 35,Previsto,Sim,Botafogo,Grêmio,Derrota,,RandomForest_LOSO
-35,Previsto,Sim,Botafogo,Grêmio,Derrota,63.6,RandomForest_MCCV
+35,Previsto,Sim,Botafogo,Grêmio,Derrota,65.60000000000001,RandomForest_MCCV
 35,Previsto,Sim,Botafogo,Grêmio,Vitória,,LogisticRegression_LOSO
-35,Previsto,Sim,Botafogo,Grêmio,Vitória,98.6,LogisticRegression_MCCV
+35,Previsto,Sim,Botafogo,Grêmio,Vitória,98.8,LogisticRegression_MCCV
 35,Previsto,Não,Bragantino,Flamengo,Empate,,RandomForest_LOSO
-35,Previsto,Não,Bragantino,Flamengo,Empate,51.0,RandomForest_MCCV
+35,Previsto,Não,Bragantino,Flamengo,Empate,53.900000000000006,RandomForest_MCCV
 35,Previsto,Não,Bragantino,Flamengo,Derrota,,LogisticRegression_LOSO
-35,Previsto,Não,Bragantino,Flamengo,Derrota,98.2,LogisticRegression_MCCV
-35,Previsto,Não,Ceará,Mirassol,Derrota,,RandomForest_LOSO
-35,Previsto,Não,Ceará,Mirassol,Vitória,86.7,RandomForest_MCCV
+35,Previsto,Não,Bragantino,Flamengo,Derrota,97.7,LogisticRegression_MCCV
+35,Previsto,Não,Ceará,Mirassol,Vitória,,RandomForest_LOSO
+35,Previsto,Não,Ceará,Mirassol,Vitória,84.5,RandomForest_MCCV
 35,Previsto,Não,Ceará,Mirassol,Derrota,,LogisticRegression_LOSO
-35,Previsto,Não,Ceará,Mirassol,Derrota,92.80000000000001,LogisticRegression_MCCV
+35,Previsto,Não,Ceará,Mirassol,Derrota,91.5,LogisticRegression_MCCV
 35,Previsto,Não,Corinthians,Cruzeiro,Derrota,,RandomForest_LOSO
-35,Previsto,Não,Corinthians,Cruzeiro,Derrota,98.1,RandomForest_MCCV
+35,Previsto,Não,Corinthians,Cruzeiro,Derrota,98.8,RandomForest_MCCV
 35,Previsto,Não,Corinthians,Cruzeiro,Derrota,,LogisticRegression_LOSO
 35,Previsto,Não,Corinthians,Cruzeiro,Derrota,100.0,LogisticRegression_MCCV
 35,Previsto,Sim,Cruzeiro,Corinthians,Vitória,,RandomForest_LOSO
 35,Previsto,Sim,Cruzeiro,Corinthians,Vitória,99.1,RandomForest_MCCV
 35,Previsto,Sim,Cruzeiro,Corinthians,Vitória,,LogisticRegression_LOSO
 35,Previsto,Sim,Cruzeiro,Corinthians,Vitória,100.0,LogisticRegression_MCCV
-35,Previsto,Sim,Flamengo,Bragantino,Empate,,RandomForest_LOSO
-35,Previsto,Sim,Flamengo,Bragantino,Empate,54.0,RandomForest_MCCV
+35,Previsto,Sim,Flamengo,Bragantino,Vitória,,RandomForest_LOSO
+35,Previsto,Sim,Flamengo,Bragantino,Empate,55.00000000000001,RandomForest_MCCV
 35,Previsto,Sim,Flamengo,Bragantino,Vitória,,LogisticRegression_LOSO
-35,Previsto,Sim,Flamengo,Bragantino,Vitória,98.6,LogisticRegression_MCCV
+35,Previsto,Sim,Flamengo,Bragantino,Vitória,98.9,LogisticRegression_MCCV
 35,Previsto,Não,Fluminense,Palmeiras,Vitória,,RandomForest_LOSO
-35,Previsto,Não,Fluminense,Palmeiras,Vitória,92.7,RandomForest_MCCV
+35,Previsto,Não,Fluminense,Palmeiras,Vitória,93.8,RandomForest_MCCV
 35,Previsto,Não,Fluminense,Palmeiras,Derrota,,LogisticRegression_LOSO
-35,Previsto,Não,Fluminense,Palmeiras,Derrota,99.6,LogisticRegression_MCCV
+35,Previsto,Não,Fluminense,Palmeiras,Derrota,99.5,LogisticRegression_MCCV
 35,Previsto,Sim,Fortaleza,Atlético-MG,Empate,,RandomForest_LOSO
-35,Previsto,Sim,Fortaleza,Atlético-MG,Empate,74.3,RandomForest_MCCV
+35,Previsto,Sim,Fortaleza,Atlético-MG,Empate,74.9,RandomForest_MCCV
 35,Previsto,Sim,Fortaleza,Atlético-MG,Derrota,,LogisticRegression_LOSO
-35,Previsto,Sim,Fortaleza,Atlético-MG,Derrota,99.9,LogisticRegression_MCCV
+35,Previsto,Sim,Fortaleza,Atlético-MG,Derrota,99.2,LogisticRegression_MCCV
 35,Previsto,Não,Grêmio,Botafogo,Vitória,,RandomForest_LOSO
-35,Previsto,Não,Grêmio,Botafogo,Vitória,62.4,RandomForest_MCCV
+35,Previsto,Não,Grêmio,Botafogo,Vitória,65.10000000000001,RandomForest_MCCV
 35,Previsto,Não,Grêmio,Botafogo,Derrota,,LogisticRegression_LOSO
-35,Previsto,Não,Grêmio,Botafogo,Derrota,97.8,LogisticRegression_MCCV
+35,Previsto,Não,Grêmio,Botafogo,Derrota,97.5,LogisticRegression_MCCV
 35,Previsto,Sim,Internacional,Santos,Vitória,,RandomForest_LOSO
-35,Previsto,Sim,Internacional,Santos,Vitória,100.0,RandomForest_MCCV
+35,Previsto,Sim,Internacional,Santos,Vitória,99.9,RandomForest_MCCV
 35,Previsto,Sim,Internacional,Santos,Vitória,,LogisticRegression_LOSO
 35,Previsto,Sim,Internacional,Santos,Vitória,100.0,LogisticRegression_MCCV
-35,Previsto,Não,Juventude,São Paulo,Derrota,,RandomForest_LOSO
-35,Previsto,Não,Juventude,São Paulo,Derrota,58.199999999999996,RandomForest_MCCV
+35,Previsto,Não,Juventude,São Paulo,Vitória,,RandomForest_LOSO
+35,Previsto,Não,Juventude,São Paulo,Derrota,54.6,RandomForest_MCCV
 35,Previsto,Não,Juventude,São Paulo,Derrota,,LogisticRegression_LOSO
 35,Previsto,Não,Juventude,São Paulo,Derrota,99.8,LogisticRegression_MCCV
 35,Previsto,Sim,Mirassol,Ceará,Derrota,,RandomForest_LOSO
-35,Previsto,Sim,Mirassol,Ceará,Derrota,86.0,RandomForest_MCCV
+35,Previsto,Sim,Mirassol,Ceará,Derrota,86.2,RandomForest_MCCV
 35,Previsto,Sim,Mirassol,Ceará,Vitória,,LogisticRegression_LOSO
-35,Previsto,Sim,Mirassol,Ceará,Vitória,93.30000000000001,LogisticRegression_MCCV
+35,Previsto,Sim,Mirassol,Ceará,Vitória,92.2,LogisticRegression_MCCV
 35,Previsto,Sim,Palmeiras,Fluminense,Derrota,,RandomForest_LOSO
-35,Previsto,Sim,Palmeiras,Fluminense,Derrota,93.60000000000001,RandomForest_MCCV
+35,Previsto,Sim,Palmeiras,Fluminense,Derrota,92.80000000000001,RandomForest_MCCV
 35,Previsto,Sim,Palmeiras,Fluminense,Vitória,,LogisticRegression_LOSO
-35,Previsto,Sim,Palmeiras,Fluminense,Vitória,99.8,LogisticRegression_MCCV
+35,Previsto,Sim,Palmeiras,Fluminense,Vitória,99.7,LogisticRegression_MCCV
 35,Previsto,Não,Santos,Internacional,Derrota,,RandomForest_LOSO
-35,Previsto,Não,Santos,Internacional,Derrota,99.9,RandomForest_MCCV
+35,Previsto,Não,Santos,Internacional,Derrota,100.0,RandomForest_MCCV
 35,Previsto,Não,Santos,Internacional,Derrota,,LogisticRegression_LOSO
 35,Previsto,Não,Santos,Internacional,Derrota,100.0,LogisticRegression_MCCV
-35,Previsto,Sim,Sport,Vitória,Derrota,,RandomForest_LOSO
-35,Previsto,Sim,Sport,Vitória,Derrota,63.1,RandomForest_MCCV
+35,Previsto,Sim,Sport,Vitória,Vitória,,RandomForest_LOSO
+35,Previsto,Sim,Sport,Vitória,Derrota,58.699999999999996,RandomForest_MCCV
 35,Previsto,Sim,Sport,Vitória,Derrota,,LogisticRegression_LOSO
-35,Previsto,Sim,Sport,Vitória,Derrota,65.5,LogisticRegression_MCCV
-35,Previsto,Sim,São Paulo,Juventude,Vitória,,RandomForest_LOSO
-35,Previsto,Sim,São Paulo,Juventude,Vitória,54.0,RandomForest_MCCV
+35,Previsto,Sim,Sport,Vitória,Derrota,64.7,LogisticRegression_MCCV
+35,Previsto,Sim,São Paulo,Juventude,Derrota,,RandomForest_LOSO
+35,Previsto,Sim,São Paulo,Juventude,Vitória,53.300000000000004,RandomForest_MCCV
 35,Previsto,Sim,São Paulo,Juventude,Vitória,,LogisticRegression_LOSO
 35,Previsto,Sim,São Paulo,Juventude,Vitória,100.0,LogisticRegression_MCCV
 35,Previsto,Não,Vasco,Bahia,Empate,,RandomForest_LOSO
-35,Previsto,Não,Vasco,Bahia,Empate,74.0,RandomForest_MCCV
+35,Previsto,Não,Vasco,Bahia,Empate,73.6,RandomForest_MCCV
 35,Previsto,Não,Vasco,Bahia,Vitória,,LogisticRegression_LOSO
-35,Previsto,Não,Vasco,Bahia,Vitória,99.9,LogisticRegression_MCCV
+35,Previsto,Não,Vasco,Bahia,Vitória,100.0,LogisticRegression_MCCV
 35,Previsto,Não,Vitória,Sport,Vitória,,RandomForest_LOSO
-35,Previsto,Não,Vitória,Sport,Vitória,59.599999999999994,RandomForest_MCCV
+35,Previsto,Não,Vitória,Sport,Vitória,58.099999999999994,RandomForest_MCCV
 35,Previsto,Não,Vitória,Sport,Vitória,,LogisticRegression_LOSO
-35,Previsto,Não,Vitória,Sport,Vitória,65.9,LogisticRegression_MCCV
+35,Previsto,Não,Vitória,Sport,Vitória,66.0,LogisticRegression_MCCV
 36,Previsto,Sim,Atlético-MG,Flamengo,Vitória,,RandomForest_LOSO
 36,Previsto,Sim,Atlético-MG,Flamengo,Vitória,100.0,RandomForest_MCCV
 36,Previsto,Sim,Atlético-MG,Flamengo,Vitória,,LogisticRegression_LOSO
@@ -1554,7 +1554,7 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 36,Previsto,Não,Bahia,Juventude,Derrota,,LogisticRegression_LOSO
 36,Previsto,Não,Bahia,Juventude,Derrota,100.0,LogisticRegression_MCCV
 36,Previsto,Não,Botafogo,Corinthians,Derrota,,RandomForest_LOSO
-36,Previsto,Não,Botafogo,Corinthians,Derrota,99.2,RandomForest_MCCV
+36,Previsto,Não,Botafogo,Corinthians,Derrota,98.8,RandomForest_MCCV
 36,Previsto,Não,Botafogo,Corinthians,Derrota,,LogisticRegression_LOSO
 36,Previsto,Não,Botafogo,Corinthians,Derrota,100.0,LogisticRegression_MCCV
 36,Previsto,Sim,Bragantino,Fortaleza,Vitória,,RandomForest_LOSO
@@ -1562,37 +1562,37 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 36,Previsto,Sim,Bragantino,Fortaleza,Vitória,,LogisticRegression_LOSO
 36,Previsto,Sim,Bragantino,Fortaleza,Vitória,100.0,LogisticRegression_MCCV
 36,Previsto,Sim,Ceará,Cruzeiro,Vitória,,RandomForest_LOSO
-36,Previsto,Sim,Ceará,Cruzeiro,Vitória,86.1,RandomForest_MCCV
+36,Previsto,Sim,Ceará,Cruzeiro,Vitória,88.7,RandomForest_MCCV
 36,Previsto,Sim,Ceará,Cruzeiro,Vitória,,LogisticRegression_LOSO
-36,Previsto,Sim,Ceará,Cruzeiro,Vitória,100.0,LogisticRegression_MCCV
+36,Previsto,Sim,Ceará,Cruzeiro,Vitória,99.9,LogisticRegression_MCCV
 36,Previsto,Sim,Corinthians,Botafogo,Vitória,,RandomForest_LOSO
-36,Previsto,Sim,Corinthians,Botafogo,Vitória,98.9,RandomForest_MCCV
+36,Previsto,Sim,Corinthians,Botafogo,Vitória,98.3,RandomForest_MCCV
 36,Previsto,Sim,Corinthians,Botafogo,Vitória,,LogisticRegression_LOSO
 36,Previsto,Sim,Corinthians,Botafogo,Vitória,100.0,LogisticRegression_MCCV
 36,Previsto,Não,Cruzeiro,Ceará,Derrota,,RandomForest_LOSO
-36,Previsto,Não,Cruzeiro,Ceará,Derrota,87.9,RandomForest_MCCV
+36,Previsto,Não,Cruzeiro,Ceará,Derrota,88.8,RandomForest_MCCV
 36,Previsto,Não,Cruzeiro,Ceará,Derrota,,LogisticRegression_LOSO
-36,Previsto,Não,Cruzeiro,Ceará,Derrota,99.8,LogisticRegression_MCCV
+36,Previsto,Não,Cruzeiro,Ceará,Derrota,99.6,LogisticRegression_MCCV
 36,Previsto,Não,Flamengo,Atlético-MG,Derrota,,RandomForest_LOSO
 36,Previsto,Não,Flamengo,Atlético-MG,Derrota,100.0,RandomForest_MCCV
 36,Previsto,Não,Flamengo,Atlético-MG,Derrota,,LogisticRegression_LOSO
 36,Previsto,Não,Flamengo,Atlético-MG,Derrota,100.0,LogisticRegression_MCCV
 36,Previsto,Sim,Fluminense,São Paulo,Derrota,,RandomForest_LOSO
-36,Previsto,Sim,Fluminense,São Paulo,Derrota,94.19999999999999,RandomForest_MCCV
+36,Previsto,Sim,Fluminense,São Paulo,Derrota,95.5,RandomForest_MCCV
 36,Previsto,Sim,Fluminense,São Paulo,Vitória,,LogisticRegression_LOSO
-36,Previsto,Sim,Fluminense,São Paulo,Vitória,82.39999999999999,LogisticRegression_MCCV
+36,Previsto,Sim,Fluminense,São Paulo,Vitória,81.89999999999999,LogisticRegression_MCCV
 36,Previsto,Não,Fortaleza,Bragantino,Derrota,,RandomForest_LOSO
 36,Previsto,Não,Fortaleza,Bragantino,Derrota,100.0,RandomForest_MCCV
 36,Previsto,Não,Fortaleza,Bragantino,Derrota,,LogisticRegression_LOSO
 36,Previsto,Não,Fortaleza,Bragantino,Derrota,100.0,LogisticRegression_MCCV
-36,Previsto,Sim,Grêmio,Palmeiras,Vitória,,RandomForest_LOSO
-36,Previsto,Sim,Grêmio,Palmeiras,Vitória,83.5,RandomForest_MCCV
+36,Previsto,Sim,Grêmio,Palmeiras,Derrota,,RandomForest_LOSO
+36,Previsto,Sim,Grêmio,Palmeiras,Vitória,81.89999999999999,RandomForest_MCCV
 36,Previsto,Sim,Grêmio,Palmeiras,Vitória,,LogisticRegression_LOSO
 36,Previsto,Sim,Grêmio,Palmeiras,Vitória,100.0,LogisticRegression_MCCV
 36,Previsto,Não,Internacional,Vasco,Vitória,,RandomForest_LOSO
-36,Previsto,Não,Internacional,Vasco,Vitória,95.39999999999999,RandomForest_MCCV
+36,Previsto,Não,Internacional,Vasco,Vitória,95.7,RandomForest_MCCV
 36,Previsto,Não,Internacional,Vasco,Vitória,,LogisticRegression_LOSO
-36,Previsto,Não,Internacional,Vasco,Vitória,99.8,LogisticRegression_MCCV
+36,Previsto,Não,Internacional,Vasco,Vitória,100.0,LogisticRegression_MCCV
 36,Previsto,Sim,Juventude,Bahia,Vitória,,RandomForest_LOSO
 36,Previsto,Sim,Juventude,Bahia,Vitória,100.0,RandomForest_MCCV
 36,Previsto,Sim,Juventude,Bahia,Vitória,,LogisticRegression_LOSO
@@ -1602,95 +1602,95 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 36,Previsto,Não,Mirassol,Vitória,Derrota,,LogisticRegression_LOSO
 36,Previsto,Não,Mirassol,Vitória,Derrota,100.0,LogisticRegression_MCCV
 36,Previsto,Não,Palmeiras,Grêmio,Derrota,,RandomForest_LOSO
-36,Previsto,Não,Palmeiras,Grêmio,Derrota,82.89999999999999,RandomForest_MCCV
+36,Previsto,Não,Palmeiras,Grêmio,Derrota,84.1,RandomForest_MCCV
 36,Previsto,Não,Palmeiras,Grêmio,Derrota,,LogisticRegression_LOSO
 36,Previsto,Não,Palmeiras,Grêmio,Derrota,100.0,LogisticRegression_MCCV
 36,Previsto,Sim,Santos,Sport,Vitória,,RandomForest_LOSO
-36,Previsto,Sim,Santos,Sport,Vitória,65.8,RandomForest_MCCV
+36,Previsto,Sim,Santos,Sport,Vitória,71.2,RandomForest_MCCV
 36,Previsto,Sim,Santos,Sport,Vitória,,LogisticRegression_LOSO
-36,Previsto,Sim,Santos,Sport,Vitória,77.4,LogisticRegression_MCCV
-36,Previsto,Não,Sport,Santos,Derrota,,RandomForest_LOSO
-36,Previsto,Não,Sport,Santos,Derrota,69.19999999999999,RandomForest_MCCV
+36,Previsto,Sim,Santos,Sport,Vitória,78.5,LogisticRegression_MCCV
+36,Previsto,Não,Sport,Santos,Vitória,,RandomForest_LOSO
+36,Previsto,Não,Sport,Santos,Derrota,72.8,RandomForest_MCCV
 36,Previsto,Não,Sport,Santos,Derrota,,LogisticRegression_LOSO
-36,Previsto,Não,Sport,Santos,Derrota,80.2,LogisticRegression_MCCV
+36,Previsto,Não,Sport,Santos,Derrota,77.3,LogisticRegression_MCCV
 36,Previsto,Não,São Paulo,Fluminense,Vitória,,RandomForest_LOSO
-36,Previsto,Não,São Paulo,Fluminense,Vitória,93.60000000000001,RandomForest_MCCV
+36,Previsto,Não,São Paulo,Fluminense,Vitória,93.8,RandomForest_MCCV
 36,Previsto,Não,São Paulo,Fluminense,Derrota,,LogisticRegression_LOSO
-36,Previsto,Não,São Paulo,Fluminense,Derrota,81.39999999999999,LogisticRegression_MCCV
+36,Previsto,Não,São Paulo,Fluminense,Derrota,81.2,LogisticRegression_MCCV
 36,Previsto,Sim,Vasco,Internacional,Derrota,,RandomForest_LOSO
 36,Previsto,Sim,Vasco,Internacional,Derrota,96.89999999999999,RandomForest_MCCV
 36,Previsto,Sim,Vasco,Internacional,Derrota,,LogisticRegression_LOSO
-36,Previsto,Sim,Vasco,Internacional,Derrota,99.8,LogisticRegression_MCCV
+36,Previsto,Sim,Vasco,Internacional,Derrota,99.7,LogisticRegression_MCCV
 36,Previsto,Sim,Vitória,Mirassol,Vitória,,RandomForest_LOSO
-36,Previsto,Sim,Vitória,Mirassol,Vitória,100.0,RandomForest_MCCV
+36,Previsto,Sim,Vitória,Mirassol,Vitória,99.8,RandomForest_MCCV
 36,Previsto,Sim,Vitória,Mirassol,Vitória,,LogisticRegression_LOSO
 36,Previsto,Sim,Vitória,Mirassol,Vitória,100.0,LogisticRegression_MCCV
 37,Previsto,Não,Atlético-MG,Bragantino,Derrota,,RandomForest_LOSO
-37,Previsto,Não,Atlético-MG,Bragantino,Derrota,98.3,RandomForest_MCCV
+37,Previsto,Não,Atlético-MG,Bragantino,Derrota,98.7,RandomForest_MCCV
 37,Previsto,Não,Atlético-MG,Bragantino,Derrota,,LogisticRegression_LOSO
 37,Previsto,Não,Atlético-MG,Bragantino,Derrota,100.0,LogisticRegression_MCCV
 37,Previsto,Sim,Bahia,Sport,Vitória,,RandomForest_LOSO
-37,Previsto,Sim,Bahia,Sport,Vitória,88.2,RandomForest_MCCV
+37,Previsto,Sim,Bahia,Sport,Vitória,88.7,RandomForest_MCCV
 37,Previsto,Sim,Bahia,Sport,Vitória,,LogisticRegression_LOSO
 37,Previsto,Sim,Bahia,Sport,Vitória,100.0,LogisticRegression_MCCV
 37,Previsto,Não,Botafogo,Cruzeiro,Vitória,,RandomForest_LOSO
-37,Previsto,Não,Botafogo,Cruzeiro,Vitória,94.19999999999999,RandomForest_MCCV
+37,Previsto,Não,Botafogo,Cruzeiro,Vitória,94.3,RandomForest_MCCV
 37,Previsto,Não,Botafogo,Cruzeiro,Vitória,,LogisticRegression_LOSO
-37,Previsto,Não,Botafogo,Cruzeiro,Vitória,99.5,LogisticRegression_MCCV
+37,Previsto,Não,Botafogo,Cruzeiro,Vitória,99.2,LogisticRegression_MCCV
 37,Previsto,Sim,Bragantino,Atlético-MG,Vitória,,RandomForest_LOSO
-37,Previsto,Sim,Bragantino,Atlético-MG,Vitória,98.2,RandomForest_MCCV
+37,Previsto,Sim,Bragantino,Atlético-MG,Vitória,98.1,RandomForest_MCCV
 37,Previsto,Sim,Bragantino,Atlético-MG,Vitória,,LogisticRegression_LOSO
 37,Previsto,Sim,Bragantino,Atlético-MG,Vitória,100.0,LogisticRegression_MCCV
-37,Previsto,Não,Ceará,Flamengo,Empate,,RandomForest_LOSO
-37,Previsto,Não,Ceará,Flamengo,Derrota,50.3,RandomForest_MCCV
+37,Previsto,Não,Ceará,Flamengo,Vitória,,RandomForest_LOSO
+37,Previsto,Não,Ceará,Flamengo,Derrota,48.4,RandomForest_MCCV
 37,Previsto,Não,Ceará,Flamengo,Derrota,,LogisticRegression_LOSO
-37,Previsto,Não,Ceará,Flamengo,Derrota,96.39999999999999,LogisticRegression_MCCV
+37,Previsto,Não,Ceará,Flamengo,Derrota,96.6,LogisticRegression_MCCV
 37,Previsto,Não,Corinthians,Fortaleza,Derrota,,RandomForest_LOSO
-37,Previsto,Não,Corinthians,Fortaleza,Derrota,73.0,RandomForest_MCCV
+37,Previsto,Não,Corinthians,Fortaleza,Derrota,73.5,RandomForest_MCCV
 37,Previsto,Não,Corinthians,Fortaleza,Derrota,,LogisticRegression_LOSO
-37,Previsto,Não,Corinthians,Fortaleza,Derrota,98.9,LogisticRegression_MCCV
+37,Previsto,Não,Corinthians,Fortaleza,Derrota,99.1,LogisticRegression_MCCV
 37,Previsto,Sim,Cruzeiro,Botafogo,Derrota,,RandomForest_LOSO
-37,Previsto,Sim,Cruzeiro,Botafogo,Derrota,93.7,RandomForest_MCCV
+37,Previsto,Sim,Cruzeiro,Botafogo,Derrota,94.6,RandomForest_MCCV
 37,Previsto,Sim,Cruzeiro,Botafogo,Derrota,,LogisticRegression_LOSO
-37,Previsto,Sim,Cruzeiro,Botafogo,Derrota,99.3,LogisticRegression_MCCV
-37,Previsto,Sim,Flamengo,Ceará,Empate,,RandomForest_LOSO
-37,Previsto,Sim,Flamengo,Ceará,Vitória,47.5,RandomForest_MCCV
+37,Previsto,Sim,Cruzeiro,Botafogo,Derrota,99.1,LogisticRegression_MCCV
+37,Previsto,Sim,Flamengo,Ceará,Vitória,,RandomForest_LOSO
+37,Previsto,Sim,Flamengo,Ceará,Vitória,45.9,RandomForest_MCCV
 37,Previsto,Sim,Flamengo,Ceará,Vitória,,LogisticRegression_LOSO
-37,Previsto,Sim,Flamengo,Ceará,Vitória,96.89999999999999,LogisticRegression_MCCV
-37,Previsto,Não,Fluminense,Grêmio,Derrota,,RandomForest_LOSO
-37,Previsto,Não,Fluminense,Grêmio,Vitória,44.3,RandomForest_MCCV
+37,Previsto,Sim,Flamengo,Ceará,Vitória,97.2,LogisticRegression_MCCV
+37,Previsto,Não,Fluminense,Grêmio,Empate,,RandomForest_LOSO
+37,Previsto,Não,Fluminense,Grêmio,Vitória,42.9,RandomForest_MCCV
 37,Previsto,Não,Fluminense,Grêmio,Vitória,,LogisticRegression_LOSO
-37,Previsto,Não,Fluminense,Grêmio,Vitória,91.10000000000001,LogisticRegression_MCCV
+37,Previsto,Não,Fluminense,Grêmio,Vitória,91.4,LogisticRegression_MCCV
 37,Previsto,Sim,Fortaleza,Corinthians,Vitória,,RandomForest_LOSO
-37,Previsto,Sim,Fortaleza,Corinthians,Vitória,69.6,RandomForest_MCCV
+37,Previsto,Sim,Fortaleza,Corinthians,Vitória,70.6,RandomForest_MCCV
 37,Previsto,Sim,Fortaleza,Corinthians,Vitória,,LogisticRegression_LOSO
-37,Previsto,Sim,Fortaleza,Corinthians,Vitória,99.6,LogisticRegression_MCCV
-37,Previsto,Sim,Grêmio,Fluminense,Empate,,RandomForest_LOSO
-37,Previsto,Sim,Grêmio,Fluminense,Derrota,43.9,RandomForest_MCCV
+37,Previsto,Sim,Fortaleza,Corinthians,Vitória,99.8,LogisticRegression_MCCV
+37,Previsto,Sim,Grêmio,Fluminense,Derrota,,RandomForest_LOSO
+37,Previsto,Sim,Grêmio,Fluminense,Derrota,45.0,RandomForest_MCCV
 37,Previsto,Sim,Grêmio,Fluminense,Derrota,,LogisticRegression_LOSO
-37,Previsto,Sim,Grêmio,Fluminense,Derrota,91.5,LogisticRegression_MCCV
+37,Previsto,Sim,Grêmio,Fluminense,Derrota,91.8,LogisticRegression_MCCV
 37,Previsto,Não,Internacional,São Paulo,Derrota,,RandomForest_LOSO
 37,Previsto,Não,Internacional,São Paulo,Derrota,100.0,RandomForest_MCCV
 37,Previsto,Não,Internacional,São Paulo,Derrota,,LogisticRegression_LOSO
 37,Previsto,Não,Internacional,São Paulo,Derrota,100.0,LogisticRegression_MCCV
-37,Previsto,Sim,Juventude,Santos,Empate,,RandomForest_LOSO
-37,Previsto,Sim,Juventude,Santos,Derrota,67.5,RandomForest_MCCV
+37,Previsto,Sim,Juventude,Santos,Derrota,,RandomForest_LOSO
+37,Previsto,Sim,Juventude,Santos,Derrota,67.10000000000001,RandomForest_MCCV
 37,Previsto,Sim,Juventude,Santos,Derrota,,LogisticRegression_LOSO
-37,Previsto,Sim,Juventude,Santos,Derrota,69.19999999999999,LogisticRegression_MCCV
-37,Previsto,Não,Mirassol,Vasco,Derrota,,RandomForest_LOSO
-37,Previsto,Não,Mirassol,Vasco,Vitória,55.00000000000001,RandomForest_MCCV
+37,Previsto,Sim,Juventude,Santos,Derrota,69.39999999999999,LogisticRegression_MCCV
+37,Previsto,Não,Mirassol,Vasco,Vitória,,RandomForest_LOSO
+37,Previsto,Não,Mirassol,Vasco,Vitória,56.3,RandomForest_MCCV
 37,Previsto,Não,Mirassol,Vasco,Derrota,,LogisticRegression_LOSO
-37,Previsto,Não,Mirassol,Vasco,Derrota,99.3,LogisticRegression_MCCV
-37,Previsto,Sim,Palmeiras,Vitória,Derrota,,RandomForest_LOSO
-37,Previsto,Sim,Palmeiras,Vitória,Derrota,81.39999999999999,RandomForest_MCCV
+37,Previsto,Não,Mirassol,Vasco,Derrota,99.1,LogisticRegression_MCCV
+37,Previsto,Sim,Palmeiras,Vitória,Vitória,,RandomForest_LOSO
+37,Previsto,Sim,Palmeiras,Vitória,Derrota,80.4,RandomForest_MCCV
 37,Previsto,Sim,Palmeiras,Vitória,Vitória,,LogisticRegression_LOSO
-37,Previsto,Sim,Palmeiras,Vitória,Vitória,95.0,LogisticRegression_MCCV
-37,Previsto,Não,Santos,Juventude,Derrota,,RandomForest_LOSO
-37,Previsto,Não,Santos,Juventude,Vitória,63.4,RandomForest_MCCV
+37,Previsto,Sim,Palmeiras,Vitória,Vitória,96.3,LogisticRegression_MCCV
+37,Previsto,Não,Santos,Juventude,Empate,,RandomForest_LOSO
+37,Previsto,Não,Santos,Juventude,Vitória,63.2,RandomForest_MCCV
 37,Previsto,Não,Santos,Juventude,Vitória,,LogisticRegression_LOSO
-37,Previsto,Não,Santos,Juventude,Vitória,69.3,LogisticRegression_MCCV
+37,Previsto,Não,Santos,Juventude,Vitória,71.1,LogisticRegression_MCCV
 37,Previsto,Não,Sport,Bahia,Derrota,,RandomForest_LOSO
-37,Previsto,Não,Sport,Bahia,Derrota,90.5,RandomForest_MCCV
+37,Previsto,Não,Sport,Bahia,Derrota,89.0,RandomForest_MCCV
 37,Previsto,Não,Sport,Bahia,Derrota,,LogisticRegression_LOSO
 37,Previsto,Não,Sport,Bahia,Derrota,100.0,LogisticRegression_MCCV
 37,Previsto,Sim,São Paulo,Internacional,Vitória,,RandomForest_LOSO
@@ -1698,53 +1698,53 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 37,Previsto,Sim,São Paulo,Internacional,Vitória,,LogisticRegression_LOSO
 37,Previsto,Sim,São Paulo,Internacional,Vitória,100.0,LogisticRegression_MCCV
 37,Previsto,Sim,Vasco,Mirassol,Derrota,,RandomForest_LOSO
-37,Previsto,Sim,Vasco,Mirassol,Derrota,57.699999999999996,RandomForest_MCCV
+37,Previsto,Sim,Vasco,Mirassol,Derrota,56.699999999999996,RandomForest_MCCV
 37,Previsto,Sim,Vasco,Mirassol,Vitória,,LogisticRegression_LOSO
-37,Previsto,Sim,Vasco,Mirassol,Vitória,99.4,LogisticRegression_MCCV
-37,Previsto,Não,Vitória,Palmeiras,Derrota,,RandomForest_LOSO
-37,Previsto,Não,Vitória,Palmeiras,Vitória,81.3,RandomForest_MCCV
+37,Previsto,Sim,Vasco,Mirassol,Vitória,99.5,LogisticRegression_MCCV
+37,Previsto,Não,Vitória,Palmeiras,Vitória,,RandomForest_LOSO
+37,Previsto,Não,Vitória,Palmeiras,Vitória,80.10000000000001,RandomForest_MCCV
 37,Previsto,Não,Vitória,Palmeiras,Derrota,,LogisticRegression_LOSO
-37,Previsto,Não,Vitória,Palmeiras,Derrota,95.6,LogisticRegression_MCCV
+37,Previsto,Não,Vitória,Palmeiras,Derrota,96.2,LogisticRegression_MCCV
 38,Previsto,Sim,Atlético-MG,Vasco,Empate,,RandomForest_LOSO
-38,Previsto,Sim,Atlético-MG,Vasco,Empate,85.2,RandomForest_MCCV
+38,Previsto,Sim,Atlético-MG,Vasco,Empate,84.5,RandomForest_MCCV
 38,Previsto,Sim,Atlético-MG,Vasco,Derrota,,LogisticRegression_LOSO
-38,Previsto,Sim,Atlético-MG,Vasco,Derrota,50.7,LogisticRegression_MCCV
+38,Previsto,Sim,Atlético-MG,Vasco,Derrota,52.5,LogisticRegression_MCCV
 38,Previsto,Não,Bahia,Fluminense,Vitória,,RandomForest_LOSO
-38,Previsto,Não,Bahia,Fluminense,Vitória,78.10000000000001,RandomForest_MCCV
+38,Previsto,Não,Bahia,Fluminense,Vitória,78.9,RandomForest_MCCV
 38,Previsto,Não,Bahia,Fluminense,Vitória,,LogisticRegression_LOSO
-38,Previsto,Não,Bahia,Fluminense,Vitória,53.7,LogisticRegression_MCCV
-38,Previsto,Sim,Botafogo,Fortaleza,Empate,,RandomForest_LOSO
-38,Previsto,Sim,Botafogo,Fortaleza,Derrota,56.3,RandomForest_MCCV
+38,Previsto,Não,Bahia,Fluminense,Vitória,55.1,LogisticRegression_MCCV
+38,Previsto,Sim,Botafogo,Fortaleza,Derrota,,RandomForest_LOSO
+38,Previsto,Sim,Botafogo,Fortaleza,Derrota,53.300000000000004,RandomForest_MCCV
 38,Previsto,Sim,Botafogo,Fortaleza,Vitória,,LogisticRegression_LOSO
-38,Previsto,Sim,Botafogo,Fortaleza,Vitória,65.8,LogisticRegression_MCCV
+38,Previsto,Sim,Botafogo,Fortaleza,Vitória,68.7,LogisticRegression_MCCV
 38,Previsto,Não,Bragantino,Internacional,Derrota,,RandomForest_LOSO
 38,Previsto,Não,Bragantino,Internacional,Derrota,100.0,RandomForest_MCCV
 38,Previsto,Não,Bragantino,Internacional,Derrota,,LogisticRegression_LOSO
-38,Previsto,Não,Bragantino,Internacional,Derrota,97.6,LogisticRegression_MCCV
+38,Previsto,Não,Bragantino,Internacional,Derrota,98.0,LogisticRegression_MCCV
 38,Previsto,Sim,Ceará,Palmeiras,Vitória,,RandomForest_LOSO
 38,Previsto,Sim,Ceará,Palmeiras,Vitória,100.0,RandomForest_MCCV
 38,Previsto,Sim,Ceará,Palmeiras,Vitória,,LogisticRegression_LOSO
 38,Previsto,Sim,Ceará,Palmeiras,Vitória,100.0,LogisticRegression_MCCV
 38,Previsto,Sim,Corinthians,Juventude,Derrota,,RandomForest_LOSO
-38,Previsto,Sim,Corinthians,Juventude,Vitória,66.4,RandomForest_MCCV
+38,Previsto,Sim,Corinthians,Juventude,Vitória,65.4,RandomForest_MCCV
 38,Previsto,Sim,Corinthians,Juventude,Vitória,,LogisticRegression_LOSO
-38,Previsto,Sim,Corinthians,Juventude,Vitória,52.900000000000006,LogisticRegression_MCCV
+38,Previsto,Sim,Corinthians,Juventude,Vitória,53.800000000000004,LogisticRegression_MCCV
 38,Previsto,Não,Cruzeiro,Santos,Derrota,,RandomForest_LOSO
 38,Previsto,Não,Cruzeiro,Santos,Derrota,100.0,RandomForest_MCCV
 38,Previsto,Não,Cruzeiro,Santos,Derrota,,LogisticRegression_LOSO
 38,Previsto,Não,Cruzeiro,Santos,Derrota,100.0,LogisticRegression_MCCV
-38,Previsto,Não,Flamengo,Mirassol,Vitória,,RandomForest_LOSO
-38,Previsto,Não,Flamengo,Mirassol,Empate,60.699999999999996,RandomForest_MCCV
+38,Previsto,Não,Flamengo,Mirassol,Empate,,RandomForest_LOSO
+38,Previsto,Não,Flamengo,Mirassol,Empate,60.3,RandomForest_MCCV
 38,Previsto,Não,Flamengo,Mirassol,Vitória,,LogisticRegression_LOSO
 38,Previsto,Não,Flamengo,Mirassol,Vitória,100.0,LogisticRegression_MCCV
-38,Previsto,Sim,Fluminense,Bahia,Empate,,RandomForest_LOSO
-38,Previsto,Sim,Fluminense,Bahia,Derrota,80.9,RandomForest_MCCV
+38,Previsto,Sim,Fluminense,Bahia,Derrota,,RandomForest_LOSO
+38,Previsto,Sim,Fluminense,Bahia,Derrota,80.80000000000001,RandomForest_MCCV
 38,Previsto,Sim,Fluminense,Bahia,Derrota,,LogisticRegression_LOSO
-38,Previsto,Sim,Fluminense,Bahia,Derrota,53.1,LogisticRegression_MCCV
+38,Previsto,Sim,Fluminense,Bahia,Derrota,55.60000000000001,LogisticRegression_MCCV
 38,Previsto,Não,Fortaleza,Botafogo,Vitória,,RandomForest_LOSO
-38,Previsto,Não,Fortaleza,Botafogo,Vitória,51.300000000000004,RandomForest_MCCV
+38,Previsto,Não,Fortaleza,Botafogo,Vitória,50.8,RandomForest_MCCV
 38,Previsto,Não,Fortaleza,Botafogo,Derrota,,LogisticRegression_LOSO
-38,Previsto,Não,Fortaleza,Botafogo,Derrota,68.4,LogisticRegression_MCCV
+38,Previsto,Não,Fortaleza,Botafogo,Derrota,66.9,LogisticRegression_MCCV
 38,Previsto,Não,Grêmio,Sport,Derrota,,RandomForest_LOSO
 38,Previsto,Não,Grêmio,Sport,Derrota,99.9,RandomForest_MCCV
 38,Previsto,Não,Grêmio,Sport,Derrota,,LogisticRegression_LOSO
@@ -1752,13 +1752,13 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 38,Previsto,Sim,Internacional,Bragantino,Vitória,,RandomForest_LOSO
 38,Previsto,Sim,Internacional,Bragantino,Vitória,100.0,RandomForest_MCCV
 38,Previsto,Sim,Internacional,Bragantino,Vitória,,LogisticRegression_LOSO
-38,Previsto,Sim,Internacional,Bragantino,Vitória,97.0,LogisticRegression_MCCV
+38,Previsto,Sim,Internacional,Bragantino,Vitória,97.5,LogisticRegression_MCCV
 38,Previsto,Não,Juventude,Corinthians,Derrota,,RandomForest_LOSO
-38,Previsto,Não,Juventude,Corinthians,Derrota,67.60000000000001,RandomForest_MCCV
+38,Previsto,Não,Juventude,Corinthians,Derrota,71.8,RandomForest_MCCV
 38,Previsto,Não,Juventude,Corinthians,Derrota,,LogisticRegression_LOSO
-38,Previsto,Não,Juventude,Corinthians,Derrota,53.6,LogisticRegression_MCCV
+38,Previsto,Não,Juventude,Corinthians,Derrota,54.400000000000006,LogisticRegression_MCCV
 38,Previsto,Sim,Mirassol,Flamengo,Empate,,RandomForest_LOSO
-38,Previsto,Sim,Mirassol,Flamengo,Empate,60.199999999999996,RandomForest_MCCV
+38,Previsto,Sim,Mirassol,Flamengo,Empate,56.599999999999994,RandomForest_MCCV
 38,Previsto,Sim,Mirassol,Flamengo,Derrota,,LogisticRegression_LOSO
 38,Previsto,Sim,Mirassol,Flamengo,Derrota,100.0,LogisticRegression_MCCV
 38,Previsto,Não,Palmeiras,Ceará,Derrota,,RandomForest_LOSO
@@ -1778,9 +1778,9 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 38,Previsto,Não,São Paulo,Vitória,Derrota,,LogisticRegression_LOSO
 38,Previsto,Não,São Paulo,Vitória,Derrota,100.0,LogisticRegression_MCCV
 38,Previsto,Não,Vasco,Atlético-MG,Empate,,RandomForest_LOSO
-38,Previsto,Não,Vasco,Atlético-MG,Empate,85.6,RandomForest_MCCV
+38,Previsto,Não,Vasco,Atlético-MG,Empate,86.0,RandomForest_MCCV
 38,Previsto,Não,Vasco,Atlético-MG,Vitória,,LogisticRegression_LOSO
-38,Previsto,Não,Vasco,Atlético-MG,Vitória,52.300000000000004,LogisticRegression_MCCV
+38,Previsto,Não,Vasco,Atlético-MG,Vitória,52.0,LogisticRegression_MCCV
 38,Previsto,Sim,Vitória,São Paulo,Vitória,,RandomForest_LOSO
 38,Previsto,Sim,Vitória,São Paulo,Vitória,100.0,RandomForest_MCCV
 38,Previsto,Sim,Vitória,São Paulo,Vitória,,LogisticRegression_LOSO
