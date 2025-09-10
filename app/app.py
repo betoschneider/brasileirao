@@ -56,7 +56,7 @@ def main():
     modelo = st.sidebar.selectbox(
         "Modelo",
         modelos,
-        index=2,
+        index=0,
         # label_visibility="hidden",
     )
     
