@@ -1,10 +1,8 @@
 rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
-12,Previsto,Sim,Botafogo,Mirassol,Vitória,,LogisticRegression_LOSO
 12,Previsto,Não,Ceará,Fluminense,Derrota,,LogisticRegression_LOSO
 12,Previsto,Não,Flamengo,Sport,Derrota,,LogisticRegression_LOSO
 12,Previsto,Sim,Fluminense,Ceará,Vitória,,LogisticRegression_LOSO
 12,Previsto,Não,Juventude,Palmeiras,Derrota,,LogisticRegression_LOSO
-12,Previsto,Não,Mirassol,Botafogo,Derrota,,LogisticRegression_LOSO
 12,Previsto,Sim,Palmeiras,Juventude,Vitória,,LogisticRegression_LOSO
 12,Previsto,Sim,Sport,Flamengo,Vitória,,LogisticRegression_LOSO
 13,Previsto,Não,Fluminense,Mirassol,Derrota,,LogisticRegression_LOSO
