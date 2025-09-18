@@ -101,7 +101,7 @@ def main():
     st.subheader(f"Previsão de resultados utilizando modelos de machine learning até a 38ª rodada. ")
     st.markdown(f"---")
     st.subheader(f"Evolução da posição na tabela")
-    st.write(f"Modelo: {modelo}")
+    # st.write(f"Modelo: {modelo}")
 
     # gráfico
     chart = (
@@ -134,31 +134,47 @@ def main():
         st.dataframe(tabela, hide_index=True, height=740)
 
     # modelos utilizados
-    st.markdown("""
-        ### Sobre os modelos de machine learning e técnicas de validação utilizados
-                
-        #### Modelos
-        **Logistic Regression**
-        - Modelo estatístico para classificação binária.
-        - Estima a probabilidade de uma classe usando a função logística.
-        - Fácil de interpretar e rápido de treinar.
+    chave_modelo = modelo.split("_")[0]
+    chave_validacao = modelo.split("_")[-1]
+    det_modelos = {
+        "LogisticRegression": {
+            "nome": "#### Logistic Regression",
+            "descricao": "\n- Modelo estatístico para classificação (binária ou multiclasse).\n- Estima a probabilidade de uma classe usando a função logística.\n- Fácil de interpretar e rápido de treinar."
+        },
+        "RandomForest": {
+            "nome": "#### Random Forest",
+            "descricao": "- Ensemble de múltiplas árvores de decisão.\n- Reduz overfitting ao combinar várias árvores.\n- Funciona bem com dados tabulares e variáveis categóricas/métricas."
+        },
+        "GradientBoosting": {
+            "nome": "#### Gradient Boosting",
+            "descricao": "- Ensemble sequencial de árvores de decisão.\n- Cada nova árvore corrige erros das anteriores.\n- Alta acurácia, mas mais lento para treinar e ajustar."
+        },
+        "KNN": {
+            "nome": "#### K-Nearest Neighbors (KNN)",
+            "descricao": "- Classifica com base nos **k vizinhos mais próximos** no espaço de features.\n- Simples e intuitivo, não exige treino pesado.\n- Pode ser lento em grandes volumes de dados."
+        },
+        "NaiveBayes": {
+            "nome": "#### Naive Bayes",
+            "descricao": "- Baseado no Teorema de Bayes, assume independência entre features.\n- Extremamente rápido e eficiente em texto e dados categóricos.\n- Bom ponto de partida para classificadores simples."
+        }
+    }
+    det_validacao = {
+        "LOSO": {
+            "nome": "#### Leave-One-Season-Out (LOSO)",
+            "descricao": "- Variante de cross-validation temporal.\n- Cada 'temporada' do dataset é usada uma vez como teste, enquanto o restante serve como treino.\n- Útil em séries temporais esportivas ou financeiras."
+        },
+        "MCCV": {
+            "nome": "#### Monte Carlo Cross-Validation (MCCV)",
+            "descricao": "- Amostras aleatórias do dataset são divididas em treino e teste múltiplas vezes.\n- Resultados são agregados para estimar desempenho do modelo.\n- Mais flexível que k-fold, mas não garante que cada ponto de dado será usado como teste."
+        }
+    }
 
-        **Random Forest**
-        - Ensemble de árvores de decisão.
-        - Combina múltiplas árvores para reduzir overfitting.
-        - Funciona bem com dados tabulares e variáveis categóricas/métricas.
 
-        #### Validação
-        **Leave-One-Season-Out (LOSO)**
-        - Variante de cross-validation temporal.
-        - Cada “temporada” do dataset é usada uma vez como teste, enquanto o restante serve como treino.
-        - Útil em séries temporais esportivas ou financeiras.
-
-        **Monte Carlo Cross-Validation (MCCV)**
-        - Amostras aleatórias do dataset são divididas em treino e teste múltiplas vezes.
-        - Resultados são agregados para estimar desempenho do modelo.
-        - Mais flexível que k-fold, mas não garante que cada ponto de dado será usado como teste.
-        """)
+    st.markdown(f"""### Sobre os modelos de machine learning e técnicas de validação utilizados""")
+    st.markdown(f"{det_modelos[chave_modelo]["nome"]}")
+    st.markdown(f"{det_modelos[chave_modelo]["descricao"]}")
+    st.markdown(f"{det_validacao[chave_validacao]["nome"]}")
+    st.markdown(f"{det_validacao[chave_validacao]["descricao"]}")
     
     # rodapé
     st.markdown(f"""
