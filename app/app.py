@@ -129,7 +129,7 @@ def main():
             if 'LOSO' in modelo:
                 partidas.drop(columns=['Frequência'], inplace=True)
             st.subheader(f"Resultados previstos para {times_selecionados[0]}")
-            st.dataframe(partidas, hide_index=True, height=740)
+            st.dataframe(partidas, hide_index=True, height=38*partidas.shape[0])
         st.subheader(f"Previsão de pontos na 38ª rodada")
         st.dataframe(tabela, hide_index=True, height=740)
 
