@@ -47,9 +47,11 @@ def main():
     df, partidas = carregar_dados()
 
     # título e subtítulo
-    temporada = df['data_atualizacao'].max().year
+    dt_atualizacao = df['data_atualizacao'].max()
+    temporada = dt_atualizacao.year
     st.title(f"Brasileirão Série A {temporada}")
     st.subheader("Projeção de resultados com machine learning até a 38ª rodada.")
+    st.write(f"Última atualização: {dt_atualizacao.strftime('%d/%m/%Y %H:%M')}")
     st.markdown("---")
 
     
@@ -64,14 +66,16 @@ def main():
         if rank == 1: return "Campeão"
         elif 2 <= rank <= 4: return "G4"
         elif 5 <= rank <= 6: return "G6"
+        # elif 7 <= rank <= 12: return "Sulamericana"
         elif 17 <= rank <= 20: return "Rebaixado"
         else: return "Meio de tabela"
 
-    tabela["CorCategoria"] = tabela["Ranking"].apply(classificar_cor)
+    tabela["Grupo"] = tabela["Ranking"].apply(classificar_cor)
     cores = {
         "Campeão": "#1f77b4",
         "G4": "#2ca02c",
         "G6": "#98df8a",
+        # "Sulamericana": "#f1f88a",
         "Meio de tabela": "#BABCBE",
         "Rebaixado": "#d62728"
     }
@@ -82,8 +86,8 @@ def main():
         .encode(
             x=alt.X("Pontos:Q", axis=None),
             y=alt.Y("Time:N", sort="-x", title=None),
-            color=alt.Color("CorCategoria:N", scale=alt.Scale(domain=list(cores.keys()), range=list(cores.values())), legend=None),
-            tooltip=["Time:N", "Pontos:Q", "Posição:O"]
+            color=alt.Color("Grupo:N", scale=alt.Scale(domain=list(cores.keys()), range=list(cores.values())), legend=None),
+            tooltip=["Time:N", "Pontos:Q", "Posição:O", "Grupo:N"]
         )
         .properties(height=500)
     )
@@ -159,7 +163,7 @@ def main():
     
     resultados = partidas_time['Resultado'].value_counts().to_dict()
     st.markdown(f"**✌️ Vitórias:** {resultados.get('Vitória', 0)} | **🤝 Empates:** {resultados.get('Empate', 0)} | **👎Derrotas:** {resultados.get('Derrota', 0)}")
-    st.dataframe(partidas_time, hide_index=True, height=38*partidas_time.shape[0])
+    st.dataframe(partidas_time, hide_index=True, height=min(600, 38*partidas_time.shape[0]))
 
     # ================================
     # 4️⃣ Descrição do modelo e validação
