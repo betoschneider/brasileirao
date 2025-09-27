@@ -139,18 +139,6 @@ def main():
     # ================================
     # 3️⃣ Tabela de jogos se só um time for selecionado
     # ================================
-    # if len(times_selecionados) == 1:
-    #     partidas_time = partidas[(partidas['Time'] == times_selecionados[0]) | (partidas['Status'] == 'Finalizado')]
-    #     if chave_validacao == "MCCV":
-    #         partidas_time = partidas_time[['Rodada', 'Status', 'Mandante', 'Adversário', 'Resultado', 'Frequência']]
-    #     else:
-    #         partidas_time = partidas_time[['Rodada', 'Status', 'Mandante', 'Adversário', 'Resultado']]
-    #     partidas_time['Rodada'] = partidas_time['Rodada'].astype(str)
-    #     st.subheader(f"Previsões para os jogos do {times_selecionados[0]}")
-    #     resultados = partidas_time['Resultado'].value_counts().to_dict()
-    #     st.markdown(f"**✌️ Vitórias:** {resultados.get('Vitória', 0)} | **🤝 Empates:** {resultados.get('Empate', 0)} | **👎Derrotas:** {resultados.get('Derrota', 0)}")
-    #     st.dataframe(partidas_time, hide_index=True, height=38*partidas_time.shape[0])
-
     if times_selecionados:
         partidas_time = partidas[(partidas['Time'].isin(times_selecionados)) & (partidas['Status'] != 'Finalizado')]
         colunas = ['Rodada', 'Status', 'Mandante', 'Adversário', 'Resultado', 'Frequência']
@@ -159,7 +147,6 @@ def main():
         colunas = ['Time', 'Rodada', 'Status', 'Mandante', 'Adversário', 'Resultado', 'Frequência']
         
     partidas_time = partidas_time[colunas]
-    # partidas_time = partidas_time.sort_values(by=['Rodada', 'Time'])
 
     if chave_validacao != "MCCV":
         partidas_time = partidas_time.drop(columns=['Frequência'])
