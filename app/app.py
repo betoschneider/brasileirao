@@ -66,17 +66,17 @@ def main():
         if rank == 1: return "Campeão"
         elif 2 <= rank <= 4: return "G4"
         elif 5 <= rank <= 6: return "G6"
-        # elif 7 <= rank <= 12: return "Sulamericana"
+        elif 7 <= rank <= 10: return "Primeira metade"
         elif 17 <= rank <= 20: return "Rebaixado"
-        else: return "Meio de tabela"
+        else: return "Segunda metade"
 
     tabela["Grupo"] = tabela["Ranking"].apply(classificar_cor)
     cores = {
         "Campeão": "#1f77b4",
         "G4": "#2ca02c",
         "G6": "#98df8a",
-        # "Sulamericana": "#f1f88a",
-        "Meio de tabela": "#BABCBE",
+        "Primeira metade": "#BABCBE",
+        "Segunda metade": "#BABCBE",
         "Rebaixado": "#d62728"
     }
 
@@ -103,7 +103,7 @@ def main():
     st.markdown("---")
 
     # ================================
-    # Multiselect no lugar da sidebar
+    # Seleção de times
     # ================================
     times = np.sort(df['Time'].unique())
     times_selecionados = st.multiselect("Selecione times para ver as rodadas previstas:", times, placeholder="Todos os times")
@@ -141,7 +141,13 @@ def main():
     chave_validacao = modelo_usado.split('_')[-1]
 
     # ================================
-    # 3️⃣ Tabela de jogos se só um time for selecionado
+    # Seleção de rodadas
+    # ================================
+    rodadas = np.sort(partidas['Rodada'].unique())
+    rodadas_selecionadas = st.multiselect("", rodadas, placeholder="Todas as rodadas")
+
+    # ================================
+    # 3️⃣ Tabela de jogos futuros
     # ================================
     if times_selecionados:
         partidas_time = partidas[(partidas['Time'].isin(times_selecionados)) & (partidas['Status'] != 'Finalizado')]
@@ -151,6 +157,9 @@ def main():
         colunas = ['Time', 'Rodada', 'Status', 'Mandante', 'Adversário', 'Resultado', 'Frequência']
         
     partidas_time = partidas_time[colunas]
+
+    if rodadas_selecionadas:
+        partidas_time = partidas_time[partidas_time['Rodada'].isin(rodadas_selecionadas)]
 
     if chave_validacao != "MCCV":
         partidas_time = partidas_time.drop(columns=['Frequência'])
@@ -168,9 +177,6 @@ def main():
     # ================================
     # 4️⃣ Descrição do modelo e validação
     # ================================
-    # (ajustar chave conforme seus dados – aqui só exemplo)
-    
-
     det_modelos = {
         "LogisticRegression": {
             "nome": "#### Logistic Regression",
