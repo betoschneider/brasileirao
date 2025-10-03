@@ -7,39 +7,21 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 12,Previsto,Sim,Sport,Flamengo,Vitória,,LogisticRegression_LOSO
 13,Previsto,Não,Fluminense,Mirassol,Derrota,,LogisticRegression_LOSO
 13,Previsto,Sim,Mirassol,Fluminense,Vitória,,LogisticRegression_LOSO
-13,Previsto,Não,Palmeiras,Santos,Derrota,,LogisticRegression_LOSO
-13,Previsto,Sim,Santos,Palmeiras,Vitória,,LogisticRegression_LOSO
-14,Previsto,Sim,Atlético-MG,Sport,Derrota,,LogisticRegression_LOSO
+13,Previsto,Não,Palmeiras,Santos,Vitória,,LogisticRegression_LOSO
+13,Previsto,Sim,Santos,Palmeiras,Derrota,,LogisticRegression_LOSO
+14,Previsto,Sim,Atlético-MG,Sport,Empate,,LogisticRegression_LOSO
 14,Previsto,Sim,Bahia,Internacional,Vitória,,LogisticRegression_LOSO
 14,Previsto,Não,Internacional,Bahia,Derrota,,LogisticRegression_LOSO
-14,Previsto,Não,Sport,Atlético-MG,Vitória,,LogisticRegression_LOSO
-16,Previsto,Sim,Atlético-MG,Fortaleza,Vitória,,LogisticRegression_LOSO
-16,Previsto,Não,Fortaleza,Atlético-MG,Derrota,,LogisticRegression_LOSO
-26,Previsto,Não,Bahia,Botafogo,Derrota,,LogisticRegression_LOSO
-26,Previsto,Sim,Botafogo,Bahia,Vitória,,LogisticRegression_LOSO
-26,Previsto,Não,Bragantino,Mirassol,Vitória,,LogisticRegression_LOSO
-26,Previsto,Não,Ceará,Vitória,Vitória,,LogisticRegression_LOSO
-26,Previsto,Não,Corinthians,Internacional,Derrota,,LogisticRegression_LOSO
-26,Previsto,Não,Cruzeiro,Flamengo,Vitória,,LogisticRegression_LOSO
-26,Previsto,Sim,Flamengo,Cruzeiro,Derrota,,LogisticRegression_LOSO
-26,Previsto,Não,Fluminense,Sport,Vitória,,LogisticRegression_LOSO
-26,Previsto,Sim,Fortaleza,São Paulo,Vitória,,LogisticRegression_LOSO
-26,Previsto,Não,Grêmio,Santos,Derrota,,LogisticRegression_LOSO
-26,Previsto,Sim,Internacional,Corinthians,Vitória,,LogisticRegression_LOSO
-26,Previsto,Sim,Mirassol,Bragantino,Derrota,,LogisticRegression_LOSO
-26,Previsto,Sim,Palmeiras,Vasco,Vitória,,LogisticRegression_LOSO
-26,Previsto,Sim,Santos,Grêmio,Vitória,,LogisticRegression_LOSO
-26,Previsto,Sim,Sport,Fluminense,Derrota,,LogisticRegression_LOSO
-26,Previsto,Não,São Paulo,Fortaleza,Derrota,,LogisticRegression_LOSO
-26,Previsto,Não,Vasco,Palmeiras,Derrota,,LogisticRegression_LOSO
-26,Previsto,Sim,Vitória,Ceará,Derrota,,LogisticRegression_LOSO
+14,Previsto,Não,Sport,Atlético-MG,Empate,,LogisticRegression_LOSO
+16,Previsto,Sim,Atlético-MG,Fortaleza,Empate,,LogisticRegression_LOSO
+16,Previsto,Não,Fortaleza,Atlético-MG,Empate,,LogisticRegression_LOSO
 27,Previsto,Não,Atlético-MG,Fluminense,Derrota,,LogisticRegression_LOSO
 27,Previsto,Sim,Bahia,Flamengo,Vitória,,LogisticRegression_LOSO
 27,Previsto,Não,Botafogo,Internacional,Derrota,,LogisticRegression_LOSO
 27,Previsto,Sim,Bragantino,Grêmio,Vitória,,LogisticRegression_LOSO
 27,Previsto,Sim,Ceará,Santos,Vitória,,LogisticRegression_LOSO
 27,Previsto,Sim,Corinthians,Mirassol,Vitória,,LogisticRegression_LOSO
-27,Previsto,Sim,Cruzeiro,Sport,Vitória,,LogisticRegression_LOSO
+27,Previsto,Sim,Cruzeiro,Sport,Empate,,LogisticRegression_LOSO
 27,Previsto,Não,Flamengo,Bahia,Derrota,,LogisticRegression_LOSO
 27,Previsto,Sim,Fluminense,Atlético-MG,Vitória,,LogisticRegression_LOSO
 27,Previsto,Não,Fortaleza,Juventude,Vitória,,LogisticRegression_LOSO
@@ -49,7 +31,7 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 27,Previsto,Não,Mirassol,Corinthians,Derrota,,LogisticRegression_LOSO
 27,Previsto,Não,Palmeiras,São Paulo,Derrota,,LogisticRegression_LOSO
 27,Previsto,Não,Santos,Ceará,Derrota,,LogisticRegression_LOSO
-27,Previsto,Não,Sport,Cruzeiro,Derrota,,LogisticRegression_LOSO
+27,Previsto,Não,Sport,Cruzeiro,Empate,,LogisticRegression_LOSO
 27,Previsto,Sim,São Paulo,Palmeiras,Vitória,,LogisticRegression_LOSO
 27,Previsto,Sim,Vasco,Vitória,Vitória,,LogisticRegression_LOSO
 27,Previsto,Não,Vitória,Vasco,Derrota,,LogisticRegression_LOSO
