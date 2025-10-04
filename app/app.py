@@ -30,7 +30,18 @@ def carregar_dados():
                                }, inplace=True)
     df_partidas['Frequência'] = df_partidas['Frequência'].round(2)
     df_partidas['Frequência'] = df_partidas['Frequência'].fillna('-')
-    return df, df_partidas
+
+    # estatisticas dos times
+    df_times_stats = pd.read_csv('times-stats.csv')
+    df_times_stats.rename(columns={'time': 'Time',
+                                   'pontos_time': 'Pontos',
+                                   'jogos': 'Jogos',
+                                   'aproveitamento': 'Aproveitamento',
+                                   'aproveitamento_recente': 'Aproveitamento Recente',
+                                   'media_gols_marcados': 'Média Gols Marcados',
+                                   'media_gols_sofridos': 'Média Gols Sofridos'
+                                  }, inplace=True)
+    return df, df_partidas, df_times_stats
 
 
 # Interface Streamlit
@@ -44,7 +55,7 @@ def main():
     )
 
     # Carregar dados
-    df, partidas = carregar_dados()
+    df, partidas, stats = carregar_dados()
 
     # título e subtítulo
     dt_atualizacao = df['data_atualizacao'].max()
@@ -107,6 +118,26 @@ def main():
     # ================================
     times = np.sort(df['Time'].unique())
     times_selecionados = st.multiselect("Selecione times para ver as rodadas previstas:", times, placeholder="Todos os times")
+
+    if len(times_selecionados)==1:
+        stats = stats[stats['Time'].isin(times_selecionados)]
+        jogos = stats['Jogos'].mean()
+        pontos = stats['Pontos'].mean()
+        aproveitamento = stats['Aproveitamento'].mean()
+        aproveitamento_recente= stats['Aproveitamento Recente'].mean()
+        gols_marcados = stats['Média Gols Marcados'].mean()
+        gols_sofridos = stats['Média Gols Sofridos'].mean()
+
+        col1, col2, col3, col4, col5, col6 = st.columns(6)
+
+        
+        col1.metric('Pontos', f'{pontos:.0f}')
+        col2.metric('Jogos', f'{jogos:.0f}')
+        col3.metric('Aproveitamento', f'{aproveitamento:.2%}')
+        col4.metric('Aproveitamento Recente', f'{aproveitamento_recente:.2%}')
+        col5.metric('Gols marcados', f'{gols_marcados:.2f}')
+        col6.metric('Gols sofridos', f'{gols_sofridos:.2f}')
+        st.markdown("---")
 
     # ================================
     # 2️⃣ Evolução rodada a rodada
