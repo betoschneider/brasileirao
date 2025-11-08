@@ -12,10 +12,30 @@ def carregar_dados():
     df.rename(columns={'time': 'Time',
                        'posicao': 'Posição',
                        'pontos': 'Pontos',
+                       'vitorias': 'Vitórias',
                        'rodada_num': 'Rodada',
                        'modelo': 'Modelo',
                        }, inplace=True)
     df['data_atualizacao'] = pd.to_datetime(df['data_atualizacao'])
+    df['Aproveitamento Previsto'] = df['Pontos'] / (df['Rodada'] * 3)
+    # df['Tendência (%)'] = (df['Aproveitamento Previsto'] / df['aproveitamento']) - 1
+    df['Tendência'] = (df['Aproveitamento Previsto'] - df['aproveitamento']) 
+    def formatar_tendencia(valor):
+        if pd.isna(valor):
+            return "-"
+        elif valor > 0:
+            return f"🟢 +{valor*100:.2f} p.p."
+        elif valor < 0:
+            return f"🔴 {valor*100:.2f} p.p."
+        else:
+            return f"⚪ {valor*100:.2f} p.p."
+
+    df["Tendência"] = df["Tendência"].apply(formatar_tendencia)
+    df.rename(columns={
+        'aproveitamento': 'Aproveitamento Atual', 
+        'Aproveitamento Previsto': 'Aproveitamento'
+        }, inplace=True)
+    df['Aproveitamento'] = df['Aproveitamento'].apply(lambda x: f"{x:.2%}")
 
     # partidas
     df_partidas = pd.read_csv('partidas-modelos.csv')
@@ -51,7 +71,7 @@ def main():
     st.set_page_config(
         page_title="Brasileirão Série A - Previsão de resultados",
         page_icon="⚽",
-        layout="wide",
+        # layout="wide",
     )
 
     # Carregar dados
@@ -65,12 +85,12 @@ def main():
     st.write(f"Última atualização: {dt_atualizacao.strftime('%d/%m/%Y %H:%M')}")
     st.markdown("---")
 
-    
+         
 
     # ================================
     # 1️⃣ Gráfico de barras pontos finais no topo
     # ================================
-    tabela = df[df['Rodada'] == 38][['Posição', 'Time', 'Pontos']].sort_values("Pontos", ascending=False).reset_index(drop=True)
+    tabela = df[df['Rodada'] == 38][['Posição', 'Time', 'Pontos', 'Vitórias', 'Aproveitamento', 'Tendência']].sort_values(["Pontos", 'Vitórias'], ascending=False).reset_index(drop=True)
     tabela["Ranking"] = tabela.index + 1
 
     def classificar_cor(rank):
@@ -110,7 +130,14 @@ def main():
     )
 
     st.subheader("Pontuação prevista ao fim do campeonato")
-    st.altair_chart(bars + labels, use_container_width=True)
+    tab1, tab2 = st.tabs(["📑 Tabela", "📊 Gráfico"])  
+    with tab1:
+        st.dataframe(tabela[['Posição', 'Time', 'Pontos', 'Vitórias', 'Aproveitamento', 'Tendência']], hide_index=True, height=740)
+
+
+    with tab2: 
+        st.altair_chart(bars + labels, use_container_width=True)
+
     st.markdown("---")
 
     # ================================
