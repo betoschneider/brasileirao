@@ -19,23 +19,24 @@ def carregar_dados():
     df['data_atualizacao'] = pd.to_datetime(df['data_atualizacao'])
     df['Aproveitamento Previsto'] = df['Pontos'] / (df['Rodada'] * 3)
     # df['Tendência (%)'] = (df['Aproveitamento Previsto'] / df['aproveitamento']) - 1
-    df['Tendência'] = (df['Aproveitamento Previsto'] - df['aproveitamento']) 
+    df['Variação de Aproveitamento'] = (df['Aproveitamento Previsto'] - df['aproveitamento']) 
     def formatar_tendencia(valor):
         if pd.isna(valor):
             return "-"
         elif valor > 0:
-            return f"🟢 +{valor*100:.2f} p.p."
+            return f"🔺 +{valor*100:.2f} p.p."
         elif valor < 0:
-            return f"🔴 {valor*100:.2f} p.p."
+            return f"🔻 {valor*100:.2f} p.p."
         else:
-            return f"⚪ {valor*100:.2f} p.p."
+            return f"◽ {valor*100:.2f} p.p."
 
-    df["Tendência"] = df["Tendência"].apply(formatar_tendencia)
+    df['Variação de Aproveitamento'] = df['Variação de Aproveitamento'].apply(formatar_tendencia)
     df.rename(columns={
         'aproveitamento': 'Aproveitamento Atual', 
         'Aproveitamento Previsto': 'Aproveitamento'
         }, inplace=True)
     df['Aproveitamento'] = df['Aproveitamento'].apply(lambda x: f"{x:.2%}")
+    df['Pontos'] = df['Pontos'].astype(int)
 
     # partidas
     df_partidas = pd.read_csv('partidas-modelos.csv')
@@ -90,7 +91,7 @@ def main():
     # ================================
     # 1️⃣ Gráfico de barras pontos finais no topo
     # ================================
-    tabela = df[df['Rodada'] == 38][['Posição', 'Time', 'Pontos', 'Vitórias', 'Aproveitamento', 'Tendência']].sort_values(["Pontos", 'Vitórias'], ascending=False).reset_index(drop=True)
+    tabela = df[df['Rodada'] == 38][['Posição', 'Time', 'Pontos', 'Vitórias', 'Aproveitamento', 'Variação de Aproveitamento']].sort_values(["Pontos", 'Vitórias'], ascending=False).reset_index(drop=True)
     tabela["Ranking"] = tabela.index + 1
 
     def classificar_cor(rank):
@@ -129,11 +130,21 @@ def main():
         .encode(x="Pontos:Q", y=alt.Y("Time:N", sort="-x"), text="Pontos:Q")
     )
 
-    st.subheader("Pontuação prevista ao fim do campeonato")
-    tab1, tab2 = st.tabs(["📑 Tabela", "📊 Gráfico"])  
-    with tab1:
-        st.dataframe(tabela[['Posição', 'Time', 'Pontos', 'Vitórias', 'Aproveitamento', 'Tendência']], hide_index=True, height=740)
+    # --- estiliza apenas a coluna Posição de acordo com o grupo ---
+    def colorir_posicao(col):
+        return [f"background-color: {cores[tabela.loc[idx, 'Grupo']]}; color: white; font-weight: bold;" for idx in col.index]
 
+    # Remove a coluna Grupo e aplica estilo apenas na coluna Posição
+    tabela_final = tabela[['Posição', 'Time', 'Pontos', 'Vitórias', 'Aproveitamento', 'Variação de Aproveitamento']].copy()
+    tabela_estilizada = tabela_final.style.apply(
+        colorir_posicao,
+        subset=['Posição']
+    )
+
+    st.subheader("Pontuação prevista ao fim do campeonato")
+    tab1, tab2 = st.tabs(["📑 Tabela", "📊 Gráfico"])
+    with tab1:
+        st.dataframe(tabela_estilizada, hide_index=True, height=740)
 
     with tab2: 
         st.altair_chart(bars + labels, use_container_width=True)
@@ -155,9 +166,20 @@ def main():
         gols_marcados = stats['Média Gols Marcados'].mean()
         gols_sofridos = stats['Média Gols Sofridos'].mean()
 
+        # CSS para diminuir a fonte de TODOS os metrics
+        st.markdown("""
+            <style>
+            [data-testid="stMetricValue"] {
+                font-size: 20px;  /* tamanho do valor */
+            }
+            [data-testid="stMetricLabel"] {
+                font-size: 10px;  /* tamanho do label */
+            }
+            </style>
+        """, unsafe_allow_html=True)
+
         col1, col2, col3, col4, col5, col6 = st.columns(6)
 
-        
         col1.metric('Pontos', f'{pontos:.0f}')
         col2.metric('Jogos', f'{jogos:.0f}')
         col3.metric('Aproveitamento', f'{aproveitamento:.2%}')
