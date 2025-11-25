@@ -1,28 +1,10 @@
 rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
-34,Previsto,Sim,Atlético-MG,Palmeiras,Vitória,,LogisticRegression_LOSO
-34,Previsto,Sim,Bragantino,Vitória,Vitória,,LogisticRegression_LOSO
-34,Previsto,Não,Palmeiras,Atlético-MG,Derrota,,LogisticRegression_LOSO
-34,Previsto,Não,Vitória,Bragantino,Derrota,,LogisticRegression_LOSO
+34,Previsto,Sim,Atlético-MG,Palmeiras,Derrota,,LogisticRegression_LOSO
+34,Previsto,Sim,Bragantino,Vitória,Derrota,,LogisticRegression_LOSO
+34,Previsto,Não,Palmeiras,Atlético-MG,Vitória,,LogisticRegression_LOSO
+34,Previsto,Não,Vitória,Bragantino,Vitória,,LogisticRegression_LOSO
 35,Previsto,Não,Atlético-MG,Fortaleza,Derrota,,LogisticRegression_LOSO
-35,Previsto,Sim,Bahia,Vasco,Derrota,,LogisticRegression_LOSO
-35,Previsto,Sim,Botafogo,Grêmio,Vitória,,LogisticRegression_LOSO
-35,Previsto,Não,Bragantino,Flamengo,Derrota,,LogisticRegression_LOSO
-35,Previsto,Não,Ceará,Mirassol,Derrota,,LogisticRegression_LOSO
-35,Previsto,Não,Corinthians,Cruzeiro,Derrota,,LogisticRegression_LOSO
-35,Previsto,Sim,Cruzeiro,Corinthians,Vitória,,LogisticRegression_LOSO
-35,Previsto,Sim,Flamengo,Bragantino,Vitória,,LogisticRegression_LOSO
-35,Previsto,Não,Fluminense,Palmeiras,Derrota,,LogisticRegression_LOSO
 35,Previsto,Sim,Fortaleza,Atlético-MG,Vitória,,LogisticRegression_LOSO
-35,Previsto,Não,Grêmio,Botafogo,Derrota,,LogisticRegression_LOSO
-35,Previsto,Sim,Internacional,Santos,Vitória,,LogisticRegression_LOSO
-35,Previsto,Não,Juventude,São Paulo,Derrota,,LogisticRegression_LOSO
-35,Previsto,Sim,Mirassol,Ceará,Vitória,,LogisticRegression_LOSO
-35,Previsto,Sim,Palmeiras,Fluminense,Vitória,,LogisticRegression_LOSO
-35,Previsto,Não,Santos,Internacional,Derrota,,LogisticRegression_LOSO
-35,Previsto,Sim,Sport,Vitória,Vitória,,LogisticRegression_LOSO
-35,Previsto,Sim,São Paulo,Juventude,Vitória,,LogisticRegression_LOSO
-35,Previsto,Não,Vasco,Bahia,Vitória,,LogisticRegression_LOSO
-35,Previsto,Não,Vitória,Sport,Derrota,,LogisticRegression_LOSO
 36,Previsto,Sim,Atlético-MG,Flamengo,Vitória,,LogisticRegression_LOSO
 36,Previsto,Não,Bahia,Juventude,Derrota,,LogisticRegression_LOSO
 36,Previsto,Não,Botafogo,Corinthians,Derrota,,LogisticRegression_LOSO
