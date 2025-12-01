@@ -6,9 +6,11 @@ from datetime import datetime
 
 
 # Função para carregar os dados
-def carregar_dados():
+def carregar_dados(modelo=None):
     # tabela acumulada
     df = pd.read_csv('tabela-evolucao-modelos.csv')
+    if modelo:
+        df = df[df['modelo'] == modelo]
     df.rename(columns={'time': 'Time',
                        'posicao': 'Posição',
                        'pontos': 'Pontos',
@@ -40,6 +42,8 @@ def carregar_dados():
 
     # partidas
     df_partidas = pd.read_csv('partidas-modelos.csv')
+    if modelo:
+        df_partidas = df_partidas[df_partidas['modelo'] == modelo]
     df_partidas.rename(columns={'rodada_num': 'Rodada',
                                 'status': 'Status',
                                 'mandante': 'Mandante',
@@ -64,6 +68,12 @@ def carregar_dados():
                                   }, inplace=True)
     return df, df_partidas, df_times_stats
 
+def fetch_modelos():
+    df = pd.read_csv('tabela-evolucao-modelos.csv')
+    df = df[~df['modelo'].isna()]
+    modelos = df['modelo'].unique()
+    return modelos
+
 
 # Interface Streamlit
 def main():
@@ -72,11 +82,16 @@ def main():
     st.set_page_config(
         page_title="Brasileirão Série A - Previsão de resultados",
         page_icon="⚽",
+        initial_sidebar_state="collapsed",
         # layout="wide",
     )
 
+    st.sidebar.title("Modelos")
+    modelos = fetch_modelos()
+    modelo = st.sidebar.selectbox("Modelo", modelos)
+
     # Carregar dados
-    df, partidas, stats = carregar_dados()
+    df, partidas, stats = carregar_dados(modelo)
 
     # título e subtítulo
     dt_atualizacao = df['data_atualizacao'].max()
@@ -277,6 +292,10 @@ def main():
         "NaiveBayes": {
             "nome": "#### Naive Bayes",
             "descricao": "- Baseado no Teorema de Bayes.\n- Assume independência entre features.\n- Muito rápido e eficiente em texto."
+        },
+        "VotingClassifier": {
+            "nome": "#### Voting Classifier",
+            "descricao": "- Combina as previsões de múltiplos modelos de classificação individuais.\n- Agrega as previsões de diferentes classificadores.\n- É possível mitigar os vieses e as fraquezas de modelos individuais, levando a uma previsão mais robusta e precisa."
         }
     }
 
