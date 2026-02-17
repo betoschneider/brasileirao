@@ -13,11 +13,11 @@ jobs:
       - name: 🚀 Deploy na pasta local existente
         run: |
           echo "📂 Acessando pasta do projeto..."
-          cd /home/beto/projetos/brasileirao
+          cd /home/dev-host/projetos/brasileirao
           
           echo "⬇️ Atualizando código via Git..."
           # Garante que o git confie na pasta (segurança do git moderno)
-          git config --global --add safe.directory /home/beto/projetos/brasileirao
+          git config --global --add safe.directory /home/dev-host/projetos/brasileirao
           
           git fetch origin main
           git reset --hard origin/main
