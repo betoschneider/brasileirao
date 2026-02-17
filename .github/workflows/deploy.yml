@@ -7,26 +7,25 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
-      - name: 🧾 Checkout do código
-        uses: actions/checkout@v4
-
-      - name: 🔐 Conectar e atualizar servidor remoto
-        uses: appleboy/ssh-action@v1.1.0
-        with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd ~/brasileirao
-            echo "📥 Atualizando código..."
-            git fetch origin main
-            git reset --hard origin/main
-
-            echo "🐳 Atualizando containers..."
-            docker-compose down --rmi local
-            docker-compose up --build -d
-
-            echo "✅ Deploy concluído com sucesso!"
+      - name: 🚀 Deploy na pasta local existente
+        run: |
+          echo "📂 Acessando pasta do projeto..."
+          cd /home/beto/projetos/brasileirao
+          
+          echo "⬇️ Atualizando código via Git..."
+          # Garante que o git confie na pasta (segurança do git moderno)
+          git config --global --add safe.directory /home/beto/projetos/brasileirao
+          
+          git fetch origin main
+          git reset --hard origin/main
+          
+          echo "🐳 Recriando containers..."
+          docker compose down --rmi local
+          docker compose up -d --build
+          docker image prune -f  
+      
+      - name: 🏥 Check Health
+        run: docker ps | grep brasileirao
