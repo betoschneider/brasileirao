@@ -61,13 +61,13 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 3.0,Finalizado,Sim,Vitória,Flamengo,Derrota,,
 4.0,Finalizado,Não,Athletico-PR,Bragantino,Empate,,
 4.0,Finalizado,Não,Atlético-MG,Grêmio,Derrota,,
-4.0,Previsto,Sim,Bahia,Chapecoense,Vitória,96.8,VotingClassifier_MCCV
-4.0,Previsto,Sim,Bahia,Chapecoense,Vitória,,LogisticRegression_LOSO
-4.0,Previsto,Sim,Botafogo,Vitória,Vitória,86.8,VotingClassifier_MCCV
+4.0,Previsto,Sim,Bahia,Chapecoense,Vitória,98.7,VotingClassifier_MCCV
+4.0,Previsto,Sim,Bahia,Chapecoense,Empate,,LogisticRegression_LOSO
+4.0,Previsto,Sim,Botafogo,Vitória,Vitória,100.0,VotingClassifier_MCCV
 4.0,Previsto,Sim,Botafogo,Vitória,Vitória,,LogisticRegression_LOSO
 4.0,Finalizado,Sim,Bragantino,Athletico-PR,Empate,,
-4.0,Previsto,Não,Chapecoense,Bahia,Derrota,96.7,VotingClassifier_MCCV
-4.0,Previsto,Não,Chapecoense,Bahia,Derrota,,LogisticRegression_LOSO
+4.0,Previsto,Não,Chapecoense,Bahia,Derrota,98.9,VotingClassifier_MCCV
+4.0,Previsto,Não,Chapecoense,Bahia,Empate,,LogisticRegression_LOSO
 4.0,Finalizado,Não,Corinthians,Cruzeiro,Empate,,
 4.0,Finalizado,Sim,Coritiba,São Paulo,Derrota,,
 4.0,Finalizado,Sim,Cruzeiro,Corinthians,Empate,,
@@ -83,13 +83,13 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 4.0,Finalizado,Sim,Santos,Vasco,Vitória,,
 4.0,Finalizado,Não,São Paulo,Coritiba,Vitória,,
 4.0,Finalizado,Não,Vasco,Santos,Derrota,,
-4.0,Previsto,Não,Vitória,Botafogo,Derrota,85.6,VotingClassifier_MCCV
+4.0,Previsto,Não,Vitória,Botafogo,Derrota,99.8,VotingClassifier_MCCV
 4.0,Previsto,Não,Vitória,Botafogo,Derrota,,LogisticRegression_LOSO
-5.0,Previsto,Sim,Athletico-PR,Botafogo,Vitória,98.8,VotingClassifier_MCCV
+5.0,Previsto,Sim,Athletico-PR,Botafogo,Vitória,68.60000000000001,VotingClassifier_MCCV
 5.0,Previsto,Sim,Athletico-PR,Botafogo,Empate,,LogisticRegression_LOSO
 5.0,Finalizado,Sim,Atlético-MG,Internacional,Vitória,,
 5.0,Finalizado,Sim,Bahia,Vitória,Empate,,
-5.0,Previsto,Não,Botafogo,Athletico-PR,Derrota,98.6,VotingClassifier_MCCV
+5.0,Previsto,Não,Botafogo,Athletico-PR,Derrota,67.80000000000001,VotingClassifier_MCCV
 5.0,Previsto,Não,Botafogo,Athletico-PR,Empate,,LogisticRegression_LOSO
 5.0,Finalizado,Não,Bragantino,Grêmio,Empate,,
 5.0,Finalizado,Não,Chapecoense,São Paulo,Derrota,,
@@ -147,1243 +147,1223 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 7.0,Finalizado,Não,São Paulo,Atlético-MG,Derrota,,
 7.0,Finalizado,Sim,Vasco,Fluminense,Vitória,,
 7.0,Finalizado,Não,Vitória,Grêmio,Derrota,,
-8.0,Previsto,Sim,Athletico-PR,Coritiba,Vitória,99.9,VotingClassifier_MCCV
-8.0,Previsto,Sim,Athletico-PR,Coritiba,Vitória,,LogisticRegression_LOSO
-8.0,Previsto,Não,Atlético-MG,Fluminense,Derrota,81.2,VotingClassifier_MCCV
-8.0,Previsto,Não,Atlético-MG,Fluminense,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Não,Bahia,Remo,Derrota,93.5,VotingClassifier_MCCV
-8.0,Previsto,Não,Bahia,Remo,Derrota,,LogisticRegression_LOSO
-8.0,Previsto,Não,Botafogo,Bragantino,Derrota,99.8,VotingClassifier_MCCV
-8.0,Previsto,Não,Botafogo,Bragantino,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Sim,Bragantino,Botafogo,Vitória,99.9,VotingClassifier_MCCV
-8.0,Previsto,Sim,Bragantino,Botafogo,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Não,Chapecoense,Internacional,Derrota,99.2,VotingClassifier_MCCV
-8.0,Previsto,Não,Chapecoense,Internacional,Derrota,,LogisticRegression_LOSO
-8.0,Previsto,Sim,Corinthians,Flamengo,Vitória,94.3,VotingClassifier_MCCV
-8.0,Previsto,Sim,Corinthians,Flamengo,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Não,Coritiba,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
-8.0,Previsto,Não,Coritiba,Athletico-PR,Derrota,,LogisticRegression_LOSO
-8.0,Previsto,Sim,Cruzeiro,Santos,Vitória,55.300000000000004,VotingClassifier_MCCV
-8.0,Previsto,Sim,Cruzeiro,Santos,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Não,Flamengo,Corinthians,Derrota,94.5,VotingClassifier_MCCV
-8.0,Previsto,Não,Flamengo,Corinthians,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Sim,Fluminense,Atlético-MG,Vitória,82.19999999999999,VotingClassifier_MCCV
-8.0,Previsto,Sim,Fluminense,Atlético-MG,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Não,Grêmio,Vasco,Derrota,87.0,VotingClassifier_MCCV
-8.0,Previsto,Não,Grêmio,Vasco,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Sim,Internacional,Chapecoense,Vitória,99.2,VotingClassifier_MCCV
-8.0,Previsto,Sim,Internacional,Chapecoense,Vitória,,LogisticRegression_LOSO
-8.0,Previsto,Não,Mirassol,Vitória,Derrota,96.39999999999999,VotingClassifier_MCCV
-8.0,Previsto,Não,Mirassol,Vitória,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Não,Palmeiras,São Paulo,Derrota,98.5,VotingClassifier_MCCV
-8.0,Previsto,Não,Palmeiras,São Paulo,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Sim,Remo,Bahia,Vitória,91.5,VotingClassifier_MCCV
-8.0,Previsto,Sim,Remo,Bahia,Vitória,,LogisticRegression_LOSO
-8.0,Previsto,Não,Santos,Cruzeiro,Derrota,52.7,VotingClassifier_MCCV
-8.0,Previsto,Não,Santos,Cruzeiro,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Sim,São Paulo,Palmeiras,Vitória,98.8,VotingClassifier_MCCV
-8.0,Previsto,Sim,São Paulo,Palmeiras,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Sim,Vasco,Grêmio,Vitória,84.2,VotingClassifier_MCCV
-8.0,Previsto,Sim,Vasco,Grêmio,Empate,,LogisticRegression_LOSO
-8.0,Previsto,Sim,Vitória,Mirassol,Vitória,95.19999999999999,VotingClassifier_MCCV
-8.0,Previsto,Sim,Vitória,Mirassol,Empate,,LogisticRegression_LOSO
-9.0,Previsto,Não,Athletico-PR,Bahia,Derrota,100.0,VotingClassifier_MCCV
+8.0,Finalizado,Sim,Athletico-PR,Coritiba,Vitória,,
+8.0,Finalizado,Não,Atlético-MG,Fluminense,Derrota,,
+8.0,Finalizado,Não,Bahia,Remo,Derrota,,
+8.0,Finalizado,Não,Botafogo,Bragantino,Vitória,,
+8.0,Finalizado,Sim,Bragantino,Botafogo,Derrota,,
+8.0,Finalizado,Não,Chapecoense,Internacional,Derrota,,
+8.0,Finalizado,Sim,Corinthians,Flamengo,Empate,,
+8.0,Finalizado,Não,Coritiba,Athletico-PR,Derrota,,
+8.0,Finalizado,Sim,Cruzeiro,Santos,Empate,,
+8.0,Finalizado,Não,Flamengo,Corinthians,Empate,,
+8.0,Finalizado,Sim,Fluminense,Atlético-MG,Vitória,,
+8.0,Finalizado,Não,Grêmio,Vasco,Derrota,,
+8.0,Finalizado,Sim,Internacional,Chapecoense,Vitória,,
+8.0,Finalizado,Não,Mirassol,Vitória,Derrota,,
+8.0,Finalizado,Não,Palmeiras,São Paulo,Vitória,,
+8.0,Finalizado,Sim,Remo,Bahia,Vitória,,
+8.0,Finalizado,Não,Santos,Cruzeiro,Empate,,
+8.0,Finalizado,Sim,São Paulo,Palmeiras,Derrota,,
+8.0,Finalizado,Sim,Vasco,Grêmio,Vitória,,
+8.0,Finalizado,Sim,Vitória,Mirassol,Vitória,,
+9.0,Previsto,Não,Athletico-PR,Bahia,Derrota,99.9,VotingClassifier_MCCV
 9.0,Previsto,Não,Athletico-PR,Bahia,Derrota,,LogisticRegression_LOSO
-9.0,Previsto,Não,Atlético-MG,Chapecoense,Derrota,100.0,VotingClassifier_MCCV
+9.0,Previsto,Não,Atlético-MG,Chapecoense,Derrota,91.8,VotingClassifier_MCCV
 9.0,Previsto,Não,Atlético-MG,Chapecoense,Derrota,,LogisticRegression_LOSO
-9.0,Previsto,Sim,Bahia,Athletico-PR,Vitória,99.7,VotingClassifier_MCCV
+9.0,Previsto,Sim,Bahia,Athletico-PR,Vitória,100.0,VotingClassifier_MCCV
 9.0,Previsto,Sim,Bahia,Athletico-PR,Vitória,,LogisticRegression_LOSO
-9.0,Previsto,Sim,Botafogo,Mirassol,Vitória,75.4,VotingClassifier_MCCV
-9.0,Previsto,Sim,Botafogo,Mirassol,Empate,,LogisticRegression_LOSO
+9.0,Previsto,Sim,Botafogo,Mirassol,Vitória,100.0,VotingClassifier_MCCV
+9.0,Previsto,Sim,Botafogo,Mirassol,Vitória,,LogisticRegression_LOSO
 9.0,Previsto,Sim,Bragantino,Flamengo,Vitória,100.0,VotingClassifier_MCCV
 9.0,Previsto,Sim,Bragantino,Flamengo,Vitória,,LogisticRegression_LOSO
-9.0,Previsto,Sim,Chapecoense,Atlético-MG,Vitória,100.0,VotingClassifier_MCCV
+9.0,Previsto,Sim,Chapecoense,Atlético-MG,Vitória,93.2,VotingClassifier_MCCV
 9.0,Previsto,Sim,Chapecoense,Atlético-MG,Vitória,,LogisticRegression_LOSO
-9.0,Previsto,Não,Corinthians,Fluminense,Derrota,100.0,VotingClassifier_MCCV
-9.0,Previsto,Não,Corinthians,Fluminense,Derrota,,LogisticRegression_LOSO
-9.0,Previsto,Sim,Coritiba,Vasco,Vitória,100.0,VotingClassifier_MCCV
+9.0,Previsto,Não,Corinthians,Fluminense,Vitória,58.4,VotingClassifier_MCCV
+9.0,Previsto,Não,Corinthians,Fluminense,Empate,,LogisticRegression_LOSO
+9.0,Previsto,Sim,Coritiba,Vasco,Vitória,99.5,VotingClassifier_MCCV
 9.0,Previsto,Sim,Coritiba,Vasco,Vitória,,LogisticRegression_LOSO
-9.0,Previsto,Sim,Cruzeiro,Vitória,Vitória,100.0,VotingClassifier_MCCV
-9.0,Previsto,Sim,Cruzeiro,Vitória,Vitória,,LogisticRegression_LOSO
+9.0,Previsto,Sim,Cruzeiro,Vitória,Empate,59.599999999999994,VotingClassifier_MCCV
+9.0,Previsto,Sim,Cruzeiro,Vitória,Empate,,LogisticRegression_LOSO
 9.0,Previsto,Não,Flamengo,Bragantino,Derrota,100.0,VotingClassifier_MCCV
 9.0,Previsto,Não,Flamengo,Bragantino,Derrota,,LogisticRegression_LOSO
-9.0,Previsto,Sim,Fluminense,Corinthians,Vitória,100.0,VotingClassifier_MCCV
-9.0,Previsto,Sim,Fluminense,Corinthians,Vitória,,LogisticRegression_LOSO
-9.0,Previsto,Não,Grêmio,Palmeiras,Vitória,90.0,VotingClassifier_MCCV
-9.0,Previsto,Não,Grêmio,Palmeiras,Vitória,,LogisticRegression_LOSO
-9.0,Previsto,Sim,Internacional,São Paulo,Vitória,97.5,VotingClassifier_MCCV
-9.0,Previsto,Sim,Internacional,São Paulo,Vitória,,LogisticRegression_LOSO
-9.0,Previsto,Não,Mirassol,Botafogo,Derrota,72.3,VotingClassifier_MCCV
-9.0,Previsto,Não,Mirassol,Botafogo,Empate,,LogisticRegression_LOSO
-9.0,Previsto,Sim,Palmeiras,Grêmio,Derrota,90.7,VotingClassifier_MCCV
-9.0,Previsto,Sim,Palmeiras,Grêmio,Derrota,,LogisticRegression_LOSO
-9.0,Previsto,Não,Remo,Santos,Derrota,77.0,VotingClassifier_MCCV
-9.0,Previsto,Não,Remo,Santos,Empate,,LogisticRegression_LOSO
-9.0,Previsto,Sim,Santos,Remo,Vitória,77.0,VotingClassifier_MCCV
-9.0,Previsto,Sim,Santos,Remo,Empate,,LogisticRegression_LOSO
-9.0,Previsto,Não,São Paulo,Internacional,Derrota,98.3,VotingClassifier_MCCV
-9.0,Previsto,Não,São Paulo,Internacional,Derrota,,LogisticRegression_LOSO
+9.0,Previsto,Sim,Fluminense,Corinthians,Derrota,59.099999999999994,VotingClassifier_MCCV
+9.0,Previsto,Sim,Fluminense,Corinthians,Empate,,LogisticRegression_LOSO
+9.0,Previsto,Não,Grêmio,Palmeiras,Derrota,73.9,VotingClassifier_MCCV
+9.0,Previsto,Não,Grêmio,Palmeiras,Derrota,,LogisticRegression_LOSO
+9.0,Previsto,Sim,Internacional,São Paulo,Vitória,100.0,VotingClassifier_MCCV
+9.0,Previsto,Sim,Internacional,São Paulo,Empate,,LogisticRegression_LOSO
+9.0,Previsto,Não,Mirassol,Botafogo,Derrota,99.9,VotingClassifier_MCCV
+9.0,Previsto,Não,Mirassol,Botafogo,Derrota,,LogisticRegression_LOSO
+9.0,Previsto,Sim,Palmeiras,Grêmio,Vitória,74.4,VotingClassifier_MCCV
+9.0,Previsto,Sim,Palmeiras,Grêmio,Vitória,,LogisticRegression_LOSO
+9.0,Previsto,Não,Remo,Santos,Derrota,100.0,VotingClassifier_MCCV
+9.0,Previsto,Não,Remo,Santos,Derrota,,LogisticRegression_LOSO
+9.0,Previsto,Sim,Santos,Remo,Vitória,100.0,VotingClassifier_MCCV
+9.0,Previsto,Sim,Santos,Remo,Vitória,,LogisticRegression_LOSO
+9.0,Previsto,Não,São Paulo,Internacional,Derrota,99.8,VotingClassifier_MCCV
+9.0,Previsto,Não,São Paulo,Internacional,Empate,,LogisticRegression_LOSO
 9.0,Previsto,Não,Vasco,Coritiba,Derrota,100.0,VotingClassifier_MCCV
 9.0,Previsto,Não,Vasco,Coritiba,Derrota,,LogisticRegression_LOSO
-9.0,Previsto,Não,Vitória,Cruzeiro,Derrota,100.0,VotingClassifier_MCCV
-9.0,Previsto,Não,Vitória,Cruzeiro,Derrota,,LogisticRegression_LOSO
-10.0,Previsto,Não,Athletico-PR,Atlético-MG,Derrota,64.0,VotingClassifier_MCCV
+9.0,Previsto,Não,Vitória,Cruzeiro,Empate,60.3,VotingClassifier_MCCV
+9.0,Previsto,Não,Vitória,Cruzeiro,Empate,,LogisticRegression_LOSO
+10.0,Previsto,Não,Athletico-PR,Atlético-MG,Vitória,57.4,VotingClassifier_MCCV
 10.0,Previsto,Não,Athletico-PR,Atlético-MG,Derrota,,LogisticRegression_LOSO
-10.0,Previsto,Sim,Atlético-MG,Athletico-PR,Vitória,63.5,VotingClassifier_MCCV
+10.0,Previsto,Sim,Atlético-MG,Athletico-PR,Derrota,59.099999999999994,VotingClassifier_MCCV
 10.0,Previsto,Sim,Atlético-MG,Athletico-PR,Vitória,,LogisticRegression_LOSO
-10.0,Previsto,Sim,Bahia,Palmeiras,Vitória,58.099999999999994,VotingClassifier_MCCV
+10.0,Previsto,Sim,Bahia,Palmeiras,Vitória,80.9,VotingClassifier_MCCV
 10.0,Previsto,Sim,Bahia,Palmeiras,Empate,,LogisticRegression_LOSO
-10.0,Previsto,Não,Botafogo,Vasco,Derrota,89.7,VotingClassifier_MCCV
-10.0,Previsto,Não,Botafogo,Vasco,Empate,,LogisticRegression_LOSO
-10.0,Previsto,Não,Bragantino,Mirassol,Derrota,55.800000000000004,VotingClassifier_MCCV
-10.0,Previsto,Não,Bragantino,Mirassol,Empate,,LogisticRegression_LOSO
-10.0,Previsto,Sim,Chapecoense,Vitória,Vitória,97.7,VotingClassifier_MCCV
+10.0,Previsto,Não,Botafogo,Vasco,Derrota,99.0,VotingClassifier_MCCV
+10.0,Previsto,Não,Botafogo,Vasco,Derrota,,LogisticRegression_LOSO
+10.0,Previsto,Não,Bragantino,Mirassol,Derrota,100.0,VotingClassifier_MCCV
+10.0,Previsto,Não,Bragantino,Mirassol,Derrota,,LogisticRegression_LOSO
+10.0,Previsto,Sim,Chapecoense,Vitória,Vitória,71.8,VotingClassifier_MCCV
 10.0,Previsto,Sim,Chapecoense,Vitória,Empate,,LogisticRegression_LOSO
-10.0,Previsto,Sim,Corinthians,Internacional,Vitória,99.8,VotingClassifier_MCCV
-10.0,Previsto,Sim,Corinthians,Internacional,Vitória,,LogisticRegression_LOSO
-10.0,Previsto,Sim,Coritiba,Fluminense,Vitória,85.3,VotingClassifier_MCCV
-10.0,Previsto,Sim,Coritiba,Fluminense,Vitória,,LogisticRegression_LOSO
-10.0,Previsto,Não,Cruzeiro,São Paulo,Derrota,77.4,VotingClassifier_MCCV
+10.0,Previsto,Sim,Corinthians,Internacional,Vitória,95.0,VotingClassifier_MCCV
+10.0,Previsto,Sim,Corinthians,Internacional,Empate,,LogisticRegression_LOSO
+10.0,Previsto,Sim,Coritiba,Fluminense,Vitória,63.7,VotingClassifier_MCCV
+10.0,Previsto,Sim,Coritiba,Fluminense,Empate,,LogisticRegression_LOSO
+10.0,Previsto,Não,Cruzeiro,São Paulo,Vitória,58.8,VotingClassifier_MCCV
 10.0,Previsto,Não,Cruzeiro,São Paulo,Empate,,LogisticRegression_LOSO
-10.0,Previsto,Sim,Flamengo,Santos,Vitória,100.0,VotingClassifier_MCCV
+10.0,Previsto,Sim,Flamengo,Santos,Vitória,99.1,VotingClassifier_MCCV
 10.0,Previsto,Sim,Flamengo,Santos,Vitória,,LogisticRegression_LOSO
-10.0,Previsto,Não,Fluminense,Coritiba,Derrota,83.5,VotingClassifier_MCCV
-10.0,Previsto,Não,Fluminense,Coritiba,Derrota,,LogisticRegression_LOSO
-10.0,Previsto,Sim,Grêmio,Remo,Vitória,94.89999999999999,VotingClassifier_MCCV
-10.0,Previsto,Sim,Grêmio,Remo,Empate,,LogisticRegression_LOSO
-10.0,Previsto,Não,Internacional,Corinthians,Derrota,99.5,VotingClassifier_MCCV
-10.0,Previsto,Não,Internacional,Corinthians,Derrota,,LogisticRegression_LOSO
-10.0,Previsto,Sim,Mirassol,Bragantino,Vitória,55.1,VotingClassifier_MCCV
-10.0,Previsto,Sim,Mirassol,Bragantino,Empate,,LogisticRegression_LOSO
-10.0,Previsto,Não,Palmeiras,Bahia,Derrota,55.50000000000001,VotingClassifier_MCCV
+10.0,Previsto,Não,Fluminense,Coritiba,Derrota,63.5,VotingClassifier_MCCV
+10.0,Previsto,Não,Fluminense,Coritiba,Empate,,LogisticRegression_LOSO
+10.0,Previsto,Sim,Grêmio,Remo,Vitória,100.0,VotingClassifier_MCCV
+10.0,Previsto,Sim,Grêmio,Remo,Vitória,,LogisticRegression_LOSO
+10.0,Previsto,Não,Internacional,Corinthians,Derrota,93.4,VotingClassifier_MCCV
+10.0,Previsto,Não,Internacional,Corinthians,Empate,,LogisticRegression_LOSO
+10.0,Previsto,Sim,Mirassol,Bragantino,Vitória,100.0,VotingClassifier_MCCV
+10.0,Previsto,Sim,Mirassol,Bragantino,Vitória,,LogisticRegression_LOSO
+10.0,Previsto,Não,Palmeiras,Bahia,Derrota,82.6,VotingClassifier_MCCV
 10.0,Previsto,Não,Palmeiras,Bahia,Empate,,LogisticRegression_LOSO
-10.0,Previsto,Não,Remo,Grêmio,Derrota,96.5,VotingClassifier_MCCV
-10.0,Previsto,Não,Remo,Grêmio,Empate,,LogisticRegression_LOSO
-10.0,Previsto,Não,Santos,Flamengo,Derrota,99.9,VotingClassifier_MCCV
+10.0,Previsto,Não,Remo,Grêmio,Derrota,100.0,VotingClassifier_MCCV
+10.0,Previsto,Não,Remo,Grêmio,Derrota,,LogisticRegression_LOSO
+10.0,Previsto,Não,Santos,Flamengo,Derrota,98.8,VotingClassifier_MCCV
 10.0,Previsto,Não,Santos,Flamengo,Derrota,,LogisticRegression_LOSO
-10.0,Previsto,Sim,São Paulo,Cruzeiro,Vitória,78.3,VotingClassifier_MCCV
+10.0,Previsto,Sim,São Paulo,Cruzeiro,Derrota,57.099999999999994,VotingClassifier_MCCV
 10.0,Previsto,Sim,São Paulo,Cruzeiro,Empate,,LogisticRegression_LOSO
-10.0,Previsto,Sim,Vasco,Botafogo,Vitória,89.0,VotingClassifier_MCCV
-10.0,Previsto,Sim,Vasco,Botafogo,Empate,,LogisticRegression_LOSO
-10.0,Previsto,Não,Vitória,Chapecoense,Derrota,98.2,VotingClassifier_MCCV
+10.0,Previsto,Sim,Vasco,Botafogo,Vitória,99.2,VotingClassifier_MCCV
+10.0,Previsto,Sim,Vasco,Botafogo,Vitória,,LogisticRegression_LOSO
+10.0,Previsto,Não,Vitória,Chapecoense,Derrota,70.8,VotingClassifier_MCCV
 10.0,Previsto,Não,Vitória,Chapecoense,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Sim,Athletico-PR,Chapecoense,Vitória,99.9,VotingClassifier_MCCV
+11.0,Previsto,Sim,Athletico-PR,Chapecoense,Vitória,99.7,VotingClassifier_MCCV
 11.0,Previsto,Sim,Athletico-PR,Chapecoense,Vitória,,LogisticRegression_LOSO
-11.0,Previsto,Não,Atlético-MG,Santos,Vitória,61.0,VotingClassifier_MCCV
+11.0,Previsto,Não,Atlético-MG,Santos,Vitória,50.5,VotingClassifier_MCCV
 11.0,Previsto,Não,Atlético-MG,Santos,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Não,Bahia,Mirassol,Derrota,98.6,VotingClassifier_MCCV
+11.0,Previsto,Não,Bahia,Mirassol,Derrota,100.0,VotingClassifier_MCCV
 11.0,Previsto,Não,Bahia,Mirassol,Derrota,,LogisticRegression_LOSO
-11.0,Previsto,Sim,Botafogo,Coritiba,Vitória,96.1,VotingClassifier_MCCV
+11.0,Previsto,Sim,Botafogo,Coritiba,Vitória,65.0,VotingClassifier_MCCV
 11.0,Previsto,Sim,Botafogo,Coritiba,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Não,Bragantino,Cruzeiro,Vitória,48.1,VotingClassifier_MCCV
+11.0,Previsto,Não,Bragantino,Cruzeiro,Derrota,70.89999999999999,VotingClassifier_MCCV
 11.0,Previsto,Não,Bragantino,Cruzeiro,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Não,Chapecoense,Athletico-PR,Derrota,99.8,VotingClassifier_MCCV
+11.0,Previsto,Não,Chapecoense,Athletico-PR,Derrota,98.9,VotingClassifier_MCCV
 11.0,Previsto,Não,Chapecoense,Athletico-PR,Derrota,,LogisticRegression_LOSO
-11.0,Previsto,Sim,Corinthians,Palmeiras,Vitória,97.7,VotingClassifier_MCCV
+11.0,Previsto,Sim,Corinthians,Palmeiras,Vitória,95.89999999999999,VotingClassifier_MCCV
 11.0,Previsto,Sim,Corinthians,Palmeiras,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Não,Coritiba,Botafogo,Derrota,97.0,VotingClassifier_MCCV
+11.0,Previsto,Não,Coritiba,Botafogo,Derrota,66.3,VotingClassifier_MCCV
 11.0,Previsto,Não,Coritiba,Botafogo,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Sim,Cruzeiro,Bragantino,Derrota,46.2,VotingClassifier_MCCV
+11.0,Previsto,Sim,Cruzeiro,Bragantino,Vitória,69.69999999999999,VotingClassifier_MCCV
 11.0,Previsto,Sim,Cruzeiro,Bragantino,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Não,Flamengo,Fluminense,Derrota,69.0,VotingClassifier_MCCV
+11.0,Previsto,Não,Flamengo,Fluminense,Empate,58.4,VotingClassifier_MCCV
 11.0,Previsto,Não,Flamengo,Fluminense,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Sim,Fluminense,Flamengo,Vitória,67.30000000000001,VotingClassifier_MCCV
+11.0,Previsto,Sim,Fluminense,Flamengo,Empate,57.8,VotingClassifier_MCCV
 11.0,Previsto,Sim,Fluminense,Flamengo,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Não,Grêmio,Internacional,Derrota,99.3,VotingClassifier_MCCV
+11.0,Previsto,Não,Grêmio,Internacional,Derrota,91.10000000000001,VotingClassifier_MCCV
 11.0,Previsto,Não,Grêmio,Internacional,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Sim,Internacional,Grêmio,Vitória,99.2,VotingClassifier_MCCV
+11.0,Previsto,Sim,Internacional,Grêmio,Vitória,92.5,VotingClassifier_MCCV
 11.0,Previsto,Sim,Internacional,Grêmio,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Sim,Mirassol,Bahia,Vitória,98.6,VotingClassifier_MCCV
+11.0,Previsto,Sim,Mirassol,Bahia,Vitória,100.0,VotingClassifier_MCCV
 11.0,Previsto,Sim,Mirassol,Bahia,Vitória,,LogisticRegression_LOSO
-11.0,Previsto,Não,Palmeiras,Corinthians,Derrota,97.8,VotingClassifier_MCCV
+11.0,Previsto,Não,Palmeiras,Corinthians,Derrota,95.6,VotingClassifier_MCCV
 11.0,Previsto,Não,Palmeiras,Corinthians,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Sim,Remo,Vasco,Vitória,72.2,VotingClassifier_MCCV
+11.0,Previsto,Sim,Remo,Vasco,Vitória,43.5,VotingClassifier_MCCV
 11.0,Previsto,Sim,Remo,Vasco,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Sim,Santos,Atlético-MG,Derrota,59.199999999999996,VotingClassifier_MCCV
+11.0,Previsto,Sim,Santos,Atlético-MG,Derrota,48.199999999999996,VotingClassifier_MCCV
 11.0,Previsto,Sim,Santos,Atlético-MG,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Não,São Paulo,Vitória,Derrota,70.1,VotingClassifier_MCCV
-11.0,Previsto,Não,São Paulo,Vitória,Vitória,,LogisticRegression_LOSO
-11.0,Previsto,Não,Vasco,Remo,Derrota,73.1,VotingClassifier_MCCV
+11.0,Previsto,Não,São Paulo,Vitória,Derrota,95.39999999999999,VotingClassifier_MCCV
+11.0,Previsto,Não,São Paulo,Vitória,Empate,,LogisticRegression_LOSO
+11.0,Previsto,Não,Vasco,Remo,Derrota,48.1,VotingClassifier_MCCV
 11.0,Previsto,Não,Vasco,Remo,Empate,,LogisticRegression_LOSO
-11.0,Previsto,Sim,Vitória,São Paulo,Vitória,74.9,VotingClassifier_MCCV
+11.0,Previsto,Sim,Vitória,São Paulo,Vitória,97.3,VotingClassifier_MCCV
 11.0,Previsto,Sim,Vitória,São Paulo,Empate,,LogisticRegression_LOSO
-12.0,Previsto,Não,Athletico-PR,Palmeiras,Derrota,98.3,VotingClassifier_MCCV
-12.0,Previsto,Não,Athletico-PR,Palmeiras,Empate,,LogisticRegression_LOSO
-12.0,Previsto,Não,Atlético-MG,Coritiba,Derrota,99.5,VotingClassifier_MCCV
+12.0,Previsto,Não,Athletico-PR,Palmeiras,Derrota,99.2,VotingClassifier_MCCV
+12.0,Previsto,Não,Athletico-PR,Palmeiras,Derrota,,LogisticRegression_LOSO
+12.0,Previsto,Não,Atlético-MG,Coritiba,Derrota,99.9,VotingClassifier_MCCV
 12.0,Previsto,Não,Atlético-MG,Coritiba,Derrota,,LogisticRegression_LOSO
-12.0,Previsto,Não,Bahia,Flamengo,Derrota,99.5,VotingClassifier_MCCV
+12.0,Previsto,Não,Bahia,Flamengo,Derrota,99.9,VotingClassifier_MCCV
 12.0,Previsto,Não,Bahia,Flamengo,Derrota,,LogisticRegression_LOSO
-12.0,Previsto,Não,Botafogo,Chapecoense,Derrota,99.9,VotingClassifier_MCCV
+12.0,Previsto,Não,Botafogo,Chapecoense,Derrota,100.0,VotingClassifier_MCCV
 12.0,Previsto,Não,Botafogo,Chapecoense,Derrota,,LogisticRegression_LOSO
 12.0,Previsto,Sim,Bragantino,Remo,Vitória,100.0,VotingClassifier_MCCV
 12.0,Previsto,Sim,Bragantino,Remo,Vitória,,LogisticRegression_LOSO
 12.0,Previsto,Sim,Chapecoense,Botafogo,Vitória,100.0,VotingClassifier_MCCV
 12.0,Previsto,Sim,Chapecoense,Botafogo,Vitória,,LogisticRegression_LOSO
-12.0,Previsto,Não,Corinthians,Vitória,Derrota,78.2,VotingClassifier_MCCV
+12.0,Previsto,Não,Corinthians,Vitória,Derrota,90.8,VotingClassifier_MCCV
 12.0,Previsto,Não,Corinthians,Vitória,Empate,,LogisticRegression_LOSO
-12.0,Previsto,Sim,Coritiba,Atlético-MG,Vitória,99.9,VotingClassifier_MCCV
+12.0,Previsto,Sim,Coritiba,Atlético-MG,Vitória,100.0,VotingClassifier_MCCV
 12.0,Previsto,Sim,Coritiba,Atlético-MG,Vitória,,LogisticRegression_LOSO
-12.0,Previsto,Sim,Cruzeiro,Grêmio,Vitória,51.4,VotingClassifier_MCCV
+12.0,Previsto,Sim,Cruzeiro,Grêmio,Vitória,53.900000000000006,VotingClassifier_MCCV
 12.0,Previsto,Sim,Cruzeiro,Grêmio,Empate,,LogisticRegression_LOSO
-12.0,Previsto,Sim,Flamengo,Bahia,Vitória,99.3,VotingClassifier_MCCV
+12.0,Previsto,Sim,Flamengo,Bahia,Vitória,99.9,VotingClassifier_MCCV
 12.0,Previsto,Sim,Flamengo,Bahia,Vitória,,LogisticRegression_LOSO
-12.0,Previsto,Não,Fluminense,Santos,Derrota,55.60000000000001,VotingClassifier_MCCV
+12.0,Previsto,Não,Fluminense,Santos,Vitória,51.5,VotingClassifier_MCCV
 12.0,Previsto,Não,Fluminense,Santos,Empate,,LogisticRegression_LOSO
-12.0,Previsto,Não,Grêmio,Cruzeiro,Derrota,51.7,VotingClassifier_MCCV
+12.0,Previsto,Não,Grêmio,Cruzeiro,Derrota,52.1,VotingClassifier_MCCV
 12.0,Previsto,Não,Grêmio,Cruzeiro,Empate,,LogisticRegression_LOSO
-12.0,Previsto,Sim,Internacional,Mirassol,Vitória,96.89999999999999,VotingClassifier_MCCV
+12.0,Previsto,Sim,Internacional,Mirassol,Vitória,99.9,VotingClassifier_MCCV
 12.0,Previsto,Sim,Internacional,Mirassol,Vitória,,LogisticRegression_LOSO
-12.0,Previsto,Não,Mirassol,Internacional,Derrota,97.89999999999999,VotingClassifier_MCCV
+12.0,Previsto,Não,Mirassol,Internacional,Derrota,100.0,VotingClassifier_MCCV
 12.0,Previsto,Não,Mirassol,Internacional,Derrota,,LogisticRegression_LOSO
-12.0,Previsto,Sim,Palmeiras,Athletico-PR,Vitória,98.8,VotingClassifier_MCCV
-12.0,Previsto,Sim,Palmeiras,Athletico-PR,Empate,,LogisticRegression_LOSO
+12.0,Previsto,Sim,Palmeiras,Athletico-PR,Vitória,99.8,VotingClassifier_MCCV
+12.0,Previsto,Sim,Palmeiras,Athletico-PR,Vitória,,LogisticRegression_LOSO
 12.0,Previsto,Não,Remo,Bragantino,Derrota,100.0,VotingClassifier_MCCV
 12.0,Previsto,Não,Remo,Bragantino,Derrota,,LogisticRegression_LOSO
-12.0,Previsto,Sim,Santos,Fluminense,Vitória,57.9,VotingClassifier_MCCV
+12.0,Previsto,Sim,Santos,Fluminense,Derrota,47.5,VotingClassifier_MCCV
 12.0,Previsto,Sim,Santos,Fluminense,Empate,,LogisticRegression_LOSO
-12.0,Previsto,Não,São Paulo,Vasco,Derrota,98.5,VotingClassifier_MCCV
+12.0,Previsto,Não,São Paulo,Vasco,Derrota,99.7,VotingClassifier_MCCV
 12.0,Previsto,Não,São Paulo,Vasco,Derrota,,LogisticRegression_LOSO
-12.0,Previsto,Sim,Vasco,São Paulo,Vitória,98.7,VotingClassifier_MCCV
+12.0,Previsto,Sim,Vasco,São Paulo,Vitória,99.6,VotingClassifier_MCCV
 12.0,Previsto,Sim,Vasco,São Paulo,Vitória,,LogisticRegression_LOSO
-12.0,Previsto,Sim,Vitória,Corinthians,Vitória,76.8,VotingClassifier_MCCV
+12.0,Previsto,Sim,Vitória,Corinthians,Vitória,91.0,VotingClassifier_MCCV
 12.0,Previsto,Sim,Vitória,Corinthians,Empate,,LogisticRegression_LOSO
-13.0,Previsto,Sim,Athletico-PR,Vitória,Vitória,100.0,VotingClassifier_MCCV
+13.0,Previsto,Sim,Athletico-PR,Vitória,Vitória,99.2,VotingClassifier_MCCV
 13.0,Previsto,Sim,Athletico-PR,Vitória,Vitória,,LogisticRegression_LOSO
-13.0,Previsto,Sim,Atlético-MG,Flamengo,Vitória,97.89999999999999,VotingClassifier_MCCV
+13.0,Previsto,Sim,Atlético-MG,Flamengo,Vitória,99.5,VotingClassifier_MCCV
 13.0,Previsto,Sim,Atlético-MG,Flamengo,Vitória,,LogisticRegression_LOSO
-13.0,Previsto,Sim,Bahia,Santos,Vitória,94.39999999999999,VotingClassifier_MCCV
+13.0,Previsto,Sim,Bahia,Santos,Vitória,98.7,VotingClassifier_MCCV
 13.0,Previsto,Sim,Bahia,Santos,Empate,,LogisticRegression_LOSO
-13.0,Previsto,Sim,Botafogo,Internacional,Vitória,61.5,VotingClassifier_MCCV
+13.0,Previsto,Sim,Botafogo,Internacional,Vitória,68.5,VotingClassifier_MCCV
 13.0,Previsto,Sim,Botafogo,Internacional,Empate,,LogisticRegression_LOSO
-13.0,Previsto,Sim,Bragantino,Palmeiras,Vitória,99.8,VotingClassifier_MCCV
+13.0,Previsto,Sim,Bragantino,Palmeiras,Vitória,100.0,VotingClassifier_MCCV
 13.0,Previsto,Sim,Bragantino,Palmeiras,Vitória,,LogisticRegression_LOSO
-13.0,Previsto,Não,Chapecoense,Fluminense,Derrota,100.0,VotingClassifier_MCCV
+13.0,Previsto,Não,Chapecoense,Fluminense,Derrota,98.4,VotingClassifier_MCCV
 13.0,Previsto,Não,Chapecoense,Fluminense,Derrota,,LogisticRegression_LOSO
-13.0,Previsto,Sim,Corinthians,Vasco,Vitória,98.0,VotingClassifier_MCCV
+13.0,Previsto,Sim,Corinthians,Vasco,Vitória,99.7,VotingClassifier_MCCV
 13.0,Previsto,Sim,Corinthians,Vasco,Empate,,LogisticRegression_LOSO
-13.0,Previsto,Não,Coritiba,Grêmio,Derrota,99.8,VotingClassifier_MCCV
+13.0,Previsto,Não,Coritiba,Grêmio,Derrota,96.7,VotingClassifier_MCCV
 13.0,Previsto,Não,Coritiba,Grêmio,Empate,,LogisticRegression_LOSO
-13.0,Previsto,Não,Cruzeiro,Remo,Derrota,99.8,VotingClassifier_MCCV
+13.0,Previsto,Não,Cruzeiro,Remo,Derrota,87.9,VotingClassifier_MCCV
 13.0,Previsto,Não,Cruzeiro,Remo,Derrota,,LogisticRegression_LOSO
-13.0,Previsto,Não,Flamengo,Atlético-MG,Derrota,98.0,VotingClassifier_MCCV
+13.0,Previsto,Não,Flamengo,Atlético-MG,Derrota,99.5,VotingClassifier_MCCV
 13.0,Previsto,Não,Flamengo,Atlético-MG,Derrota,,LogisticRegression_LOSO
-13.0,Previsto,Sim,Fluminense,Chapecoense,Vitória,99.9,VotingClassifier_MCCV
+13.0,Previsto,Sim,Fluminense,Chapecoense,Vitória,98.8,VotingClassifier_MCCV
 13.0,Previsto,Sim,Fluminense,Chapecoense,Vitória,,LogisticRegression_LOSO
-13.0,Previsto,Sim,Grêmio,Coritiba,Vitória,99.7,VotingClassifier_MCCV
+13.0,Previsto,Sim,Grêmio,Coritiba,Vitória,97.0,VotingClassifier_MCCV
 13.0,Previsto,Sim,Grêmio,Coritiba,Empate,,LogisticRegression_LOSO
-13.0,Previsto,Não,Internacional,Botafogo,Derrota,62.3,VotingClassifier_MCCV
+13.0,Previsto,Não,Internacional,Botafogo,Derrota,69.5,VotingClassifier_MCCV
 13.0,Previsto,Não,Internacional,Botafogo,Empate,,LogisticRegression_LOSO
-13.0,Previsto,Não,Mirassol,São Paulo,Vitória,54.2,VotingClassifier_MCCV
+13.0,Previsto,Não,Mirassol,São Paulo,Empate,41.5,VotingClassifier_MCCV
 13.0,Previsto,Não,Mirassol,São Paulo,Empate,,LogisticRegression_LOSO
-13.0,Previsto,Não,Palmeiras,Bragantino,Derrota,99.9,VotingClassifier_MCCV
+13.0,Previsto,Não,Palmeiras,Bragantino,Derrota,100.0,VotingClassifier_MCCV
 13.0,Previsto,Não,Palmeiras,Bragantino,Derrota,,LogisticRegression_LOSO
-13.0,Previsto,Sim,Remo,Cruzeiro,Vitória,99.8,VotingClassifier_MCCV
+13.0,Previsto,Sim,Remo,Cruzeiro,Vitória,87.6,VotingClassifier_MCCV
 13.0,Previsto,Sim,Remo,Cruzeiro,Vitória,,LogisticRegression_LOSO
-13.0,Previsto,Não,Santos,Bahia,Derrota,95.7,VotingClassifier_MCCV
+13.0,Previsto,Não,Santos,Bahia,Derrota,98.6,VotingClassifier_MCCV
 13.0,Previsto,Não,Santos,Bahia,Empate,,LogisticRegression_LOSO
-13.0,Previsto,Sim,São Paulo,Mirassol,Derrota,49.8,VotingClassifier_MCCV
+13.0,Previsto,Sim,São Paulo,Mirassol,Empate,44.800000000000004,VotingClassifier_MCCV
 13.0,Previsto,Sim,São Paulo,Mirassol,Empate,,LogisticRegression_LOSO
-13.0,Previsto,Não,Vasco,Corinthians,Derrota,98.4,VotingClassifier_MCCV
+13.0,Previsto,Não,Vasco,Corinthians,Derrota,99.4,VotingClassifier_MCCV
 13.0,Previsto,Não,Vasco,Corinthians,Empate,,LogisticRegression_LOSO
-13.0,Previsto,Não,Vitória,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
+13.0,Previsto,Não,Vitória,Athletico-PR,Derrota,98.8,VotingClassifier_MCCV
 13.0,Previsto,Não,Vitória,Athletico-PR,Derrota,,LogisticRegression_LOSO
 14.0,Previsto,Sim,Athletico-PR,Grêmio,Vitória,100.0,VotingClassifier_MCCV
 14.0,Previsto,Sim,Athletico-PR,Grêmio,Vitória,,LogisticRegression_LOSO
-14.0,Previsto,Não,Atlético-MG,Cruzeiro,Derrota,77.60000000000001,VotingClassifier_MCCV
+14.0,Previsto,Não,Atlético-MG,Cruzeiro,Derrota,65.0,VotingClassifier_MCCV
 14.0,Previsto,Não,Atlético-MG,Cruzeiro,Empate,,LogisticRegression_LOSO
-14.0,Previsto,Não,Bahia,São Paulo,Derrota,84.8,VotingClassifier_MCCV
+14.0,Previsto,Não,Bahia,São Paulo,Derrota,49.5,VotingClassifier_MCCV
 14.0,Previsto,Não,Bahia,São Paulo,Empate,,LogisticRegression_LOSO
-14.0,Previsto,Sim,Botafogo,Remo,Vitória,83.8,VotingClassifier_MCCV
+14.0,Previsto,Sim,Botafogo,Remo,Derrota,51.1,VotingClassifier_MCCV
 14.0,Previsto,Sim,Botafogo,Remo,Empate,,LogisticRegression_LOSO
-14.0,Previsto,Não,Bragantino,Chapecoense,Derrota,59.5,VotingClassifier_MCCV
+14.0,Previsto,Não,Bragantino,Chapecoense,Derrota,47.8,VotingClassifier_MCCV
 14.0,Previsto,Não,Bragantino,Chapecoense,Empate,,LogisticRegression_LOSO
-14.0,Previsto,Sim,Chapecoense,Bragantino,Vitória,59.699999999999996,VotingClassifier_MCCV
+14.0,Previsto,Sim,Chapecoense,Bragantino,Vitória,45.2,VotingClassifier_MCCV
 14.0,Previsto,Sim,Chapecoense,Bragantino,Empate,,LogisticRegression_LOSO
-14.0,Previsto,Não,Corinthians,Mirassol,Derrota,99.3,VotingClassifier_MCCV
+14.0,Previsto,Não,Corinthians,Mirassol,Derrota,96.89999999999999,VotingClassifier_MCCV
 14.0,Previsto,Não,Corinthians,Mirassol,Derrota,,LogisticRegression_LOSO
-14.0,Previsto,Não,Coritiba,Vitória,Derrota,81.39999999999999,VotingClassifier_MCCV
+14.0,Previsto,Não,Coritiba,Vitória,Derrota,98.0,VotingClassifier_MCCV
 14.0,Previsto,Não,Coritiba,Vitória,Empate,,LogisticRegression_LOSO
-14.0,Previsto,Sim,Cruzeiro,Atlético-MG,Vitória,79.4,VotingClassifier_MCCV
+14.0,Previsto,Sim,Cruzeiro,Atlético-MG,Vitória,64.9,VotingClassifier_MCCV
 14.0,Previsto,Sim,Cruzeiro,Atlético-MG,Empate,,LogisticRegression_LOSO
 14.0,Previsto,Sim,Flamengo,Vasco,Vitória,100.0,VotingClassifier_MCCV
 14.0,Previsto,Sim,Flamengo,Vasco,Vitória,,LogisticRegression_LOSO
-14.0,Previsto,Não,Fluminense,Internacional,Derrota,64.0,VotingClassifier_MCCV
-14.0,Previsto,Não,Fluminense,Internacional,Empate,,LogisticRegression_LOSO
+14.0,Previsto,Não,Fluminense,Internacional,Derrota,92.7,VotingClassifier_MCCV
+14.0,Previsto,Não,Fluminense,Internacional,Derrota,,LogisticRegression_LOSO
 14.0,Previsto,Não,Grêmio,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
 14.0,Previsto,Não,Grêmio,Athletico-PR,Derrota,,LogisticRegression_LOSO
-14.0,Previsto,Sim,Internacional,Fluminense,Vitória,62.6,VotingClassifier_MCCV
-14.0,Previsto,Sim,Internacional,Fluminense,Empate,,LogisticRegression_LOSO
-14.0,Previsto,Sim,Mirassol,Corinthians,Vitória,99.6,VotingClassifier_MCCV
+14.0,Previsto,Sim,Internacional,Fluminense,Vitória,93.0,VotingClassifier_MCCV
+14.0,Previsto,Sim,Internacional,Fluminense,Vitória,,LogisticRegression_LOSO
+14.0,Previsto,Sim,Mirassol,Corinthians,Vitória,97.3,VotingClassifier_MCCV
 14.0,Previsto,Sim,Mirassol,Corinthians,Vitória,,LogisticRegression_LOSO
-14.0,Previsto,Sim,Palmeiras,Santos,Derrota,76.6,VotingClassifier_MCCV
+14.0,Previsto,Sim,Palmeiras,Santos,Vitória,88.3,VotingClassifier_MCCV
 14.0,Previsto,Sim,Palmeiras,Santos,Empate,,LogisticRegression_LOSO
-14.0,Previsto,Não,Remo,Botafogo,Derrota,84.1,VotingClassifier_MCCV
+14.0,Previsto,Não,Remo,Botafogo,Vitória,53.0,VotingClassifier_MCCV
 14.0,Previsto,Não,Remo,Botafogo,Empate,,LogisticRegression_LOSO
-14.0,Previsto,Não,Santos,Palmeiras,Vitória,79.0,VotingClassifier_MCCV
+14.0,Previsto,Não,Santos,Palmeiras,Derrota,87.5,VotingClassifier_MCCV
 14.0,Previsto,Não,Santos,Palmeiras,Empate,,LogisticRegression_LOSO
-14.0,Previsto,Sim,São Paulo,Bahia,Vitória,84.0,VotingClassifier_MCCV
+14.0,Previsto,Sim,São Paulo,Bahia,Vitória,53.5,VotingClassifier_MCCV
 14.0,Previsto,Sim,São Paulo,Bahia,Empate,,LogisticRegression_LOSO
 14.0,Previsto,Não,Vasco,Flamengo,Derrota,100.0,VotingClassifier_MCCV
 14.0,Previsto,Não,Vasco,Flamengo,Derrota,,LogisticRegression_LOSO
-14.0,Previsto,Sim,Vitória,Coritiba,Vitória,81.2,VotingClassifier_MCCV
+14.0,Previsto,Sim,Vitória,Coritiba,Vitória,97.0,VotingClassifier_MCCV
 14.0,Previsto,Sim,Vitória,Coritiba,Empate,,LogisticRegression_LOSO
-15.0,Previsto,Não,Athletico-PR,Vasco,Derrota,99.0,VotingClassifier_MCCV
+15.0,Previsto,Não,Athletico-PR,Vasco,Derrota,100.0,VotingClassifier_MCCV
 15.0,Previsto,Não,Athletico-PR,Vasco,Derrota,,LogisticRegression_LOSO
-15.0,Previsto,Sim,Atlético-MG,Botafogo,Vitória,99.5,VotingClassifier_MCCV
+15.0,Previsto,Sim,Atlético-MG,Botafogo,Vitória,100.0,VotingClassifier_MCCV
 15.0,Previsto,Sim,Atlético-MG,Botafogo,Vitória,,LogisticRegression_LOSO
-15.0,Previsto,Sim,Bahia,Cruzeiro,Empate,55.1,VotingClassifier_MCCV
+15.0,Previsto,Sim,Bahia,Cruzeiro,Vitória,68.30000000000001,VotingClassifier_MCCV
 15.0,Previsto,Sim,Bahia,Cruzeiro,Empate,,LogisticRegression_LOSO
-15.0,Previsto,Não,Botafogo,Atlético-MG,Derrota,99.9,VotingClassifier_MCCV
+15.0,Previsto,Não,Botafogo,Atlético-MG,Derrota,100.0,VotingClassifier_MCCV
 15.0,Previsto,Não,Botafogo,Atlético-MG,Derrota,,LogisticRegression_LOSO
-15.0,Previsto,Não,Bragantino,Santos,Derrota,99.5,VotingClassifier_MCCV
+15.0,Previsto,Não,Bragantino,Santos,Derrota,100.0,VotingClassifier_MCCV
 15.0,Previsto,Não,Bragantino,Santos,Derrota,,LogisticRegression_LOSO
 15.0,Previsto,Não,Chapecoense,Mirassol,Derrota,100.0,VotingClassifier_MCCV
 15.0,Previsto,Não,Chapecoense,Mirassol,Derrota,,LogisticRegression_LOSO
-15.0,Previsto,Sim,Corinthians,São Paulo,Vitória,90.4,VotingClassifier_MCCV
+15.0,Previsto,Sim,Corinthians,São Paulo,Vitória,59.5,VotingClassifier_MCCV
 15.0,Previsto,Sim,Corinthians,São Paulo,Empate,,LogisticRegression_LOSO
-15.0,Previsto,Sim,Coritiba,Internacional,Derrota,50.3,VotingClassifier_MCCV
+15.0,Previsto,Sim,Coritiba,Internacional,Vitória,98.7,VotingClassifier_MCCV
 15.0,Previsto,Sim,Coritiba,Internacional,Empate,,LogisticRegression_LOSO
-15.0,Previsto,Não,Cruzeiro,Bahia,Empate,53.5,VotingClassifier_MCCV
+15.0,Previsto,Não,Cruzeiro,Bahia,Derrota,67.5,VotingClassifier_MCCV
 15.0,Previsto,Não,Cruzeiro,Bahia,Empate,,LogisticRegression_LOSO
-15.0,Previsto,Não,Flamengo,Grêmio,Derrota,45.4,VotingClassifier_MCCV
+15.0,Previsto,Não,Flamengo,Grêmio,Vitória,43.0,VotingClassifier_MCCV
 15.0,Previsto,Não,Flamengo,Grêmio,Empate,,LogisticRegression_LOSO
-15.0,Previsto,Sim,Fluminense,Vitória,Derrota,70.5,VotingClassifier_MCCV
+15.0,Previsto,Sim,Fluminense,Vitória,Vitória,70.39999999999999,VotingClassifier_MCCV
 15.0,Previsto,Sim,Fluminense,Vitória,Empate,,LogisticRegression_LOSO
-15.0,Previsto,Sim,Grêmio,Flamengo,Vitória,46.5,VotingClassifier_MCCV
+15.0,Previsto,Sim,Grêmio,Flamengo,Derrota,38.6,VotingClassifier_MCCV
 15.0,Previsto,Sim,Grêmio,Flamengo,Empate,,LogisticRegression_LOSO
-15.0,Previsto,Não,Internacional,Coritiba,Vitória,52.7,VotingClassifier_MCCV
+15.0,Previsto,Não,Internacional,Coritiba,Derrota,98.9,VotingClassifier_MCCV
 15.0,Previsto,Não,Internacional,Coritiba,Empate,,LogisticRegression_LOSO
 15.0,Previsto,Sim,Mirassol,Chapecoense,Vitória,100.0,VotingClassifier_MCCV
 15.0,Previsto,Sim,Mirassol,Chapecoense,Vitória,,LogisticRegression_LOSO
-15.0,Previsto,Não,Palmeiras,Remo,Derrota,79.5,VotingClassifier_MCCV
+15.0,Previsto,Não,Palmeiras,Remo,Derrota,50.0,VotingClassifier_MCCV
 15.0,Previsto,Não,Palmeiras,Remo,Empate,,LogisticRegression_LOSO
-15.0,Previsto,Sim,Remo,Palmeiras,Vitória,81.3,VotingClassifier_MCCV
+15.0,Previsto,Sim,Remo,Palmeiras,Vitória,49.6,VotingClassifier_MCCV
 15.0,Previsto,Sim,Remo,Palmeiras,Empate,,LogisticRegression_LOSO
 15.0,Previsto,Sim,Santos,Bragantino,Vitória,99.8,VotingClassifier_MCCV
 15.0,Previsto,Sim,Santos,Bragantino,Vitória,,LogisticRegression_LOSO
-15.0,Previsto,Não,São Paulo,Corinthians,Derrota,90.4,VotingClassifier_MCCV
+15.0,Previsto,Não,São Paulo,Corinthians,Derrota,60.699999999999996,VotingClassifier_MCCV
 15.0,Previsto,Não,São Paulo,Corinthians,Empate,,LogisticRegression_LOSO
-15.0,Previsto,Sim,Vasco,Athletico-PR,Vitória,99.0,VotingClassifier_MCCV
+15.0,Previsto,Sim,Vasco,Athletico-PR,Vitória,99.9,VotingClassifier_MCCV
 15.0,Previsto,Sim,Vasco,Athletico-PR,Vitória,,LogisticRegression_LOSO
-15.0,Previsto,Não,Vitória,Fluminense,Vitória,70.3,VotingClassifier_MCCV
+15.0,Previsto,Não,Vitória,Fluminense,Derrota,68.10000000000001,VotingClassifier_MCCV
 15.0,Previsto,Não,Vitória,Fluminense,Empate,,LogisticRegression_LOSO
-16.0,Previsto,Sim,Athletico-PR,Flamengo,Empate,52.6,VotingClassifier_MCCV
+16.0,Previsto,Sim,Athletico-PR,Flamengo,Empate,73.2,VotingClassifier_MCCV
 16.0,Previsto,Sim,Athletico-PR,Flamengo,Vitória,,LogisticRegression_LOSO
-16.0,Previsto,Sim,Atlético-MG,Mirassol,Vitória,98.8,VotingClassifier_MCCV
+16.0,Previsto,Sim,Atlético-MG,Mirassol,Vitória,99.3,VotingClassifier_MCCV
 16.0,Previsto,Sim,Atlético-MG,Mirassol,Vitória,,LogisticRegression_LOSO
-16.0,Previsto,Sim,Bahia,Grêmio,Derrota,58.8,VotingClassifier_MCCV
+16.0,Previsto,Sim,Bahia,Grêmio,Vitória,93.89999999999999,VotingClassifier_MCCV
 16.0,Previsto,Sim,Bahia,Grêmio,Empate,,LogisticRegression_LOSO
-16.0,Previsto,Sim,Botafogo,Corinthians,Vitória,99.7,VotingClassifier_MCCV
+16.0,Previsto,Sim,Botafogo,Corinthians,Vitória,99.9,VotingClassifier_MCCV
 16.0,Previsto,Sim,Botafogo,Corinthians,Vitória,,LogisticRegression_LOSO
-16.0,Previsto,Sim,Bragantino,Vitória,Vitória,67.10000000000001,VotingClassifier_MCCV
+16.0,Previsto,Sim,Bragantino,Vitória,Empate,55.7,VotingClassifier_MCCV
 16.0,Previsto,Sim,Bragantino,Vitória,Empate,,LogisticRegression_LOSO
-16.0,Previsto,Sim,Chapecoense,Remo,Vitória,99.8,VotingClassifier_MCCV
+16.0,Previsto,Sim,Chapecoense,Remo,Vitória,100.0,VotingClassifier_MCCV
 16.0,Previsto,Sim,Chapecoense,Remo,Vitória,,LogisticRegression_LOSO
-16.0,Previsto,Não,Corinthians,Botafogo,Derrota,99.4,VotingClassifier_MCCV
+16.0,Previsto,Não,Corinthians,Botafogo,Derrota,100.0,VotingClassifier_MCCV
 16.0,Previsto,Não,Corinthians,Botafogo,Derrota,,LogisticRegression_LOSO
-16.0,Previsto,Não,Coritiba,Santos,Derrota,98.7,VotingClassifier_MCCV
-16.0,Previsto,Não,Coritiba,Santos,Empate,,LogisticRegression_LOSO
-16.0,Previsto,Não,Cruzeiro,Palmeiras,Derrota,98.3,VotingClassifier_MCCV
+16.0,Previsto,Não,Coritiba,Santos,Derrota,99.7,VotingClassifier_MCCV
+16.0,Previsto,Não,Coritiba,Santos,Derrota,,LogisticRegression_LOSO
+16.0,Previsto,Não,Cruzeiro,Palmeiras,Derrota,98.6,VotingClassifier_MCCV
 16.0,Previsto,Não,Cruzeiro,Palmeiras,Derrota,,LogisticRegression_LOSO
-16.0,Previsto,Não,Flamengo,Athletico-PR,Empate,53.1,VotingClassifier_MCCV
+16.0,Previsto,Não,Flamengo,Athletico-PR,Empate,74.1,VotingClassifier_MCCV
 16.0,Previsto,Não,Flamengo,Athletico-PR,Derrota,,LogisticRegression_LOSO
-16.0,Previsto,Sim,Fluminense,São Paulo,Vitória,99.9,VotingClassifier_MCCV
+16.0,Previsto,Sim,Fluminense,São Paulo,Vitória,100.0,VotingClassifier_MCCV
 16.0,Previsto,Sim,Fluminense,São Paulo,Vitória,,LogisticRegression_LOSO
-16.0,Previsto,Não,Grêmio,Bahia,Vitória,57.49999999999999,VotingClassifier_MCCV
+16.0,Previsto,Não,Grêmio,Bahia,Derrota,93.0,VotingClassifier_MCCV
 16.0,Previsto,Não,Grêmio,Bahia,Empate,,LogisticRegression_LOSO
-16.0,Previsto,Sim,Internacional,Vasco,Vitória,93.89999999999999,VotingClassifier_MCCV
+16.0,Previsto,Sim,Internacional,Vasco,Vitória,99.7,VotingClassifier_MCCV
 16.0,Previsto,Sim,Internacional,Vasco,Vitória,,LogisticRegression_LOSO
-16.0,Previsto,Não,Mirassol,Atlético-MG,Derrota,98.9,VotingClassifier_MCCV
+16.0,Previsto,Não,Mirassol,Atlético-MG,Derrota,99.5,VotingClassifier_MCCV
 16.0,Previsto,Não,Mirassol,Atlético-MG,Derrota,,LogisticRegression_LOSO
-16.0,Previsto,Sim,Palmeiras,Cruzeiro,Vitória,98.3,VotingClassifier_MCCV
+16.0,Previsto,Sim,Palmeiras,Cruzeiro,Vitória,99.5,VotingClassifier_MCCV
 16.0,Previsto,Sim,Palmeiras,Cruzeiro,Vitória,,LogisticRegression_LOSO
-16.0,Previsto,Não,Remo,Chapecoense,Derrota,99.4,VotingClassifier_MCCV
+16.0,Previsto,Não,Remo,Chapecoense,Derrota,100.0,VotingClassifier_MCCV
 16.0,Previsto,Não,Remo,Chapecoense,Derrota,,LogisticRegression_LOSO
-16.0,Previsto,Sim,Santos,Coritiba,Vitória,98.7,VotingClassifier_MCCV
-16.0,Previsto,Sim,Santos,Coritiba,Empate,,LogisticRegression_LOSO
-16.0,Previsto,Não,São Paulo,Fluminense,Derrota,99.9,VotingClassifier_MCCV
+16.0,Previsto,Sim,Santos,Coritiba,Vitória,99.4,VotingClassifier_MCCV
+16.0,Previsto,Sim,Santos,Coritiba,Vitória,,LogisticRegression_LOSO
+16.0,Previsto,Não,São Paulo,Fluminense,Derrota,100.0,VotingClassifier_MCCV
 16.0,Previsto,Não,São Paulo,Fluminense,Derrota,,LogisticRegression_LOSO
-16.0,Previsto,Não,Vasco,Internacional,Derrota,93.2,VotingClassifier_MCCV
+16.0,Previsto,Não,Vasco,Internacional,Derrota,99.8,VotingClassifier_MCCV
 16.0,Previsto,Não,Vasco,Internacional,Derrota,,LogisticRegression_LOSO
-16.0,Previsto,Não,Vitória,Bragantino,Derrota,65.8,VotingClassifier_MCCV
+16.0,Previsto,Não,Vitória,Bragantino,Empate,55.900000000000006,VotingClassifier_MCCV
 16.0,Previsto,Não,Vitória,Bragantino,Empate,,LogisticRegression_LOSO
-17.0,Previsto,Não,Athletico-PR,Remo,Derrota,97.3,VotingClassifier_MCCV
+17.0,Previsto,Não,Athletico-PR,Remo,Derrota,80.9,VotingClassifier_MCCV
 17.0,Previsto,Não,Athletico-PR,Remo,Empate,,LogisticRegression_LOSO
-17.0,Previsto,Não,Atlético-MG,Corinthians,Derrota,99.5,VotingClassifier_MCCV
+17.0,Previsto,Não,Atlético-MG,Corinthians,Derrota,99.8,VotingClassifier_MCCV
 17.0,Previsto,Não,Atlético-MG,Corinthians,Derrota,,LogisticRegression_LOSO
-17.0,Previsto,Não,Bahia,Coritiba,Derrota,99.4,VotingClassifier_MCCV
+17.0,Previsto,Não,Bahia,Coritiba,Derrota,97.7,VotingClassifier_MCCV
 17.0,Previsto,Não,Bahia,Coritiba,Derrota,,LogisticRegression_LOSO
-17.0,Previsto,Não,Botafogo,São Paulo,Derrota,74.5,VotingClassifier_MCCV
+17.0,Previsto,Não,Botafogo,São Paulo,Derrota,51.9,VotingClassifier_MCCV
 17.0,Previsto,Não,Botafogo,São Paulo,Empate,,LogisticRegression_LOSO
-17.0,Previsto,Não,Bragantino,Vasco,Derrota,87.2,VotingClassifier_MCCV
+17.0,Previsto,Não,Bragantino,Vasco,Derrota,78.9,VotingClassifier_MCCV
 17.0,Previsto,Não,Bragantino,Vasco,Empate,,LogisticRegression_LOSO
-17.0,Previsto,Não,Chapecoense,Cruzeiro,Derrota,92.9,VotingClassifier_MCCV
+17.0,Previsto,Não,Chapecoense,Cruzeiro,Derrota,63.0,VotingClassifier_MCCV
 17.0,Previsto,Não,Chapecoense,Cruzeiro,Derrota,,LogisticRegression_LOSO
-17.0,Previsto,Sim,Corinthians,Atlético-MG,Vitória,98.7,VotingClassifier_MCCV
+17.0,Previsto,Sim,Corinthians,Atlético-MG,Vitória,99.5,VotingClassifier_MCCV
 17.0,Previsto,Sim,Corinthians,Atlético-MG,Vitória,,LogisticRegression_LOSO
-17.0,Previsto,Sim,Coritiba,Bahia,Vitória,99.7,VotingClassifier_MCCV
+17.0,Previsto,Sim,Coritiba,Bahia,Vitória,98.2,VotingClassifier_MCCV
 17.0,Previsto,Sim,Coritiba,Bahia,Vitória,,LogisticRegression_LOSO
-17.0,Previsto,Sim,Cruzeiro,Chapecoense,Vitória,93.2,VotingClassifier_MCCV
+17.0,Previsto,Sim,Cruzeiro,Chapecoense,Vitória,63.0,VotingClassifier_MCCV
 17.0,Previsto,Sim,Cruzeiro,Chapecoense,Vitória,,LogisticRegression_LOSO
-17.0,Previsto,Sim,Flamengo,Palmeiras,Vitória,99.9,VotingClassifier_MCCV
+17.0,Previsto,Sim,Flamengo,Palmeiras,Vitória,99.2,VotingClassifier_MCCV
 17.0,Previsto,Sim,Flamengo,Palmeiras,Vitória,,LogisticRegression_LOSO
-17.0,Previsto,Não,Fluminense,Mirassol,Derrota,85.8,VotingClassifier_MCCV
+17.0,Previsto,Não,Fluminense,Mirassol,Derrota,62.6,VotingClassifier_MCCV
 17.0,Previsto,Não,Fluminense,Mirassol,Derrota,,LogisticRegression_LOSO
-17.0,Previsto,Sim,Grêmio,Santos,Vitória,79.60000000000001,VotingClassifier_MCCV
+17.0,Previsto,Sim,Grêmio,Santos,Vitória,49.8,VotingClassifier_MCCV
 17.0,Previsto,Sim,Grêmio,Santos,Empate,,LogisticRegression_LOSO
-17.0,Previsto,Não,Internacional,Vitória,Derrota,98.7,VotingClassifier_MCCV
-17.0,Previsto,Não,Internacional,Vitória,Derrota,,LogisticRegression_LOSO
-17.0,Previsto,Sim,Mirassol,Fluminense,Vitória,87.8,VotingClassifier_MCCV
+17.0,Previsto,Não,Internacional,Vitória,Derrota,99.1,VotingClassifier_MCCV
+17.0,Previsto,Não,Internacional,Vitória,Empate,,LogisticRegression_LOSO
+17.0,Previsto,Sim,Mirassol,Fluminense,Vitória,66.0,VotingClassifier_MCCV
 17.0,Previsto,Sim,Mirassol,Fluminense,Vitória,,LogisticRegression_LOSO
-17.0,Previsto,Não,Palmeiras,Flamengo,Derrota,99.9,VotingClassifier_MCCV
+17.0,Previsto,Não,Palmeiras,Flamengo,Derrota,98.5,VotingClassifier_MCCV
 17.0,Previsto,Não,Palmeiras,Flamengo,Derrota,,LogisticRegression_LOSO
-17.0,Previsto,Sim,Remo,Athletico-PR,Vitória,96.6,VotingClassifier_MCCV
+17.0,Previsto,Sim,Remo,Athletico-PR,Vitória,81.6,VotingClassifier_MCCV
 17.0,Previsto,Sim,Remo,Athletico-PR,Empate,,LogisticRegression_LOSO
-17.0,Previsto,Não,Santos,Grêmio,Derrota,80.30000000000001,VotingClassifier_MCCV
+17.0,Previsto,Não,Santos,Grêmio,Derrota,48.199999999999996,VotingClassifier_MCCV
 17.0,Previsto,Não,Santos,Grêmio,Empate,,LogisticRegression_LOSO
-17.0,Previsto,Sim,São Paulo,Botafogo,Vitória,76.9,VotingClassifier_MCCV
+17.0,Previsto,Sim,São Paulo,Botafogo,Vitória,54.800000000000004,VotingClassifier_MCCV
 17.0,Previsto,Sim,São Paulo,Botafogo,Empate,,LogisticRegression_LOSO
-17.0,Previsto,Sim,Vasco,Bragantino,Vitória,89.4,VotingClassifier_MCCV
+17.0,Previsto,Sim,Vasco,Bragantino,Vitória,77.10000000000001,VotingClassifier_MCCV
 17.0,Previsto,Sim,Vasco,Bragantino,Empate,,LogisticRegression_LOSO
-17.0,Previsto,Sim,Vitória,Internacional,Vitória,98.2,VotingClassifier_MCCV
-17.0,Previsto,Sim,Vitória,Internacional,Vitória,,LogisticRegression_LOSO
-18.0,Previsto,Sim,Athletico-PR,Mirassol,Vitória,99.2,VotingClassifier_MCCV
+17.0,Previsto,Sim,Vitória,Internacional,Vitória,98.6,VotingClassifier_MCCV
+17.0,Previsto,Sim,Vitória,Internacional,Empate,,LogisticRegression_LOSO
+18.0,Previsto,Sim,Athletico-PR,Mirassol,Vitória,99.9,VotingClassifier_MCCV
 18.0,Previsto,Sim,Athletico-PR,Mirassol,Vitória,,LogisticRegression_LOSO
-18.0,Previsto,Não,Atlético-MG,Vasco,Derrota,98.6,VotingClassifier_MCCV
+18.0,Previsto,Não,Atlético-MG,Vasco,Derrota,85.0,VotingClassifier_MCCV
 18.0,Previsto,Não,Atlético-MG,Vasco,Derrota,,LogisticRegression_LOSO
-18.0,Previsto,Sim,Bahia,Botafogo,Vitória,93.7,VotingClassifier_MCCV
+18.0,Previsto,Sim,Bahia,Botafogo,Vitória,94.8,VotingClassifier_MCCV
 18.0,Previsto,Sim,Bahia,Botafogo,Empate,,LogisticRegression_LOSO
-18.0,Previsto,Não,Botafogo,Bahia,Derrota,94.0,VotingClassifier_MCCV
+18.0,Previsto,Não,Botafogo,Bahia,Derrota,94.69999999999999,VotingClassifier_MCCV
 18.0,Previsto,Não,Botafogo,Bahia,Empate,,LogisticRegression_LOSO
-18.0,Previsto,Sim,Bragantino,Internacional,Vitória,99.7,VotingClassifier_MCCV
+18.0,Previsto,Sim,Bragantino,Internacional,Vitória,100.0,VotingClassifier_MCCV
 18.0,Previsto,Sim,Bragantino,Internacional,Vitória,,LogisticRegression_LOSO
-18.0,Previsto,Não,Chapecoense,Palmeiras,Derrota,92.7,VotingClassifier_MCCV
-18.0,Previsto,Não,Chapecoense,Palmeiras,Empate,,LogisticRegression_LOSO
-18.0,Previsto,Não,Corinthians,Grêmio,Vitória,69.8,VotingClassifier_MCCV
+18.0,Previsto,Não,Chapecoense,Palmeiras,Derrota,97.89999999999999,VotingClassifier_MCCV
+18.0,Previsto,Não,Chapecoense,Palmeiras,Derrota,,LogisticRegression_LOSO
+18.0,Previsto,Não,Corinthians,Grêmio,Derrota,55.1,VotingClassifier_MCCV
 18.0,Previsto,Não,Corinthians,Grêmio,Vitória,,LogisticRegression_LOSO
-18.0,Previsto,Não,Coritiba,Flamengo,Derrota,99.3,VotingClassifier_MCCV
+18.0,Previsto,Não,Coritiba,Flamengo,Derrota,100.0,VotingClassifier_MCCV
 18.0,Previsto,Não,Coritiba,Flamengo,Derrota,,LogisticRegression_LOSO
-18.0,Previsto,Sim,Cruzeiro,Fluminense,Vitória,98.9,VotingClassifier_MCCV
+18.0,Previsto,Sim,Cruzeiro,Fluminense,Vitória,100.0,VotingClassifier_MCCV
 18.0,Previsto,Sim,Cruzeiro,Fluminense,Vitória,,LogisticRegression_LOSO
-18.0,Previsto,Sim,Flamengo,Coritiba,Vitória,99.7,VotingClassifier_MCCV
+18.0,Previsto,Sim,Flamengo,Coritiba,Vitória,100.0,VotingClassifier_MCCV
 18.0,Previsto,Sim,Flamengo,Coritiba,Vitória,,LogisticRegression_LOSO
-18.0,Previsto,Não,Fluminense,Cruzeiro,Derrota,98.7,VotingClassifier_MCCV
+18.0,Previsto,Não,Fluminense,Cruzeiro,Derrota,99.6,VotingClassifier_MCCV
 18.0,Previsto,Não,Fluminense,Cruzeiro,Derrota,,LogisticRegression_LOSO
-18.0,Previsto,Sim,Grêmio,Corinthians,Derrota,65.60000000000001,VotingClassifier_MCCV
+18.0,Previsto,Sim,Grêmio,Corinthians,Vitória,58.199999999999996,VotingClassifier_MCCV
 18.0,Previsto,Sim,Grêmio,Corinthians,Derrota,,LogisticRegression_LOSO
-18.0,Previsto,Não,Internacional,Bragantino,Derrota,99.9,VotingClassifier_MCCV
+18.0,Previsto,Não,Internacional,Bragantino,Derrota,100.0,VotingClassifier_MCCV
 18.0,Previsto,Não,Internacional,Bragantino,Derrota,,LogisticRegression_LOSO
-18.0,Previsto,Não,Mirassol,Athletico-PR,Derrota,99.2,VotingClassifier_MCCV
+18.0,Previsto,Não,Mirassol,Athletico-PR,Derrota,99.9,VotingClassifier_MCCV
 18.0,Previsto,Não,Mirassol,Athletico-PR,Derrota,,LogisticRegression_LOSO
-18.0,Previsto,Sim,Palmeiras,Chapecoense,Vitória,91.8,VotingClassifier_MCCV
-18.0,Previsto,Sim,Palmeiras,Chapecoense,Empate,,LogisticRegression_LOSO
-18.0,Previsto,Sim,Remo,São Paulo,Vitória,99.9,VotingClassifier_MCCV
+18.0,Previsto,Sim,Palmeiras,Chapecoense,Vitória,98.3,VotingClassifier_MCCV
+18.0,Previsto,Sim,Palmeiras,Chapecoense,Vitória,,LogisticRegression_LOSO
+18.0,Previsto,Sim,Remo,São Paulo,Vitória,100.0,VotingClassifier_MCCV
 18.0,Previsto,Sim,Remo,São Paulo,Vitória,,LogisticRegression_LOSO
-18.0,Previsto,Sim,Santos,Vitória,Derrota,74.4,VotingClassifier_MCCV
+18.0,Previsto,Sim,Santos,Vitória,Derrota,56.599999999999994,VotingClassifier_MCCV
 18.0,Previsto,Sim,Santos,Vitória,Empate,,LogisticRegression_LOSO
 18.0,Previsto,Não,São Paulo,Remo,Derrota,100.0,VotingClassifier_MCCV
 18.0,Previsto,Não,São Paulo,Remo,Derrota,,LogisticRegression_LOSO
-18.0,Previsto,Sim,Vasco,Atlético-MG,Vitória,98.7,VotingClassifier_MCCV
+18.0,Previsto,Sim,Vasco,Atlético-MG,Vitória,84.3,VotingClassifier_MCCV
 18.0,Previsto,Sim,Vasco,Atlético-MG,Vitória,,LogisticRegression_LOSO
-18.0,Previsto,Não,Vitória,Santos,Vitória,74.3,VotingClassifier_MCCV
+18.0,Previsto,Não,Vitória,Santos,Vitória,60.5,VotingClassifier_MCCV
 18.0,Previsto,Não,Vitória,Santos,Empate,,LogisticRegression_LOSO
-19.0,Previsto,Não,Athletico-PR,São Paulo,Derrota,57.599999999999994,VotingClassifier_MCCV
+19.0,Previsto,Não,Athletico-PR,São Paulo,Derrota,71.2,VotingClassifier_MCCV
 19.0,Previsto,Não,Athletico-PR,São Paulo,Empate,,LogisticRegression_LOSO
-19.0,Previsto,Sim,Atlético-MG,Bahia,Vitória,99.4,VotingClassifier_MCCV
-19.0,Previsto,Sim,Atlético-MG,Bahia,Vitória,,LogisticRegression_LOSO
-19.0,Previsto,Não,Bahia,Atlético-MG,Derrota,99.2,VotingClassifier_MCCV
-19.0,Previsto,Não,Bahia,Atlético-MG,Derrota,,LogisticRegression_LOSO
-19.0,Previsto,Sim,Botafogo,Santos,Vitória,99.1,VotingClassifier_MCCV
-19.0,Previsto,Sim,Botafogo,Santos,Vitória,,LogisticRegression_LOSO
-19.0,Previsto,Não,Bragantino,Fluminense,Derrota,99.4,VotingClassifier_MCCV
+19.0,Previsto,Sim,Atlético-MG,Bahia,Vitória,99.2,VotingClassifier_MCCV
+19.0,Previsto,Sim,Atlético-MG,Bahia,Empate,,LogisticRegression_LOSO
+19.0,Previsto,Não,Bahia,Atlético-MG,Derrota,99.0,VotingClassifier_MCCV
+19.0,Previsto,Não,Bahia,Atlético-MG,Empate,,LogisticRegression_LOSO
+19.0,Previsto,Sim,Botafogo,Santos,Vitória,92.7,VotingClassifier_MCCV
+19.0,Previsto,Sim,Botafogo,Santos,Empate,,LogisticRegression_LOSO
+19.0,Previsto,Não,Bragantino,Fluminense,Derrota,95.39999999999999,VotingClassifier_MCCV
 19.0,Previsto,Não,Bragantino,Fluminense,Derrota,,LogisticRegression_LOSO
-19.0,Previsto,Sim,Chapecoense,Flamengo,Vitória,91.60000000000001,VotingClassifier_MCCV
+19.0,Previsto,Sim,Chapecoense,Flamengo,Vitória,95.0,VotingClassifier_MCCV
 19.0,Previsto,Sim,Chapecoense,Flamengo,Empate,,LogisticRegression_LOSO
-19.0,Previsto,Sim,Corinthians,Remo,Vitória,97.1,VotingClassifier_MCCV
+19.0,Previsto,Sim,Corinthians,Remo,Vitória,98.1,VotingClassifier_MCCV
 19.0,Previsto,Sim,Corinthians,Remo,Vitória,,LogisticRegression_LOSO
-19.0,Previsto,Sim,Coritiba,Palmeiras,Vitória,84.3,VotingClassifier_MCCV
-19.0,Previsto,Sim,Coritiba,Palmeiras,Vitória,,LogisticRegression_LOSO
-19.0,Previsto,Não,Cruzeiro,Internacional,Derrota,77.3,VotingClassifier_MCCV
+19.0,Previsto,Sim,Coritiba,Palmeiras,Vitória,89.9,VotingClassifier_MCCV
+19.0,Previsto,Sim,Coritiba,Palmeiras,Empate,,LogisticRegression_LOSO
+19.0,Previsto,Não,Cruzeiro,Internacional,Derrota,57.49999999999999,VotingClassifier_MCCV
 19.0,Previsto,Não,Cruzeiro,Internacional,Empate,,LogisticRegression_LOSO
-19.0,Previsto,Não,Flamengo,Chapecoense,Derrota,93.10000000000001,VotingClassifier_MCCV
+19.0,Previsto,Não,Flamengo,Chapecoense,Derrota,94.89999999999999,VotingClassifier_MCCV
 19.0,Previsto,Não,Flamengo,Chapecoense,Empate,,LogisticRegression_LOSO
-19.0,Previsto,Sim,Fluminense,Bragantino,Vitória,99.5,VotingClassifier_MCCV
+19.0,Previsto,Sim,Fluminense,Bragantino,Vitória,95.19999999999999,VotingClassifier_MCCV
 19.0,Previsto,Sim,Fluminense,Bragantino,Vitória,,LogisticRegression_LOSO
-19.0,Previsto,Não,Grêmio,Mirassol,Derrota,60.3,VotingClassifier_MCCV
+19.0,Previsto,Não,Grêmio,Mirassol,Derrota,49.8,VotingClassifier_MCCV
 19.0,Previsto,Não,Grêmio,Mirassol,Derrota,,LogisticRegression_LOSO
-19.0,Previsto,Sim,Internacional,Cruzeiro,Vitória,78.7,VotingClassifier_MCCV
+19.0,Previsto,Sim,Internacional,Cruzeiro,Vitória,54.50000000000001,VotingClassifier_MCCV
 19.0,Previsto,Sim,Internacional,Cruzeiro,Empate,,LogisticRegression_LOSO
-19.0,Previsto,Sim,Mirassol,Grêmio,Vitória,61.9,VotingClassifier_MCCV
+19.0,Previsto,Sim,Mirassol,Grêmio,Vitória,47.8,VotingClassifier_MCCV
 19.0,Previsto,Sim,Mirassol,Grêmio,Vitória,,LogisticRegression_LOSO
-19.0,Previsto,Não,Palmeiras,Coritiba,Derrota,83.8,VotingClassifier_MCCV
-19.0,Previsto,Não,Palmeiras,Coritiba,Derrota,,LogisticRegression_LOSO
-19.0,Previsto,Não,Remo,Corinthians,Derrota,96.2,VotingClassifier_MCCV
+19.0,Previsto,Não,Palmeiras,Coritiba,Derrota,87.8,VotingClassifier_MCCV
+19.0,Previsto,Não,Palmeiras,Coritiba,Empate,,LogisticRegression_LOSO
+19.0,Previsto,Não,Remo,Corinthians,Derrota,98.3,VotingClassifier_MCCV
 19.0,Previsto,Não,Remo,Corinthians,Derrota,,LogisticRegression_LOSO
-19.0,Previsto,Não,Santos,Botafogo,Derrota,99.0,VotingClassifier_MCCV
-19.0,Previsto,Não,Santos,Botafogo,Derrota,,LogisticRegression_LOSO
-19.0,Previsto,Sim,São Paulo,Athletico-PR,Vitória,61.3,VotingClassifier_MCCV
+19.0,Previsto,Não,Santos,Botafogo,Derrota,91.2,VotingClassifier_MCCV
+19.0,Previsto,Não,Santos,Botafogo,Empate,,LogisticRegression_LOSO
+19.0,Previsto,Sim,São Paulo,Athletico-PR,Vitória,72.3,VotingClassifier_MCCV
 19.0,Previsto,Sim,São Paulo,Athletico-PR,Empate,,LogisticRegression_LOSO
-19.0,Previsto,Não,Vasco,Vitória,Derrota,92.60000000000001,VotingClassifier_MCCV
+19.0,Previsto,Não,Vasco,Vitória,Derrota,79.9,VotingClassifier_MCCV
 19.0,Previsto,Não,Vasco,Vitória,Empate,,LogisticRegression_LOSO
-19.0,Previsto,Sim,Vitória,Vasco,Vitória,93.2,VotingClassifier_MCCV
+19.0,Previsto,Sim,Vitória,Vasco,Vitória,77.60000000000001,VotingClassifier_MCCV
 19.0,Previsto,Sim,Vitória,Vasco,Empate,,LogisticRegression_LOSO
-20.0,Previsto,Sim,Athletico-PR,Internacional,Vitória,54.2,VotingClassifier_MCCV
+20.0,Previsto,Sim,Athletico-PR,Internacional,Vitória,98.7,VotingClassifier_MCCV
 20.0,Previsto,Sim,Athletico-PR,Internacional,Vitória,,LogisticRegression_LOSO
-20.0,Previsto,Não,Atlético-MG,Palmeiras,Derrota,99.6,VotingClassifier_MCCV
+20.0,Previsto,Não,Atlético-MG,Palmeiras,Derrota,98.6,VotingClassifier_MCCV
 20.0,Previsto,Não,Atlético-MG,Palmeiras,Derrota,,LogisticRegression_LOSO
-20.0,Previsto,Sim,Bahia,Corinthians,Vitória,99.1,VotingClassifier_MCCV
+20.0,Previsto,Sim,Bahia,Corinthians,Vitória,99.6,VotingClassifier_MCCV
 20.0,Previsto,Sim,Bahia,Corinthians,Vitória,,LogisticRegression_LOSO
 20.0,Previsto,Não,Botafogo,Cruzeiro,Derrota,100.0,VotingClassifier_MCCV
 20.0,Previsto,Não,Botafogo,Cruzeiro,Derrota,,LogisticRegression_LOSO
-20.0,Previsto,Sim,Bragantino,Coritiba,Vitória,98.8,VotingClassifier_MCCV
+20.0,Previsto,Sim,Bragantino,Coritiba,Vitória,97.7,VotingClassifier_MCCV
 20.0,Previsto,Sim,Bragantino,Coritiba,Vitória,,LogisticRegression_LOSO
-20.0,Previsto,Não,Chapecoense,Santos,Derrota,94.5,VotingClassifier_MCCV
+20.0,Previsto,Não,Chapecoense,Santos,Derrota,97.8,VotingClassifier_MCCV
 20.0,Previsto,Não,Chapecoense,Santos,Empate,,LogisticRegression_LOSO
-20.0,Previsto,Não,Corinthians,Bahia,Derrota,99.2,VotingClassifier_MCCV
+20.0,Previsto,Não,Corinthians,Bahia,Derrota,99.7,VotingClassifier_MCCV
 20.0,Previsto,Não,Corinthians,Bahia,Derrota,,LogisticRegression_LOSO
-20.0,Previsto,Não,Coritiba,Bragantino,Derrota,98.8,VotingClassifier_MCCV
+20.0,Previsto,Não,Coritiba,Bragantino,Derrota,97.0,VotingClassifier_MCCV
 20.0,Previsto,Não,Coritiba,Bragantino,Derrota,,LogisticRegression_LOSO
-20.0,Previsto,Sim,Cruzeiro,Botafogo,Vitória,99.9,VotingClassifier_MCCV
+20.0,Previsto,Sim,Cruzeiro,Botafogo,Vitória,100.0,VotingClassifier_MCCV
 20.0,Previsto,Sim,Cruzeiro,Botafogo,Vitória,,LogisticRegression_LOSO
 20.0,Previsto,Sim,Flamengo,São Paulo,Vitória,100.0,VotingClassifier_MCCV
 20.0,Previsto,Sim,Flamengo,São Paulo,Vitória,,LogisticRegression_LOSO
-20.0,Previsto,Não,Fluminense,Grêmio,Derrota,96.6,VotingClassifier_MCCV
+20.0,Previsto,Não,Fluminense,Grêmio,Derrota,92.9,VotingClassifier_MCCV
 20.0,Previsto,Não,Fluminense,Grêmio,Empate,,LogisticRegression_LOSO
-20.0,Previsto,Sim,Grêmio,Fluminense,Vitória,96.5,VotingClassifier_MCCV
+20.0,Previsto,Sim,Grêmio,Fluminense,Vitória,94.1,VotingClassifier_MCCV
 20.0,Previsto,Sim,Grêmio,Fluminense,Empate,,LogisticRegression_LOSO
-20.0,Previsto,Não,Internacional,Athletico-PR,Derrota,51.300000000000004,VotingClassifier_MCCV
+20.0,Previsto,Não,Internacional,Athletico-PR,Derrota,98.0,VotingClassifier_MCCV
 20.0,Previsto,Não,Internacional,Athletico-PR,Derrota,,LogisticRegression_LOSO
-20.0,Previsto,Não,Mirassol,Vasco,Derrota,99.0,VotingClassifier_MCCV
-20.0,Previsto,Não,Mirassol,Vasco,Derrota,,LogisticRegression_LOSO
-20.0,Previsto,Sim,Palmeiras,Atlético-MG,Vitória,99.9,VotingClassifier_MCCV
+20.0,Previsto,Não,Mirassol,Vasco,Derrota,98.7,VotingClassifier_MCCV
+20.0,Previsto,Não,Mirassol,Vasco,Empate,,LogisticRegression_LOSO
+20.0,Previsto,Sim,Palmeiras,Atlético-MG,Vitória,98.3,VotingClassifier_MCCV
 20.0,Previsto,Sim,Palmeiras,Atlético-MG,Vitória,,LogisticRegression_LOSO
-20.0,Previsto,Sim,Remo,Vitória,Vitória,86.6,VotingClassifier_MCCV
+20.0,Previsto,Sim,Remo,Vitória,Vitória,92.5,VotingClassifier_MCCV
 20.0,Previsto,Sim,Remo,Vitória,Empate,,LogisticRegression_LOSO
-20.0,Previsto,Sim,Santos,Chapecoense,Vitória,93.4,VotingClassifier_MCCV
+20.0,Previsto,Sim,Santos,Chapecoense,Vitória,98.0,VotingClassifier_MCCV
 20.0,Previsto,Sim,Santos,Chapecoense,Empate,,LogisticRegression_LOSO
 20.0,Previsto,Não,São Paulo,Flamengo,Derrota,100.0,VotingClassifier_MCCV
 20.0,Previsto,Não,São Paulo,Flamengo,Derrota,,LogisticRegression_LOSO
-20.0,Previsto,Sim,Vasco,Mirassol,Vitória,99.0,VotingClassifier_MCCV
-20.0,Previsto,Sim,Vasco,Mirassol,Vitória,,LogisticRegression_LOSO
-20.0,Previsto,Não,Vitória,Remo,Derrota,86.8,VotingClassifier_MCCV
+20.0,Previsto,Sim,Vasco,Mirassol,Vitória,99.5,VotingClassifier_MCCV
+20.0,Previsto,Sim,Vasco,Mirassol,Empate,,LogisticRegression_LOSO
+20.0,Previsto,Não,Vitória,Remo,Derrota,91.10000000000001,VotingClassifier_MCCV
 20.0,Previsto,Não,Vitória,Remo,Empate,,LogisticRegression_LOSO
-21.0,Previsto,Não,Athletico-PR,Corinthians,Vitória,82.8,VotingClassifier_MCCV
+21.0,Previsto,Não,Athletico-PR,Corinthians,Empate,59.3,VotingClassifier_MCCV
 21.0,Previsto,Não,Athletico-PR,Corinthians,Vitória,,LogisticRegression_LOSO
-21.0,Previsto,Sim,Atlético-MG,Bragantino,Derrota,44.7,VotingClassifier_MCCV
+21.0,Previsto,Sim,Atlético-MG,Bragantino,Derrota,52.7,VotingClassifier_MCCV
 21.0,Previsto,Sim,Atlético-MG,Bragantino,Empate,,LogisticRegression_LOSO
-21.0,Previsto,Não,Bahia,Fluminense,Derrota,97.3,VotingClassifier_MCCV
+21.0,Previsto,Não,Bahia,Fluminense,Derrota,93.5,VotingClassifier_MCCV
 21.0,Previsto,Não,Bahia,Fluminense,Derrota,,LogisticRegression_LOSO
-21.0,Previsto,Sim,Botafogo,Grêmio,Vitória,98.9,VotingClassifier_MCCV
+21.0,Previsto,Sim,Botafogo,Grêmio,Vitória,99.4,VotingClassifier_MCCV
 21.0,Previsto,Sim,Botafogo,Grêmio,Vitória,,LogisticRegression_LOSO
-21.0,Previsto,Não,Bragantino,Atlético-MG,Vitória,41.8,VotingClassifier_MCCV
+21.0,Previsto,Não,Bragantino,Atlético-MG,Vitória,53.800000000000004,VotingClassifier_MCCV
 21.0,Previsto,Não,Bragantino,Atlético-MG,Empate,,LogisticRegression_LOSO
-21.0,Previsto,Sim,Chapecoense,Vasco,Vitória,79.2,VotingClassifier_MCCV
+21.0,Previsto,Sim,Chapecoense,Vasco,Vitória,76.7,VotingClassifier_MCCV
 21.0,Previsto,Sim,Chapecoense,Vasco,Empate,,LogisticRegression_LOSO
-21.0,Previsto,Sim,Corinthians,Athletico-PR,Derrota,79.9,VotingClassifier_MCCV
+21.0,Previsto,Sim,Corinthians,Athletico-PR,Empate,61.8,VotingClassifier_MCCV
 21.0,Previsto,Sim,Corinthians,Athletico-PR,Derrota,,LogisticRegression_LOSO
 21.0,Previsto,Sim,Coritiba,Cruzeiro,Vitória,100.0,VotingClassifier_MCCV
 21.0,Previsto,Sim,Coritiba,Cruzeiro,Vitória,,LogisticRegression_LOSO
-21.0,Previsto,Não,Cruzeiro,Coritiba,Derrota,99.9,VotingClassifier_MCCV
+21.0,Previsto,Não,Cruzeiro,Coritiba,Derrota,99.8,VotingClassifier_MCCV
 21.0,Previsto,Não,Cruzeiro,Coritiba,Derrota,,LogisticRegression_LOSO
-21.0,Previsto,Não,Flamengo,Internacional,Derrota,96.89999999999999,VotingClassifier_MCCV
+21.0,Previsto,Não,Flamengo,Internacional,Derrota,100.0,VotingClassifier_MCCV
 21.0,Previsto,Não,Flamengo,Internacional,Derrota,,LogisticRegression_LOSO
-21.0,Previsto,Sim,Fluminense,Bahia,Vitória,97.5,VotingClassifier_MCCV
+21.0,Previsto,Sim,Fluminense,Bahia,Vitória,93.8,VotingClassifier_MCCV
 21.0,Previsto,Sim,Fluminense,Bahia,Vitória,,LogisticRegression_LOSO
-21.0,Previsto,Não,Grêmio,Botafogo,Derrota,99.0,VotingClassifier_MCCV
+21.0,Previsto,Não,Grêmio,Botafogo,Derrota,99.2,VotingClassifier_MCCV
 21.0,Previsto,Não,Grêmio,Botafogo,Derrota,,LogisticRegression_LOSO
-21.0,Previsto,Sim,Internacional,Flamengo,Vitória,96.0,VotingClassifier_MCCV
+21.0,Previsto,Sim,Internacional,Flamengo,Vitória,100.0,VotingClassifier_MCCV
 21.0,Previsto,Sim,Internacional,Flamengo,Vitória,,LogisticRegression_LOSO
 21.0,Previsto,Sim,Mirassol,Remo,Vitória,100.0,VotingClassifier_MCCV
 21.0,Previsto,Sim,Mirassol,Remo,Vitória,,LogisticRegression_LOSO
-21.0,Previsto,Não,Palmeiras,Vitória,Derrota,57.4,VotingClassifier_MCCV
+21.0,Previsto,Não,Palmeiras,Vitória,Derrota,94.6,VotingClassifier_MCCV
 21.0,Previsto,Não,Palmeiras,Vitória,Empate,,LogisticRegression_LOSO
-21.0,Previsto,Não,Remo,Mirassol,Derrota,99.8,VotingClassifier_MCCV
+21.0,Previsto,Não,Remo,Mirassol,Derrota,100.0,VotingClassifier_MCCV
 21.0,Previsto,Não,Remo,Mirassol,Derrota,,LogisticRegression_LOSO
-21.0,Previsto,Não,Santos,São Paulo,Vitória,56.699999999999996,VotingClassifier_MCCV
-21.0,Previsto,Não,Santos,São Paulo,Empate,,LogisticRegression_LOSO
-21.0,Previsto,Sim,São Paulo,Santos,Derrota,56.89999999999999,VotingClassifier_MCCV
-21.0,Previsto,Sim,São Paulo,Santos,Empate,,LogisticRegression_LOSO
-21.0,Previsto,Não,Vasco,Chapecoense,Derrota,79.10000000000001,VotingClassifier_MCCV
+21.0,Previsto,Não,Santos,São Paulo,Derrota,79.10000000000001,VotingClassifier_MCCV
+21.0,Previsto,Não,Santos,São Paulo,Derrota,,LogisticRegression_LOSO
+21.0,Previsto,Sim,São Paulo,Santos,Vitória,80.30000000000001,VotingClassifier_MCCV
+21.0,Previsto,Sim,São Paulo,Santos,Vitória,,LogisticRegression_LOSO
+21.0,Previsto,Não,Vasco,Chapecoense,Derrota,76.9,VotingClassifier_MCCV
 21.0,Previsto,Não,Vasco,Chapecoense,Empate,,LogisticRegression_LOSO
-21.0,Previsto,Sim,Vitória,Palmeiras,Vitória,58.3,VotingClassifier_MCCV
+21.0,Previsto,Sim,Vitória,Palmeiras,Vitória,95.1,VotingClassifier_MCCV
 21.0,Previsto,Sim,Vitória,Palmeiras,Empate,,LogisticRegression_LOSO
-22.0,Previsto,Não,Athletico-PR,Santos,Derrota,70.8,VotingClassifier_MCCV
+22.0,Previsto,Não,Athletico-PR,Santos,Derrota,76.9,VotingClassifier_MCCV
 22.0,Previsto,Não,Athletico-PR,Santos,Empate,,LogisticRegression_LOSO
-22.0,Previsto,Não,Atlético-MG,Remo,Derrota,99.8,VotingClassifier_MCCV
+22.0,Previsto,Não,Atlético-MG,Remo,Derrota,99.9,VotingClassifier_MCCV
 22.0,Previsto,Não,Atlético-MG,Remo,Derrota,,LogisticRegression_LOSO
-22.0,Previsto,Sim,Bahia,Vasco,Vitória,98.7,VotingClassifier_MCCV
+22.0,Previsto,Sim,Bahia,Vasco,Vitória,95.8,VotingClassifier_MCCV
 22.0,Previsto,Sim,Bahia,Vasco,Vitória,,LogisticRegression_LOSO
-22.0,Previsto,Sim,Botafogo,Fluminense,Vitória,76.5,VotingClassifier_MCCV
+22.0,Previsto,Sim,Botafogo,Fluminense,Vitória,85.7,VotingClassifier_MCCV
 22.0,Previsto,Sim,Botafogo,Fluminense,Vitória,,LogisticRegression_LOSO
-22.0,Previsto,Sim,Bragantino,Corinthians,Vitória,99.0,VotingClassifier_MCCV
+22.0,Previsto,Sim,Bragantino,Corinthians,Vitória,100.0,VotingClassifier_MCCV
 22.0,Previsto,Sim,Bragantino,Corinthians,Vitória,,LogisticRegression_LOSO
-22.0,Previsto,Não,Chapecoense,Coritiba,Derrota,61.4,VotingClassifier_MCCV
-22.0,Previsto,Não,Chapecoense,Coritiba,Derrota,,LogisticRegression_LOSO
-22.0,Previsto,Não,Corinthians,Bragantino,Derrota,98.8,VotingClassifier_MCCV
+22.0,Previsto,Não,Chapecoense,Coritiba,Derrota,76.8,VotingClassifier_MCCV
+22.0,Previsto,Não,Chapecoense,Coritiba,Empate,,LogisticRegression_LOSO
+22.0,Previsto,Não,Corinthians,Bragantino,Derrota,100.0,VotingClassifier_MCCV
 22.0,Previsto,Não,Corinthians,Bragantino,Derrota,,LogisticRegression_LOSO
-22.0,Previsto,Sim,Coritiba,Chapecoense,Vitória,60.5,VotingClassifier_MCCV
-22.0,Previsto,Sim,Coritiba,Chapecoense,Vitória,,LogisticRegression_LOSO
-22.0,Previsto,Sim,Cruzeiro,Mirassol,Vitória,99.2,VotingClassifier_MCCV
+22.0,Previsto,Sim,Coritiba,Chapecoense,Vitória,75.5,VotingClassifier_MCCV
+22.0,Previsto,Sim,Coritiba,Chapecoense,Empate,,LogisticRegression_LOSO
+22.0,Previsto,Sim,Cruzeiro,Mirassol,Vitória,100.0,VotingClassifier_MCCV
 22.0,Previsto,Sim,Cruzeiro,Mirassol,Vitória,,LogisticRegression_LOSO
-22.0,Previsto,Sim,Flamengo,Vitória,Vitória,97.3,VotingClassifier_MCCV
+22.0,Previsto,Sim,Flamengo,Vitória,Vitória,99.6,VotingClassifier_MCCV
 22.0,Previsto,Sim,Flamengo,Vitória,Vitória,,LogisticRegression_LOSO
-22.0,Previsto,Não,Fluminense,Botafogo,Derrota,76.1,VotingClassifier_MCCV
+22.0,Previsto,Não,Fluminense,Botafogo,Derrota,84.7,VotingClassifier_MCCV
 22.0,Previsto,Não,Fluminense,Botafogo,Derrota,,LogisticRegression_LOSO
-22.0,Previsto,Sim,Grêmio,São Paulo,Vitória,98.7,VotingClassifier_MCCV
+22.0,Previsto,Sim,Grêmio,São Paulo,Vitória,73.4,VotingClassifier_MCCV
 22.0,Previsto,Sim,Grêmio,São Paulo,Empate,,LogisticRegression_LOSO
-22.0,Previsto,Não,Internacional,Palmeiras,Derrota,78.60000000000001,VotingClassifier_MCCV
+22.0,Previsto,Não,Internacional,Palmeiras,Derrota,96.2,VotingClassifier_MCCV
 22.0,Previsto,Não,Internacional,Palmeiras,Empate,,LogisticRegression_LOSO
-22.0,Previsto,Não,Mirassol,Cruzeiro,Derrota,99.6,VotingClassifier_MCCV
+22.0,Previsto,Não,Mirassol,Cruzeiro,Derrota,99.8,VotingClassifier_MCCV
 22.0,Previsto,Não,Mirassol,Cruzeiro,Derrota,,LogisticRegression_LOSO
-22.0,Previsto,Sim,Palmeiras,Internacional,Vitória,80.30000000000001,VotingClassifier_MCCV
+22.0,Previsto,Sim,Palmeiras,Internacional,Vitória,96.8,VotingClassifier_MCCV
 22.0,Previsto,Sim,Palmeiras,Internacional,Empate,,LogisticRegression_LOSO
 22.0,Previsto,Sim,Remo,Atlético-MG,Vitória,99.9,VotingClassifier_MCCV
 22.0,Previsto,Sim,Remo,Atlético-MG,Vitória,,LogisticRegression_LOSO
-22.0,Previsto,Sim,Santos,Athletico-PR,Vitória,72.2,VotingClassifier_MCCV
+22.0,Previsto,Sim,Santos,Athletico-PR,Vitória,77.10000000000001,VotingClassifier_MCCV
 22.0,Previsto,Sim,Santos,Athletico-PR,Empate,,LogisticRegression_LOSO
-22.0,Previsto,Não,São Paulo,Grêmio,Derrota,98.9,VotingClassifier_MCCV
+22.0,Previsto,Não,São Paulo,Grêmio,Derrota,70.39999999999999,VotingClassifier_MCCV
 22.0,Previsto,Não,São Paulo,Grêmio,Empate,,LogisticRegression_LOSO
-22.0,Previsto,Não,Vasco,Bahia,Derrota,98.8,VotingClassifier_MCCV
+22.0,Previsto,Não,Vasco,Bahia,Derrota,96.39999999999999,VotingClassifier_MCCV
 22.0,Previsto,Não,Vasco,Bahia,Derrota,,LogisticRegression_LOSO
-22.0,Previsto,Não,Vitória,Flamengo,Derrota,96.7,VotingClassifier_MCCV
+22.0,Previsto,Não,Vitória,Flamengo,Derrota,99.2,VotingClassifier_MCCV
 22.0,Previsto,Não,Vitória,Flamengo,Derrota,,LogisticRegression_LOSO
 23.0,Previsto,Sim,Athletico-PR,Bragantino,Vitória,100.0,VotingClassifier_MCCV
 23.0,Previsto,Sim,Athletico-PR,Bragantino,Vitória,,LogisticRegression_LOSO
-23.0,Previsto,Sim,Atlético-MG,Grêmio,Vitória,98.5,VotingClassifier_MCCV
+23.0,Previsto,Sim,Atlético-MG,Grêmio,Vitória,99.4,VotingClassifier_MCCV
 23.0,Previsto,Sim,Atlético-MG,Grêmio,Vitória,,LogisticRegression_LOSO
-23.0,Previsto,Não,Bahia,Chapecoense,Derrota,98.5,VotingClassifier_MCCV
+23.0,Previsto,Não,Bahia,Chapecoense,Derrota,89.4,VotingClassifier_MCCV
 23.0,Previsto,Não,Bahia,Chapecoense,Derrota,,LogisticRegression_LOSO
-23.0,Previsto,Não,Botafogo,Vitória,Derrota,76.7,VotingClassifier_MCCV
+23.0,Previsto,Não,Botafogo,Vitória,Derrota,95.19999999999999,VotingClassifier_MCCV
 23.0,Previsto,Não,Botafogo,Vitória,Empate,,LogisticRegression_LOSO
 23.0,Previsto,Não,Bragantino,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
 23.0,Previsto,Não,Bragantino,Athletico-PR,Derrota,,LogisticRegression_LOSO
-23.0,Previsto,Sim,Chapecoense,Bahia,Vitória,97.39999999999999,VotingClassifier_MCCV
+23.0,Previsto,Sim,Chapecoense,Bahia,Vitória,89.5,VotingClassifier_MCCV
 23.0,Previsto,Sim,Chapecoense,Bahia,Vitória,,LogisticRegression_LOSO
-23.0,Previsto,Sim,Corinthians,Cruzeiro,Vitória,92.7,VotingClassifier_MCCV
+23.0,Previsto,Sim,Corinthians,Cruzeiro,Vitória,97.8,VotingClassifier_MCCV
 23.0,Previsto,Sim,Corinthians,Cruzeiro,Vitória,,LogisticRegression_LOSO
-23.0,Previsto,Não,Coritiba,São Paulo,Derrota,95.1,VotingClassifier_MCCV
-23.0,Previsto,Não,Coritiba,São Paulo,Empate,,LogisticRegression_LOSO
-23.0,Previsto,Não,Cruzeiro,Corinthians,Derrota,92.9,VotingClassifier_MCCV
+23.0,Previsto,Não,Coritiba,São Paulo,Derrota,90.4,VotingClassifier_MCCV
+23.0,Previsto,Não,Coritiba,São Paulo,Derrota,,LogisticRegression_LOSO
+23.0,Previsto,Não,Cruzeiro,Corinthians,Derrota,97.0,VotingClassifier_MCCV
 23.0,Previsto,Não,Cruzeiro,Corinthians,Derrota,,LogisticRegression_LOSO
-23.0,Previsto,Não,Flamengo,Mirassol,Derrota,80.80000000000001,VotingClassifier_MCCV
+23.0,Previsto,Não,Flamengo,Mirassol,Derrota,94.3,VotingClassifier_MCCV
 23.0,Previsto,Não,Flamengo,Mirassol,Derrota,,LogisticRegression_LOSO
-23.0,Previsto,Sim,Fluminense,Palmeiras,Vitória,99.7,VotingClassifier_MCCV
+23.0,Previsto,Sim,Fluminense,Palmeiras,Vitória,99.4,VotingClassifier_MCCV
 23.0,Previsto,Sim,Fluminense,Palmeiras,Vitória,,LogisticRegression_LOSO
-23.0,Previsto,Não,Grêmio,Atlético-MG,Derrota,98.7,VotingClassifier_MCCV
+23.0,Previsto,Não,Grêmio,Atlético-MG,Derrota,98.8,VotingClassifier_MCCV
 23.0,Previsto,Não,Grêmio,Atlético-MG,Derrota,,LogisticRegression_LOSO
-23.0,Previsto,Sim,Internacional,Remo,Vitória,78.60000000000001,VotingClassifier_MCCV
+23.0,Previsto,Sim,Internacional,Remo,Vitória,92.5,VotingClassifier_MCCV
 23.0,Previsto,Sim,Internacional,Remo,Empate,,LogisticRegression_LOSO
-23.0,Previsto,Sim,Mirassol,Flamengo,Vitória,79.2,VotingClassifier_MCCV
+23.0,Previsto,Sim,Mirassol,Flamengo,Vitória,95.5,VotingClassifier_MCCV
 23.0,Previsto,Sim,Mirassol,Flamengo,Vitória,,LogisticRegression_LOSO
-23.0,Previsto,Não,Palmeiras,Fluminense,Derrota,99.3,VotingClassifier_MCCV
+23.0,Previsto,Não,Palmeiras,Fluminense,Derrota,99.2,VotingClassifier_MCCV
 23.0,Previsto,Não,Palmeiras,Fluminense,Derrota,,LogisticRegression_LOSO
-23.0,Previsto,Não,Remo,Internacional,Derrota,78.0,VotingClassifier_MCCV
+23.0,Previsto,Não,Remo,Internacional,Derrota,93.4,VotingClassifier_MCCV
 23.0,Previsto,Não,Remo,Internacional,Empate,,LogisticRegression_LOSO
-23.0,Previsto,Não,Santos,Vasco,Derrota,90.8,VotingClassifier_MCCV
+23.0,Previsto,Não,Santos,Vasco,Empate,43.1,VotingClassifier_MCCV
 23.0,Previsto,Não,Santos,Vasco,Empate,,LogisticRegression_LOSO
-23.0,Previsto,Sim,São Paulo,Coritiba,Vitória,96.1,VotingClassifier_MCCV
-23.0,Previsto,Sim,São Paulo,Coritiba,Empate,,LogisticRegression_LOSO
-23.0,Previsto,Sim,Vasco,Santos,Vitória,90.9,VotingClassifier_MCCV
+23.0,Previsto,Sim,São Paulo,Coritiba,Vitória,93.0,VotingClassifier_MCCV
+23.0,Previsto,Sim,São Paulo,Coritiba,Vitória,,LogisticRegression_LOSO
+23.0,Previsto,Sim,Vasco,Santos,Empate,43.6,VotingClassifier_MCCV
 23.0,Previsto,Sim,Vasco,Santos,Empate,,LogisticRegression_LOSO
-23.0,Previsto,Sim,Vitória,Botafogo,Vitória,76.2,VotingClassifier_MCCV
+23.0,Previsto,Sim,Vitória,Botafogo,Vitória,95.19999999999999,VotingClassifier_MCCV
 23.0,Previsto,Sim,Vitória,Botafogo,Empate,,LogisticRegression_LOSO
-24.0,Previsto,Não,Athletico-PR,Botafogo,Derrota,97.8,VotingClassifier_MCCV
+24.0,Previsto,Não,Athletico-PR,Botafogo,Derrota,95.8,VotingClassifier_MCCV
 24.0,Previsto,Não,Athletico-PR,Botafogo,Derrota,,LogisticRegression_LOSO
-24.0,Previsto,Não,Atlético-MG,Internacional,Derrota,52.0,VotingClassifier_MCCV
-24.0,Previsto,Não,Atlético-MG,Internacional,Vitória,,LogisticRegression_LOSO
-24.0,Previsto,Não,Bahia,Vitória,Derrota,99.1,VotingClassifier_MCCV
+24.0,Previsto,Não,Atlético-MG,Internacional,Derrota,93.30000000000001,VotingClassifier_MCCV
+24.0,Previsto,Não,Atlético-MG,Internacional,Empate,,LogisticRegression_LOSO
+24.0,Previsto,Não,Bahia,Vitória,Derrota,98.2,VotingClassifier_MCCV
 24.0,Previsto,Não,Bahia,Vitória,Derrota,,LogisticRegression_LOSO
-24.0,Previsto,Sim,Botafogo,Athletico-PR,Vitória,97.6,VotingClassifier_MCCV
+24.0,Previsto,Sim,Botafogo,Athletico-PR,Vitória,98.0,VotingClassifier_MCCV
 24.0,Previsto,Sim,Botafogo,Athletico-PR,Vitória,,LogisticRegression_LOSO
-24.0,Previsto,Sim,Bragantino,Grêmio,Vitória,98.1,VotingClassifier_MCCV
+24.0,Previsto,Sim,Bragantino,Grêmio,Vitória,99.8,VotingClassifier_MCCV
 24.0,Previsto,Sim,Bragantino,Grêmio,Vitória,,LogisticRegression_LOSO
 24.0,Previsto,Sim,Chapecoense,São Paulo,Vitória,100.0,VotingClassifier_MCCV
 24.0,Previsto,Sim,Chapecoense,São Paulo,Vitória,,LogisticRegression_LOSO
-24.0,Previsto,Não,Corinthians,Coritiba,Derrota,99.7,VotingClassifier_MCCV
+24.0,Previsto,Não,Corinthians,Coritiba,Derrota,99.4,VotingClassifier_MCCV
 24.0,Previsto,Não,Corinthians,Coritiba,Derrota,,LogisticRegression_LOSO
-24.0,Previsto,Sim,Coritiba,Corinthians,Vitória,99.4,VotingClassifier_MCCV
+24.0,Previsto,Sim,Coritiba,Corinthians,Vitória,99.5,VotingClassifier_MCCV
 24.0,Previsto,Sim,Coritiba,Corinthians,Vitória,,LogisticRegression_LOSO
-24.0,Previsto,Sim,Cruzeiro,Flamengo,Vitória,70.1,VotingClassifier_MCCV
+24.0,Previsto,Sim,Cruzeiro,Flamengo,Vitória,87.1,VotingClassifier_MCCV
 24.0,Previsto,Sim,Cruzeiro,Flamengo,Empate,,LogisticRegression_LOSO
-24.0,Previsto,Não,Flamengo,Cruzeiro,Derrota,68.2,VotingClassifier_MCCV
+24.0,Previsto,Não,Flamengo,Cruzeiro,Derrota,87.1,VotingClassifier_MCCV
 24.0,Previsto,Não,Flamengo,Cruzeiro,Empate,,LogisticRegression_LOSO
-24.0,Previsto,Sim,Fluminense,Remo,Vitória,99.9,VotingClassifier_MCCV
+24.0,Previsto,Sim,Fluminense,Remo,Vitória,100.0,VotingClassifier_MCCV
 24.0,Previsto,Sim,Fluminense,Remo,Vitória,,LogisticRegression_LOSO
-24.0,Previsto,Não,Grêmio,Bragantino,Derrota,97.7,VotingClassifier_MCCV
+24.0,Previsto,Não,Grêmio,Bragantino,Derrota,99.2,VotingClassifier_MCCV
 24.0,Previsto,Não,Grêmio,Bragantino,Derrota,,LogisticRegression_LOSO
-24.0,Previsto,Sim,Internacional,Atlético-MG,Vitória,54.50000000000001,VotingClassifier_MCCV
-24.0,Previsto,Sim,Internacional,Atlético-MG,Derrota,,LogisticRegression_LOSO
-24.0,Previsto,Não,Mirassol,Santos,Vitória,75.9,VotingClassifier_MCCV
+24.0,Previsto,Sim,Internacional,Atlético-MG,Vitória,94.19999999999999,VotingClassifier_MCCV
+24.0,Previsto,Sim,Internacional,Atlético-MG,Empate,,LogisticRegression_LOSO
+24.0,Previsto,Não,Mirassol,Santos,Empate,47.199999999999996,VotingClassifier_MCCV
 24.0,Previsto,Não,Mirassol,Santos,Vitória,,LogisticRegression_LOSO
-24.0,Previsto,Sim,Palmeiras,Vasco,Vitória,95.6,VotingClassifier_MCCV
+24.0,Previsto,Sim,Palmeiras,Vasco,Vitória,89.9,VotingClassifier_MCCV
 24.0,Previsto,Sim,Palmeiras,Vasco,Vitória,,LogisticRegression_LOSO
 24.0,Previsto,Não,Remo,Fluminense,Derrota,100.0,VotingClassifier_MCCV
 24.0,Previsto,Não,Remo,Fluminense,Derrota,,LogisticRegression_LOSO
-24.0,Previsto,Sim,Santos,Mirassol,Derrota,76.8,VotingClassifier_MCCV
+24.0,Previsto,Sim,Santos,Mirassol,Empate,50.1,VotingClassifier_MCCV
 24.0,Previsto,Sim,Santos,Mirassol,Derrota,,LogisticRegression_LOSO
-24.0,Previsto,Não,São Paulo,Chapecoense,Derrota,99.9,VotingClassifier_MCCV
+24.0,Previsto,Não,São Paulo,Chapecoense,Derrota,100.0,VotingClassifier_MCCV
 24.0,Previsto,Não,São Paulo,Chapecoense,Derrota,,LogisticRegression_LOSO
-24.0,Previsto,Não,Vasco,Palmeiras,Derrota,95.0,VotingClassifier_MCCV
+24.0,Previsto,Não,Vasco,Palmeiras,Derrota,87.3,VotingClassifier_MCCV
 24.0,Previsto,Não,Vasco,Palmeiras,Derrota,,LogisticRegression_LOSO
-24.0,Previsto,Sim,Vitória,Bahia,Vitória,99.2,VotingClassifier_MCCV
+24.0,Previsto,Sim,Vitória,Bahia,Vitória,98.2,VotingClassifier_MCCV
 24.0,Previsto,Sim,Vitória,Bahia,Vitória,,LogisticRegression_LOSO
 25.0,Previsto,Sim,Athletico-PR,Fluminense,Vitória,100.0,VotingClassifier_MCCV
 25.0,Previsto,Sim,Athletico-PR,Fluminense,Vitória,,LogisticRegression_LOSO
 25.0,Previsto,Sim,Atlético-MG,Vitória,Vitória,100.0,VotingClassifier_MCCV
 25.0,Previsto,Sim,Atlético-MG,Vitória,Vitória,,LogisticRegression_LOSO
-25.0,Previsto,Sim,Bahia,Internacional,Vitória,54.7,VotingClassifier_MCCV
+25.0,Previsto,Sim,Bahia,Internacional,Vitória,78.8,VotingClassifier_MCCV
 25.0,Previsto,Sim,Bahia,Internacional,Empate,,LogisticRegression_LOSO
-25.0,Previsto,Não,Botafogo,Flamengo,Derrota,99.1,VotingClassifier_MCCV
+25.0,Previsto,Não,Botafogo,Flamengo,Derrota,90.8,VotingClassifier_MCCV
 25.0,Previsto,Não,Botafogo,Flamengo,Derrota,,LogisticRegression_LOSO
-25.0,Previsto,Não,Bragantino,São Paulo,Derrota,98.6,VotingClassifier_MCCV
-25.0,Previsto,Não,Bragantino,São Paulo,Empate,,LogisticRegression_LOSO
-25.0,Previsto,Não,Chapecoense,Grêmio,Derrota,52.400000000000006,VotingClassifier_MCCV
+25.0,Previsto,Não,Bragantino,São Paulo,Derrota,99.9,VotingClassifier_MCCV
+25.0,Previsto,Não,Bragantino,São Paulo,Derrota,,LogisticRegression_LOSO
+25.0,Previsto,Não,Chapecoense,Grêmio,Derrota,64.8,VotingClassifier_MCCV
 25.0,Previsto,Não,Chapecoense,Grêmio,Empate,,LogisticRegression_LOSO
-25.0,Previsto,Sim,Corinthians,Santos,Vitória,95.3,VotingClassifier_MCCV
+25.0,Previsto,Sim,Corinthians,Santos,Vitória,99.6,VotingClassifier_MCCV
 25.0,Previsto,Sim,Corinthians,Santos,Vitória,,LogisticRegression_LOSO
-25.0,Previsto,Não,Coritiba,Remo,Derrota,99.9,VotingClassifier_MCCV
+25.0,Previsto,Não,Coritiba,Remo,Derrota,100.0,VotingClassifier_MCCV
 25.0,Previsto,Não,Coritiba,Remo,Derrota,,LogisticRegression_LOSO
-25.0,Previsto,Não,Cruzeiro,Vasco,Derrota,79.4,VotingClassifier_MCCV
+25.0,Previsto,Não,Cruzeiro,Vasco,Vitória,51.2,VotingClassifier_MCCV
 25.0,Previsto,Não,Cruzeiro,Vasco,Empate,,LogisticRegression_LOSO
-25.0,Previsto,Sim,Flamengo,Botafogo,Vitória,99.4,VotingClassifier_MCCV
+25.0,Previsto,Sim,Flamengo,Botafogo,Vitória,92.10000000000001,VotingClassifier_MCCV
 25.0,Previsto,Sim,Flamengo,Botafogo,Vitória,,LogisticRegression_LOSO
-25.0,Previsto,Não,Fluminense,Athletico-PR,Derrota,99.9,VotingClassifier_MCCV
+25.0,Previsto,Não,Fluminense,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
 25.0,Previsto,Não,Fluminense,Athletico-PR,Derrota,,LogisticRegression_LOSO
-25.0,Previsto,Sim,Grêmio,Chapecoense,Vitória,55.1,VotingClassifier_MCCV
+25.0,Previsto,Sim,Grêmio,Chapecoense,Vitória,65.60000000000001,VotingClassifier_MCCV
 25.0,Previsto,Sim,Grêmio,Chapecoense,Empate,,LogisticRegression_LOSO
-25.0,Previsto,Não,Internacional,Bahia,Derrota,55.300000000000004,VotingClassifier_MCCV
+25.0,Previsto,Não,Internacional,Bahia,Derrota,79.2,VotingClassifier_MCCV
 25.0,Previsto,Não,Internacional,Bahia,Empate,,LogisticRegression_LOSO
-25.0,Previsto,Sim,Mirassol,Palmeiras,Vitória,72.6,VotingClassifier_MCCV
-25.0,Previsto,Sim,Mirassol,Palmeiras,Empate,,LogisticRegression_LOSO
-25.0,Previsto,Não,Palmeiras,Mirassol,Derrota,73.7,VotingClassifier_MCCV
-25.0,Previsto,Não,Palmeiras,Mirassol,Empate,,LogisticRegression_LOSO
-25.0,Previsto,Sim,Remo,Coritiba,Vitória,99.9,VotingClassifier_MCCV
+25.0,Previsto,Sim,Mirassol,Palmeiras,Vitória,83.0,VotingClassifier_MCCV
+25.0,Previsto,Sim,Mirassol,Palmeiras,Vitória,,LogisticRegression_LOSO
+25.0,Previsto,Não,Palmeiras,Mirassol,Derrota,83.89999999999999,VotingClassifier_MCCV
+25.0,Previsto,Não,Palmeiras,Mirassol,Derrota,,LogisticRegression_LOSO
+25.0,Previsto,Sim,Remo,Coritiba,Vitória,100.0,VotingClassifier_MCCV
 25.0,Previsto,Sim,Remo,Coritiba,Vitória,,LogisticRegression_LOSO
-25.0,Previsto,Não,Santos,Corinthians,Derrota,95.19999999999999,VotingClassifier_MCCV
+25.0,Previsto,Não,Santos,Corinthians,Derrota,99.7,VotingClassifier_MCCV
 25.0,Previsto,Não,Santos,Corinthians,Derrota,,LogisticRegression_LOSO
-25.0,Previsto,Sim,São Paulo,Bragantino,Vitória,98.5,VotingClassifier_MCCV
-25.0,Previsto,Sim,São Paulo,Bragantino,Empate,,LogisticRegression_LOSO
-25.0,Previsto,Sim,Vasco,Cruzeiro,Vitória,80.10000000000001,VotingClassifier_MCCV
+25.0,Previsto,Sim,São Paulo,Bragantino,Vitória,99.7,VotingClassifier_MCCV
+25.0,Previsto,Sim,São Paulo,Bragantino,Vitória,,LogisticRegression_LOSO
+25.0,Previsto,Sim,Vasco,Cruzeiro,Derrota,51.800000000000004,VotingClassifier_MCCV
 25.0,Previsto,Sim,Vasco,Cruzeiro,Empate,,LogisticRegression_LOSO
 25.0,Previsto,Não,Vitória,Atlético-MG,Derrota,100.0,VotingClassifier_MCCV
 25.0,Previsto,Não,Vitória,Atlético-MG,Derrota,,LogisticRegression_LOSO
-26.0,Previsto,Não,Athletico-PR,Cruzeiro,Derrota,96.3,VotingClassifier_MCCV
-26.0,Previsto,Não,Athletico-PR,Cruzeiro,Derrota,,LogisticRegression_LOSO
-26.0,Previsto,Não,Atlético-MG,São Paulo,Derrota,56.99999999999999,VotingClassifier_MCCV
+26.0,Previsto,Não,Athletico-PR,Cruzeiro,Derrota,92.30000000000001,VotingClassifier_MCCV
+26.0,Previsto,Não,Athletico-PR,Cruzeiro,Empate,,LogisticRegression_LOSO
+26.0,Previsto,Não,Atlético-MG,São Paulo,Derrota,48.0,VotingClassifier_MCCV
 26.0,Previsto,Não,Atlético-MG,São Paulo,Empate,,LogisticRegression_LOSO
-26.0,Previsto,Não,Bahia,Bragantino,Derrota,99.9,VotingClassifier_MCCV
+26.0,Previsto,Não,Bahia,Bragantino,Derrota,100.0,VotingClassifier_MCCV
 26.0,Previsto,Não,Bahia,Bragantino,Derrota,,LogisticRegression_LOSO
-26.0,Previsto,Sim,Botafogo,Palmeiras,Vitória,64.2,VotingClassifier_MCCV
-26.0,Previsto,Sim,Botafogo,Palmeiras,Vitória,,LogisticRegression_LOSO
+26.0,Previsto,Sim,Botafogo,Palmeiras,Vitória,69.39999999999999,VotingClassifier_MCCV
+26.0,Previsto,Sim,Botafogo,Palmeiras,Empate,,LogisticRegression_LOSO
 26.0,Previsto,Sim,Bragantino,Bahia,Vitória,100.0,VotingClassifier_MCCV
 26.0,Previsto,Sim,Bragantino,Bahia,Vitória,,LogisticRegression_LOSO
-26.0,Previsto,Não,Chapecoense,Corinthians,Derrota,96.2,VotingClassifier_MCCV
+26.0,Previsto,Não,Chapecoense,Corinthians,Derrota,93.5,VotingClassifier_MCCV
 26.0,Previsto,Não,Chapecoense,Corinthians,Derrota,,LogisticRegression_LOSO
-26.0,Previsto,Sim,Corinthians,Chapecoense,Vitória,96.1,VotingClassifier_MCCV
+26.0,Previsto,Sim,Corinthians,Chapecoense,Vitória,94.1,VotingClassifier_MCCV
 26.0,Previsto,Sim,Corinthians,Chapecoense,Vitória,,LogisticRegression_LOSO
-26.0,Previsto,Sim,Coritiba,Mirassol,Vitória,99.8,VotingClassifier_MCCV
+26.0,Previsto,Sim,Coritiba,Mirassol,Vitória,99.1,VotingClassifier_MCCV
 26.0,Previsto,Sim,Coritiba,Mirassol,Vitória,,LogisticRegression_LOSO
-26.0,Previsto,Sim,Cruzeiro,Athletico-PR,Vitória,96.2,VotingClassifier_MCCV
-26.0,Previsto,Sim,Cruzeiro,Athletico-PR,Vitória,,LogisticRegression_LOSO
-26.0,Previsto,Não,Flamengo,Remo,Derrota,98.7,VotingClassifier_MCCV
+26.0,Previsto,Sim,Cruzeiro,Athletico-PR,Vitória,94.1,VotingClassifier_MCCV
+26.0,Previsto,Sim,Cruzeiro,Athletico-PR,Empate,,LogisticRegression_LOSO
+26.0,Previsto,Não,Flamengo,Remo,Derrota,85.6,VotingClassifier_MCCV
 26.0,Previsto,Não,Flamengo,Remo,Derrota,,LogisticRegression_LOSO
-26.0,Previsto,Sim,Fluminense,Vasco,Vitória,97.8,VotingClassifier_MCCV
+26.0,Previsto,Sim,Fluminense,Vasco,Vitória,99.9,VotingClassifier_MCCV
 26.0,Previsto,Sim,Fluminense,Vasco,Vitória,,LogisticRegression_LOSO
-26.0,Previsto,Não,Grêmio,Vitória,Derrota,55.7,VotingClassifier_MCCV
+26.0,Previsto,Não,Grêmio,Vitória,Derrota,95.19999999999999,VotingClassifier_MCCV
 26.0,Previsto,Não,Grêmio,Vitória,Empate,,LogisticRegression_LOSO
-26.0,Previsto,Sim,Internacional,Santos,Derrota,65.7,VotingClassifier_MCCV
+26.0,Previsto,Sim,Internacional,Santos,Empate,62.0,VotingClassifier_MCCV
 26.0,Previsto,Sim,Internacional,Santos,Derrota,,LogisticRegression_LOSO
-26.0,Previsto,Não,Mirassol,Coritiba,Derrota,100.0,VotingClassifier_MCCV
+26.0,Previsto,Não,Mirassol,Coritiba,Derrota,99.0,VotingClassifier_MCCV
 26.0,Previsto,Não,Mirassol,Coritiba,Derrota,,LogisticRegression_LOSO
-26.0,Previsto,Não,Palmeiras,Botafogo,Derrota,62.3,VotingClassifier_MCCV
-26.0,Previsto,Não,Palmeiras,Botafogo,Derrota,,LogisticRegression_LOSO
-26.0,Previsto,Sim,Remo,Flamengo,Vitória,99.0,VotingClassifier_MCCV
+26.0,Previsto,Não,Palmeiras,Botafogo,Derrota,67.7,VotingClassifier_MCCV
+26.0,Previsto,Não,Palmeiras,Botafogo,Empate,,LogisticRegression_LOSO
+26.0,Previsto,Sim,Remo,Flamengo,Vitória,86.8,VotingClassifier_MCCV
 26.0,Previsto,Sim,Remo,Flamengo,Vitória,,LogisticRegression_LOSO
-26.0,Previsto,Não,Santos,Internacional,Vitória,67.5,VotingClassifier_MCCV
+26.0,Previsto,Não,Santos,Internacional,Empate,60.199999999999996,VotingClassifier_MCCV
 26.0,Previsto,Não,Santos,Internacional,Vitória,,LogisticRegression_LOSO
-26.0,Previsto,Sim,São Paulo,Atlético-MG,Vitória,60.3,VotingClassifier_MCCV
+26.0,Previsto,Sim,São Paulo,Atlético-MG,Vitória,49.2,VotingClassifier_MCCV
 26.0,Previsto,Sim,São Paulo,Atlético-MG,Empate,,LogisticRegression_LOSO
-26.0,Previsto,Não,Vasco,Fluminense,Derrota,96.89999999999999,VotingClassifier_MCCV
+26.0,Previsto,Não,Vasco,Fluminense,Derrota,99.4,VotingClassifier_MCCV
 26.0,Previsto,Não,Vasco,Fluminense,Derrota,,LogisticRegression_LOSO
-26.0,Previsto,Sim,Vitória,Grêmio,Vitória,54.7,VotingClassifier_MCCV
+26.0,Previsto,Sim,Vitória,Grêmio,Vitória,94.89999999999999,VotingClassifier_MCCV
 26.0,Previsto,Sim,Vitória,Grêmio,Empate,,LogisticRegression_LOSO
-27.0,Previsto,Não,Athletico-PR,Coritiba,Derrota,99.9,VotingClassifier_MCCV
+27.0,Previsto,Não,Athletico-PR,Coritiba,Derrota,99.7,VotingClassifier_MCCV
 27.0,Previsto,Não,Athletico-PR,Coritiba,Derrota,,LogisticRegression_LOSO
-27.0,Previsto,Sim,Atlético-MG,Fluminense,Vitória,99.8,VotingClassifier_MCCV
+27.0,Previsto,Sim,Atlético-MG,Fluminense,Vitória,100.0,VotingClassifier_MCCV
 27.0,Previsto,Sim,Atlético-MG,Fluminense,Vitória,,LogisticRegression_LOSO
-27.0,Previsto,Sim,Bahia,Remo,Vitória,80.2,VotingClassifier_MCCV
+27.0,Previsto,Sim,Bahia,Remo,Vitória,93.4,VotingClassifier_MCCV
 27.0,Previsto,Sim,Bahia,Remo,Empate,,LogisticRegression_LOSO
-27.0,Previsto,Sim,Botafogo,Bragantino,Vitória,99.3,VotingClassifier_MCCV
+27.0,Previsto,Sim,Botafogo,Bragantino,Vitória,99.8,VotingClassifier_MCCV
 27.0,Previsto,Sim,Botafogo,Bragantino,Vitória,,LogisticRegression_LOSO
-27.0,Previsto,Não,Bragantino,Botafogo,Derrota,99.4,VotingClassifier_MCCV
+27.0,Previsto,Não,Bragantino,Botafogo,Derrota,99.8,VotingClassifier_MCCV
 27.0,Previsto,Não,Bragantino,Botafogo,Derrota,,LogisticRegression_LOSO
 27.0,Previsto,Sim,Chapecoense,Internacional,Vitória,100.0,VotingClassifier_MCCV
 27.0,Previsto,Sim,Chapecoense,Internacional,Vitória,,LogisticRegression_LOSO
-27.0,Previsto,Não,Corinthians,Flamengo,Derrota,84.0,VotingClassifier_MCCV
+27.0,Previsto,Não,Corinthians,Flamengo,Derrota,100.0,VotingClassifier_MCCV
 27.0,Previsto,Não,Corinthians,Flamengo,Derrota,,LogisticRegression_LOSO
-27.0,Previsto,Sim,Coritiba,Athletico-PR,Vitória,100.0,VotingClassifier_MCCV
+27.0,Previsto,Sim,Coritiba,Athletico-PR,Vitória,99.6,VotingClassifier_MCCV
 27.0,Previsto,Sim,Coritiba,Athletico-PR,Vitória,,LogisticRegression_LOSO
-27.0,Previsto,Não,Cruzeiro,Santos,Vitória,56.00000000000001,VotingClassifier_MCCV
+27.0,Previsto,Não,Cruzeiro,Santos,Derrota,89.7,VotingClassifier_MCCV
 27.0,Previsto,Não,Cruzeiro,Santos,Empate,,LogisticRegression_LOSO
-27.0,Previsto,Sim,Flamengo,Corinthians,Vitória,84.5,VotingClassifier_MCCV
+27.0,Previsto,Sim,Flamengo,Corinthians,Vitória,100.0,VotingClassifier_MCCV
 27.0,Previsto,Sim,Flamengo,Corinthians,Vitória,,LogisticRegression_LOSO
-27.0,Previsto,Não,Fluminense,Atlético-MG,Derrota,99.7,VotingClassifier_MCCV
+27.0,Previsto,Não,Fluminense,Atlético-MG,Derrota,100.0,VotingClassifier_MCCV
 27.0,Previsto,Não,Fluminense,Atlético-MG,Derrota,,LogisticRegression_LOSO
-27.0,Previsto,Sim,Grêmio,Vasco,Vitória,88.1,VotingClassifier_MCCV
+27.0,Previsto,Sim,Grêmio,Vasco,Vitória,93.89999999999999,VotingClassifier_MCCV
 27.0,Previsto,Sim,Grêmio,Vasco,Vitória,,LogisticRegression_LOSO
 27.0,Previsto,Não,Internacional,Chapecoense,Derrota,100.0,VotingClassifier_MCCV
 27.0,Previsto,Não,Internacional,Chapecoense,Derrota,,LogisticRegression_LOSO
-27.0,Previsto,Sim,Mirassol,Vitória,Vitória,99.6,VotingClassifier_MCCV
+27.0,Previsto,Sim,Mirassol,Vitória,Vitória,100.0,VotingClassifier_MCCV
 27.0,Previsto,Sim,Mirassol,Vitória,Vitória,,LogisticRegression_LOSO
-27.0,Previsto,Sim,Palmeiras,São Paulo,Vitória,99.3,VotingClassifier_MCCV
+27.0,Previsto,Sim,Palmeiras,São Paulo,Vitória,100.0,VotingClassifier_MCCV
 27.0,Previsto,Sim,Palmeiras,São Paulo,Vitória,,LogisticRegression_LOSO
-27.0,Previsto,Não,Remo,Bahia,Derrota,79.10000000000001,VotingClassifier_MCCV
+27.0,Previsto,Não,Remo,Bahia,Derrota,94.1,VotingClassifier_MCCV
 27.0,Previsto,Não,Remo,Bahia,Empate,,LogisticRegression_LOSO
-27.0,Previsto,Sim,Santos,Cruzeiro,Derrota,53.400000000000006,VotingClassifier_MCCV
+27.0,Previsto,Sim,Santos,Cruzeiro,Vitória,91.7,VotingClassifier_MCCV
 27.0,Previsto,Sim,Santos,Cruzeiro,Empate,,LogisticRegression_LOSO
-27.0,Previsto,Não,São Paulo,Palmeiras,Derrota,99.6,VotingClassifier_MCCV
+27.0,Previsto,Não,São Paulo,Palmeiras,Derrota,100.0,VotingClassifier_MCCV
 27.0,Previsto,Não,São Paulo,Palmeiras,Derrota,,LogisticRegression_LOSO
-27.0,Previsto,Não,Vasco,Grêmio,Derrota,86.2,VotingClassifier_MCCV
+27.0,Previsto,Não,Vasco,Grêmio,Derrota,93.0,VotingClassifier_MCCV
 27.0,Previsto,Não,Vasco,Grêmio,Derrota,,LogisticRegression_LOSO
 27.0,Previsto,Não,Vitória,Mirassol,Derrota,99.9,VotingClassifier_MCCV
 27.0,Previsto,Não,Vitória,Mirassol,Derrota,,LogisticRegression_LOSO
 28.0,Previsto,Sim,Athletico-PR,Bahia,Vitória,99.7,VotingClassifier_MCCV
 28.0,Previsto,Sim,Athletico-PR,Bahia,Vitória,,LogisticRegression_LOSO
-28.0,Previsto,Sim,Atlético-MG,Chapecoense,Vitória,99.7,VotingClassifier_MCCV
+28.0,Previsto,Sim,Atlético-MG,Chapecoense,Vitória,97.7,VotingClassifier_MCCV
 28.0,Previsto,Sim,Atlético-MG,Chapecoense,Vitória,,LogisticRegression_LOSO
-28.0,Previsto,Não,Bahia,Athletico-PR,Derrota,99.5,VotingClassifier_MCCV
+28.0,Previsto,Não,Bahia,Athletico-PR,Derrota,99.6,VotingClassifier_MCCV
 28.0,Previsto,Não,Bahia,Athletico-PR,Derrota,,LogisticRegression_LOSO
-28.0,Previsto,Não,Botafogo,Mirassol,Derrota,63.5,VotingClassifier_MCCV
+28.0,Previsto,Não,Botafogo,Mirassol,Derrota,65.3,VotingClassifier_MCCV
 28.0,Previsto,Não,Botafogo,Mirassol,Derrota,,LogisticRegression_LOSO
-28.0,Previsto,Não,Bragantino,Flamengo,Derrota,83.2,VotingClassifier_MCCV
+28.0,Previsto,Não,Bragantino,Flamengo,Derrota,81.89999999999999,VotingClassifier_MCCV
 28.0,Previsto,Não,Bragantino,Flamengo,Derrota,,LogisticRegression_LOSO
-28.0,Previsto,Não,Chapecoense,Atlético-MG,Derrota,99.4,VotingClassifier_MCCV
+28.0,Previsto,Não,Chapecoense,Atlético-MG,Derrota,98.0,VotingClassifier_MCCV
 28.0,Previsto,Não,Chapecoense,Atlético-MG,Derrota,,LogisticRegression_LOSO
-28.0,Previsto,Sim,Corinthians,Fluminense,Vitória,84.5,VotingClassifier_MCCV
+28.0,Previsto,Sim,Corinthians,Fluminense,Vitória,86.1,VotingClassifier_MCCV
 28.0,Previsto,Sim,Corinthians,Fluminense,Empate,,LogisticRegression_LOSO
-28.0,Previsto,Não,Coritiba,Vasco,Derrota,99.6,VotingClassifier_MCCV
+28.0,Previsto,Não,Coritiba,Vasco,Derrota,99.9,VotingClassifier_MCCV
 28.0,Previsto,Não,Coritiba,Vasco,Derrota,,LogisticRegression_LOSO
-28.0,Previsto,Não,Cruzeiro,Vitória,Derrota,96.89999999999999,VotingClassifier_MCCV
+28.0,Previsto,Não,Cruzeiro,Vitória,Derrota,99.6,VotingClassifier_MCCV
 28.0,Previsto,Não,Cruzeiro,Vitória,Empate,,LogisticRegression_LOSO
-28.0,Previsto,Sim,Flamengo,Bragantino,Vitória,82.89999999999999,VotingClassifier_MCCV
+28.0,Previsto,Sim,Flamengo,Bragantino,Vitória,85.3,VotingClassifier_MCCV
 28.0,Previsto,Sim,Flamengo,Bragantino,Vitória,,LogisticRegression_LOSO
-28.0,Previsto,Não,Fluminense,Corinthians,Derrota,84.39999999999999,VotingClassifier_MCCV
+28.0,Previsto,Não,Fluminense,Corinthians,Derrota,88.0,VotingClassifier_MCCV
 28.0,Previsto,Não,Fluminense,Corinthians,Empate,,LogisticRegression_LOSO
-28.0,Previsto,Sim,Grêmio,Palmeiras,Vitória,97.89999999999999,VotingClassifier_MCCV
-28.0,Previsto,Sim,Grêmio,Palmeiras,Vitória,,LogisticRegression_LOSO
-28.0,Previsto,Não,Internacional,São Paulo,Derrota,97.7,VotingClassifier_MCCV
+28.0,Previsto,Sim,Grêmio,Palmeiras,Vitória,90.4,VotingClassifier_MCCV
+28.0,Previsto,Sim,Grêmio,Palmeiras,Empate,,LogisticRegression_LOSO
+28.0,Previsto,Não,Internacional,São Paulo,Derrota,99.8,VotingClassifier_MCCV
 28.0,Previsto,Não,Internacional,São Paulo,Derrota,,LogisticRegression_LOSO
-28.0,Previsto,Sim,Mirassol,Botafogo,Vitória,64.9,VotingClassifier_MCCV
+28.0,Previsto,Sim,Mirassol,Botafogo,Vitória,65.2,VotingClassifier_MCCV
 28.0,Previsto,Sim,Mirassol,Botafogo,Vitória,,LogisticRegression_LOSO
-28.0,Previsto,Não,Palmeiras,Grêmio,Derrota,97.7,VotingClassifier_MCCV
-28.0,Previsto,Não,Palmeiras,Grêmio,Derrota,,LogisticRegression_LOSO
-28.0,Previsto,Sim,Remo,Santos,Vitória,68.89999999999999,VotingClassifier_MCCV
-28.0,Previsto,Sim,Remo,Santos,Empate,,LogisticRegression_LOSO
-28.0,Previsto,Não,Santos,Remo,Derrota,67.9,VotingClassifier_MCCV
-28.0,Previsto,Não,Santos,Remo,Empate,,LogisticRegression_LOSO
-28.0,Previsto,Sim,São Paulo,Internacional,Vitória,98.2,VotingClassifier_MCCV
+28.0,Previsto,Não,Palmeiras,Grêmio,Derrota,90.3,VotingClassifier_MCCV
+28.0,Previsto,Não,Palmeiras,Grêmio,Empate,,LogisticRegression_LOSO
+28.0,Previsto,Sim,Remo,Santos,Empate,59.099999999999994,VotingClassifier_MCCV
+28.0,Previsto,Sim,Remo,Santos,Derrota,,LogisticRegression_LOSO
+28.0,Previsto,Não,Santos,Remo,Empate,53.6,VotingClassifier_MCCV
+28.0,Previsto,Não,Santos,Remo,Vitória,,LogisticRegression_LOSO
+28.0,Previsto,Sim,São Paulo,Internacional,Vitória,99.8,VotingClassifier_MCCV
 28.0,Previsto,Sim,São Paulo,Internacional,Vitória,,LogisticRegression_LOSO
-28.0,Previsto,Sim,Vasco,Coritiba,Vitória,99.7,VotingClassifier_MCCV
+28.0,Previsto,Sim,Vasco,Coritiba,Vitória,99.8,VotingClassifier_MCCV
 28.0,Previsto,Sim,Vasco,Coritiba,Vitória,,LogisticRegression_LOSO
-28.0,Previsto,Sim,Vitória,Cruzeiro,Vitória,96.7,VotingClassifier_MCCV
+28.0,Previsto,Sim,Vitória,Cruzeiro,Vitória,99.2,VotingClassifier_MCCV
 28.0,Previsto,Sim,Vitória,Cruzeiro,Empate,,LogisticRegression_LOSO
-29.0,Previsto,Sim,Athletico-PR,Atlético-MG,Vitória,96.2,VotingClassifier_MCCV
+29.0,Previsto,Sim,Athletico-PR,Atlético-MG,Vitória,96.89999999999999,VotingClassifier_MCCV
 29.0,Previsto,Sim,Athletico-PR,Atlético-MG,Vitória,,LogisticRegression_LOSO
-29.0,Previsto,Não,Atlético-MG,Athletico-PR,Derrota,96.7,VotingClassifier_MCCV
+29.0,Previsto,Não,Atlético-MG,Athletico-PR,Derrota,96.3,VotingClassifier_MCCV
 29.0,Previsto,Não,Atlético-MG,Athletico-PR,Derrota,,LogisticRegression_LOSO
-29.0,Previsto,Não,Bahia,Palmeiras,Vitória,41.8,VotingClassifier_MCCV
+29.0,Previsto,Não,Bahia,Palmeiras,Derrota,76.2,VotingClassifier_MCCV
 29.0,Previsto,Não,Bahia,Palmeiras,Derrota,,LogisticRegression_LOSO
-29.0,Previsto,Sim,Botafogo,Vasco,Vitória,99.5,VotingClassifier_MCCV
+29.0,Previsto,Sim,Botafogo,Vasco,Vitória,99.9,VotingClassifier_MCCV
 29.0,Previsto,Sim,Botafogo,Vasco,Vitória,,LogisticRegression_LOSO
-29.0,Previsto,Sim,Bragantino,Mirassol,Vitória,99.8,VotingClassifier_MCCV
+29.0,Previsto,Sim,Bragantino,Mirassol,Vitória,100.0,VotingClassifier_MCCV
 29.0,Previsto,Sim,Bragantino,Mirassol,Vitória,,LogisticRegression_LOSO
-29.0,Previsto,Não,Chapecoense,Vitória,Derrota,98.3,VotingClassifier_MCCV
+29.0,Previsto,Não,Chapecoense,Vitória,Derrota,99.8,VotingClassifier_MCCV
 29.0,Previsto,Não,Chapecoense,Vitória,Derrota,,LogisticRegression_LOSO
-29.0,Previsto,Não,Corinthians,Internacional,Derrota,93.4,VotingClassifier_MCCV
+29.0,Previsto,Não,Corinthians,Internacional,Derrota,52.800000000000004,VotingClassifier_MCCV
 29.0,Previsto,Não,Corinthians,Internacional,Empate,,LogisticRegression_LOSO
-29.0,Previsto,Não,Coritiba,Fluminense,Derrota,99.6,VotingClassifier_MCCV
+29.0,Previsto,Não,Coritiba,Fluminense,Derrota,99.9,VotingClassifier_MCCV
 29.0,Previsto,Não,Coritiba,Fluminense,Derrota,,LogisticRegression_LOSO
-29.0,Previsto,Sim,Cruzeiro,São Paulo,Vitória,95.89999999999999,VotingClassifier_MCCV
+29.0,Previsto,Sim,Cruzeiro,São Paulo,Vitória,99.5,VotingClassifier_MCCV
 29.0,Previsto,Sim,Cruzeiro,São Paulo,Vitória,,LogisticRegression_LOSO
-29.0,Previsto,Não,Flamengo,Santos,Vitória,76.3,VotingClassifier_MCCV
+29.0,Previsto,Não,Flamengo,Santos,Vitória,68.60000000000001,VotingClassifier_MCCV
 29.0,Previsto,Não,Flamengo,Santos,Vitória,,LogisticRegression_LOSO
-29.0,Previsto,Sim,Fluminense,Coritiba,Vitória,99.4,VotingClassifier_MCCV
+29.0,Previsto,Sim,Fluminense,Coritiba,Vitória,99.8,VotingClassifier_MCCV
 29.0,Previsto,Sim,Fluminense,Coritiba,Vitória,,LogisticRegression_LOSO
-29.0,Previsto,Não,Grêmio,Remo,Derrota,99.9,VotingClassifier_MCCV
+29.0,Previsto,Não,Grêmio,Remo,Derrota,100.0,VotingClassifier_MCCV
 29.0,Previsto,Não,Grêmio,Remo,Derrota,,LogisticRegression_LOSO
-29.0,Previsto,Sim,Internacional,Corinthians,Vitória,93.0,VotingClassifier_MCCV
+29.0,Previsto,Sim,Internacional,Corinthians,Vitória,58.099999999999994,VotingClassifier_MCCV
 29.0,Previsto,Sim,Internacional,Corinthians,Empate,,LogisticRegression_LOSO
 29.0,Previsto,Não,Mirassol,Bragantino,Derrota,100.0,VotingClassifier_MCCV
 29.0,Previsto,Não,Mirassol,Bragantino,Derrota,,LogisticRegression_LOSO
-29.0,Previsto,Sim,Palmeiras,Bahia,Derrota,42.1,VotingClassifier_MCCV
+29.0,Previsto,Sim,Palmeiras,Bahia,Vitória,76.4,VotingClassifier_MCCV
 29.0,Previsto,Sim,Palmeiras,Bahia,Vitória,,LogisticRegression_LOSO
-29.0,Previsto,Sim,Remo,Grêmio,Vitória,99.9,VotingClassifier_MCCV
+29.0,Previsto,Sim,Remo,Grêmio,Vitória,100.0,VotingClassifier_MCCV
 29.0,Previsto,Sim,Remo,Grêmio,Vitória,,LogisticRegression_LOSO
-29.0,Previsto,Sim,Santos,Flamengo,Derrota,73.0,VotingClassifier_MCCV
+29.0,Previsto,Sim,Santos,Flamengo,Derrota,67.0,VotingClassifier_MCCV
 29.0,Previsto,Sim,Santos,Flamengo,Derrota,,LogisticRegression_LOSO
-29.0,Previsto,Não,São Paulo,Cruzeiro,Derrota,95.6,VotingClassifier_MCCV
+29.0,Previsto,Não,São Paulo,Cruzeiro,Derrota,99.4,VotingClassifier_MCCV
 29.0,Previsto,Não,São Paulo,Cruzeiro,Derrota,,LogisticRegression_LOSO
-29.0,Previsto,Não,Vasco,Botafogo,Derrota,99.3,VotingClassifier_MCCV
+29.0,Previsto,Não,Vasco,Botafogo,Derrota,99.8,VotingClassifier_MCCV
 29.0,Previsto,Não,Vasco,Botafogo,Derrota,,LogisticRegression_LOSO
-29.0,Previsto,Sim,Vitória,Chapecoense,Vitória,98.1,VotingClassifier_MCCV
+29.0,Previsto,Sim,Vitória,Chapecoense,Vitória,99.5,VotingClassifier_MCCV
 29.0,Previsto,Sim,Vitória,Chapecoense,Vitória,,LogisticRegression_LOSO
 30.0,Previsto,Não,Athletico-PR,Chapecoense,Derrota,99.9,VotingClassifier_MCCV
 30.0,Previsto,Não,Athletico-PR,Chapecoense,Derrota,,LogisticRegression_LOSO
-30.0,Previsto,Sim,Atlético-MG,Santos,Vitória,99.3,VotingClassifier_MCCV
+30.0,Previsto,Sim,Atlético-MG,Santos,Vitória,100.0,VotingClassifier_MCCV
 30.0,Previsto,Sim,Atlético-MG,Santos,Vitória,,LogisticRegression_LOSO
-30.0,Previsto,Sim,Bahia,Mirassol,Vitória,93.89999999999999,VotingClassifier_MCCV
+30.0,Previsto,Sim,Bahia,Mirassol,Vitória,98.3,VotingClassifier_MCCV
 30.0,Previsto,Sim,Bahia,Mirassol,Empate,,LogisticRegression_LOSO
-30.0,Previsto,Não,Botafogo,Coritiba,Derrota,100.0,VotingClassifier_MCCV
+30.0,Previsto,Não,Botafogo,Coritiba,Derrota,99.9,VotingClassifier_MCCV
 30.0,Previsto,Não,Botafogo,Coritiba,Derrota,,LogisticRegression_LOSO
-30.0,Previsto,Sim,Bragantino,Cruzeiro,Vitória,99.5,VotingClassifier_MCCV
+30.0,Previsto,Sim,Bragantino,Cruzeiro,Vitória,99.9,VotingClassifier_MCCV
 30.0,Previsto,Sim,Bragantino,Cruzeiro,Vitória,,LogisticRegression_LOSO
-30.0,Previsto,Sim,Chapecoense,Athletico-PR,Vitória,100.0,VotingClassifier_MCCV
+30.0,Previsto,Sim,Chapecoense,Athletico-PR,Vitória,99.8,VotingClassifier_MCCV
 30.0,Previsto,Sim,Chapecoense,Athletico-PR,Vitória,,LogisticRegression_LOSO
-30.0,Previsto,Não,Corinthians,Palmeiras,Derrota,96.89999999999999,VotingClassifier_MCCV
+30.0,Previsto,Não,Corinthians,Palmeiras,Derrota,99.2,VotingClassifier_MCCV
 30.0,Previsto,Não,Corinthians,Palmeiras,Derrota,,LogisticRegression_LOSO
-30.0,Previsto,Sim,Coritiba,Botafogo,Vitória,100.0,VotingClassifier_MCCV
+30.0,Previsto,Sim,Coritiba,Botafogo,Vitória,99.9,VotingClassifier_MCCV
 30.0,Previsto,Sim,Coritiba,Botafogo,Vitória,,LogisticRegression_LOSO
-30.0,Previsto,Não,Cruzeiro,Bragantino,Derrota,99.3,VotingClassifier_MCCV
+30.0,Previsto,Não,Cruzeiro,Bragantino,Derrota,100.0,VotingClassifier_MCCV
 30.0,Previsto,Não,Cruzeiro,Bragantino,Derrota,,LogisticRegression_LOSO
-30.0,Previsto,Sim,Flamengo,Fluminense,Vitória,99.2,VotingClassifier_MCCV
+30.0,Previsto,Sim,Flamengo,Fluminense,Vitória,99.3,VotingClassifier_MCCV
 30.0,Previsto,Sim,Flamengo,Fluminense,Vitória,,LogisticRegression_LOSO
-30.0,Previsto,Não,Fluminense,Flamengo,Derrota,99.6,VotingClassifier_MCCV
+30.0,Previsto,Não,Fluminense,Flamengo,Derrota,99.1,VotingClassifier_MCCV
 30.0,Previsto,Não,Fluminense,Flamengo,Derrota,,LogisticRegression_LOSO
-30.0,Previsto,Sim,Grêmio,Internacional,Vitória,86.4,VotingClassifier_MCCV
+30.0,Previsto,Sim,Grêmio,Internacional,Vitória,98.8,VotingClassifier_MCCV
 30.0,Previsto,Sim,Grêmio,Internacional,Vitória,,LogisticRegression_LOSO
-30.0,Previsto,Não,Internacional,Grêmio,Derrota,87.9,VotingClassifier_MCCV
+30.0,Previsto,Não,Internacional,Grêmio,Derrota,99.4,VotingClassifier_MCCV
 30.0,Previsto,Não,Internacional,Grêmio,Derrota,,LogisticRegression_LOSO
-30.0,Previsto,Não,Mirassol,Bahia,Derrota,93.2,VotingClassifier_MCCV
+30.0,Previsto,Não,Mirassol,Bahia,Derrota,98.9,VotingClassifier_MCCV
 30.0,Previsto,Não,Mirassol,Bahia,Empate,,LogisticRegression_LOSO
-30.0,Previsto,Sim,Palmeiras,Corinthians,Vitória,97.7,VotingClassifier_MCCV
+30.0,Previsto,Sim,Palmeiras,Corinthians,Vitória,99.3,VotingClassifier_MCCV
 30.0,Previsto,Sim,Palmeiras,Corinthians,Vitória,,LogisticRegression_LOSO
-30.0,Previsto,Não,Remo,Vasco,Derrota,99.1,VotingClassifier_MCCV
+30.0,Previsto,Não,Remo,Vasco,Derrota,99.8,VotingClassifier_MCCV
 30.0,Previsto,Não,Remo,Vasco,Derrota,,LogisticRegression_LOSO
-30.0,Previsto,Não,Santos,Atlético-MG,Derrota,99.5,VotingClassifier_MCCV
+30.0,Previsto,Não,Santos,Atlético-MG,Derrota,100.0,VotingClassifier_MCCV
 30.0,Previsto,Não,Santos,Atlético-MG,Derrota,,LogisticRegression_LOSO
-30.0,Previsto,Sim,São Paulo,Vitória,Vitória,98.9,VotingClassifier_MCCV
+30.0,Previsto,Sim,São Paulo,Vitória,Vitória,98.0,VotingClassifier_MCCV
 30.0,Previsto,Sim,São Paulo,Vitória,Vitória,,LogisticRegression_LOSO
-30.0,Previsto,Sim,Vasco,Remo,Vitória,99.0,VotingClassifier_MCCV
+30.0,Previsto,Sim,Vasco,Remo,Vitória,99.5,VotingClassifier_MCCV
 30.0,Previsto,Sim,Vasco,Remo,Vitória,,LogisticRegression_LOSO
-30.0,Previsto,Não,Vitória,São Paulo,Derrota,99.3,VotingClassifier_MCCV
+30.0,Previsto,Não,Vitória,São Paulo,Derrota,98.3,VotingClassifier_MCCV
 30.0,Previsto,Não,Vitória,São Paulo,Derrota,,LogisticRegression_LOSO
 31.0,Previsto,Sim,Athletico-PR,Palmeiras,Vitória,100.0,VotingClassifier_MCCV
 31.0,Previsto,Sim,Athletico-PR,Palmeiras,Vitória,,LogisticRegression_LOSO
-31.0,Previsto,Sim,Atlético-MG,Coritiba,Vitória,90.3,VotingClassifier_MCCV
+31.0,Previsto,Sim,Atlético-MG,Coritiba,Vitória,73.9,VotingClassifier_MCCV
 31.0,Previsto,Sim,Atlético-MG,Coritiba,Vitória,,LogisticRegression_LOSO
-31.0,Previsto,Sim,Bahia,Flamengo,Derrota,59.0,VotingClassifier_MCCV
+31.0,Previsto,Sim,Bahia,Flamengo,Vitória,88.5,VotingClassifier_MCCV
 31.0,Previsto,Sim,Bahia,Flamengo,Vitória,,LogisticRegression_LOSO
-31.0,Previsto,Sim,Botafogo,Chapecoense,Vitória,96.1,VotingClassifier_MCCV
+31.0,Previsto,Sim,Botafogo,Chapecoense,Vitória,73.4,VotingClassifier_MCCV
 31.0,Previsto,Sim,Botafogo,Chapecoense,Vitória,,LogisticRegression_LOSO
-31.0,Previsto,Não,Bragantino,Remo,Derrota,64.0,VotingClassifier_MCCV
+31.0,Previsto,Não,Bragantino,Remo,Derrota,55.1,VotingClassifier_MCCV
 31.0,Previsto,Não,Bragantino,Remo,Vitória,,LogisticRegression_LOSO
-31.0,Previsto,Não,Chapecoense,Botafogo,Derrota,95.6,VotingClassifier_MCCV
+31.0,Previsto,Não,Chapecoense,Botafogo,Derrota,72.8,VotingClassifier_MCCV
 31.0,Previsto,Não,Chapecoense,Botafogo,Derrota,,LogisticRegression_LOSO
-31.0,Previsto,Sim,Corinthians,Vitória,Vitória,99.4,VotingClassifier_MCCV
+31.0,Previsto,Sim,Corinthians,Vitória,Vitória,100.0,VotingClassifier_MCCV
 31.0,Previsto,Sim,Corinthians,Vitória,Vitória,,LogisticRegression_LOSO
-31.0,Previsto,Não,Coritiba,Atlético-MG,Derrota,88.8,VotingClassifier_MCCV
+31.0,Previsto,Não,Coritiba,Atlético-MG,Derrota,76.5,VotingClassifier_MCCV
 31.0,Previsto,Não,Coritiba,Atlético-MG,Derrota,,LogisticRegression_LOSO
-31.0,Previsto,Não,Cruzeiro,Grêmio,Derrota,69.8,VotingClassifier_MCCV
+31.0,Previsto,Não,Cruzeiro,Grêmio,Derrota,55.2,VotingClassifier_MCCV
 31.0,Previsto,Não,Cruzeiro,Grêmio,Empate,,LogisticRegression_LOSO
-31.0,Previsto,Não,Flamengo,Bahia,Vitória,56.10000000000001,VotingClassifier_MCCV
+31.0,Previsto,Não,Flamengo,Bahia,Derrota,90.10000000000001,VotingClassifier_MCCV
 31.0,Previsto,Não,Flamengo,Bahia,Derrota,,LogisticRegression_LOSO
-31.0,Previsto,Sim,Fluminense,Santos,Vitória,99.7,VotingClassifier_MCCV
+31.0,Previsto,Sim,Fluminense,Santos,Vitória,99.9,VotingClassifier_MCCV
 31.0,Previsto,Sim,Fluminense,Santos,Vitória,,LogisticRegression_LOSO
-31.0,Previsto,Sim,Grêmio,Cruzeiro,Vitória,69.19999999999999,VotingClassifier_MCCV
+31.0,Previsto,Sim,Grêmio,Cruzeiro,Vitória,55.2,VotingClassifier_MCCV
 31.0,Previsto,Sim,Grêmio,Cruzeiro,Empate,,LogisticRegression_LOSO
-31.0,Previsto,Não,Internacional,Mirassol,Derrota,71.0,VotingClassifier_MCCV
+31.0,Previsto,Não,Internacional,Mirassol,Derrota,60.699999999999996,VotingClassifier_MCCV
 31.0,Previsto,Não,Internacional,Mirassol,Derrota,,LogisticRegression_LOSO
-31.0,Previsto,Sim,Mirassol,Internacional,Vitória,71.8,VotingClassifier_MCCV
+31.0,Previsto,Sim,Mirassol,Internacional,Vitória,59.599999999999994,VotingClassifier_MCCV
 31.0,Previsto,Sim,Mirassol,Internacional,Vitória,,LogisticRegression_LOSO
 31.0,Previsto,Não,Palmeiras,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
 31.0,Previsto,Não,Palmeiras,Athletico-PR,Derrota,,LogisticRegression_LOSO
-31.0,Previsto,Sim,Remo,Bragantino,Vitória,64.60000000000001,VotingClassifier_MCCV
+31.0,Previsto,Sim,Remo,Bragantino,Vitória,53.2,VotingClassifier_MCCV
 31.0,Previsto,Sim,Remo,Bragantino,Derrota,,LogisticRegression_LOSO
-31.0,Previsto,Não,Santos,Fluminense,Derrota,99.7,VotingClassifier_MCCV
+31.0,Previsto,Não,Santos,Fluminense,Derrota,100.0,VotingClassifier_MCCV
 31.0,Previsto,Não,Santos,Fluminense,Derrota,,LogisticRegression_LOSO
-31.0,Previsto,Sim,São Paulo,Vasco,Vitória,64.0,VotingClassifier_MCCV
+31.0,Previsto,Sim,São Paulo,Vasco,Vitória,79.4,VotingClassifier_MCCV
 31.0,Previsto,Sim,São Paulo,Vasco,Empate,,LogisticRegression_LOSO
-31.0,Previsto,Não,Vasco,São Paulo,Derrota,64.1,VotingClassifier_MCCV
+31.0,Previsto,Não,Vasco,São Paulo,Derrota,76.2,VotingClassifier_MCCV
 31.0,Previsto,Não,Vasco,São Paulo,Empate,,LogisticRegression_LOSO
-31.0,Previsto,Não,Vitória,Corinthians,Derrota,99.1,VotingClassifier_MCCV
+31.0,Previsto,Não,Vitória,Corinthians,Derrota,100.0,VotingClassifier_MCCV
 31.0,Previsto,Não,Vitória,Corinthians,Derrota,,LogisticRegression_LOSO
-32.0,Previsto,Não,Athletico-PR,Vitória,Derrota,53.1,VotingClassifier_MCCV
+32.0,Previsto,Não,Athletico-PR,Vitória,Derrota,50.4,VotingClassifier_MCCV
 32.0,Previsto,Não,Athletico-PR,Vitória,Vitória,,LogisticRegression_LOSO
-32.0,Previsto,Não,Atlético-MG,Flamengo,Derrota,99.2,VotingClassifier_MCCV
+32.0,Previsto,Não,Atlético-MG,Flamengo,Derrota,99.6,VotingClassifier_MCCV
 32.0,Previsto,Não,Atlético-MG,Flamengo,Derrota,,LogisticRegression_LOSO
-32.0,Previsto,Não,Bahia,Santos,Derrota,78.7,VotingClassifier_MCCV
+32.0,Previsto,Não,Bahia,Santos,Derrota,75.8,VotingClassifier_MCCV
 32.0,Previsto,Não,Bahia,Santos,Empate,,LogisticRegression_LOSO
-32.0,Previsto,Não,Botafogo,Internacional,Derrota,78.60000000000001,VotingClassifier_MCCV
-32.0,Previsto,Não,Botafogo,Internacional,Empate,,LogisticRegression_LOSO
-32.0,Previsto,Não,Bragantino,Palmeiras,Derrota,98.0,VotingClassifier_MCCV
+32.0,Previsto,Não,Botafogo,Internacional,Derrota,98.1,VotingClassifier_MCCV
+32.0,Previsto,Não,Botafogo,Internacional,Derrota,,LogisticRegression_LOSO
+32.0,Previsto,Não,Bragantino,Palmeiras,Derrota,98.9,VotingClassifier_MCCV
 32.0,Previsto,Não,Bragantino,Palmeiras,Derrota,,LogisticRegression_LOSO
-32.0,Previsto,Sim,Chapecoense,Fluminense,Vitória,59.699999999999996,VotingClassifier_MCCV
+32.0,Previsto,Sim,Chapecoense,Fluminense,Derrota,49.1,VotingClassifier_MCCV
 32.0,Previsto,Sim,Chapecoense,Fluminense,Empate,,LogisticRegression_LOSO
-32.0,Previsto,Não,Corinthians,Vasco,Derrota,64.3,VotingClassifier_MCCV
+32.0,Previsto,Não,Corinthians,Vasco,Derrota,64.2,VotingClassifier_MCCV
 32.0,Previsto,Não,Corinthians,Vasco,Vitória,,LogisticRegression_LOSO
-32.0,Previsto,Sim,Coritiba,Grêmio,Vitória,100.0,VotingClassifier_MCCV
+32.0,Previsto,Sim,Coritiba,Grêmio,Vitória,99.8,VotingClassifier_MCCV
 32.0,Previsto,Sim,Coritiba,Grêmio,Vitória,,LogisticRegression_LOSO
-32.0,Previsto,Sim,Cruzeiro,Remo,Vitória,91.4,VotingClassifier_MCCV
-32.0,Previsto,Sim,Cruzeiro,Remo,Vitória,,LogisticRegression_LOSO
-32.0,Previsto,Sim,Flamengo,Atlético-MG,Vitória,98.5,VotingClassifier_MCCV
+32.0,Previsto,Sim,Cruzeiro,Remo,Vitória,93.60000000000001,VotingClassifier_MCCV
+32.0,Previsto,Sim,Cruzeiro,Remo,Empate,,LogisticRegression_LOSO
+32.0,Previsto,Sim,Flamengo,Atlético-MG,Vitória,99.5,VotingClassifier_MCCV
 32.0,Previsto,Sim,Flamengo,Atlético-MG,Vitória,,LogisticRegression_LOSO
-32.0,Previsto,Não,Fluminense,Chapecoense,Derrota,57.8,VotingClassifier_MCCV
+32.0,Previsto,Não,Fluminense,Chapecoense,Vitória,49.9,VotingClassifier_MCCV
 32.0,Previsto,Não,Fluminense,Chapecoense,Empate,,LogisticRegression_LOSO
-32.0,Previsto,Não,Grêmio,Coritiba,Derrota,99.9,VotingClassifier_MCCV
+32.0,Previsto,Não,Grêmio,Coritiba,Derrota,99.7,VotingClassifier_MCCV
 32.0,Previsto,Não,Grêmio,Coritiba,Derrota,,LogisticRegression_LOSO
-32.0,Previsto,Sim,Internacional,Botafogo,Vitória,76.9,VotingClassifier_MCCV
-32.0,Previsto,Sim,Internacional,Botafogo,Empate,,LogisticRegression_LOSO
-32.0,Previsto,Sim,Mirassol,São Paulo,Vitória,99.8,VotingClassifier_MCCV
+32.0,Previsto,Sim,Internacional,Botafogo,Vitória,97.8,VotingClassifier_MCCV
+32.0,Previsto,Sim,Internacional,Botafogo,Vitória,,LogisticRegression_LOSO
+32.0,Previsto,Sim,Mirassol,São Paulo,Vitória,99.9,VotingClassifier_MCCV
 32.0,Previsto,Sim,Mirassol,São Paulo,Vitória,,LogisticRegression_LOSO
-32.0,Previsto,Sim,Palmeiras,Bragantino,Vitória,98.0,VotingClassifier_MCCV
+32.0,Previsto,Sim,Palmeiras,Bragantino,Vitória,98.5,VotingClassifier_MCCV
 32.0,Previsto,Sim,Palmeiras,Bragantino,Vitória,,LogisticRegression_LOSO
-32.0,Previsto,Não,Remo,Cruzeiro,Derrota,90.3,VotingClassifier_MCCV
-32.0,Previsto,Não,Remo,Cruzeiro,Derrota,,LogisticRegression_LOSO
-32.0,Previsto,Sim,Santos,Bahia,Vitória,79.4,VotingClassifier_MCCV
+32.0,Previsto,Não,Remo,Cruzeiro,Derrota,91.7,VotingClassifier_MCCV
+32.0,Previsto,Não,Remo,Cruzeiro,Empate,,LogisticRegression_LOSO
+32.0,Previsto,Sim,Santos,Bahia,Vitória,75.4,VotingClassifier_MCCV
 32.0,Previsto,Sim,Santos,Bahia,Empate,,LogisticRegression_LOSO
 32.0,Previsto,Não,São Paulo,Mirassol,Derrota,99.9,VotingClassifier_MCCV
 32.0,Previsto,Não,São Paulo,Mirassol,Derrota,,LogisticRegression_LOSO
-32.0,Previsto,Sim,Vasco,Corinthians,Vitória,64.8,VotingClassifier_MCCV
+32.0,Previsto,Sim,Vasco,Corinthians,Vitória,60.9,VotingClassifier_MCCV
 32.0,Previsto,Sim,Vasco,Corinthians,Derrota,,LogisticRegression_LOSO
-32.0,Previsto,Sim,Vitória,Athletico-PR,Vitória,57.699999999999996,VotingClassifier_MCCV
+32.0,Previsto,Sim,Vitória,Athletico-PR,Vitória,50.2,VotingClassifier_MCCV
 32.0,Previsto,Sim,Vitória,Athletico-PR,Derrota,,LogisticRegression_LOSO
-33.0,Previsto,Não,Athletico-PR,Grêmio,Derrota,98.4,VotingClassifier_MCCV
+33.0,Previsto,Não,Athletico-PR,Grêmio,Derrota,94.5,VotingClassifier_MCCV
 33.0,Previsto,Não,Athletico-PR,Grêmio,Derrota,,LogisticRegression_LOSO
-33.0,Previsto,Sim,Atlético-MG,Cruzeiro,Derrota,44.6,VotingClassifier_MCCV
+33.0,Previsto,Sim,Atlético-MG,Cruzeiro,Vitória,86.8,VotingClassifier_MCCV
 33.0,Previsto,Sim,Atlético-MG,Cruzeiro,Vitória,,LogisticRegression_LOSO
-33.0,Previsto,Sim,Bahia,São Paulo,Vitória,94.6,VotingClassifier_MCCV
-33.0,Previsto,Sim,Bahia,São Paulo,Vitória,,LogisticRegression_LOSO
-33.0,Previsto,Não,Botafogo,Remo,Derrota,99.9,VotingClassifier_MCCV
+33.0,Previsto,Sim,Bahia,São Paulo,Vitória,95.89999999999999,VotingClassifier_MCCV
+33.0,Previsto,Sim,Bahia,São Paulo,Empate,,LogisticRegression_LOSO
+33.0,Previsto,Não,Botafogo,Remo,Derrota,100.0,VotingClassifier_MCCV
 33.0,Previsto,Não,Botafogo,Remo,Derrota,,LogisticRegression_LOSO
-33.0,Previsto,Sim,Bragantino,Chapecoense,Vitória,99.9,VotingClassifier_MCCV
+33.0,Previsto,Sim,Bragantino,Chapecoense,Vitória,100.0,VotingClassifier_MCCV
 33.0,Previsto,Sim,Bragantino,Chapecoense,Vitória,,LogisticRegression_LOSO
-33.0,Previsto,Não,Chapecoense,Bragantino,Derrota,99.9,VotingClassifier_MCCV
+33.0,Previsto,Não,Chapecoense,Bragantino,Derrota,100.0,VotingClassifier_MCCV
 33.0,Previsto,Não,Chapecoense,Bragantino,Derrota,,LogisticRegression_LOSO
-33.0,Previsto,Sim,Corinthians,Mirassol,Vitória,96.6,VotingClassifier_MCCV
+33.0,Previsto,Sim,Corinthians,Mirassol,Vitória,98.7,VotingClassifier_MCCV
 33.0,Previsto,Sim,Corinthians,Mirassol,Vitória,,LogisticRegression_LOSO
-33.0,Previsto,Sim,Coritiba,Vitória,Vitória,99.6,VotingClassifier_MCCV
+33.0,Previsto,Sim,Coritiba,Vitória,Vitória,97.8,VotingClassifier_MCCV
 33.0,Previsto,Sim,Coritiba,Vitória,Vitória,,LogisticRegression_LOSO
-33.0,Previsto,Não,Cruzeiro,Atlético-MG,Vitória,48.199999999999996,VotingClassifier_MCCV
+33.0,Previsto,Não,Cruzeiro,Atlético-MG,Derrota,87.4,VotingClassifier_MCCV
 33.0,Previsto,Não,Cruzeiro,Atlético-MG,Derrota,,LogisticRegression_LOSO
-33.0,Previsto,Não,Flamengo,Vasco,Derrota,95.89999999999999,VotingClassifier_MCCV
+33.0,Previsto,Não,Flamengo,Vasco,Derrota,99.8,VotingClassifier_MCCV
 33.0,Previsto,Não,Flamengo,Vasco,Derrota,,LogisticRegression_LOSO
-33.0,Previsto,Sim,Fluminense,Internacional,Vitória,99.6,VotingClassifier_MCCV
+33.0,Previsto,Sim,Fluminense,Internacional,Vitória,99.8,VotingClassifier_MCCV
 33.0,Previsto,Sim,Fluminense,Internacional,Vitória,,LogisticRegression_LOSO
-33.0,Previsto,Sim,Grêmio,Athletico-PR,Vitória,98.7,VotingClassifier_MCCV
+33.0,Previsto,Sim,Grêmio,Athletico-PR,Vitória,95.1,VotingClassifier_MCCV
 33.0,Previsto,Sim,Grêmio,Athletico-PR,Vitória,,LogisticRegression_LOSO
-33.0,Previsto,Não,Internacional,Fluminense,Derrota,99.8,VotingClassifier_MCCV
+33.0,Previsto,Não,Internacional,Fluminense,Derrota,99.7,VotingClassifier_MCCV
 33.0,Previsto,Não,Internacional,Fluminense,Derrota,,LogisticRegression_LOSO
-33.0,Previsto,Não,Mirassol,Corinthians,Derrota,97.0,VotingClassifier_MCCV
+33.0,Previsto,Não,Mirassol,Corinthians,Derrota,99.1,VotingClassifier_MCCV
 33.0,Previsto,Não,Mirassol,Corinthians,Derrota,,LogisticRegression_LOSO
-33.0,Previsto,Não,Palmeiras,Santos,Derrota,98.9,VotingClassifier_MCCV
+33.0,Previsto,Não,Palmeiras,Santos,Derrota,99.8,VotingClassifier_MCCV
 33.0,Previsto,Não,Palmeiras,Santos,Derrota,,LogisticRegression_LOSO
 33.0,Previsto,Sim,Remo,Botafogo,Vitória,100.0,VotingClassifier_MCCV
 33.0,Previsto,Sim,Remo,Botafogo,Vitória,,LogisticRegression_LOSO
-33.0,Previsto,Sim,Santos,Palmeiras,Vitória,99.0,VotingClassifier_MCCV
+33.0,Previsto,Sim,Santos,Palmeiras,Vitória,99.4,VotingClassifier_MCCV
 33.0,Previsto,Sim,Santos,Palmeiras,Vitória,,LogisticRegression_LOSO
-33.0,Previsto,Não,São Paulo,Bahia,Derrota,96.3,VotingClassifier_MCCV
-33.0,Previsto,Não,São Paulo,Bahia,Derrota,,LogisticRegression_LOSO
-33.0,Previsto,Sim,Vasco,Flamengo,Vitória,96.1,VotingClassifier_MCCV
+33.0,Previsto,Não,São Paulo,Bahia,Derrota,95.5,VotingClassifier_MCCV
+33.0,Previsto,Não,São Paulo,Bahia,Empate,,LogisticRegression_LOSO
+33.0,Previsto,Sim,Vasco,Flamengo,Vitória,99.8,VotingClassifier_MCCV
 33.0,Previsto,Sim,Vasco,Flamengo,Vitória,,LogisticRegression_LOSO
-33.0,Previsto,Não,Vitória,Coritiba,Derrota,99.9,VotingClassifier_MCCV
+33.0,Previsto,Não,Vitória,Coritiba,Derrota,97.2,VotingClassifier_MCCV
 33.0,Previsto,Não,Vitória,Coritiba,Derrota,,LogisticRegression_LOSO
-34.0,Previsto,Sim,Athletico-PR,Vasco,Vitória,99.9,VotingClassifier_MCCV
+34.0,Previsto,Sim,Athletico-PR,Vasco,Vitória,99.7,VotingClassifier_MCCV
 34.0,Previsto,Sim,Athletico-PR,Vasco,Vitória,,LogisticRegression_LOSO
-34.0,Previsto,Não,Atlético-MG,Botafogo,Derrota,98.2,VotingClassifier_MCCV
+34.0,Previsto,Não,Atlético-MG,Botafogo,Derrota,97.8,VotingClassifier_MCCV
 34.0,Previsto,Não,Atlético-MG,Botafogo,Derrota,,LogisticRegression_LOSO
-34.0,Previsto,Não,Bahia,Cruzeiro,Derrota,68.89999999999999,VotingClassifier_MCCV
+34.0,Previsto,Não,Bahia,Cruzeiro,Derrota,73.2,VotingClassifier_MCCV
 34.0,Previsto,Não,Bahia,Cruzeiro,Empate,,LogisticRegression_LOSO
-34.0,Previsto,Sim,Botafogo,Atlético-MG,Vitória,98.2,VotingClassifier_MCCV
+34.0,Previsto,Sim,Botafogo,Atlético-MG,Vitória,97.89999999999999,VotingClassifier_MCCV
 34.0,Previsto,Sim,Botafogo,Atlético-MG,Vitória,,LogisticRegression_LOSO
-34.0,Previsto,Sim,Bragantino,Santos,Vitória,99.8,VotingClassifier_MCCV
+34.0,Previsto,Sim,Bragantino,Santos,Vitória,100.0,VotingClassifier_MCCV
 34.0,Previsto,Sim,Bragantino,Santos,Vitória,,LogisticRegression_LOSO
-34.0,Previsto,Sim,Chapecoense,Mirassol,Vitória,89.3,VotingClassifier_MCCV
+34.0,Previsto,Sim,Chapecoense,Mirassol,Vitória,95.7,VotingClassifier_MCCV
 34.0,Previsto,Sim,Chapecoense,Mirassol,Vitória,,LogisticRegression_LOSO
-34.0,Previsto,Não,Corinthians,São Paulo,Vitória,64.0,VotingClassifier_MCCV
+34.0,Previsto,Não,Corinthians,São Paulo,Vitória,57.3,VotingClassifier_MCCV
 34.0,Previsto,Não,Corinthians,São Paulo,Vitória,,LogisticRegression_LOSO
-34.0,Previsto,Não,Coritiba,Internacional,Derrota,96.89999999999999,VotingClassifier_MCCV
+34.0,Previsto,Não,Coritiba,Internacional,Derrota,99.8,VotingClassifier_MCCV
 34.0,Previsto,Não,Coritiba,Internacional,Derrota,,LogisticRegression_LOSO
-34.0,Previsto,Sim,Cruzeiro,Bahia,Vitória,67.4,VotingClassifier_MCCV
+34.0,Previsto,Sim,Cruzeiro,Bahia,Vitória,73.9,VotingClassifier_MCCV
 34.0,Previsto,Sim,Cruzeiro,Bahia,Empate,,LogisticRegression_LOSO
 34.0,Previsto,Sim,Flamengo,Grêmio,Vitória,100.0,VotingClassifier_MCCV
 34.0,Previsto,Sim,Flamengo,Grêmio,Vitória,,LogisticRegression_LOSO
-34.0,Previsto,Não,Fluminense,Vitória,Derrota,87.5,VotingClassifier_MCCV
+34.0,Previsto,Não,Fluminense,Vitória,Derrota,94.19999999999999,VotingClassifier_MCCV
 34.0,Previsto,Não,Fluminense,Vitória,Derrota,,LogisticRegression_LOSO
 34.0,Previsto,Não,Grêmio,Flamengo,Derrota,100.0,VotingClassifier_MCCV
 34.0,Previsto,Não,Grêmio,Flamengo,Derrota,,LogisticRegression_LOSO
-34.0,Previsto,Sim,Internacional,Coritiba,Vitória,96.0,VotingClassifier_MCCV
+34.0,Previsto,Sim,Internacional,Coritiba,Vitória,99.8,VotingClassifier_MCCV
 34.0,Previsto,Sim,Internacional,Coritiba,Vitória,,LogisticRegression_LOSO
-34.0,Previsto,Não,Mirassol,Chapecoense,Derrota,89.2,VotingClassifier_MCCV
+34.0,Previsto,Não,Mirassol,Chapecoense,Derrota,95.39999999999999,VotingClassifier_MCCV
 34.0,Previsto,Não,Mirassol,Chapecoense,Derrota,,LogisticRegression_LOSO
-34.0,Previsto,Sim,Palmeiras,Remo,Derrota,77.3,VotingClassifier_MCCV
+34.0,Previsto,Sim,Palmeiras,Remo,Vitória,71.2,VotingClassifier_MCCV
 34.0,Previsto,Sim,Palmeiras,Remo,Vitória,,LogisticRegression_LOSO
-34.0,Previsto,Não,Remo,Palmeiras,Vitória,78.60000000000001,VotingClassifier_MCCV
-34.0,Previsto,Não,Remo,Palmeiras,Vitória,,LogisticRegression_LOSO
+34.0,Previsto,Não,Remo,Palmeiras,Derrota,70.19999999999999,VotingClassifier_MCCV
+34.0,Previsto,Não,Remo,Palmeiras,Derrota,,LogisticRegression_LOSO
 34.0,Previsto,Não,Santos,Bragantino,Derrota,100.0,VotingClassifier_MCCV
 34.0,Previsto,Não,Santos,Bragantino,Derrota,,LogisticRegression_LOSO
-34.0,Previsto,Sim,São Paulo,Corinthians,Derrota,62.7,VotingClassifier_MCCV
+34.0,Previsto,Sim,São Paulo,Corinthians,Derrota,55.00000000000001,VotingClassifier_MCCV
 34.0,Previsto,Sim,São Paulo,Corinthians,Derrota,,LogisticRegression_LOSO
-34.0,Previsto,Não,Vasco,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
+34.0,Previsto,Não,Vasco,Athletico-PR,Derrota,99.5,VotingClassifier_MCCV
 34.0,Previsto,Não,Vasco,Athletico-PR,Derrota,,LogisticRegression_LOSO
-34.0,Previsto,Sim,Vitória,Fluminense,Vitória,89.5,VotingClassifier_MCCV
+34.0,Previsto,Sim,Vitória,Fluminense,Vitória,94.6,VotingClassifier_MCCV
 34.0,Previsto,Sim,Vitória,Fluminense,Vitória,,LogisticRegression_LOSO
-35.0,Previsto,Não,Athletico-PR,Flamengo,Derrota,98.4,VotingClassifier_MCCV
+35.0,Previsto,Não,Athletico-PR,Flamengo,Derrota,98.8,VotingClassifier_MCCV
 35.0,Previsto,Não,Athletico-PR,Flamengo,Derrota,,LogisticRegression_LOSO
-35.0,Previsto,Não,Atlético-MG,Mirassol,Derrota,99.9,VotingClassifier_MCCV
+35.0,Previsto,Não,Atlético-MG,Mirassol,Derrota,99.3,VotingClassifier_MCCV
 35.0,Previsto,Não,Atlético-MG,Mirassol,Derrota,,LogisticRegression_LOSO
-35.0,Previsto,Não,Bahia,Grêmio,Derrota,94.8,VotingClassifier_MCCV
-35.0,Previsto,Não,Bahia,Grêmio,Derrota,,LogisticRegression_LOSO
-35.0,Previsto,Não,Botafogo,Corinthians,Derrota,92.10000000000001,VotingClassifier_MCCV
-35.0,Previsto,Não,Botafogo,Corinthians,Empate,,LogisticRegression_LOSO
-35.0,Previsto,Não,Bragantino,Vitória,Vitória,49.9,VotingClassifier_MCCV
+35.0,Previsto,Não,Bahia,Grêmio,Derrota,87.4,VotingClassifier_MCCV
+35.0,Previsto,Não,Bahia,Grêmio,Empate,,LogisticRegression_LOSO
+35.0,Previsto,Não,Botafogo,Corinthians,Derrota,95.3,VotingClassifier_MCCV
+35.0,Previsto,Não,Botafogo,Corinthians,Derrota,,LogisticRegression_LOSO
+35.0,Previsto,Não,Bragantino,Vitória,Derrota,83.8,VotingClassifier_MCCV
 35.0,Previsto,Não,Bragantino,Vitória,Vitória,,LogisticRegression_LOSO
-35.0,Previsto,Não,Chapecoense,Remo,Derrota,94.8,VotingClassifier_MCCV
-35.0,Previsto,Não,Chapecoense,Remo,Derrota,,LogisticRegression_LOSO
-35.0,Previsto,Sim,Corinthians,Botafogo,Vitória,92.2,VotingClassifier_MCCV
-35.0,Previsto,Sim,Corinthians,Botafogo,Empate,,LogisticRegression_LOSO
-35.0,Previsto,Sim,Coritiba,Santos,Vitória,99.8,VotingClassifier_MCCV
+35.0,Previsto,Não,Chapecoense,Remo,Derrota,58.8,VotingClassifier_MCCV
+35.0,Previsto,Não,Chapecoense,Remo,Empate,,LogisticRegression_LOSO
+35.0,Previsto,Sim,Corinthians,Botafogo,Vitória,96.2,VotingClassifier_MCCV
+35.0,Previsto,Sim,Corinthians,Botafogo,Vitória,,LogisticRegression_LOSO
+35.0,Previsto,Sim,Coritiba,Santos,Vitória,100.0,VotingClassifier_MCCV
 35.0,Previsto,Sim,Coritiba,Santos,Vitória,,LogisticRegression_LOSO
-35.0,Previsto,Sim,Cruzeiro,Palmeiras,Vitória,66.0,VotingClassifier_MCCV
+35.0,Previsto,Sim,Cruzeiro,Palmeiras,Vitória,72.0,VotingClassifier_MCCV
 35.0,Previsto,Sim,Cruzeiro,Palmeiras,Vitória,,LogisticRegression_LOSO
-35.0,Previsto,Sim,Flamengo,Athletico-PR,Vitória,98.4,VotingClassifier_MCCV
+35.0,Previsto,Sim,Flamengo,Athletico-PR,Vitória,98.9,VotingClassifier_MCCV
 35.0,Previsto,Sim,Flamengo,Athletico-PR,Vitória,,LogisticRegression_LOSO
-35.0,Previsto,Não,Fluminense,São Paulo,Derrota,49.1,VotingClassifier_MCCV
+35.0,Previsto,Não,Fluminense,São Paulo,Vitória,48.4,VotingClassifier_MCCV
 35.0,Previsto,Não,Fluminense,São Paulo,Vitória,,LogisticRegression_LOSO
-35.0,Previsto,Sim,Grêmio,Bahia,Vitória,94.8,VotingClassifier_MCCV
-35.0,Previsto,Sim,Grêmio,Bahia,Vitória,,LogisticRegression_LOSO
-35.0,Previsto,Não,Internacional,Vasco,Derrota,99.3,VotingClassifier_MCCV
+35.0,Previsto,Sim,Grêmio,Bahia,Vitória,90.10000000000001,VotingClassifier_MCCV
+35.0,Previsto,Sim,Grêmio,Bahia,Empate,,LogisticRegression_LOSO
+35.0,Previsto,Não,Internacional,Vasco,Derrota,96.7,VotingClassifier_MCCV
 35.0,Previsto,Não,Internacional,Vasco,Derrota,,LogisticRegression_LOSO
-35.0,Previsto,Sim,Mirassol,Atlético-MG,Vitória,99.7,VotingClassifier_MCCV
+35.0,Previsto,Sim,Mirassol,Atlético-MG,Vitória,99.1,VotingClassifier_MCCV
 35.0,Previsto,Sim,Mirassol,Atlético-MG,Vitória,,LogisticRegression_LOSO
-35.0,Previsto,Não,Palmeiras,Cruzeiro,Derrota,66.8,VotingClassifier_MCCV
+35.0,Previsto,Não,Palmeiras,Cruzeiro,Derrota,72.2,VotingClassifier_MCCV
 35.0,Previsto,Não,Palmeiras,Cruzeiro,Derrota,,LogisticRegression_LOSO
-35.0,Previsto,Sim,Remo,Chapecoense,Vitória,93.0,VotingClassifier_MCCV
-35.0,Previsto,Sim,Remo,Chapecoense,Vitória,,LogisticRegression_LOSO
-35.0,Previsto,Não,Santos,Coritiba,Derrota,100.0,VotingClassifier_MCCV
+35.0,Previsto,Sim,Remo,Chapecoense,Vitória,60.699999999999996,VotingClassifier_MCCV
+35.0,Previsto,Sim,Remo,Chapecoense,Empate,,LogisticRegression_LOSO
+35.0,Previsto,Não,Santos,Coritiba,Derrota,99.9,VotingClassifier_MCCV
 35.0,Previsto,Não,Santos,Coritiba,Derrota,,LogisticRegression_LOSO
-35.0,Previsto,Sim,São Paulo,Fluminense,Vitória,49.8,VotingClassifier_MCCV
+35.0,Previsto,Sim,São Paulo,Fluminense,Derrota,48.5,VotingClassifier_MCCV
 35.0,Previsto,Sim,São Paulo,Fluminense,Derrota,,LogisticRegression_LOSO
-35.0,Previsto,Sim,Vasco,Internacional,Vitória,99.3,VotingClassifier_MCCV
+35.0,Previsto,Sim,Vasco,Internacional,Vitória,97.0,VotingClassifier_MCCV
 35.0,Previsto,Sim,Vasco,Internacional,Vitória,,LogisticRegression_LOSO
-35.0,Previsto,Sim,Vitória,Bragantino,Derrota,45.7,VotingClassifier_MCCV
+35.0,Previsto,Sim,Vitória,Bragantino,Vitória,84.2,VotingClassifier_MCCV
 35.0,Previsto,Sim,Vitória,Bragantino,Derrota,,LogisticRegression_LOSO
-36.0,Previsto,Sim,Athletico-PR,Remo,Vitória,99.9,VotingClassifier_MCCV
+36.0,Previsto,Sim,Athletico-PR,Remo,Vitória,99.8,VotingClassifier_MCCV
 36.0,Previsto,Sim,Athletico-PR,Remo,Vitória,,LogisticRegression_LOSO
-36.0,Previsto,Sim,Atlético-MG,Corinthians,Vitória,96.89999999999999,VotingClassifier_MCCV
+36.0,Previsto,Sim,Atlético-MG,Corinthians,Vitória,99.2,VotingClassifier_MCCV
 36.0,Previsto,Sim,Atlético-MG,Corinthians,Vitória,,LogisticRegression_LOSO
-36.0,Previsto,Sim,Bahia,Coritiba,Vitória,46.0,VotingClassifier_MCCV
+36.0,Previsto,Sim,Bahia,Coritiba,Vitória,76.1,VotingClassifier_MCCV
 36.0,Previsto,Sim,Bahia,Coritiba,Derrota,,LogisticRegression_LOSO
-36.0,Previsto,Sim,Botafogo,São Paulo,Vitória,98.8,VotingClassifier_MCCV
+36.0,Previsto,Sim,Botafogo,São Paulo,Vitória,99.5,VotingClassifier_MCCV
 36.0,Previsto,Sim,Botafogo,São Paulo,Vitória,,LogisticRegression_LOSO
 36.0,Previsto,Sim,Bragantino,Vasco,Vitória,99.9,VotingClassifier_MCCV
 36.0,Previsto,Sim,Bragantino,Vasco,Vitória,,LogisticRegression_LOSO
-36.0,Previsto,Sim,Chapecoense,Cruzeiro,Vitória,99.8,VotingClassifier_MCCV
+36.0,Previsto,Sim,Chapecoense,Cruzeiro,Vitória,100.0,VotingClassifier_MCCV
 36.0,Previsto,Sim,Chapecoense,Cruzeiro,Vitória,,LogisticRegression_LOSO
-36.0,Previsto,Não,Corinthians,Atlético-MG,Derrota,97.5,VotingClassifier_MCCV
+36.0,Previsto,Não,Corinthians,Atlético-MG,Derrota,99.4,VotingClassifier_MCCV
 36.0,Previsto,Não,Corinthians,Atlético-MG,Derrota,,LogisticRegression_LOSO
-36.0,Previsto,Não,Coritiba,Bahia,Derrota,43.8,VotingClassifier_MCCV
+36.0,Previsto,Não,Coritiba,Bahia,Derrota,77.8,VotingClassifier_MCCV
 36.0,Previsto,Não,Coritiba,Bahia,Vitória,,LogisticRegression_LOSO
-36.0,Previsto,Não,Cruzeiro,Chapecoense,Derrota,99.7,VotingClassifier_MCCV
+36.0,Previsto,Não,Cruzeiro,Chapecoense,Derrota,100.0,VotingClassifier_MCCV
 36.0,Previsto,Não,Cruzeiro,Chapecoense,Derrota,,LogisticRegression_LOSO
-36.0,Previsto,Não,Flamengo,Palmeiras,Derrota,93.89999999999999,VotingClassifier_MCCV
+36.0,Previsto,Não,Flamengo,Palmeiras,Derrota,98.7,VotingClassifier_MCCV
 36.0,Previsto,Não,Flamengo,Palmeiras,Derrota,,LogisticRegression_LOSO
-36.0,Previsto,Sim,Fluminense,Mirassol,Vitória,88.9,VotingClassifier_MCCV
+36.0,Previsto,Sim,Fluminense,Mirassol,Vitória,74.7,VotingClassifier_MCCV
 36.0,Previsto,Sim,Fluminense,Mirassol,Vitória,,LogisticRegression_LOSO
-36.0,Previsto,Não,Grêmio,Santos,Derrota,50.2,VotingClassifier_MCCV
+36.0,Previsto,Não,Grêmio,Santos,Derrota,83.89999999999999,VotingClassifier_MCCV
 36.0,Previsto,Não,Grêmio,Santos,Derrota,,LogisticRegression_LOSO
-36.0,Previsto,Sim,Internacional,Vitória,Vitória,98.1,VotingClassifier_MCCV
+36.0,Previsto,Sim,Internacional,Vitória,Vitória,99.9,VotingClassifier_MCCV
 36.0,Previsto,Sim,Internacional,Vitória,Vitória,,LogisticRegression_LOSO
-36.0,Previsto,Não,Mirassol,Fluminense,Derrota,89.7,VotingClassifier_MCCV
+36.0,Previsto,Não,Mirassol,Fluminense,Derrota,78.9,VotingClassifier_MCCV
 36.0,Previsto,Não,Mirassol,Fluminense,Derrota,,LogisticRegression_LOSO
-36.0,Previsto,Sim,Palmeiras,Flamengo,Vitória,94.39999999999999,VotingClassifier_MCCV
+36.0,Previsto,Sim,Palmeiras,Flamengo,Vitória,99.0,VotingClassifier_MCCV
 36.0,Previsto,Sim,Palmeiras,Flamengo,Vitória,,LogisticRegression_LOSO
-36.0,Previsto,Não,Remo,Athletico-PR,Derrota,99.4,VotingClassifier_MCCV
+36.0,Previsto,Não,Remo,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
 36.0,Previsto,Não,Remo,Athletico-PR,Derrota,,LogisticRegression_LOSO
-36.0,Previsto,Sim,Santos,Grêmio,Vitória,53.6,VotingClassifier_MCCV
+36.0,Previsto,Sim,Santos,Grêmio,Vitória,86.9,VotingClassifier_MCCV
 36.0,Previsto,Sim,Santos,Grêmio,Vitória,,LogisticRegression_LOSO
-36.0,Previsto,Não,São Paulo,Botafogo,Derrota,98.9,VotingClassifier_MCCV
+36.0,Previsto,Não,São Paulo,Botafogo,Derrota,99.3,VotingClassifier_MCCV
 36.0,Previsto,Não,São Paulo,Botafogo,Derrota,,LogisticRegression_LOSO
-36.0,Previsto,Não,Vasco,Bragantino,Derrota,99.9,VotingClassifier_MCCV
+36.0,Previsto,Não,Vasco,Bragantino,Derrota,100.0,VotingClassifier_MCCV
 36.0,Previsto,Não,Vasco,Bragantino,Derrota,,LogisticRegression_LOSO
-36.0,Previsto,Não,Vitória,Internacional,Derrota,98.2,VotingClassifier_MCCV
+36.0,Previsto,Não,Vitória,Internacional,Derrota,99.9,VotingClassifier_MCCV
 36.0,Previsto,Não,Vitória,Internacional,Derrota,,LogisticRegression_LOSO
-37.0,Previsto,Não,Athletico-PR,Mirassol,Derrota,76.5,VotingClassifier_MCCV
+37.0,Previsto,Não,Athletico-PR,Mirassol,Empate,48.5,VotingClassifier_MCCV
 37.0,Previsto,Não,Athletico-PR,Mirassol,Derrota,,LogisticRegression_LOSO
-37.0,Previsto,Sim,Atlético-MG,Vasco,Vitória,98.4,VotingClassifier_MCCV
+37.0,Previsto,Sim,Atlético-MG,Vasco,Vitória,97.8,VotingClassifier_MCCV
 37.0,Previsto,Sim,Atlético-MG,Vasco,Vitória,,LogisticRegression_LOSO
-37.0,Previsto,Não,Bahia,Botafogo,Derrota,95.19999999999999,VotingClassifier_MCCV
+37.0,Previsto,Não,Bahia,Botafogo,Derrota,92.0,VotingClassifier_MCCV
 37.0,Previsto,Não,Bahia,Botafogo,Derrota,,LogisticRegression_LOSO
-37.0,Previsto,Sim,Botafogo,Bahia,Vitória,96.1,VotingClassifier_MCCV
+37.0,Previsto,Sim,Botafogo,Bahia,Vitória,93.10000000000001,VotingClassifier_MCCV
 37.0,Previsto,Sim,Botafogo,Bahia,Vitória,,LogisticRegression_LOSO
-37.0,Previsto,Não,Bragantino,Internacional,Empate,52.5,VotingClassifier_MCCV
+37.0,Previsto,Não,Bragantino,Internacional,Derrota,69.0,VotingClassifier_MCCV
 37.0,Previsto,Não,Bragantino,Internacional,Empate,,LogisticRegression_LOSO
-37.0,Previsto,Sim,Chapecoense,Palmeiras,Vitória,97.39999999999999,VotingClassifier_MCCV
+37.0,Previsto,Sim,Chapecoense,Palmeiras,Vitória,96.2,VotingClassifier_MCCV
 37.0,Previsto,Sim,Chapecoense,Palmeiras,Vitória,,LogisticRegression_LOSO
-37.0,Previsto,Sim,Corinthians,Grêmio,Empate,45.7,VotingClassifier_MCCV
+37.0,Previsto,Sim,Corinthians,Grêmio,Vitória,54.900000000000006,VotingClassifier_MCCV
 37.0,Previsto,Sim,Corinthians,Grêmio,Vitória,,LogisticRegression_LOSO
-37.0,Previsto,Sim,Coritiba,Flamengo,Vitória,89.1,VotingClassifier_MCCV
+37.0,Previsto,Sim,Coritiba,Flamengo,Vitória,97.7,VotingClassifier_MCCV
 37.0,Previsto,Sim,Coritiba,Flamengo,Vitória,,LogisticRegression_LOSO
-37.0,Previsto,Não,Cruzeiro,Fluminense,Derrota,98.3,VotingClassifier_MCCV
+37.0,Previsto,Não,Cruzeiro,Fluminense,Derrota,85.8,VotingClassifier_MCCV
 37.0,Previsto,Não,Cruzeiro,Fluminense,Derrota,,LogisticRegression_LOSO
-37.0,Previsto,Não,Flamengo,Coritiba,Derrota,87.6,VotingClassifier_MCCV
+37.0,Previsto,Não,Flamengo,Coritiba,Derrota,97.0,VotingClassifier_MCCV
 37.0,Previsto,Não,Flamengo,Coritiba,Derrota,,LogisticRegression_LOSO
-37.0,Previsto,Sim,Fluminense,Cruzeiro,Vitória,97.5,VotingClassifier_MCCV
+37.0,Previsto,Sim,Fluminense,Cruzeiro,Vitória,84.39999999999999,VotingClassifier_MCCV
 37.0,Previsto,Sim,Fluminense,Cruzeiro,Vitória,,LogisticRegression_LOSO
-37.0,Previsto,Não,Grêmio,Corinthians,Empate,46.800000000000004,VotingClassifier_MCCV
+37.0,Previsto,Não,Grêmio,Corinthians,Derrota,55.900000000000006,VotingClassifier_MCCV
 37.0,Previsto,Não,Grêmio,Corinthians,Derrota,,LogisticRegression_LOSO
-37.0,Previsto,Sim,Internacional,Bragantino,Empate,51.800000000000004,VotingClassifier_MCCV
+37.0,Previsto,Sim,Internacional,Bragantino,Vitória,63.4,VotingClassifier_MCCV
 37.0,Previsto,Sim,Internacional,Bragantino,Empate,,LogisticRegression_LOSO
-37.0,Previsto,Sim,Mirassol,Athletico-PR,Vitória,80.30000000000001,VotingClassifier_MCCV
+37.0,Previsto,Sim,Mirassol,Athletico-PR,Vitória,49.1,VotingClassifier_MCCV
 37.0,Previsto,Sim,Mirassol,Athletico-PR,Vitória,,LogisticRegression_LOSO
-37.0,Previsto,Não,Palmeiras,Chapecoense,Derrota,97.1,VotingClassifier_MCCV
+37.0,Previsto,Não,Palmeiras,Chapecoense,Derrota,95.6,VotingClassifier_MCCV
 37.0,Previsto,Não,Palmeiras,Chapecoense,Derrota,,LogisticRegression_LOSO
-37.0,Previsto,Não,Remo,São Paulo,Derrota,98.4,VotingClassifier_MCCV
+37.0,Previsto,Não,Remo,São Paulo,Derrota,99.8,VotingClassifier_MCCV
 37.0,Previsto,Não,Remo,São Paulo,Derrota,,LogisticRegression_LOSO
-37.0,Previsto,Não,Santos,Vitória,Derrota,97.7,VotingClassifier_MCCV
+37.0,Previsto,Não,Santos,Vitória,Derrota,99.2,VotingClassifier_MCCV
 37.0,Previsto,Não,Santos,Vitória,Derrota,,LogisticRegression_LOSO
-37.0,Previsto,Sim,São Paulo,Remo,Vitória,98.5,VotingClassifier_MCCV
+37.0,Previsto,Sim,São Paulo,Remo,Vitória,99.7,VotingClassifier_MCCV
 37.0,Previsto,Sim,São Paulo,Remo,Vitória,,LogisticRegression_LOSO
-37.0,Previsto,Não,Vasco,Atlético-MG,Derrota,98.7,VotingClassifier_MCCV
+37.0,Previsto,Não,Vasco,Atlético-MG,Derrota,98.0,VotingClassifier_MCCV
 37.0,Previsto,Não,Vasco,Atlético-MG,Derrota,,LogisticRegression_LOSO
-37.0,Previsto,Sim,Vitória,Santos,Vitória,96.8,VotingClassifier_MCCV
+37.0,Previsto,Sim,Vitória,Santos,Vitória,99.2,VotingClassifier_MCCV
 37.0,Previsto,Sim,Vitória,Santos,Vitória,,LogisticRegression_LOSO
 38.0,Previsto,Sim,Athletico-PR,São Paulo,Vitória,100.0,VotingClassifier_MCCV
 38.0,Previsto,Sim,Athletico-PR,São Paulo,Vitória,,LogisticRegression_LOSO
-38.0,Previsto,Não,Atlético-MG,Bahia,Derrota,95.0,VotingClassifier_MCCV
+38.0,Previsto,Não,Atlético-MG,Bahia,Derrota,99.6,VotingClassifier_MCCV
 38.0,Previsto,Não,Atlético-MG,Bahia,Empate,,LogisticRegression_LOSO
-38.0,Previsto,Sim,Bahia,Atlético-MG,Vitória,94.39999999999999,VotingClassifier_MCCV
+38.0,Previsto,Sim,Bahia,Atlético-MG,Vitória,99.2,VotingClassifier_MCCV
 38.0,Previsto,Sim,Bahia,Atlético-MG,Empate,,LogisticRegression_LOSO
-38.0,Previsto,Não,Botafogo,Santos,Derrota,66.3,VotingClassifier_MCCV
-38.0,Previsto,Não,Botafogo,Santos,Derrota,,LogisticRegression_LOSO
-38.0,Previsto,Sim,Bragantino,Fluminense,Derrota,41.6,VotingClassifier_MCCV
-38.0,Previsto,Sim,Bragantino,Fluminense,Derrota,,LogisticRegression_LOSO
-38.0,Previsto,Não,Chapecoense,Flamengo,Derrota,87.6,VotingClassifier_MCCV
+38.0,Previsto,Não,Botafogo,Santos,Derrota,42.699999999999996,VotingClassifier_MCCV
+38.0,Previsto,Não,Botafogo,Santos,Empate,,LogisticRegression_LOSO
+38.0,Previsto,Sim,Bragantino,Fluminense,Vitória,72.89999999999999,VotingClassifier_MCCV
+38.0,Previsto,Sim,Bragantino,Fluminense,Vitória,,LogisticRegression_LOSO
+38.0,Previsto,Não,Chapecoense,Flamengo,Derrota,92.7,VotingClassifier_MCCV
 38.0,Previsto,Não,Chapecoense,Flamengo,Derrota,,LogisticRegression_LOSO
-38.0,Previsto,Não,Corinthians,Remo,Derrota,95.6,VotingClassifier_MCCV
+38.0,Previsto,Não,Corinthians,Remo,Derrota,99.9,VotingClassifier_MCCV
 38.0,Previsto,Não,Corinthians,Remo,Derrota,,LogisticRegression_LOSO
-38.0,Previsto,Não,Coritiba,Palmeiras,Derrota,98.1,VotingClassifier_MCCV
+38.0,Previsto,Não,Coritiba,Palmeiras,Derrota,98.8,VotingClassifier_MCCV
 38.0,Previsto,Não,Coritiba,Palmeiras,Derrota,,LogisticRegression_LOSO
-38.0,Previsto,Sim,Cruzeiro,Internacional,Vitória,98.7,VotingClassifier_MCCV
+38.0,Previsto,Sim,Cruzeiro,Internacional,Vitória,99.7,VotingClassifier_MCCV
 38.0,Previsto,Sim,Cruzeiro,Internacional,Vitória,,LogisticRegression_LOSO
-38.0,Previsto,Sim,Flamengo,Chapecoense,Vitória,90.9,VotingClassifier_MCCV
+38.0,Previsto,Sim,Flamengo,Chapecoense,Vitória,94.3,VotingClassifier_MCCV
 38.0,Previsto,Sim,Flamengo,Chapecoense,Vitória,,LogisticRegression_LOSO
-38.0,Previsto,Não,Fluminense,Bragantino,Vitória,43.1,VotingClassifier_MCCV
-38.0,Previsto,Não,Fluminense,Bragantino,Vitória,,LogisticRegression_LOSO
-38.0,Previsto,Sim,Grêmio,Mirassol,Vitória,63.7,VotingClassifier_MCCV
-38.0,Previsto,Sim,Grêmio,Mirassol,Vitória,,LogisticRegression_LOSO
-38.0,Previsto,Não,Internacional,Cruzeiro,Derrota,99.0,VotingClassifier_MCCV
+38.0,Previsto,Não,Fluminense,Bragantino,Derrota,70.8,VotingClassifier_MCCV
+38.0,Previsto,Não,Fluminense,Bragantino,Derrota,,LogisticRegression_LOSO
+38.0,Previsto,Sim,Grêmio,Mirassol,Vitória,71.89999999999999,VotingClassifier_MCCV
+38.0,Previsto,Sim,Grêmio,Mirassol,Empate,,LogisticRegression_LOSO
+38.0,Previsto,Não,Internacional,Cruzeiro,Derrota,99.8,VotingClassifier_MCCV
 38.0,Previsto,Não,Internacional,Cruzeiro,Derrota,,LogisticRegression_LOSO
-38.0,Previsto,Não,Mirassol,Grêmio,Derrota,63.9,VotingClassifier_MCCV
-38.0,Previsto,Não,Mirassol,Grêmio,Derrota,,LogisticRegression_LOSO
-38.0,Previsto,Sim,Palmeiras,Coritiba,Vitória,97.8,VotingClassifier_MCCV
+38.0,Previsto,Não,Mirassol,Grêmio,Derrota,73.9,VotingClassifier_MCCV
+38.0,Previsto,Não,Mirassol,Grêmio,Empate,,LogisticRegression_LOSO
+38.0,Previsto,Sim,Palmeiras,Coritiba,Vitória,99.0,VotingClassifier_MCCV
 38.0,Previsto,Sim,Palmeiras,Coritiba,Vitória,,LogisticRegression_LOSO
-38.0,Previsto,Sim,Remo,Corinthians,Vitória,95.3,VotingClassifier_MCCV
+38.0,Previsto,Sim,Remo,Corinthians,Vitória,100.0,VotingClassifier_MCCV
 38.0,Previsto,Sim,Remo,Corinthians,Vitória,,LogisticRegression_LOSO
-38.0,Previsto,Sim,Santos,Botafogo,Vitória,65.9,VotingClassifier_MCCV
-38.0,Previsto,Sim,Santos,Botafogo,Vitória,,LogisticRegression_LOSO
-38.0,Previsto,Não,São Paulo,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
+38.0,Previsto,Sim,Santos,Botafogo,Vitória,44.2,VotingClassifier_MCCV
+38.0,Previsto,Sim,Santos,Botafogo,Empate,,LogisticRegression_LOSO
+38.0,Previsto,Não,São Paulo,Athletico-PR,Derrota,99.9,VotingClassifier_MCCV
 38.0,Previsto,Não,São Paulo,Athletico-PR,Derrota,,LogisticRegression_LOSO
-38.0,Previsto,Sim,Vasco,Vitória,Vitória,50.9,VotingClassifier_MCCV
+38.0,Previsto,Sim,Vasco,Vitória,Vitória,71.2,VotingClassifier_MCCV
 38.0,Previsto,Sim,Vasco,Vitória,Vitória,,LogisticRegression_LOSO
-38.0,Previsto,Não,Vitória,Vasco,Derrota,53.7,VotingClassifier_MCCV
+38.0,Previsto,Não,Vitória,Vasco,Derrota,69.69999999999999,VotingClassifier_MCCV
 38.0,Previsto,Não,Vitória,Vasco,Derrota,,LogisticRegression_LOSO
