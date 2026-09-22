@@ -1,22 +1,13 @@
-version: "3.9"
-
 services:
   brasileirao:
     build: .
     image: brasileirao_app
     ports:
       - "8504:8504"
+    # o projeto é montado como volume: uma atualização dos CSVs em app/ já é
+    # lida pelo Streamlit sem precisar reconstruir a imagem
     volumes:
-      - ./app:/app  # monta a pasta local /app no container
+      - .:/app
     working_dir: /app
-    command: streamlit run app.py --server.port=8504 --server.address=0.0.0.0
+    command: /opt/venv/bin/streamlit run app/app.py --server.port=8504 --server.address=0.0.0.0
     restart: always
-
-  # worker:
-  #   build: .
-  #   image: brasileirao_worker
-  #   volumes:
-  #     - ./app:/app
-  #   working_dir: /app
-  #   command: python3 worker.py
-  #   restart: always

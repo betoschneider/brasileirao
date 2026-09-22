@@ -10,22 +10,46 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: 🚀 Deploy na pasta local existente
+      - name: ⬇️ Atualizar o código e detectar o que mudou
+        id: codigo
         run: |
           echo "📂 Acessando pasta do projeto..."
           cd /home/dev-host/projetos/brasileirao
-          
-          echo "⬇️ Atualizando código via Git..."
+
           # Garante que o git confie na pasta (segurança do git moderno)
           git config --global --add safe.directory /home/dev-host/projetos/brasileirao
-          
+
+          antes=$(git rev-parse HEAD)
           git fetch origin main
           git reset --hard origin/main
-          
-          echo "🐳 Recriando containers..."
-          docker compose down --rmi local
-          docker compose up -d --build
-          docker image prune -f  
-      
+          depois=$(git rev-parse HEAD)
+
+          # Reconstruir a imagem é a etapa mais pesada para o servidor, então só
+          # acontece quando muda código ou dependências. Atualização de dados
+          # (app/*.csv) é lida direto do volume, sem rebuild.
+          if git diff --quiet "$antes" "$depois" -- \
+              Dockerfile docker-compose.yml pyproject.toml uv.lock app/app.py; then
+            echo "rebuild=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "rebuild=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 🐳 Deploy dos containers
+        run: |
+          cd /home/dev-host/projetos/brasileirao
+
+          if [ "${{ steps.codigo.outputs.rebuild }}" = "true" ]; then
+            echo "🔨 Código mudou: reconstruindo a imagem..."
+            docker compose up -d --build
+          else
+            echo "📊 Apenas dados: mantendo o container (o volume já tem os CSVs novos)..."
+            docker compose up -d
+          fi
+
+          docker image prune -f
+
       - name: 🏥 Check Health
-        run: docker ps | grep brasileirao
+        run: |
+          docker ps | grep brasileirao
+          curl -fsS --max-time 10 http://localhost:8504/_stcore/health \
+            || echo "Aviso: o dashboard não respondeu no health check HTTP"

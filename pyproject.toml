@@ -1,0 +1,28 @@
+[project]
+name = "brasileirao"
+version = "1.0.0"
+description = "Previsão de resultados do Campeonato Brasileiro Série A com machine learning"
+readme = "README.md"
+requires-python = ">=3.12"
+# dependências do dashboard, que é o único serviço rodando em produção
+dependencies = [
+    "altair==5.5.0",
+    "numpy==2.3.2",
+    "pandas==2.3.1",
+    "streamlit==1.48.0",
+]
+
+# dependências usadas apenas por atualizar_previsoes.py, que roda na máquina local.
+# A imagem de produção é construída com --no-group pipeline para não instalar
+# scikit-learn/joblib em um servidor de 1 núcleo e 1 GB.
+[dependency-groups]
+pipeline = [
+    "joblib==1.5.1",
+    "requests==2.32.4",
+    "scikit-learn==1.7.1",
+]
+
+# o projeto é um conjunto de scripts, não um pacote instalável
+[tool.uv]
+package = false
+default-groups = ["pipeline"]

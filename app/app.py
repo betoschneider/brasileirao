@@ -1,330 +1,605 @@
-import pandas as pd
-import numpy as np
-import streamlit as st
+"""Dashboard Streamlit com as previsões do Brasileirão Série A.
+
+Lê os arquivos gerados por ``atualizar_previsoes.py`` e apresenta a tabela
+projetada, a evolução rodada a rodada e as previsões de cada partida.
+"""
+
+import sys
+from datetime import UTC, datetime
+from pathlib import Path
+
 import altair as alt
-from datetime import datetime
+import numpy as np
+import pandas as pd
+import streamlit as st
+
+DIR_DADOS = Path(__file__).resolve().parent
+RAIZ = DIR_DADOS.parent
+if str(RAIZ) not in sys.path:
+    sys.path.insert(0, str(RAIZ))
+
+try:
+    from atualizar_previsoes import EXECUTAR_LOSO, EXECUTAR_MCCV
+except ImportError:
+    EXECUTAR_LOSO = False
+    EXECUTAR_MCCV = True
+ARQUIVO_EVOLUCAO = DIR_DADOS / "tabela-evolucao-modelos.csv"
+ARQUIVO_PARTIDAS = DIR_DADOS / "partidas-modelos.csv"
+ARQUIVO_TIMES_STATS = DIR_DADOS / "times-stats.csv"
+ARQUIVO_CHANCES = DIR_DADOS / "chances-times.csv"
+
+# aproveitamento é sempre armazenado como fração (0 a 1) e exibido como %
+CORES = {
+    "Campeão": "#1f77b4",
+    "G4": "#2ca02c",
+    "G6": "#98df8a",
+    "Primeira metade": "#BABCBE",
+    "Segunda metade": "#BABCBE",
+    "Rebaixado": "#d62728",
+}
+
+DESCRICAO_MODELOS = {
+    "LogisticRegression": (
+        "Regressão logística",
+        (
+            "Modelo estatístico de classificação que estima a probabilidade de cada "
+            "resultado (vitória, empate ou derrota) a partir das variáveis de entrada."
+        ),
+    ),
+    "RandomForest": (
+        "Random Forest",
+        (
+            "Conjunto de árvores de decisão treinadas em amostras diferentes. "
+            "Reduz o overfitting e lida bem com dados tabulares."
+        ),
+    ),
+    "GradientBoosting": (
+        "Gradient Boosting",
+        (
+            "Árvores treinadas de forma sequencial, cada uma corrigindo os erros da "
+            "anterior. Costuma ter alta acurácia, mas é mais lento para treinar."
+        ),
+    ),
+    "KNN": (
+        "K-Nearest Neighbors (KNN)",
+        (
+            "Classifica cada partida a partir das partidas mais parecidas do "
+            "histórico. Simples e intuitivo, porém sensível à escala das variáveis."
+        ),
+    ),
+    "VotingClassifier": (
+        "Voting Classifier",
+        (
+            "Combina as probabilidades de Random Forest, Regressão Logística e "
+            "Gradient Boosting, reduzindo o viés de cada modelo isolado."
+        ),
+    ),
+}
+
+DESCRICAO_VALIDACAO = {
+    "LOSO": (
+        "Leave-One-Season-Out (LOSO)",
+        (
+            "Treina com as temporadas anteriores e testa na temporada seguinte. "
+            "Mede o desempenho do modelo em um campeonato que ele nunca viu."
+        ),
+    ),
+    "MCCV": (
+        "Monte Carlo Cross-Validation (MCCV)",
+        (
+            "Repete centenas de divisões aleatórias entre treino e teste e projeta a "
+            "partida em cada uma delas. A frequência das previsões vira a confiança "
+            "de cada resultado."
+        ),
+    ),
+}
 
 
-# Função para carregar os dados
-def carregar_dados(modelo=None):
-    # tabela acumulada
-    df = pd.read_csv('tabela-evolucao-modelos.csv')
-    if modelo:
-        df = df[df['modelo'] == modelo]
-    df.rename(columns={'time': 'Time',
-                       'posicao': 'Posição',
-                       'pontos': 'Pontos',
-                       'vitorias': 'Vitórias',
-                       'rodada_num': 'Rodada',
-                       'modelo': 'Modelo',
-                       }, inplace=True)
-    df['data_atualizacao'] = pd.to_datetime(df['data_atualizacao'])
-    df['Aproveitamento Previsto'] = df['Pontos'] / (df['Rodada'] * 3)
-    # df['Tendência (%)'] = (df['Aproveitamento Previsto'] / df['aproveitamento']) - 1
-    df['Variação de Aproveitamento'] = (df['Aproveitamento Previsto'] - df['aproveitamento']) 
-    def formatar_tendencia(valor):
-        if pd.isna(valor):
-            return "-"
-        elif valor > 0:
-            return f"🔺 +{valor*100:.2f} p.p."
-        elif valor < 0:
-            return f"🔻 {valor*100:.2f} p.p."
-        else:
-            return f"◽ {valor*100:.2f} p.p."
-
-    df['Variação de Aproveitamento'] = df['Variação de Aproveitamento'].apply(formatar_tendencia)
-    df.rename(columns={
-        'aproveitamento': 'Aproveitamento Atual', 
-        'Aproveitamento Previsto': 'Aproveitamento'
-        }, inplace=True)
-    df['Aproveitamento'] = df['Aproveitamento'].apply(lambda x: f"{x:.2%}")
-    df['Pontos'] = df['Pontos'].astype(int)
-
-    # partidas
-    df_partidas = pd.read_csv('partidas-modelos.csv')
-    if modelo:
-        df_partidas = df_partidas[df_partidas['modelo'] == modelo]
-    df_partidas.rename(columns={'rodada_num': 'Rodada',
-                                'status': 'Status',
-                                'mandante': 'Mandante',
-                                'time': 'Time',
-                                'adversario': 'Adversário',
-                                'resultado': 'Resultado',
-                                'frequencia': 'Frequência',
-                                'modelo': 'Modelo',
-                               }, inplace=True)
-    df_partidas['Frequência'] = df_partidas['Frequência'].round(2)
-    df_partidas['Frequência'] = df_partidas['Frequência'].fillna('-')
-
-    # estatisticas dos times
-    df_times_stats = pd.read_csv('times-stats.csv')
-    df_times_stats.rename(columns={'time': 'Time',
-                                   'pontos_time': 'Pontos',
-                                   'jogos': 'Jogos',
-                                   'aproveitamento': 'Aproveitamento',
-                                   'aproveitamento_recente': 'Aproveitamento Recente',
-                                   'media_gols_marcados': 'Média Gols Marcados',
-                                   'media_gols_sofridos': 'Média Gols Sofridos'
-                                  }, inplace=True)
-    return df, df_partidas, df_times_stats
-
-def fetch_modelos():
-    df = pd.read_csv('tabela-evolucao-modelos.csv')
-    df = df[~df['modelo'].isna()]
-    modelos = df['modelo'].unique()
-    return modelos
+def carregar_modelos() -> list[str]:
+    """Lista os modelos disponíveis no arquivo de evolução."""
+    modelos = list(pd.read_csv(ARQUIVO_EVOLUCAO)["modelo"].dropna().unique())
+    if not EXECUTAR_LOSO:
+        modelos = [m for m in modelos if not m.endswith("_LOSO")]
+    if not EXECUTAR_MCCV:
+        modelos = [m for m in modelos if not m.endswith("_MCCV")]
+    return sorted(modelos)
 
 
-# Interface Streamlit
-def main():
+def carregar_dados(modelo: str):
+    """Carrega e normaliza os arquivos consumidos pelo dashboard."""
+    df = pd.read_csv(ARQUIVO_EVOLUCAO)
+    df = df[df["modelo"] == modelo].copy()
+    df = df.rename(
+        columns={
+            "time": "Time",
+            "rodada_num": "Rodada",
+            "pontos": "Pontos",
+            "vitorias": "Vitórias",
+            "posicao": "Posição",
+            "modelo": "Modelo",
+            "pontos_time": "Pontos Atuais",
+            "aproveitamento": "Aproveitamento Atual",
+            "aproveitamento_recente": "Aproveitamento Recente",
+            "media_gols_marcados": "Média de Gols Marcados",
+            "media_gols_sofridos": "Média de Gols Sofridos",
+            "jogos": "Jogos Disputados",
+        }
+    )
+    df["data_atualizacao"] = pd.to_datetime(df["data_atualizacao"])
+    # a rodada é inteira; o CSV pode trazê-la como float após os merges
+    df["Rodada"] = df["Rodada"].astype(int)
 
-    # Configurações da página
+    # aproveitamento previsto (fração) e a variação em relação ao aproveitamento atual
+    df["Aproveitamento Previsto"] = df["Pontos"] / (df["Rodada"] * 3)
+    df["Variação de Aproveitamento"] = (
+        df["Aproveitamento Previsto"] - df["Aproveitamento Atual"]
+    )
+
+    partidas = pd.read_csv(ARQUIVO_PARTIDAS)
+    partidas = partidas[partidas["modelo"] == modelo].copy()
+    partidas = partidas.rename(
+        columns={
+            "rodada_num": "Rodada",
+            "status": "Status",
+            "mandante": "Mandante",
+            "time": "Time",
+            "adversario": "Adversário",
+            "resultado": "Resultado",
+            "frequencia": "Confiança",
+            "modelo": "Modelo",
+        }
+    )
+    partidas["Rodada"] = partidas["Rodada"].astype(int)
+
+    stats = pd.read_csv(ARQUIVO_TIMES_STATS).rename(
+        columns={
+            "time": "Time",
+            "pontos_time": "Pontos",
+            "jogos": "Jogos Disputados",
+            "aproveitamento": "Aproveitamento",
+            "aproveitamento_recente": "Aproveitamento Recente",
+            "media_gols_marcados": "Média de Gols Marcados",
+            "media_gols_sofridos": "Média de Gols Sofridos",
+        }
+    )
+    stats["Jogos Disputados"] = stats["Jogos Disputados"].astype(int)
+
+    chances = carregar_chances(modelo)
+    return df, partidas, stats, chances
+
+
+def carregar_chances(modelo: str) -> pd.DataFrame | None:
+    """Carrega as probabilidades do modelo selecionado, quando existirem.
+
+    As chances vêm das simulações Monte Carlo, então só existem para o modelo
+    validado dessa forma.
+    """
+    if not ARQUIVO_CHANCES.exists():
+        return None
+
+    chances = pd.read_csv(ARQUIVO_CHANCES)
+    chances = chances[chances["modelo"] == modelo].copy()
+    if chances.empty:
+        return None
+
+    return chances.rename(
+        columns={
+            "time": "Time",
+            "pontos_previstos": "Pontos Previstos",
+            "chance_pontos_previstos": "Chance da Pontuação",
+            "pontos_p10": "Piso (p10)",
+            "pontos_p90": "Teto (p90)",
+            "chance_titulo": "Chance de Título",
+            "chance_g4": "Chance de G4",
+            "chance_rebaixamento": "Chance de Rebaixamento",
+        }
+    )
+
+
+def classificar_grupo(posicao: int) -> str:
+    if posicao == 1:
+        return "Campeão"
+    if 2 <= posicao <= 4:
+        return "G4"
+    if 5 <= posicao <= 6:
+        return "G6"
+    if 7 <= posicao <= 10:
+        return "Primeira metade"
+    if 17 <= posicao <= 20:
+        return "Rebaixado"
+    return "Segunda metade"
+
+
+def formatar_variacao(valor: float) -> str:
+    """Formata a variação de aproveitamento em pontos percentuais."""
+    if pd.isna(valor):
+        return "-"
+    if valor > 0:
+        return f"🔺 +{valor * 100:.2f} p.p."
+    if valor < 0:
+        return f"🔻 {valor * 100:.2f} p.p."
+    return f"◽ {valor * 100:.2f} p.p."
+
+
+def formatar_chance(valor: float) -> str:
+    """Formata uma probabilidade; abaixo de 1% mostra '<1%' em vez de arredondar a zero."""
+    if pd.isna(valor) or valor <= 0:
+        return "—"
+    if valor < 0.01:
+        return "<1%"
+    return f"{valor:.0%}"
+
+
+def montar_tabela_final(
+    df: pd.DataFrame, rodada_final: int, chances: pd.DataFrame | None = None
+) -> pd.DataFrame:
+    """Monta a tabela projetada para a última rodada, já ordenada e classificada."""
+    colunas = [
+        "Posição",
+        "Time",
+        "Pontos",
+        "Vitórias",
+        "Aproveitamento Previsto",
+        "Aproveitamento Atual",
+        "Variação de Aproveitamento",
+    ]
+    tabela = (
+        df[df["Rodada"] == rodada_final][colunas]
+        .sort_values(["Pontos", "Vitórias"], ascending=False)
+        .reset_index(drop=True)
+    )
+    tabela["Grupo"] = tabela["Posição"].astype(int).apply(classificar_grupo)
+
+    if chances is not None:
+        tabela = tabela.merge(
+            chances[["Time", "Chance da Pontuação", "Piso (p10)", "Teto (p90)"]],
+            on="Time",
+            how="left",
+        )
+        tabela["Faixa Provável"] = tabela.apply(
+            lambda linha: f"{linha['Piso (p10)']:.0f} – {linha['Teto (p90)']:.0f}",
+            axis=1,
+        )
+    return tabela
+
+
+def grafico_chance(chances: pd.DataFrame, coluna: str, titulo: str) -> alt.Chart | None:
+    """Barras horizontais com os times mais prováveis em um cenário."""
+    dados = chances[chances[coluna] > 0].sort_values(coluna, ascending=False).head(8)
+    if dados.empty:
+        return None
+    return (
+        alt.Chart(dados, title=titulo)
+        .mark_bar(color="#6b7280")
+        .encode(
+            x=alt.X(
+                f"{coluna}:Q",
+                title="Chance",
+                axis=alt.Axis(format="%"),
+                scale=alt.Scale(domain=[0, 1]),
+            ),
+            y=alt.Y("Time:N", sort="-x", title=None),
+            tooltip=[
+                alt.Tooltip("Time:N"),
+                alt.Tooltip(f"{coluna}:Q", title="Chance", format=".1%"),
+            ],
+        )
+        .properties(height=260)
+    )
+
+
+def renderizar_chances(chances: pd.DataFrame) -> None:
+    """Mostra as probabilidades calculadas pelas simulações Monte Carlo."""
+    st.caption(
+        "Probabilidades estimadas pelas simulações do modelo. A **chance da pontuação** é a "
+        "frequência com que o time terminou exatamente com os pontos previstos e a **faixa "
+        "provável** cobre de 10% a 90% dos cenários. Como a acurácia do modelo é de ~45% por "
+        "partida, leia os números como tendência, não como certeza."
+    )
+
+    tabela = (
+        chances[
+            [
+                "Time",
+                "Pontos Previstos",
+                "Chance da Pontuação",
+                "Piso (p10)",
+                "Teto (p90)",
+                "Chance de Título",
+                "Chance de G4",
+                "Chance de Rebaixamento",
+            ]
+        ]
+        .sort_values(
+            ["Chance de Título", "Chance de G4", "Pontos Previstos"], ascending=False
+        )
+        .reset_index(drop=True)
+    )
+    tabela["Faixa Provável"] = tabela.apply(
+        lambda linha: f"{linha['Piso (p10)']:.0f} – {linha['Teto (p90)']:.0f}", axis=1
+    )
+    for coluna in (
+        "Chance da Pontuação",
+        "Chance de Título",
+        "Chance de G4",
+        "Chance de Rebaixamento",
+    ):
+        tabela[coluna] = tabela[coluna].apply(formatar_chance)
+
+    st.dataframe(
+        tabela[
+            [
+                "Time",
+                "Pontos Previstos",
+                "Chance da Pontuação",
+                "Faixa Provável",
+                "Chance de Título",
+                "Chance de G4",
+                "Chance de Rebaixamento",
+            ]
+        ],
+        hide_index=True,
+        height=560,
+    )
+
+    grafico_titulo = grafico_chance(
+        chances, "Chance de Título", "🏆 Corrida pelo título"
+    )
+    grafico_rebaixamento = grafico_chance(
+        chances, "Chance de Rebaixamento", "⚠️ Risco de rebaixamento"
+    )
+
+    coluna_esquerda, coluna_direita = st.columns(2)
+    with coluna_esquerda:
+        if grafico_titulo is not None:
+            st.altair_chart(grafico_titulo, use_container_width=True)
+    with coluna_direita:
+        if grafico_rebaixamento is not None:
+            st.altair_chart(grafico_rebaixamento, use_container_width=True)
+
+
+def main() -> None:
     st.set_page_config(
         page_title="Brasileirão Série A - Previsão de resultados",
         page_icon="⚽",
-        initial_sidebar_state="collapsed",
-        # layout="wide",
+        layout="wide",
+        initial_sidebar_state="expanded",
     )
 
-    st.sidebar.title("Modelos")
-    modelos = fetch_modelos()
-    modelo = st.sidebar.selectbox("Modelo", modelos)
+    modelos = carregar_modelos()
+    st.sidebar.title("⚙️ Configurações")
+    st.sidebar.caption("Cada modelo é validado de uma forma diferente.")
+    modelo = st.sidebar.selectbox("Modelo e validação", modelos)
 
-    # Carregar dados
-    df, partidas, stats = carregar_dados(modelo)
+    df, partidas, stats, chances = carregar_dados(modelo)
+    chave_modelo = modelo.split("_")[0]
+    chave_validacao = modelo.split("_")[-1]
 
-    # título e subtítulo
-    dt_atualizacao = df['data_atualizacao'].max()
-    temporada = dt_atualizacao.year
-    st.title(f"Brasileirão Série A {temporada}")
-    st.subheader("Projeção de resultados com machine learning até a 38ª rodada.")
-    st.write(f"Última atualização: {dt_atualizacao.strftime('%d/%m/%Y %H:%M')}")
-    st.markdown("---")
+    dt_atualizacao = df["data_atualizacao"].max()
+    rodada_final = int(df["Rodada"].max())
 
-         
+    st.title(f"⚽ Brasileirão Série A {dt_atualizacao.year}")
+    st.caption(
+        f"Projeção de resultados com machine learning até a {rodada_final}ª rodada · "
+        f"Última atualização em {dt_atualizacao.strftime('%d/%m/%Y às %H:%M')} · "
+        f"Modelo **{modelo}**"
+    )
 
     # ================================
-    # 1️⃣ Gráfico de barras pontos finais no topo
+    # 1) Pontuação prevista no fim do campeonato
     # ================================
-    tabela = df[df['Rodada'] == 38][['Posição', 'Time', 'Pontos', 'Vitórias', 'Aproveitamento', 'Variação de Aproveitamento']].sort_values(["Pontos", 'Vitórias'], ascending=False).reset_index(drop=True)
-    tabela["Ranking"] = tabela.index + 1
+    tabela = montar_tabela_final(df, rodada_final, chances)
 
-    def classificar_cor(rank):
-        if rank == 1: return "Campeão"
-        elif 2 <= rank <= 4: return "G4"
-        elif 5 <= rank <= 6: return "G6"
-        elif 7 <= rank <= 10: return "Primeira metade"
-        elif 17 <= rank <= 20: return "Rebaixado"
-        else: return "Segunda metade"
+    st.subheader("Classificação final prevista")
 
-    tabela["Grupo"] = tabela["Ranking"].apply(classificar_cor)
-    cores = {
-        "Campeão": "#1f77b4",
-        "G4": "#2ca02c",
-        "G6": "#98df8a",
-        "Primeira metade": "#BABCBE",
-        "Segunda metade": "#BABCBE",
-        "Rebaixado": "#d62728"
-    }
-
-    bars = (
+    barras = (
         alt.Chart(tabela)
         .mark_bar()
         .encode(
             x=alt.X("Pontos:Q", axis=None),
             y=alt.Y("Time:N", sort="-x", title=None),
-            color=alt.Color("Grupo:N", scale=alt.Scale(domain=list(cores.keys()), range=list(cores.values())), legend=None),
-            tooltip=["Time:N", "Pontos:Q", "Posição:O", "Grupo:N"]
+            color=alt.Color(
+                "Grupo:N",
+                scale=alt.Scale(domain=list(CORES), range=list(CORES.values())),
+                legend=None,
+            ),
+            tooltip=[
+                alt.Tooltip("Time:N"),
+                alt.Tooltip("Posição:O", title="Posição"),
+                alt.Tooltip("Pontos:Q", title="Pontos"),
+                alt.Tooltip("Grupo:N"),
+            ],
         )
-        .properties(height=500)
+        .properties(height=560)
     )
-
-    labels = (
+    rotulos = (
         alt.Chart(tabela)
-        .mark_text(align="left", baseline="middle", dx=3, color="black")
+        .mark_text(align="left", baseline="middle", dx=4, color="black")
         .encode(x="Pontos:Q", y=alt.Y("Time:N", sort="-x"), text="Pontos:Q")
     )
 
-    # --- estiliza apenas a coluna Posição de acordo com o grupo ---
-    def colorir_posicao(col):
-        return [f"background-color: {cores[tabela.loc[idx, 'Grupo']]}; color: white; font-weight: bold;" for idx in col.index]
+    def colorir_posicao(coluna: pd.Series) -> list[str]:
+        return [
+            f"background-color: {CORES[tabela.loc[indice, 'Grupo']]}; color: white; font-weight: bold;"
+            for indice in coluna.index
+        ]
 
-    # Remove a coluna Grupo e aplica estilo apenas na coluna Posição
-    tabela_final = tabela[['Posição', 'Time', 'Pontos', 'Vitórias', 'Aproveitamento', 'Variação de Aproveitamento']].copy()
-    tabela_estilizada = tabela_final.style.apply(
-        colorir_posicao,
-        subset=['Posição']
+    exibicao = tabela[
+        [
+            "Posição",
+            "Time",
+            "Pontos",
+            "Vitórias",
+            "Aproveitamento Previsto",
+            "Aproveitamento Atual",
+            "Variação de Aproveitamento",
+        ]
+    ].copy()
+    if chances is not None:
+        exibicao["Chance da Pontuação"] = tabela["Chance da Pontuação"].apply(
+            formatar_chance
+        )
+        exibicao["Faixa Provável"] = tabela["Faixa Provável"]
+    exibicao["Aproveitamento Previsto"] = exibicao["Aproveitamento Previsto"].map(
+        "{:.2%}".format
+    )
+    exibicao["Aproveitamento Atual"] = exibicao["Aproveitamento Atual"].map(
+        "{:.2%}".format
+    )
+    exibicao["Variação de Aproveitamento"] = exibicao[
+        "Variação de Aproveitamento"
+    ].apply(formatar_variacao)
+    estilo = exibicao.style.apply(colorir_posicao, subset=["Posição"])
+
+    rotulos_abas = ["📑 Tabela", "📊 Gráfico"]
+    if chances is not None:
+        rotulos_abas.append("🎲 Chances")
+    abas = dict(zip(rotulos_abas, st.tabs(rotulos_abas)))
+
+    with abas["📑 Tabela"]:
+        st.dataframe(estilo, hide_index=True, height=720)
+    with abas["📊 Gráfico"]:
+        st.altair_chart(barras + rotulos, use_container_width=True)
+    if chances is not None:
+        with abas["🎲 Chances"]:
+            renderizar_chances(chances)
+
+    # ================================
+    # 2) Seleção de times
+    # ================================
+    st.divider()
+    times = np.sort(df["Time"].unique())
+    times_selecionados = st.multiselect(
+        "Filtrar por time (opcional)",
+        times,
+        placeholder="Todos os times",
     )
 
-    st.subheader("Pontuação prevista ao fim do campeonato")
-    tab1, tab2 = st.tabs(["📑 Tabela", "📊 Gráfico"])
-    with tab1:
-        st.dataframe(tabela_estilizada, hide_index=True, height=740)
-
-    with tab2: 
-        st.altair_chart(bars + labels, use_container_width=True)
-
-    st.markdown("---")
-
-    # ================================
-    # Seleção de times
-    # ================================
-    times = np.sort(df['Time'].unique())
-    times_selecionados = st.multiselect("Selecione times para ver as rodadas previstas:", times, placeholder="Todos os times")
-
-    if len(times_selecionados)==1:
-        stats = stats[stats['Time'].isin(times_selecionados)]
-        jogos = stats['Jogos'].mean()
-        pontos = stats['Pontos'].mean()
-        aproveitamento = stats['Aproveitamento'].mean()
-        aproveitamento_recente= stats['Aproveitamento Recente'].mean()
-        gols_marcados = stats['Média Gols Marcados'].mean()
-        gols_sofridos = stats['Média Gols Sofridos'].mean()
-
-        # CSS para diminuir a fonte de TODOS os metrics
-        st.markdown("""
-            <style>
-            [data-testid="stMetricValue"] {
-                font-size: 20px;  /* tamanho do valor */
-            }
-            [data-testid="stMetricLabel"] {
-                font-size: 10px;  /* tamanho do label */
-            }
-            </style>
-        """, unsafe_allow_html=True)
-
-        col1, col2, col3, col4, col5, col6 = st.columns(6)
-
-        col1.metric('Pontos', f'{pontos:.0f}')
-        col2.metric('Jogos', f'{jogos:.0f}')
-        col3.metric('Aproveitamento', f'{aproveitamento:.2%}')
-        col4.metric('Aproveitamento Recente', f'{aproveitamento_recente:.2%}')
-        col5.metric('Gols marcados', f'{gols_marcados:.2f}')
-        col6.metric('Gols sofridos', f'{gols_sofridos:.2f}')
-        st.markdown("---")
+    if len(times_selecionados) == 1:
+        selecionado = stats[stats["Time"].isin(times_selecionados)].iloc[0]
+        colunas = st.columns(6)
+        colunas[0].metric("Pontos conquistados", f"{selecionado['Pontos']:.0f}")
+        colunas[1].metric("Jogos disputados", f"{selecionado['Jogos Disputados']:.0f}")
+        colunas[2].metric("Aproveitamento", f"{selecionado['Aproveitamento']:.2%}")
+        colunas[3].metric(
+            "Aproveitamento recente", f"{selecionado['Aproveitamento Recente']:.2%}"
+        )
+        colunas[4].metric(
+            "Média de gols marcados", f"{selecionado['Média de Gols Marcados']:.2f}"
+        )
+        colunas[5].metric(
+            "Média de gols sofridos", f"{selecionado['Média de Gols Sofridos']:.2f}"
+        )
 
     # ================================
-    # 2️⃣ Evolução rodada a rodada
+    # 3) Evolução rodada a rodada
     # ================================
     if times_selecionados:
-        df = df[df['Time'].isin(times_selecionados)]
+        df = df[df["Time"].isin(times_selecionados)]
 
-    qtd_times = df['Time'].nunique()
-    
+    qtd_times = df["Time"].nunique()
     if qtd_times == 1:
-        st.subheader(f"Posição na tabela a cada rodada - {times_selecionados[0]}")
+        st.subheader(f"Posição na tabela a cada rodada · {times_selecionados[0]}")
     else:
-        st.subheader(f"Posição na tabela a cada rodada - {qtd_times} times selecionados")
+        st.subheader(f"Posição na tabela a cada rodada · {qtd_times} times")
 
-    chart = (
+    grafico_evolucao = (
         alt.Chart(df)
         .mark_line(point=True)
         .encode(
-            x=alt.X("Rodada:Q", scale=alt.Scale(domain=[1, 38]), title="Rodada"),
+            x=alt.X(
+                "Rodada:Q", scale=alt.Scale(domain=[1, rodada_final]), title="Rodada"
+            ),
             y=alt.Y("Posição:Q", scale=alt.Scale(domain=[20, 1]), title="Posição"),
-            color="Time:N",
+            color=alt.Color("Time:N", title=None),
+            tooltip=[
+                alt.Tooltip("Time:N"),
+                alt.Tooltip("Rodada:Q", title="Rodada"),
+                alt.Tooltip("Posição:Q", title="Posição"),
+                alt.Tooltip("Pontos:Q", title="Pontos"),
+            ],
         )
-        .properties(height=700)
+        .properties(height=640)
     )
-    st.altair_chart(chart, use_container_width=True)
+    st.altair_chart(grafico_evolucao, use_container_width=True)
 
     # ================================
-    # Identificação do modelo
+    # 4) Previsões das partidas
     # ================================
-    modelo_usado = df['Modelo'].mode()[0] if not df['Modelo'].mode().empty else "Desconhecido"
-    chave_modelo = modelo_usado.split('_')[0]
-    chave_validacao = modelo_usado.split('_')[-1]
+    st.divider()
+    rodadas = np.sort(partidas["Rodada"].unique())
+    rodadas_selecionadas = st.multiselect(
+        "Filtrar por rodada (opcional)", rodadas, placeholder="Todas as rodadas"
+    )
 
-    # ================================
-    # Seleção de rodadas
-    # ================================
-    rodadas = np.sort(partidas['Rodada'].unique())
-    rodadas_selecionadas = st.multiselect("", rodadas, placeholder="Todas as rodadas")
-
-    # ================================
-    # 3️⃣ Tabela de jogos futuros
-    # ================================
     if times_selecionados:
-        partidas_time = partidas[(partidas['Time'].isin(times_selecionados)) & (partidas['Status'] != 'Finalizado')]
-        colunas = ['Rodada', 'Status', 'Mandante', 'Adversário', 'Resultado', 'Frequência']
+        partidas_time = partidas[partidas["Time"].isin(times_selecionados)]
+        colunas_partidas = ["Rodada", "Status", "Mandante", "Adversário", "Resultado"]
+        contexto = f"dos jogos de {', '.join(times_selecionados)}"
     else:
-        partidas_time = partidas[partidas['Status'] != 'Finalizado']
-        colunas = ['Time', 'Rodada', 'Status', 'Mandante', 'Adversário', 'Resultado', 'Frequência']
-        
-    partidas_time = partidas_time[colunas]
+        partidas_time = partidas
+        colunas_partidas = [
+            "Rodada",
+            "Time",
+            "Status",
+            "Mandante",
+            "Adversário",
+            "Resultado",
+        ]
+        contexto = "de todos os times"
+
+    if chave_validacao == "MCCV":
+        colunas_partidas = colunas_partidas + ["Confiança"]
 
     if rodadas_selecionadas:
-        partidas_time = partidas_time[partidas_time['Rodada'].isin(rodadas_selecionadas)]
+        partidas_time = partidas_time[
+            partidas_time["Rodada"].isin(rodadas_selecionadas)
+        ]
 
-    if chave_validacao != "MCCV":
-        partidas_time = partidas_time.drop(columns=['Frequência'])
-    
-    partidas_time['Rodada'] = partidas_time['Rodada'].astype(str)
-    if qtd_times == 1:
-        st.subheader(f"Previsões para os jogos do {times_selecionados[0]}")
+    st.subheader(f"Previsões {contexto}")
+
+    pendentes = partidas_time[partidas_time["Status"] != "Finalizado"]
+    if not pendentes.empty:
+        resultados = pendentes["Resultado"].value_counts().to_dict()
+        st.markdown(
+            f"**✌️ Vitórias:** {resultados.get('Vitória', 0)} · "
+            f"**🤝 Empates:** {resultados.get('Empate', 0)} · "
+            f"**👎 Derrotas:** {resultados.get('Derrota', 0)}"
+        )
     else:
-        st.subheader(f"Previsões para os jogos - {qtd_times} times selecionados")
-    
-    resultados = partidas_time['Resultado'].value_counts().to_dict()
-    st.markdown(f"**✌️ Vitórias:** {resultados.get('Vitória', 0)} | **🤝 Empates:** {resultados.get('Empate', 0)} | **👎Derrotas:** {resultados.get('Derrota', 0)}")
-    st.dataframe(partidas_time, hide_index=True, height=min(600, 38*partidas_time.shape[0]))
+        st.caption("Nenhuma partida prevista para os filtros selecionados.")
+
+    tabela_partidas = partidas_time[colunas_partidas].copy()
+    if "Confiança" in tabela_partidas.columns:
+        tabela_partidas["Confiança"] = tabela_partidas["Confiança"].apply(
+            lambda valor: f"{valor:.0f}%" if pd.notna(valor) else "-"
+        )
+    st.dataframe(tabela_partidas, hide_index=True, height=560)
+    if chave_validacao == "MCCV":
+        st.caption(
+            "A confiança é o percentual das simulações em que o resultado previsto "
+            "apareceu."
+        )
 
     # ================================
-    # 4️⃣ Descrição do modelo e validação
+    # 5) Descrição do modelo e da validação
     # ================================
-    det_modelos = {
-        "LogisticRegression": {
-            "nome": "#### Logistic Regression",
-            "descricao": "- Modelo estatístico para classificação.\n- Estima probabilidades com a função logística.\n- Fácil de interpretar e rápido."
-        },
-        "RandomForest": {
-            "nome": "#### Random Forest",
-            "descricao": "- Ensemble de múltiplas árvores de decisão.\n- Reduz overfitting.\n- Funciona bem com dados tabulares."
-        },
-        "GradientBoosting": {
-            "nome": "#### Gradient Boosting",
-            "descricao": "- Ensemble sequencial de árvores.\n- Cada árvore corrige erros das anteriores.\n- Alta acurácia, mas mais lento."
-        },
-        "KNN": {
-            "nome": "#### K-Nearest Neighbors (KNN)",
-            "descricao": "- Classifica com base nos vizinhos mais próximos.\n- Simples e intuitivo.\n- Pode ser lento em bases grandes."
-        },
-        "NaiveBayes": {
-            "nome": "#### Naive Bayes",
-            "descricao": "- Baseado no Teorema de Bayes.\n- Assume independência entre features.\n- Muito rápido e eficiente em texto."
-        },
-        "VotingClassifier": {
-            "nome": "#### Voting Classifier",
-            "descricao": "- Combina as previsões de múltiplos modelos de classificação individuais.\n- Agrega as previsões de diferentes classificadores.\n- É possível mitigar os vieses e as fraquezas de modelos individuais, levando a uma previsão mais robusta e precisa."
-        }
-    }
+    st.divider()
+    with st.expander("ℹ️ Como o modelo e a validação funcionam", expanded=False):
+        nome_modelo, descricao_modelo = DESCRICAO_MODELOS[chave_modelo]
+        nome_validacao, descricao_validacao = DESCRICAO_VALIDACAO[chave_validacao]
+        st.markdown(f"**Modelo: {nome_modelo}**")
+        st.write(descricao_modelo)
+        st.markdown(f"**Validação: {nome_validacao}**")
+        st.write(descricao_validacao)
 
-    det_validacao = {
-        "LOSO": {
-            "nome": "#### Leave-One-Season-Out (LOSO)",
-            "descricao": "- Cada temporada é teste uma vez.\n- O restante é treino.\n- Bom para séries temporais esportivas."
-        },
-        "MCCV": {
-            "nome": "#### Monte Carlo Cross-Validation (MCCV)",
-            "descricao": "- Amostras aleatórias divididas em treino e teste várias vezes.\n- Resultados agregados estimam o desempenho.\n- Mais flexível que k-fold."
-        }
-    }
-
-    st.markdown("### Sobre os modelos e técnicas de validação")
-    st.markdown(det_modelos[chave_modelo]["nome"])
-    st.markdown(det_modelos[chave_modelo]["descricao"])
-    st.markdown(det_validacao[chave_validacao]["nome"])
-    st.markdown(det_validacao[chave_validacao]["descricao"])
-
-    # ================================
-    # Rodapé
-    # ================================
-    st.markdown(f"""
-        ---
-        Desenvolvido por [Roberto Schneider](https://www.linkedin.com/in/robertoschneider/) | 
-        [Repositório](https://github.com/betoschneider/brasileirao) | {datetime.now().year}.
-        """)
+    st.divider()
+    st.caption(
+        f"Desenvolvido por [Roberto Schneider](https://www.linkedin.com/in/robertoschneider/) · "
+        f"[Repositório](https://github.com/betoschneider/brasileirao) · "
+        f"{datetime.now(UTC).year}"
+    )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
