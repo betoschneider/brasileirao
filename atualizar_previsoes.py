@@ -819,11 +819,54 @@ def calcular_chances(
         ordem = np.lexsort((vitorias[:, split], pontos[:, split]))[::-1]
         posicoes[ordem, split] = np.arange(1, len(times) + 1)
 
+    # limites algébricos do campeonato (garantia ou eliminação matemática)
+    jogos_restantes = {
+        nome_time: int(np.sum(times_agendadas == nome_time)) for nome_time in times
+    }
+    pontos_max = {
+        nome_time: float(pontos_atuais[nome_time] + 3 * jogos_restantes[nome_time])
+        for nome_time in times
+    }
+    pontos_min = {nome_time: float(pontos_atuais[nome_time]) for nome_time in times}
+
+    status_mat = {}
+    for t in times:
+        outros = [outro for outro in times if outro != t]
+        outros_max_desc = sorted([pontos_max[outro] for outro in outros], reverse=True)
+        outros_min_desc = sorted([pontos_min[outro] for outro in outros], reverse=True)
+
+        # Título
+        if pontos_min[t] > outros_max_desc[0]:
+            st_titulo = "garantido"
+        elif pontos_max[t] < outros_min_desc[0]:
+            st_titulo = "eliminado"
+        else:
+            st_titulo = "aberto"
+
+        # G4
+        if pontos_min[t] > outros_max_desc[3]:
+            st_g4 = "garantido"
+        elif pontos_max[t] < outros_min_desc[3]:
+            st_g4 = "eliminado"
+        else:
+            st_g4 = "aberto"
+
+        # Rebaixamento (Z4)
+        if pontos_max[t] < outros_min_desc[15]:
+            st_z4 = "rebaixado"
+        elif pontos_min[t] > outros_max_desc[15]:
+            st_z4 = "salvo"
+        else:
+            st_z4 = "aberto"
+
+        status_mat[t] = (st_titulo, st_g4, st_z4)
+
     linhas = []
     for nome_time in times:
         indice = posicao_do_time[nome_time]
         valores = pontos[indice]
         previsto = int(pontos_projetados[nome_time])
+        st_titulo, st_g4, st_z4 = status_mat[nome_time]
         linhas.append(
             {
                 "modelo": modelo,
@@ -837,6 +880,9 @@ def calcular_chances(
                 "chance_rebaixamento": float(
                     np.mean(posicoes[indice] >= len(times) - 3)
                 ),
+                "status_titulo": st_titulo,
+                "status_g4": st_g4,
+                "status_rebaixamento": st_z4,
             }
         )
     return pd.DataFrame(linhas)

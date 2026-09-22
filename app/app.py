@@ -105,6 +105,55 @@ def carregar_modelos() -> list[str]:
     return sorted(modelos)
 
 
+def calcular_status_matematico(
+    stats_df: pd.DataFrame, rodada_final: int = 38
+) -> dict[str, dict[str, str]]:
+    """Calcula a garantia ou eliminação matemática para título, G4 e rebaixamento."""
+    df = stats_df.copy()
+    col_jogos = "Jogos Disputados" if "Jogos Disputados" in df.columns else "jogos"
+    col_pontos = "Pontos" if "Pontos" in df.columns else "pontos_time"
+    col_time = "Time" if "Time" in df.columns else "time"
+
+    df = df.set_index(col_time)
+    jogos_restantes = (rodada_final - df[col_jogos]).clip(lower=0)
+    p_atual = df[col_pontos].astype(float)
+    p_max = p_atual + 3.0 * jogos_restantes
+
+    status = {}
+    times = list(df.index)
+    for t in times:
+        outros = [outro for outro in times if outro != t]
+        outros_max_desc = sorted([p_max[outro] for outro in outros], reverse=True)
+        outros_atual_desc = sorted([p_atual[outro] for outro in outros], reverse=True)
+
+        # Título (1º lugar)
+        if p_atual[t] > outros_max_desc[0]:
+            st_titulo = "garantido"
+        elif p_max[t] < outros_atual_desc[0]:
+            st_titulo = "eliminado"
+        else:
+            st_titulo = "aberto"
+
+        # G4 (1º ao 4º lugar)
+        if p_atual[t] > outros_max_desc[3]:
+            st_g4 = "garantido"
+        elif p_max[t] < outros_atual_desc[3]:
+            st_g4 = "eliminado"
+        else:
+            st_g4 = "aberto"
+
+        # Rebaixamento (17º ao 20º lugar)
+        if p_max[t] < outros_atual_desc[15]:
+            st_z4 = "rebaixado"
+        elif p_atual[t] > outros_max_desc[15]:
+            st_z4 = "salvo"
+        else:
+            st_z4 = "aberto"
+
+        status[t] = {"titulo": st_titulo, "g4": st_g4, "rebaixamento": st_z4}
+    return status
+
+
 def carregar_dados(modelo: str):
     """Carrega e normaliza os arquivos consumidos pelo dashboard."""
     df = pd.read_csv(ARQUIVO_EVOLUCAO)
@@ -165,6 +214,20 @@ def carregar_dados(modelo: str):
     stats["Jogos Disputados"] = stats["Jogos Disputados"].astype(int)
 
     chances = carregar_chances(modelo)
+    if chances is not None:
+        status_mat = calcular_status_matematico(stats)
+        if "status_titulo" not in chances.columns:
+            chances["status_titulo"] = chances["Time"].map(
+                lambda t: status_mat.get(t, {}).get("titulo", "aberto")
+            )
+        if "status_g4" not in chances.columns:
+            chances["status_g4"] = chances["Time"].map(
+                lambda t: status_mat.get(t, {}).get("g4", "aberto")
+            )
+        if "status_rebaixamento" not in chances.columns:
+            chances["status_rebaixamento"] = chances["Time"].map(
+                lambda t: status_mat.get(t, {}).get("rebaixamento", "aberto")
+            )
     return df, partidas, stats, chances
 
 
@@ -221,9 +284,26 @@ def formatar_variacao(valor: float) -> str:
     return f"◽ {valor * 100:.2f} p.p."
 
 
-def formatar_chance(valor: float) -> str:
-    """Formata uma probabilidade; abaixo de 1% mostra '<1%' em vez de arredondar a zero."""
-    if pd.isna(valor) or valor <= 0:
+def formatar_chance(valor: float, status: str = "aberto") -> str:
+    """Formata uma probabilidade levando em consideração a situação matemática.
+
+    - Se status == 'garantido' ou 'rebaixado': '100%'
+    - Se status == 'eliminado' ou 'salvo': '—'
+    - Se status == 'aberto':
+        - Se valor >= 0.995: '>99%' (não crava 100% enquanto houver chance matemática)
+        - Se valor <= 0 ou pd.isna(valor): '—'
+        - Se valor < 0.01: '<1%'
+        - Caso contrário: f'{valor:.0%}'
+    """
+    if pd.isna(valor):
+        return "—"
+    if status in ("garantido", "rebaixado"):
+        return "100%"
+    if status in ("eliminado", "salvo"):
+        return "—"
+    if valor >= 0.995:
+        return ">99%"
+    if valor <= 0:
         return "—"
     if valor < 0.01:
         return "<1%"
@@ -263,11 +343,21 @@ def montar_tabela_final(
     return tabela
 
 
-def grafico_chance(chances: pd.DataFrame, coluna: str, titulo: str) -> alt.Chart | None:
+def grafico_chance(
+    chances: pd.DataFrame, coluna: str, titulo: str, coluna_status: str | None = None
+) -> alt.Chart | None:
     """Barras horizontais com os times mais prováveis em um cenário."""
-    dados = chances[chances[coluna] > 0].sort_values(coluna, ascending=False).head(8)
+    dados = (
+        chances[chances[coluna] > 0].sort_values(coluna, ascending=False).head(8).copy()
+    )
     if dados.empty:
         return None
+    dados["Chance_Exibicao"] = dados.apply(
+        lambda r: formatar_chance(
+            r[coluna], r.get(coluna_status, "aberto") if coluna_status else "aberto"
+        ),
+        axis=1,
+    )
     return (
         alt.Chart(dados, title=titulo)
         .mark_bar(color="#6b7280")
@@ -281,7 +371,7 @@ def grafico_chance(chances: pd.DataFrame, coluna: str, titulo: str) -> alt.Chart
             y=alt.Y("Time:N", sort="-x", title=None),
             tooltip=[
                 alt.Tooltip("Time:N"),
-                alt.Tooltip(f"{coluna}:Q", title="Chance", format=".1%"),
+                alt.Tooltip("Chance_Exibicao:N", title="Chance"),
             ],
         )
         .properties(height=260)
@@ -293,8 +383,9 @@ def renderizar_chances(chances: pd.DataFrame) -> None:
     st.caption(
         "Probabilidades estimadas pelas simulações do modelo. A **chance da pontuação** é a "
         "frequência com que o time terminou exatamente com os pontos previstos e a **faixa "
-        "provável** cobre de 10% a 90% dos cenários. Como a acurácia do modelo é de ~45% por "
-        "partida, leia os números como tendência, não como certeza."
+        "provável** cobre de 10% a 90% dos cenários. Como o campeonato segue em andamento, "
+        "probabilidades extremas são exibidas como **>99%** ou **<1%**, reservando **100%** e "
+        "**0%** exclusivamente para confirmações matemáticas oficiais."
     )
 
     tabela = (
@@ -308,6 +399,9 @@ def renderizar_chances(chances: pd.DataFrame) -> None:
                 "Chance de Título",
                 "Chance de G4",
                 "Chance de Rebaixamento",
+                "status_titulo",
+                "status_g4",
+                "status_rebaixamento",
             ]
         ]
         .sort_values(
@@ -318,13 +412,21 @@ def renderizar_chances(chances: pd.DataFrame) -> None:
     tabela["Faixa Provável"] = tabela.apply(
         lambda linha: f"{linha['Piso (p10)']:.0f} – {linha['Teto (p90)']:.0f}", axis=1
     )
-    for coluna in (
-        "Chance da Pontuação",
-        "Chance de Título",
-        "Chance de G4",
-        "Chance de Rebaixamento",
-    ):
-        tabela[coluna] = tabela[coluna].apply(formatar_chance)
+    tabela["Chance da Pontuação"] = tabela["Chance da Pontuação"].apply(formatar_chance)
+    tabela["Chance de Título"] = tabela.apply(
+        lambda r: formatar_chance(r["Chance de Título"], r.get("status_titulo", "aberto")),
+        axis=1,
+    )
+    tabela["Chance de G4"] = tabela.apply(
+        lambda r: formatar_chance(r["Chance de G4"], r.get("status_g4", "aberto")),
+        axis=1,
+    )
+    tabela["Chance de Rebaixamento"] = tabela.apply(
+        lambda r: formatar_chance(
+            r["Chance de Rebaixamento"], r.get("status_rebaixamento", "aberto")
+        ),
+        axis=1,
+    )
 
     st.dataframe(
         tabela[
@@ -343,10 +445,10 @@ def renderizar_chances(chances: pd.DataFrame) -> None:
     )
 
     grafico_titulo = grafico_chance(
-        chances, "Chance de Título", "🏆 Corrida pelo título"
+        chances, "Chance de Título", "🏆 Corrida pelo título", "status_titulo"
     )
     grafico_rebaixamento = grafico_chance(
-        chances, "Chance de Rebaixamento", "⚠️ Risco de rebaixamento"
+        chances, "Chance de Rebaixamento", "⚠️ Risco de rebaixamento", "status_rebaixamento"
     )
 
     coluna_esquerda, coluna_direita = st.columns(2)
