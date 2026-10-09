@@ -400,11 +400,11 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 20,Finalizado,Sim,Vasco,Mirassol,Empate,,
 20,Finalizado,Não,Vitória,Remo,Derrota,,
 21,Finalizado,Não,Athletico-PR,Corinthians,Empate,,
-21,Previsto,Sim,Atlético-MG,Bragantino,Vitória,99.0,VotingClassifier_MCCV
+21,Finalizado,Sim,Atlético-MG,Bragantino,Vitória,,
 21,Finalizado,Não,Bahia,Fluminense,Empate,,
 21,Finalizado,Sim,Botafogo,Grêmio,Vitória,,
-21,Previsto,Não,Bragantino,Atlético-MG,Derrota,98.0,VotingClassifier_MCCV
-21,Previsto,Sim,Chapecoense,Vasco,Vitória,85.5,VotingClassifier_MCCV
+21,Finalizado,Não,Bragantino,Atlético-MG,Derrota,,
+21,Previsto,Sim,Chapecoense,Vasco,Vitória,66.5,VotingClassifier_MCCV
 21,Finalizado,Sim,Corinthians,Athletico-PR,Empate,,
 21,Finalizado,Sim,Coritiba,Cruzeiro,Derrota,,
 21,Finalizado,Não,Cruzeiro,Coritiba,Vitória,,
@@ -415,9 +415,9 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 21,Finalizado,Sim,Mirassol,Remo,Vitória,,
 21,Finalizado,Não,Palmeiras,Vitória,Vitória,,
 21,Finalizado,Não,Remo,Mirassol,Derrota,,
-21,Previsto,Não,Santos,São Paulo,Derrota,99.5,VotingClassifier_MCCV
-21,Previsto,Sim,São Paulo,Santos,Vitória,100.0,VotingClassifier_MCCV
-21,Previsto,Não,Vasco,Chapecoense,Derrota,83.5,VotingClassifier_MCCV
+21,Finalizado,Não,Santos,São Paulo,Vitória,,
+21,Finalizado,Sim,São Paulo,Santos,Derrota,,
+21,Previsto,Não,Vasco,Chapecoense,Derrota,64.0,VotingClassifier_MCCV
 21,Finalizado,Sim,Vitória,Palmeiras,Derrota,,
 22,Finalizado,Não,Athletico-PR,Santos,Vitória,,
 22,Finalizado,Não,Atlético-MG,Remo,Empate,,
@@ -559,203 +559,203 @@ rodada_num,status,mandante,time,adversario,resultado,frequencia,modelo
 28,Finalizado,Sim,São Paulo,Internacional,Vitória,,
 28,Finalizado,Sim,Vasco,Coritiba,Vitória,,
 28,Finalizado,Sim,Vitória,Cruzeiro,Derrota,,
-29,Previsto,Sim,Athletico-PR,Atlético-MG,Vitória,99.5,VotingClassifier_MCCV
-29,Previsto,Não,Atlético-MG,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
-29,Previsto,Não,Bahia,Palmeiras,Derrota,97.0,VotingClassifier_MCCV
-29,Previsto,Sim,Botafogo,Vasco,Vitória,98.0,VotingClassifier_MCCV
-29,Previsto,Sim,Bragantino,Mirassol,Vitória,100.0,VotingClassifier_MCCV
-29,Previsto,Não,Chapecoense,Vitória,Derrota,99.5,VotingClassifier_MCCV
-29,Previsto,Não,Corinthians,Internacional,Derrota,92.5,VotingClassifier_MCCV
-29,Previsto,Não,Coritiba,Fluminense,Derrota,100.0,VotingClassifier_MCCV
-29,Previsto,Sim,Cruzeiro,São Paulo,Vitória,93.0,VotingClassifier_MCCV
-29,Previsto,Não,Flamengo,Santos,Derrota,56.49999999999999,VotingClassifier_MCCV
-29,Previsto,Sim,Fluminense,Coritiba,Vitória,100.0,VotingClassifier_MCCV
-29,Previsto,Não,Grêmio,Remo,Derrota,95.0,VotingClassifier_MCCV
-29,Previsto,Sim,Internacional,Corinthians,Vitória,92.5,VotingClassifier_MCCV
-29,Previsto,Não,Mirassol,Bragantino,Derrota,100.0,VotingClassifier_MCCV
-29,Previsto,Sim,Palmeiras,Bahia,Vitória,96.0,VotingClassifier_MCCV
-29,Previsto,Sim,Remo,Grêmio,Vitória,96.5,VotingClassifier_MCCV
-29,Previsto,Sim,Santos,Flamengo,Vitória,47.5,VotingClassifier_MCCV
-29,Previsto,Não,São Paulo,Cruzeiro,Derrota,88.5,VotingClassifier_MCCV
-29,Previsto,Não,Vasco,Botafogo,Derrota,98.5,VotingClassifier_MCCV
-29,Previsto,Sim,Vitória,Chapecoense,Vitória,100.0,VotingClassifier_MCCV
-30,Previsto,Não,Athletico-PR,Chapecoense,Vitória,61.5,VotingClassifier_MCCV
-30,Previsto,Sim,Atlético-MG,Santos,Vitória,100.0,VotingClassifier_MCCV
+29,Finalizado,Sim,Athletico-PR,Atlético-MG,Empate,,
+29,Finalizado,Não,Atlético-MG,Athletico-PR,Empate,,
+29,Finalizado,Não,Bahia,Palmeiras,Derrota,,
+29,Finalizado,Sim,Botafogo,Vasco,Derrota,,
+29,Finalizado,Sim,Bragantino,Mirassol,Empate,,
+29,Finalizado,Não,Chapecoense,Vitória,Derrota,,
+29,Finalizado,Não,Corinthians,Internacional,Derrota,,
+29,Finalizado,Não,Coritiba,Fluminense,Derrota,,
+29,Finalizado,Sim,Cruzeiro,São Paulo,Vitória,,
+29,Finalizado,Não,Flamengo,Santos,Empate,,
+29,Finalizado,Sim,Fluminense,Coritiba,Vitória,,
+29,Finalizado,Não,Grêmio,Remo,Empate,,
+29,Finalizado,Sim,Internacional,Corinthians,Vitória,,
+29,Finalizado,Não,Mirassol,Bragantino,Empate,,
+29,Finalizado,Sim,Palmeiras,Bahia,Vitória,,
+29,Finalizado,Sim,Remo,Grêmio,Empate,,
+29,Finalizado,Sim,Santos,Flamengo,Empate,,
+29,Finalizado,Não,São Paulo,Cruzeiro,Derrota,,
+29,Finalizado,Não,Vasco,Botafogo,Vitória,,
+29,Finalizado,Sim,Vitória,Chapecoense,Vitória,,
+30,Previsto,Não,Athletico-PR,Chapecoense,Vitória,66.0,VotingClassifier_MCCV
+30,Previsto,Sim,Atlético-MG,Santos,Vitória,99.5,VotingClassifier_MCCV
 30,Previsto,Sim,Bahia,Mirassol,Vitória,100.0,VotingClassifier_MCCV
-30,Previsto,Não,Botafogo,Coritiba,Derrota,100.0,VotingClassifier_MCCV
-30,Previsto,Sim,Bragantino,Cruzeiro,Vitória,100.0,VotingClassifier_MCCV
-30,Previsto,Sim,Chapecoense,Athletico-PR,Derrota,56.49999999999999,VotingClassifier_MCCV
+30,Previsto,Não,Botafogo,Coritiba,Derrota,99.0,VotingClassifier_MCCV
+30,Previsto,Sim,Bragantino,Cruzeiro,Vitória,99.0,VotingClassifier_MCCV
+30,Previsto,Sim,Chapecoense,Athletico-PR,Derrota,67.0,VotingClassifier_MCCV
 30,Previsto,Não,Corinthians,Palmeiras,Derrota,100.0,VotingClassifier_MCCV
-30,Previsto,Sim,Coritiba,Botafogo,Vitória,100.0,VotingClassifier_MCCV
-30,Previsto,Não,Cruzeiro,Bragantino,Derrota,100.0,VotingClassifier_MCCV
-30,Previsto,Sim,Flamengo,Fluminense,Vitória,99.0,VotingClassifier_MCCV
-30,Previsto,Não,Fluminense,Flamengo,Derrota,99.5,VotingClassifier_MCCV
-30,Previsto,Sim,Grêmio,Internacional,Vitória,99.5,VotingClassifier_MCCV
-30,Previsto,Não,Internacional,Grêmio,Derrota,98.0,VotingClassifier_MCCV
+30,Previsto,Sim,Coritiba,Botafogo,Vitória,99.5,VotingClassifier_MCCV
+30,Previsto,Não,Cruzeiro,Bragantino,Derrota,98.5,VotingClassifier_MCCV
+30,Previsto,Sim,Flamengo,Fluminense,Vitória,99.5,VotingClassifier_MCCV
+30,Previsto,Não,Fluminense,Flamengo,Derrota,100.0,VotingClassifier_MCCV
+30,Previsto,Sim,Grêmio,Internacional,Vitória,96.5,VotingClassifier_MCCV
+30,Previsto,Não,Internacional,Grêmio,Derrota,97.5,VotingClassifier_MCCV
 30,Previsto,Não,Mirassol,Bahia,Derrota,100.0,VotingClassifier_MCCV
 30,Previsto,Sim,Palmeiras,Corinthians,Vitória,100.0,VotingClassifier_MCCV
-30,Previsto,Não,Remo,Vasco,Derrota,98.5,VotingClassifier_MCCV
-30,Previsto,Não,Santos,Atlético-MG,Derrota,99.0,VotingClassifier_MCCV
+30,Previsto,Não,Remo,Vasco,Derrota,99.5,VotingClassifier_MCCV
+30,Previsto,Não,Santos,Atlético-MG,Derrota,100.0,VotingClassifier_MCCV
 30,Previsto,Sim,São Paulo,Vitória,Vitória,100.0,VotingClassifier_MCCV
-30,Previsto,Sim,Vasco,Remo,Vitória,98.5,VotingClassifier_MCCV
+30,Previsto,Sim,Vasco,Remo,Vitória,100.0,VotingClassifier_MCCV
 30,Previsto,Não,Vitória,São Paulo,Derrota,100.0,VotingClassifier_MCCV
 31,Previsto,Sim,Athletico-PR,Palmeiras,Vitória,98.0,VotingClassifier_MCCV
 31,Previsto,Sim,Atlético-MG,Coritiba,Vitória,100.0,VotingClassifier_MCCV
-31,Previsto,Sim,Bahia,Flamengo,Vitória,74.5,VotingClassifier_MCCV
-31,Previsto,Sim,Botafogo,Chapecoense,Vitória,100.0,VotingClassifier_MCCV
-31,Previsto,Não,Bragantino,Remo,Derrota,94.0,VotingClassifier_MCCV
-31,Previsto,Não,Chapecoense,Botafogo,Derrota,99.0,VotingClassifier_MCCV
+31,Previsto,Sim,Bahia,Flamengo,Vitória,73.0,VotingClassifier_MCCV
+31,Previsto,Sim,Botafogo,Chapecoense,Vitória,98.0,VotingClassifier_MCCV
+31,Previsto,Não,Bragantino,Remo,Derrota,95.5,VotingClassifier_MCCV
+31,Previsto,Não,Chapecoense,Botafogo,Derrota,99.5,VotingClassifier_MCCV
 31,Previsto,Sim,Corinthians,Vitória,Vitória,100.0,VotingClassifier_MCCV
-31,Previsto,Não,Coritiba,Atlético-MG,Derrota,99.5,VotingClassifier_MCCV
-31,Previsto,Não,Cruzeiro,Grêmio,Derrota,99.0,VotingClassifier_MCCV
-31,Previsto,Não,Flamengo,Bahia,Derrota,80.0,VotingClassifier_MCCV
+31,Previsto,Não,Coritiba,Atlético-MG,Derrota,100.0,VotingClassifier_MCCV
+31,Previsto,Não,Cruzeiro,Grêmio,Derrota,97.0,VotingClassifier_MCCV
+31,Previsto,Não,Flamengo,Bahia,Derrota,77.5,VotingClassifier_MCCV
 31,Previsto,Sim,Fluminense,Santos,Vitória,100.0,VotingClassifier_MCCV
-31,Previsto,Sim,Grêmio,Cruzeiro,Vitória,98.0,VotingClassifier_MCCV
-31,Previsto,Não,Internacional,Mirassol,Derrota,97.5,VotingClassifier_MCCV
-31,Previsto,Sim,Mirassol,Internacional,Vitória,98.5,VotingClassifier_MCCV
-31,Previsto,Não,Palmeiras,Athletico-PR,Derrota,98.5,VotingClassifier_MCCV
-31,Previsto,Sim,Remo,Bragantino,Vitória,92.5,VotingClassifier_MCCV
-31,Previsto,Não,Santos,Fluminense,Derrota,99.0,VotingClassifier_MCCV
+31,Previsto,Sim,Grêmio,Cruzeiro,Vitória,97.5,VotingClassifier_MCCV
+31,Previsto,Não,Internacional,Mirassol,Derrota,98.5,VotingClassifier_MCCV
+31,Previsto,Sim,Mirassol,Internacional,Vitória,99.0,VotingClassifier_MCCV
+31,Previsto,Não,Palmeiras,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
+31,Previsto,Sim,Remo,Bragantino,Vitória,95.5,VotingClassifier_MCCV
+31,Previsto,Não,Santos,Fluminense,Derrota,99.5,VotingClassifier_MCCV
 31,Previsto,Sim,São Paulo,Vasco,Vitória,100.0,VotingClassifier_MCCV
 31,Previsto,Não,Vasco,São Paulo,Derrota,100.0,VotingClassifier_MCCV
 31,Previsto,Não,Vitória,Corinthians,Derrota,100.0,VotingClassifier_MCCV
-32,Previsto,Não,Athletico-PR,Vitória,Derrota,81.5,VotingClassifier_MCCV
-32,Previsto,Não,Atlético-MG,Flamengo,Derrota,99.5,VotingClassifier_MCCV
-32,Previsto,Não,Bahia,Santos,Derrota,95.5,VotingClassifier_MCCV
+32,Previsto,Não,Athletico-PR,Vitória,Derrota,91.5,VotingClassifier_MCCV
+32,Previsto,Não,Atlético-MG,Flamengo,Derrota,100.0,VotingClassifier_MCCV
+32,Previsto,Não,Bahia,Santos,Derrota,96.5,VotingClassifier_MCCV
 32,Previsto,Não,Botafogo,Internacional,Derrota,100.0,VotingClassifier_MCCV
 32,Previsto,Não,Bragantino,Palmeiras,Derrota,100.0,VotingClassifier_MCCV
-32,Previsto,Sim,Chapecoense,Fluminense,Derrota,70.5,VotingClassifier_MCCV
-32,Previsto,Não,Corinthians,Vasco,Derrota,83.5,VotingClassifier_MCCV
-32,Previsto,Sim,Coritiba,Grêmio,Vitória,95.0,VotingClassifier_MCCV
+32,Previsto,Sim,Chapecoense,Fluminense,Derrota,72.5,VotingClassifier_MCCV
+32,Previsto,Não,Corinthians,Vasco,Derrota,90.0,VotingClassifier_MCCV
+32,Previsto,Sim,Coritiba,Grêmio,Vitória,97.0,VotingClassifier_MCCV
 32,Previsto,Sim,Cruzeiro,Remo,Vitória,100.0,VotingClassifier_MCCV
-32,Previsto,Sim,Flamengo,Atlético-MG,Vitória,99.5,VotingClassifier_MCCV
-32,Previsto,Não,Fluminense,Chapecoense,Vitória,67.0,VotingClassifier_MCCV
-32,Previsto,Não,Grêmio,Coritiba,Derrota,91.5,VotingClassifier_MCCV
-32,Previsto,Sim,Internacional,Botafogo,Vitória,99.5,VotingClassifier_MCCV
-32,Previsto,Sim,Mirassol,São Paulo,Vitória,98.0,VotingClassifier_MCCV
+32,Previsto,Sim,Flamengo,Atlético-MG,Vitória,100.0,VotingClassifier_MCCV
+32,Previsto,Não,Fluminense,Chapecoense,Vitória,73.0,VotingClassifier_MCCV
+32,Previsto,Não,Grêmio,Coritiba,Derrota,94.5,VotingClassifier_MCCV
+32,Previsto,Sim,Internacional,Botafogo,Vitória,100.0,VotingClassifier_MCCV
+32,Previsto,Sim,Mirassol,São Paulo,Vitória,100.0,VotingClassifier_MCCV
 32,Previsto,Sim,Palmeiras,Bragantino,Vitória,100.0,VotingClassifier_MCCV
 32,Previsto,Não,Remo,Cruzeiro,Derrota,100.0,VotingClassifier_MCCV
-32,Previsto,Sim,Santos,Bahia,Vitória,95.5,VotingClassifier_MCCV
-32,Previsto,Não,São Paulo,Mirassol,Derrota,95.5,VotingClassifier_MCCV
-32,Previsto,Sim,Vasco,Corinthians,Vitória,85.0,VotingClassifier_MCCV
-32,Previsto,Sim,Vitória,Athletico-PR,Vitória,77.5,VotingClassifier_MCCV
-33,Previsto,Não,Athletico-PR,Grêmio,Derrota,86.0,VotingClassifier_MCCV
+32,Previsto,Sim,Santos,Bahia,Vitória,97.0,VotingClassifier_MCCV
+32,Previsto,Não,São Paulo,Mirassol,Derrota,98.5,VotingClassifier_MCCV
+32,Previsto,Sim,Vasco,Corinthians,Vitória,92.0,VotingClassifier_MCCV
+32,Previsto,Sim,Vitória,Athletico-PR,Vitória,91.0,VotingClassifier_MCCV
+33,Previsto,Não,Athletico-PR,Grêmio,Derrota,88.0,VotingClassifier_MCCV
 33,Previsto,Sim,Atlético-MG,Cruzeiro,Vitória,100.0,VotingClassifier_MCCV
 33,Previsto,Sim,Bahia,São Paulo,Vitória,100.0,VotingClassifier_MCCV
-33,Previsto,Não,Botafogo,Remo,Derrota,98.5,VotingClassifier_MCCV
+33,Previsto,Não,Botafogo,Remo,Derrota,97.0,VotingClassifier_MCCV
 33,Previsto,Sim,Bragantino,Chapecoense,Vitória,100.0,VotingClassifier_MCCV
-33,Previsto,Não,Chapecoense,Bragantino,Derrota,100.0,VotingClassifier_MCCV
+33,Previsto,Não,Chapecoense,Bragantino,Derrota,99.5,VotingClassifier_MCCV
 33,Previsto,Sim,Corinthians,Mirassol,Vitória,100.0,VotingClassifier_MCCV
-33,Previsto,Sim,Coritiba,Vitória,Vitória,99.0,VotingClassifier_MCCV
+33,Previsto,Sim,Coritiba,Vitória,Vitória,89.5,VotingClassifier_MCCV
 33,Previsto,Não,Cruzeiro,Atlético-MG,Derrota,99.5,VotingClassifier_MCCV
-33,Previsto,Não,Flamengo,Vasco,Vitória,79.5,VotingClassifier_MCCV
-33,Previsto,Sim,Fluminense,Internacional,Vitória,99.0,VotingClassifier_MCCV
-33,Previsto,Sim,Grêmio,Athletico-PR,Vitória,87.0,VotingClassifier_MCCV
-33,Previsto,Não,Internacional,Fluminense,Derrota,98.0,VotingClassifier_MCCV
+33,Previsto,Não,Flamengo,Vasco,Vitória,54.0,VotingClassifier_MCCV
+33,Previsto,Sim,Fluminense,Internacional,Vitória,100.0,VotingClassifier_MCCV
+33,Previsto,Sim,Grêmio,Athletico-PR,Vitória,85.0,VotingClassifier_MCCV
+33,Previsto,Não,Internacional,Fluminense,Derrota,99.5,VotingClassifier_MCCV
 33,Previsto,Não,Mirassol,Corinthians,Derrota,100.0,VotingClassifier_MCCV
-33,Previsto,Não,Palmeiras,Santos,Derrota,89.5,VotingClassifier_MCCV
-33,Previsto,Sim,Remo,Botafogo,Vitória,98.0,VotingClassifier_MCCV
-33,Previsto,Sim,Santos,Palmeiras,Vitória,86.0,VotingClassifier_MCCV
-33,Previsto,Não,São Paulo,Bahia,Derrota,97.5,VotingClassifier_MCCV
-33,Previsto,Sim,Vasco,Flamengo,Derrota,77.0,VotingClassifier_MCCV
-33,Previsto,Não,Vitória,Coritiba,Derrota,98.0,VotingClassifier_MCCV
+33,Previsto,Não,Palmeiras,Santos,Derrota,88.0,VotingClassifier_MCCV
+33,Previsto,Sim,Remo,Botafogo,Vitória,92.5,VotingClassifier_MCCV
+33,Previsto,Sim,Santos,Palmeiras,Vitória,89.5,VotingClassifier_MCCV
+33,Previsto,Não,São Paulo,Bahia,Derrota,100.0,VotingClassifier_MCCV
+33,Previsto,Sim,Vasco,Flamengo,Derrota,51.0,VotingClassifier_MCCV
+33,Previsto,Não,Vitória,Coritiba,Derrota,91.0,VotingClassifier_MCCV
 34,Previsto,Sim,Athletico-PR,Vasco,Vitória,100.0,VotingClassifier_MCCV
-34,Previsto,Não,Atlético-MG,Botafogo,Derrota,94.0,VotingClassifier_MCCV
-34,Previsto,Não,Bahia,Cruzeiro,Derrota,95.5,VotingClassifier_MCCV
-34,Previsto,Sim,Botafogo,Atlético-MG,Vitória,98.0,VotingClassifier_MCCV
-34,Previsto,Sim,Bragantino,Santos,Vitória,99.5,VotingClassifier_MCCV
-34,Previsto,Sim,Chapecoense,Mirassol,Vitória,87.0,VotingClassifier_MCCV
-34,Previsto,Não,Corinthians,São Paulo,Derrota,94.5,VotingClassifier_MCCV
+34,Previsto,Não,Atlético-MG,Botafogo,Derrota,95.5,VotingClassifier_MCCV
+34,Previsto,Não,Bahia,Cruzeiro,Derrota,99.0,VotingClassifier_MCCV
+34,Previsto,Sim,Botafogo,Atlético-MG,Vitória,93.5,VotingClassifier_MCCV
+34,Previsto,Sim,Bragantino,Santos,Vitória,98.5,VotingClassifier_MCCV
+34,Previsto,Sim,Chapecoense,Mirassol,Vitória,84.5,VotingClassifier_MCCV
+34,Previsto,Não,Corinthians,São Paulo,Derrota,97.0,VotingClassifier_MCCV
 34,Previsto,Não,Coritiba,Internacional,Derrota,100.0,VotingClassifier_MCCV
-34,Previsto,Sim,Cruzeiro,Bahia,Vitória,97.0,VotingClassifier_MCCV
+34,Previsto,Sim,Cruzeiro,Bahia,Vitória,96.5,VotingClassifier_MCCV
 34,Previsto,Sim,Flamengo,Grêmio,Vitória,100.0,VotingClassifier_MCCV
-34,Previsto,Não,Fluminense,Vitória,Derrota,73.5,VotingClassifier_MCCV
+34,Previsto,Não,Fluminense,Vitória,Derrota,92.0,VotingClassifier_MCCV
 34,Previsto,Não,Grêmio,Flamengo,Derrota,100.0,VotingClassifier_MCCV
-34,Previsto,Sim,Internacional,Coritiba,Vitória,99.0,VotingClassifier_MCCV
-34,Previsto,Não,Mirassol,Chapecoense,Derrota,80.5,VotingClassifier_MCCV
+34,Previsto,Sim,Internacional,Coritiba,Vitória,100.0,VotingClassifier_MCCV
+34,Previsto,Não,Mirassol,Chapecoense,Derrota,76.0,VotingClassifier_MCCV
 34,Previsto,Sim,Palmeiras,Remo,Vitória,100.0,VotingClassifier_MCCV
 34,Previsto,Não,Remo,Palmeiras,Derrota,100.0,VotingClassifier_MCCV
-34,Previsto,Não,Santos,Bragantino,Derrota,100.0,VotingClassifier_MCCV
-34,Previsto,Sim,São Paulo,Corinthians,Vitória,93.5,VotingClassifier_MCCV
+34,Previsto,Não,Santos,Bragantino,Derrota,98.0,VotingClassifier_MCCV
+34,Previsto,Sim,São Paulo,Corinthians,Vitória,98.0,VotingClassifier_MCCV
 34,Previsto,Não,Vasco,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
-34,Previsto,Sim,Vitória,Fluminense,Vitória,69.5,VotingClassifier_MCCV
-35,Previsto,Não,Athletico-PR,Flamengo,Derrota,100.0,VotingClassifier_MCCV
-35,Previsto,Não,Atlético-MG,Mirassol,Derrota,92.0,VotingClassifier_MCCV
-35,Previsto,Não,Bahia,Grêmio,Derrota,73.5,VotingClassifier_MCCV
+34,Previsto,Sim,Vitória,Fluminense,Vitória,88.5,VotingClassifier_MCCV
+35,Previsto,Não,Athletico-PR,Flamengo,Derrota,99.5,VotingClassifier_MCCV
+35,Previsto,Não,Atlético-MG,Mirassol,Derrota,96.0,VotingClassifier_MCCV
+35,Previsto,Não,Bahia,Grêmio,Derrota,80.5,VotingClassifier_MCCV
 35,Previsto,Não,Botafogo,Corinthians,Derrota,100.0,VotingClassifier_MCCV
-35,Previsto,Não,Bragantino,Vitória,Derrota,95.5,VotingClassifier_MCCV
-35,Previsto,Não,Chapecoense,Remo,Derrota,100.0,VotingClassifier_MCCV
+35,Previsto,Não,Bragantino,Vitória,Derrota,97.5,VotingClassifier_MCCV
+35,Previsto,Não,Chapecoense,Remo,Derrota,99.5,VotingClassifier_MCCV
 35,Previsto,Sim,Corinthians,Botafogo,Vitória,100.0,VotingClassifier_MCCV
-35,Previsto,Sim,Coritiba,Santos,Vitória,100.0,VotingClassifier_MCCV
-35,Previsto,Sim,Cruzeiro,Palmeiras,Vitória,90.0,VotingClassifier_MCCV
+35,Previsto,Sim,Coritiba,Santos,Vitória,97.0,VotingClassifier_MCCV
+35,Previsto,Sim,Cruzeiro,Palmeiras,Vitória,96.5,VotingClassifier_MCCV
 35,Previsto,Sim,Flamengo,Athletico-PR,Vitória,100.0,VotingClassifier_MCCV
-35,Previsto,Não,Fluminense,São Paulo,Derrota,95.5,VotingClassifier_MCCV
-35,Previsto,Sim,Grêmio,Bahia,Vitória,74.0,VotingClassifier_MCCV
-35,Previsto,Não,Internacional,Vasco,Derrota,95.0,VotingClassifier_MCCV
-35,Previsto,Sim,Mirassol,Atlético-MG,Vitória,94.5,VotingClassifier_MCCV
-35,Previsto,Não,Palmeiras,Cruzeiro,Derrota,87.5,VotingClassifier_MCCV
-35,Previsto,Sim,Remo,Chapecoense,Vitória,100.0,VotingClassifier_MCCV
-35,Previsto,Não,Santos,Coritiba,Derrota,99.5,VotingClassifier_MCCV
-35,Previsto,Sim,São Paulo,Fluminense,Vitória,98.0,VotingClassifier_MCCV
-35,Previsto,Sim,Vasco,Internacional,Vitória,97.0,VotingClassifier_MCCV
-35,Previsto,Sim,Vitória,Bragantino,Vitória,95.5,VotingClassifier_MCCV
+35,Previsto,Não,Fluminense,São Paulo,Derrota,94.0,VotingClassifier_MCCV
+35,Previsto,Sim,Grêmio,Bahia,Vitória,75.0,VotingClassifier_MCCV
+35,Previsto,Não,Internacional,Vasco,Derrota,98.0,VotingClassifier_MCCV
+35,Previsto,Sim,Mirassol,Atlético-MG,Vitória,97.0,VotingClassifier_MCCV
+35,Previsto,Não,Palmeiras,Cruzeiro,Derrota,97.5,VotingClassifier_MCCV
+35,Previsto,Sim,Remo,Chapecoense,Vitória,99.0,VotingClassifier_MCCV
+35,Previsto,Não,Santos,Coritiba,Derrota,98.0,VotingClassifier_MCCV
+35,Previsto,Sim,São Paulo,Fluminense,Vitória,89.5,VotingClassifier_MCCV
+35,Previsto,Sim,Vasco,Internacional,Vitória,98.5,VotingClassifier_MCCV
+35,Previsto,Sim,Vitória,Bragantino,Vitória,98.0,VotingClassifier_MCCV
 36,Previsto,Sim,Athletico-PR,Remo,Vitória,100.0,VotingClassifier_MCCV
-36,Previsto,Sim,Atlético-MG,Corinthians,Vitória,94.5,VotingClassifier_MCCV
+36,Previsto,Sim,Atlético-MG,Corinthians,Vitória,99.0,VotingClassifier_MCCV
 36,Previsto,Sim,Bahia,Coritiba,Vitória,100.0,VotingClassifier_MCCV
-36,Previsto,Sim,Botafogo,São Paulo,Vitória,97.0,VotingClassifier_MCCV
-36,Previsto,Sim,Bragantino,Vasco,Vitória,100.0,VotingClassifier_MCCV
-36,Previsto,Sim,Chapecoense,Cruzeiro,Vitória,56.49999999999999,VotingClassifier_MCCV
-36,Previsto,Não,Corinthians,Atlético-MG,Derrota,96.0,VotingClassifier_MCCV
-36,Previsto,Não,Coritiba,Bahia,Derrota,99.5,VotingClassifier_MCCV
-36,Previsto,Não,Cruzeiro,Chapecoense,Derrota,54.50000000000001,VotingClassifier_MCCV
-36,Previsto,Não,Flamengo,Palmeiras,Derrota,90.5,VotingClassifier_MCCV
+36,Previsto,Sim,Botafogo,São Paulo,Vitória,96.5,VotingClassifier_MCCV
+36,Previsto,Sim,Bragantino,Vasco,Vitória,99.5,VotingClassifier_MCCV
+36,Previsto,Sim,Chapecoense,Cruzeiro,Derrota,52.0,VotingClassifier_MCCV
+36,Previsto,Não,Corinthians,Atlético-MG,Derrota,97.5,VotingClassifier_MCCV
+36,Previsto,Não,Coritiba,Bahia,Derrota,100.0,VotingClassifier_MCCV
+36,Previsto,Não,Cruzeiro,Chapecoense,Vitória,55.00000000000001,VotingClassifier_MCCV
+36,Previsto,Não,Flamengo,Palmeiras,Derrota,89.0,VotingClassifier_MCCV
 36,Previsto,Sim,Fluminense,Mirassol,Vitória,100.0,VotingClassifier_MCCV
 36,Previsto,Não,Grêmio,Santos,Derrota,100.0,VotingClassifier_MCCV
 36,Previsto,Sim,Internacional,Vitória,Vitória,98.5,VotingClassifier_MCCV
 36,Previsto,Não,Mirassol,Fluminense,Derrota,100.0,VotingClassifier_MCCV
-36,Previsto,Sim,Palmeiras,Flamengo,Vitória,92.5,VotingClassifier_MCCV
+36,Previsto,Sim,Palmeiras,Flamengo,Vitória,86.5,VotingClassifier_MCCV
 36,Previsto,Não,Remo,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
-36,Previsto,Sim,Santos,Grêmio,Vitória,97.5,VotingClassifier_MCCV
+36,Previsto,Sim,Santos,Grêmio,Vitória,98.5,VotingClassifier_MCCV
 36,Previsto,Não,São Paulo,Botafogo,Derrota,95.5,VotingClassifier_MCCV
-36,Previsto,Não,Vasco,Bragantino,Derrota,100.0,VotingClassifier_MCCV
-36,Previsto,Não,Vitória,Internacional,Derrota,95.5,VotingClassifier_MCCV
-37,Previsto,Não,Athletico-PR,Mirassol,Derrota,79.5,VotingClassifier_MCCV
-37,Previsto,Sim,Atlético-MG,Vasco,Vitória,100.0,VotingClassifier_MCCV
-37,Previsto,Não,Bahia,Botafogo,Derrota,95.0,VotingClassifier_MCCV
-37,Previsto,Sim,Botafogo,Bahia,Vitória,94.5,VotingClassifier_MCCV
-37,Previsto,Não,Bragantino,Internacional,Derrota,98.5,VotingClassifier_MCCV
-37,Previsto,Sim,Chapecoense,Palmeiras,Derrota,69.0,VotingClassifier_MCCV
-37,Previsto,Sim,Corinthians,Grêmio,Vitória,100.0,VotingClassifier_MCCV
-37,Previsto,Sim,Coritiba,Flamengo,Vitória,65.0,VotingClassifier_MCCV
-37,Previsto,Não,Cruzeiro,Fluminense,Derrota,100.0,VotingClassifier_MCCV
-37,Previsto,Não,Flamengo,Coritiba,Derrota,68.0,VotingClassifier_MCCV
-37,Previsto,Sim,Fluminense,Cruzeiro,Vitória,100.0,VotingClassifier_MCCV
-37,Previsto,Não,Grêmio,Corinthians,Derrota,100.0,VotingClassifier_MCCV
-37,Previsto,Sim,Internacional,Bragantino,Vitória,98.0,VotingClassifier_MCCV
-37,Previsto,Sim,Mirassol,Athletico-PR,Vitória,80.0,VotingClassifier_MCCV
-37,Previsto,Não,Palmeiras,Chapecoense,Vitória,70.0,VotingClassifier_MCCV
+36,Previsto,Não,Vasco,Bragantino,Derrota,98.0,VotingClassifier_MCCV
+36,Previsto,Não,Vitória,Internacional,Derrota,98.5,VotingClassifier_MCCV
+37,Previsto,Não,Athletico-PR,Mirassol,Derrota,80.5,VotingClassifier_MCCV
+37,Previsto,Sim,Atlético-MG,Vasco,Vitória,99.5,VotingClassifier_MCCV
+37,Previsto,Não,Bahia,Botafogo,Derrota,88.5,VotingClassifier_MCCV
+37,Previsto,Sim,Botafogo,Bahia,Vitória,88.0,VotingClassifier_MCCV
+37,Previsto,Não,Bragantino,Internacional,Derrota,99.0,VotingClassifier_MCCV
+37,Previsto,Sim,Chapecoense,Palmeiras,Derrota,66.5,VotingClassifier_MCCV
+37,Previsto,Sim,Corinthians,Grêmio,Vitória,99.0,VotingClassifier_MCCV
+37,Previsto,Sim,Coritiba,Flamengo,Vitória,44.0,VotingClassifier_MCCV
+37,Previsto,Não,Cruzeiro,Fluminense,Derrota,99.5,VotingClassifier_MCCV
+37,Previsto,Não,Flamengo,Coritiba,Derrota,49.0,VotingClassifier_MCCV
+37,Previsto,Sim,Fluminense,Cruzeiro,Vitória,99.5,VotingClassifier_MCCV
+37,Previsto,Não,Grêmio,Corinthians,Derrota,99.0,VotingClassifier_MCCV
+37,Previsto,Sim,Internacional,Bragantino,Vitória,97.0,VotingClassifier_MCCV
+37,Previsto,Sim,Mirassol,Athletico-PR,Vitória,77.5,VotingClassifier_MCCV
+37,Previsto,Não,Palmeiras,Chapecoense,Vitória,68.0,VotingClassifier_MCCV
 37,Previsto,Não,Remo,São Paulo,Derrota,100.0,VotingClassifier_MCCV
-37,Previsto,Não,Santos,Vitória,Derrota,98.0,VotingClassifier_MCCV
+37,Previsto,Não,Santos,Vitória,Derrota,97.5,VotingClassifier_MCCV
 37,Previsto,Sim,São Paulo,Remo,Vitória,100.0,VotingClassifier_MCCV
 37,Previsto,Não,Vasco,Atlético-MG,Derrota,100.0,VotingClassifier_MCCV
-37,Previsto,Sim,Vitória,Santos,Vitória,96.5,VotingClassifier_MCCV
+37,Previsto,Sim,Vitória,Santos,Vitória,94.5,VotingClassifier_MCCV
 38,Previsto,Sim,Athletico-PR,São Paulo,Vitória,100.0,VotingClassifier_MCCV
-38,Previsto,Não,Atlético-MG,Bahia,Derrota,100.0,VotingClassifier_MCCV
-38,Previsto,Sim,Bahia,Atlético-MG,Vitória,99.5,VotingClassifier_MCCV
+38,Previsto,Não,Atlético-MG,Bahia,Derrota,99.5,VotingClassifier_MCCV
+38,Previsto,Sim,Bahia,Atlético-MG,Vitória,99.0,VotingClassifier_MCCV
 38,Previsto,Não,Botafogo,Santos,Derrota,100.0,VotingClassifier_MCCV
-38,Previsto,Sim,Bragantino,Fluminense,Vitória,96.5,VotingClassifier_MCCV
-38,Previsto,Não,Chapecoense,Flamengo,Derrota,99.0,VotingClassifier_MCCV
-38,Previsto,Não,Corinthians,Remo,Derrota,71.0,VotingClassifier_MCCV
+38,Previsto,Sim,Bragantino,Fluminense,Vitória,93.0,VotingClassifier_MCCV
+38,Previsto,Não,Chapecoense,Flamengo,Derrota,100.0,VotingClassifier_MCCV
+38,Previsto,Não,Corinthians,Remo,Derrota,78.5,VotingClassifier_MCCV
 38,Previsto,Não,Coritiba,Palmeiras,Derrota,99.5,VotingClassifier_MCCV
 38,Previsto,Sim,Cruzeiro,Internacional,Vitória,100.0,VotingClassifier_MCCV
 38,Previsto,Sim,Flamengo,Chapecoense,Vitória,99.5,VotingClassifier_MCCV
-38,Previsto,Não,Fluminense,Bragantino,Derrota,97.5,VotingClassifier_MCCV
-38,Previsto,Sim,Grêmio,Mirassol,Vitória,99.5,VotingClassifier_MCCV
-38,Previsto,Não,Internacional,Cruzeiro,Derrota,99.0,VotingClassifier_MCCV
+38,Previsto,Não,Fluminense,Bragantino,Derrota,93.5,VotingClassifier_MCCV
+38,Previsto,Sim,Grêmio,Mirassol,Vitória,100.0,VotingClassifier_MCCV
+38,Previsto,Não,Internacional,Cruzeiro,Derrota,100.0,VotingClassifier_MCCV
 38,Previsto,Não,Mirassol,Grêmio,Derrota,100.0,VotingClassifier_MCCV
 38,Previsto,Sim,Palmeiras,Coritiba,Vitória,99.5,VotingClassifier_MCCV
-38,Previsto,Sim,Remo,Corinthians,Vitória,77.5,VotingClassifier_MCCV
-38,Previsto,Sim,Santos,Botafogo,Vitória,99.5,VotingClassifier_MCCV
+38,Previsto,Sim,Remo,Corinthians,Vitória,79.0,VotingClassifier_MCCV
+38,Previsto,Sim,Santos,Botafogo,Vitória,100.0,VotingClassifier_MCCV
 38,Previsto,Não,São Paulo,Athletico-PR,Derrota,100.0,VotingClassifier_MCCV
-38,Previsto,Sim,Vasco,Vitória,Vitória,93.5,VotingClassifier_MCCV
-38,Previsto,Não,Vitória,Vasco,Derrota,91.5,VotingClassifier_MCCV
+38,Previsto,Sim,Vasco,Vitória,Vitória,92.0,VotingClassifier_MCCV
+38,Previsto,Não,Vitória,Vasco,Derrota,89.0,VotingClassifier_MCCV
